@@ -43,8 +43,8 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 gem 'faraday'
-gem 'json'
 gem 'figaro'
+gem 'json'
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -60,16 +60,16 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails'
   gem 'pry'
-  gem 'shoulda-matchers', '~> 4.0'
   gem 'webmock'
   gem 'vcr'
   gem 'simplecov'
+  gem 'orderly'
 end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem "web-console"
-
+  gem 'web-console'
+  gem 'rubocop-rails', require: false
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 

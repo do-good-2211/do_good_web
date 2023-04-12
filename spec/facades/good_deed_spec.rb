@@ -24,11 +24,6 @@ RSpec.describe GoodDeedFacade do
         expect(deed.name).to be_a(String)
         expect(deed.media_link).to be_a(String)
       end
-
     end
   end
-
-
-
-
 end

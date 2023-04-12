@@ -8,5 +8,4 @@ class Deed
     @name = info[:attributes][:deed_name]
     @media_link = info[:attributes][:media_link]
   end
-
 end

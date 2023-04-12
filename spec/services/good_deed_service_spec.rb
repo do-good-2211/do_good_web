@@ -8,7 +8,7 @@ RSpec.describe "The good deeds service" do
     end
     it "returns a json object" do
       data = GoodDeedService.good_deeds
-      
+
       expect(data).to be_a(Hash)
       data[:data].each do |deed|
         expect(deed).to have_key(:id)

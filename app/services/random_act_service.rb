@@ -1,4 +1,4 @@
-class GoodDeedService
+class RandomActService
   def self.conn
     Faraday.new(url: "https://localhost:3000")
   end
@@ -8,7 +8,7 @@ class GoodDeedService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.good_deeds
-    get_url("/api/v1/good_deeds")
+  def self.get_acts
+    get_url("/api/v1/random_acts")
   end
 end

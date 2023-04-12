@@ -1,0 +1,9 @@
+{
+  "data": {
+    "id": "1",
+    "type": "random_acts",
+    "attributes":{
+        "deed_names": ["Deed 1", "Deed 2", "Deed 3"]
+      }  
+    }
+}

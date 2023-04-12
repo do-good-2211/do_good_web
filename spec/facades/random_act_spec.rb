@@ -19,7 +19,7 @@ RSpec.describe RandomActFacade do
   describe "#methods" do
     it "returns an array of random act objects and it name" do
       acts = @facade.create_acts
-
+     
       expect(acts).to be_an(Array)
       expect(acts.size).to eq(3)
       expect(acts.first.name).to be_a(String)

@@ -1,7 +1,9 @@
 class GoodDeedsController < ApplicationController
   def index
-    binding.pry
+    @deeds = GoodDeedFacade.new
   end
 
-
+  def login
+    
+  end
 end

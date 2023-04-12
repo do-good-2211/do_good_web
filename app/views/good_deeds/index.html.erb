@@ -1,0 +1,19 @@
+<div id= "header">
+  <%= link_to "Login/Register", login_path %>
+</div>
+
+<div id= "title">
+  <h1>"Do Good"</h1>
+  <p><%= "Ok, I'm Convinced. I wanna join the fun" %></p>
+</div>
+
+<div id= "random_act">
+  <%= button_to "Random Acts", "/random_acts", method: :get %>
+</div>
+
+<div class= “deeds”>
+  <% @deeds.get_deeds.each do |deed|%>
+    <%= deed.name %>
+    <%= deed.media_link %>
+  <%end%>
+</div>

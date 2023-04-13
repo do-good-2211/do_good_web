@@ -4,7 +4,7 @@ require "./app/facades/good_deed_facade"
 RSpec.describe GoodDeedFacade do
   before do
     deeds = File.read("./spec/fixtures/good_deeds.json")
-    stub_request(:get, "https://localhost:3000/api/v1/good_deeds").to_return(status: 200, body: deeds)
+    stub_request(:get, "http://localhost:3000/api/v1/good_deeds").to_return(status: 200, body: deeds)
 
     @facade = GoodDeedFacade.new
   end

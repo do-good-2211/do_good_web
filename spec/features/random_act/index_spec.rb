@@ -5,7 +5,7 @@ RSpec.describe "Random Acts index page" do
     before do
       random_acts = File.read("./spec/fixtures/random_acts.json")
       stub_request(:get, "https://localhost:3000/api/v1/random_acts")
-        .to_return(status: 200, body: random_acts)
+      .to_return(status: 200, body: random_acts)
     end
 
     it "When I visit '/random_acts I see 3 random acts and their name as a link" do
@@ -26,7 +26,8 @@ RSpec.describe "Random Acts index page" do
     end
 
     it "As a login User, when I click on any deed I am redirected to" do
-      user = User.new(name: "Bob", email: "user@example.com", password_digest: "test1", role: "User")
+      info = { attributes:{name: "Bob"} }
+      user = User.new(info)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       visit '/random_acts'

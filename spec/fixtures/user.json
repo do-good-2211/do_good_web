@@ -1,0 +1,24 @@
+{
+  "data": {
+    "id": "1",
+    "type": "user",
+    "attributes": {
+    "name": "Sam Smith", 
+    "good_deeds": [{
+            "data": {
+            "id": "1",
+            "type": "good_deed",
+            "attributes":{
+                "deed_name": "Mow your neighbor's lawn",
+                "media_link": "www.image.com/picture",
+                "notes": "Really mowed that lawn good",
+                "date": "02-02-2024",
+                "time": "10:00",
+                "status": "completed", 
+                "host_id": "9000"
+              }  
+            }
+      } ]
+    }
+  }
+}

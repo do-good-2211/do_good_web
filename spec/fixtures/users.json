@@ -1,0 +1,22 @@
+{
+  "data": [{
+    "id": "1",
+    "type": "users",
+    "attributes":{ "name": "Joe"}  
+    },
+    {
+    "id": "2",
+    "type": "users",
+    "attributes":{ "name": "Matt"}  
+    },
+    {
+    "id": "3",
+    "type": "users",
+    "attributes":{ "name": "Sunita"}  
+    },
+    {
+    "id": "4",
+    "type": "users",
+    "attributes":{ "name": "Jomah"}  
+    }]
+}

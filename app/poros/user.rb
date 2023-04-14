@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# app/poros/user.rb
 class User
   attr_reader :name,
               :email,

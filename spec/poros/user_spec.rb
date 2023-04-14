@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe User do 
-  let(:info) { {:name=>"Peter Pan", :email=>"the_pan@neverland.com", :password_digest=>"NeverGrowUp", :role=>"User"} }
+RSpec.describe User do
+  let(:info) { { name: "Peter Pan", email: "the_pan@neverland.com", password_digest: "NeverGrowUp", role: "User" } }
   let(:peter) { User.new(info) }
 
   it "exists & has attributes" do

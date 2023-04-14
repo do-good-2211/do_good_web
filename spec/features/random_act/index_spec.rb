@@ -26,7 +26,7 @@ RSpec.describe "Random Acts index page" do
     end
 
     it "As a login User, when I click on any deed I am redirected to" do
-      user = User.new(id: 1, attributes: {name: "Bob", email: "user@example.com", password_digest: "test1", role: "User"})
+      user = User.new(id: 1, attributes: { name: "Bob", email: "user@example.com", password_digest: "test1", role: "User" })
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       visit '/random_acts'

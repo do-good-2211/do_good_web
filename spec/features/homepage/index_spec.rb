@@ -5,11 +5,11 @@ RSpec.describe "The good deeds index page" do
     before do
       deeds = File.read("./spec/fixtures/good_deeds.json")
       stub_request(:get, "http://localhost:3000/api/v1/good_deeds")
-      .to_return(status: 200, body: deeds)
+        .to_return(status: 200, body: deeds)
 
       random_acts = File.read("./spec/fixtures/random_acts.json")
       stub_request(:get, "http://localhost:3000/api/v1/random_acts")
-      .to_return(status: 200, body: random_acts)
+        .to_return(status: 200, body: random_acts)
     end
 
     it "When I visit '/' I see the good deed index info" do

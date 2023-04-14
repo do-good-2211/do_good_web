@@ -9,6 +9,8 @@ RSpec.describe "Random Acts index page" do
     end
 
     it "When I visit '/random_acts I see 3 random acts and their name as a link" do
+      random_acts = RandomActService.get_acts
+      
       visit '/random_acts'
 
       expect(page).to have_link("Deed 1")

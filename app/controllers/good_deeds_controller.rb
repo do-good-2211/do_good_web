@@ -4,6 +4,7 @@ class GoodDeedsController < ApplicationController
   end
 
   def new
+    @good_deed = params[:good_deed]
     return unless current_user.nil?
 
     redirect_to login_path

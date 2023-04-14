@@ -4,7 +4,7 @@
 class SessionsController < ApplicationController
   def omniauth
     user = SessionsFacade.new.authorize_user(request.env["omniauth.auth"])
-    session[:user_id] = user.id
+    session[:user_id] = user.name
     flash[:message] = "Welcome, #{user.name}!"
 
     redirect_to "/login"

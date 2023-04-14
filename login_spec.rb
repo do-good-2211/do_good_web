@@ -6,6 +6,5 @@ RSpec.describe "Login google test" do
       visit login_path 
       
      end
-
   end
 end

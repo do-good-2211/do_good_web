@@ -1,13 +1,16 @@
+# frozen_string_literal: true
+
+# app/poros/user.rb
 class User
   attr_reader :name,
               :email,
               :password_digest,
-              :role
+              :role,
+              :id
 
   def initialize(info)
-    @name = info[:name]
-    @email = info[:email]
-    @password_digest = info[:password_digest]
-    @role = info[:role]
+    @id = info[:id]
+    @name = info[:attributes][:name]
+    @role = info[:attributes][:role]
   end
 end

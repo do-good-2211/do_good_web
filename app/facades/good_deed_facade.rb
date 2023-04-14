@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# app/facades/good_deed_facade.rb
 class GoodDeedFacade
   def initialize; end
 

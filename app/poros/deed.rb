@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# app/poros/deed.rb
 class Deed
   attr_reader :name,
               :media_link,

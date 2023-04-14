@@ -73,3 +73,16 @@ RSpec.configure do |config|
     config.hook_into :webmock
   end
 end
+
+def omni_hash
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
+                                                                       "provider" => "google_oauth2",
+                                                                       "uid" => "100000000000000000000",
+                                                                       "info" => {
+                                                                         "name" => "John Smith",
+                                                                         "email" => "john@example.com"
+
+                                                                       }
+                                                                     })
+end

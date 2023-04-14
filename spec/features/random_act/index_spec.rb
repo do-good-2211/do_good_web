@@ -4,8 +4,8 @@ RSpec.describe "Random Acts index page" do
   describe "As a visitor" do
     before do
       random_acts = File.read("./spec/fixtures/random_acts.json")
-      stub_request(:get, "https://localhost:3000/api/v1/random_acts")
-      .to_return(status: 200, body: random_acts)
+      stub_request(:get, "http://localhost:3000/api/v1/random_acts")
+        .to_return(status: 200, body: random_acts)
     end
 
     it "When I visit '/random_acts I see 3 random acts and their name as a link" do

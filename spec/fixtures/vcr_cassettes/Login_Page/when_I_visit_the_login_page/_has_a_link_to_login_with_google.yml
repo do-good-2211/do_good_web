@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users?param=1
+    body:
+      encoding: UTF-8
+      string: '{"query":{"provider":"default","uid":"1234","info":{"name":"Example
+        User"}}}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"4663a40b267ec2e7e6d70ed3ab917c20"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1c028614-0b77-48e1-a1a2-be31dda7b664
+      X-Runtime:
+      - '0.478406'
+      Server-Timing:
+      - sql.active_record;dur=52.71, start_processing.action_controller;dur=0.12,
+        process_action.action_controller;dur=295.97
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"users","attributes":{"name":"Example User","role":"user","good_deeds":[]}}}'
+  recorded_at: Fri, 14 Apr 2023 17:19:01 GMT
+recorded_with: VCR 6.1.0

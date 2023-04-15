@@ -1,13 +1,14 @@
 class UserFacade
-  attr_reader :good_deed
+  attr_reader :good_deed,
+              :user
 
-  def initialize(params, session)
+  def initialize(params, user)
     @good_deed = params[:good_deed]
-    @user = session[:user]
+    @user = user
   end
 
-  def fetch_user(user_id)
-    user_info = UserService.find_user(user_id)
+  def fetch_user
+    user_info = UserService.find_user(@user[:id])
     User.new(user_info[:data])
   end
 
@@ -16,6 +17,6 @@ class UserFacade
   end
 
   def fetch_all_but_user
-    users.select { |user| @user.name}
+    fetch_all_users.select { |user| user.name != @user[:attributes][:name]}
   end
 end

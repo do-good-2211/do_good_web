@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get "/login", to: "users#login"
   get "/auth/:provider/callback", to: "sessions#omniauth"
+  get "/dashboard", to: "users#show"
 
   namespace :user do
     resources :good_deeds, only: [:new]

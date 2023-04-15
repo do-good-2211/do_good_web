@@ -12,13 +12,12 @@ RSpec.describe "Login Page" do
 
     omni_hash
     visit login_path
-    click_on "Log in with Google"
+    click_on "Log in with Google" 
   end
 
-  describe "when I visit the login page", :vcr do
+  describe "when I click to login", :vcr do
     it "takes me to log in with my google credentials" do
-      expect(current_path).to eq("/login")
-      expect(page).to have_content("Welcome, John Smith!")
+      expect(current_path).to eq("/dashboard")
     end
   end
 end

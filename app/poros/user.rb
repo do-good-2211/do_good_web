@@ -7,7 +7,6 @@ class User
               :id
 
   def initialize(info)
-    # require 'pry'; binding.pry
     @id = info[:id]
     @name = info[:attributes][:name]
     @role = info[:attributes][:role]

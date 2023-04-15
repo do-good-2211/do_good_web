@@ -2,11 +2,12 @@
 
 # app/controllers/user/good_deeds_controller.rb
 class User::GoodDeedsController < ApplicationController
-  def index
-    @deeds = GoodDeedFacade.new
+  def new
+    @facade = UserFacade.new(params, current_user)
   end
 
-  def new
-    @facade = UserFacade.new(params)
+  def create
+    GoodDeedFacade.new(params, current_user[:id]).create_deed
+    redirect_to dashboard_path
   end
 end

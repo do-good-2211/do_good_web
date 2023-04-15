@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "Home page" do
+RSpec.describe "Home page", type: :feature do
   describe "As a visitor", :vcr do
     it "When I visit '/' I see the website name, a login/register link and a random acts button" do
       visit root_path

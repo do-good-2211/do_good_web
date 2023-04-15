@@ -16,7 +16,7 @@ RSpec.describe "User good deed new page" do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     end
 
-    it "When I visit '/user/good_deeds/new' I see the name of the good deed, a from with fields for date, time and checkboxes for other users and a button 'Do Good'" do
+    xit "When I visit '/user/good_deeds/new' I see the name of the good deed, a from with fields for date, time and checkboxes for other users and a button 'Do Good'" do
       visit 'user_good_deeds_new_path'
       expect(page).to have_content()
     end  

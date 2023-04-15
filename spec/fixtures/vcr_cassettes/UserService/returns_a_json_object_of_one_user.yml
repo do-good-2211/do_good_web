@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"9ba5fcc6507fd5961a61e646e4382c02"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d037b3de-bd5c-4027-bef6-14c89e2f3663
+      X-Runtime:
+      - '0.130291'
+      Server-Timing:
+      - sql.active_record;dur=49.15, start_processing.action_controller;dur=0.07,
+        instantiation.active_record;dur=11.73, process_action.action_controller;dur=46.14
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"users","attributes":{"name":"Jasmine Hamou","role":"user","good_deeds":[]}}}'
+  recorded_at: Sat, 15 Apr 2023 15:57:43 GMT
+recorded_with: VCR 6.1.0

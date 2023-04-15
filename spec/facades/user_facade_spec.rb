@@ -1,16 +1,7 @@
 require "rails_helper"
-# require "./app/facades/user_facade"
 
-RSpec.describe UserFacade do
+RSpec.describe UserFacade, :vcr do
   before do
-    user = File.read("./spec/fixtures/user.json")
-    stub_request(:get, "https://localhost:3000/api/v1/users/1")
-    .to_return(status: 200, body: user)
-
-    all_users = File.read("./spec/fixtures/users.json")
-    stub_request(:get, "https://localhost:3000/api/v1/users")
-    .to_return(status: 200, body: all_users)
-
     @facade = UserFacade.new
   end
 
@@ -20,7 +11,7 @@ RSpec.describe UserFacade do
     end
   end
 
-  describe "#methods" do
+  describe "#create_user" do
     it "returns one user object with its attributes" do
       user_id = 1
       user_1 = @facade.create_user(user_id)
@@ -29,7 +20,9 @@ RSpec.describe UserFacade do
       expect(user_1.name).to be_a(String)
       expect(user_1.id).to be_a(String)
     end
+  end
 
+  describe "create_all_users" do
     it "returns all user objects with their respective attributes" do
       users = @facade.create_all_users
 

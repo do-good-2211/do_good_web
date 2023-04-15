@@ -2,59 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/random_acts
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"29f1bb5cdf204e0d90a3fa433e932bb8"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 0c05551c-172e-457d-94c6-3786091c9e35
-      X-Runtime:
-      - '0.814830'
-      Server-Timing:
-      - sql.active_record;dur=34.83, start_processing.action_controller;dur=0.06,
-        process_action.action_controller;dur=694.23
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":null,"type":"random_acts","attributes":{"deed_names":["Volunteer
-        at a local animal shelter","Donate blood at a local blood center","Donate
-        to your local food bank"]}}}'
-  recorded_at: Sat, 15 Apr 2023 15:16:38 GMT
-- request:
-    method: get
     uri: http://localhost:3000/api/v1/users
     body:
       encoding: US-ASCII
@@ -92,17 +39,73 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ef698b74-400c-49b8-b5e1-e665f9560454
+      - 14c9bd22-959e-487e-a5ed-2b6a91d7da88
       X-Runtime:
-      - '0.071733'
+      - '0.009141'
       Server-Timing:
-      - start_processing.action_controller;dur=0.12, sql.active_record;dur=36.15,
-        instantiation.active_record;dur=0.30, process_action.action_controller;dur=57.47
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=2.81, instantiation.active_record;dur=0.05,
+        process_action.action_controller;dur=4.15
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"users","attributes":{"name":"Jasmine Hamou","role":"user","good_deeds":[]}},{"id":"2","type":"users","attributes":{"name":"John
         Smith","role":"user","good_deeds":[]}}]}'
-  recorded_at: Sat, 15 Apr 2023 20:31:51 GMT
+  recorded_at: Sat, 15 Apr 2023 21:21:06 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/1/good_deeds?param=1
+    body:
+      encoding: UTF-8
+      string: '{"name":"Contribute code or a monetary donation to an open-source software
+        project","date":"2023-04-15","time":"2023-04-15 16:41:43 -0700","attendees":["1","2"]}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"fe409eaebef4d5cb95c311b97f707fa9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d0892e8e-0e61-42e4-b599-39310156968a
+      X-Runtime:
+      - '0.085339'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.26, sql.active_record;dur=34.87,
+        instantiation.active_record;dur=0.36, process_action.action_controller;dur=66.23
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"7","type":"good_deeds_create","attributes":{"name":"Contribute
+        code or a monetary donation to an open-source software project","media_link":null,"notes":null,"date":"2023-04-15","time":"2000-01-01T23:41:43.000Z","status":"In
+        Progress","host_id":1}}}'
+  recorded_at: Sat, 15 Apr 2023 23:42:04 GMT
 recorded_with: VCR 6.1.0

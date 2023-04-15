@@ -51,19 +51,19 @@
             "Accept"
           ],
           "Etag": [
-            "W/\"f25babae003bc349d29020b4248e002d\""
+            "W/\"96347f517c348c28b90cd8b0acd45021\""
           ],
           "Cache-Control": [
             "max-age=0, private, must-revalidate"
           ],
           "X-Request-Id": [
-            "b501b5fe-2c3c-4e11-be41-5c375ee319fe"
+            "65864919-30d0-474e-91c6-52f543dafdc3"
           ],
           "X-Runtime": [
-            "0.788403"
+            "0.728116"
           ],
           "Server-Timing": [
-            "sql.active_record;dur=23.81, start_processing.action_controller;dur=0.06, process_action.action_controller;dur=682.19"
+            "start_processing.action_controller;dur=0.11, process_action.action_controller;dur=718.06"
           ],
           "Transfer-Encoding": [
             "chunked"
@@ -71,15 +71,15 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"data\":{\"id\":null,\"type\":\"random_acts\",\"attributes\":{\"deed_names\":[\"Donate to your local food bank\",\"Pick up litter around your favorite park\",\"Clean out your closet and donate the clothes you've outgrown\"]}}}"
+          "string": "{\"data\":{\"id\":null,\"type\":\"random_acts\",\"attributes\":{\"deed_names\":[\"Contribute code or a monetary donation to an open-source software project\",\"Contribute code or a monetary donation to an open-source software project\",\"Clean out your closet and donate the clothes you've outgrown\"]}}}"
         }
       },
-      "recorded_at": "Sat, 15 Apr 2023 15:04:31 GMT"
+      "recorded_at": "Sat, 15 Apr 2023 20:34:36 GMT"
     },
     {
       "request": {
         "method": "get",
-        "uri": "http://localhost:3000/api/v1/random_acts",
+        "uri": "http://localhost:3000/api/v1/users",
         "body": {
           "encoding": "US-ASCII",
           "string": ""
@@ -127,19 +127,19 @@
             "Accept"
           ],
           "Etag": [
-            "W/\"6cae71c13659ffafc9beeeb847eed315\""
+            "W/\"c9697dadf57a68ccd80f02649001cfcd\""
           ],
           "Cache-Control": [
             "max-age=0, private, must-revalidate"
           ],
           "X-Request-Id": [
-            "0a0c89f6-0a72-45a2-8785-273d1dfeff4e"
+            "ecd0beff-4407-473f-b5f7-44684eb43f51"
           ],
           "X-Runtime": [
-            "0.608060"
+            "0.038631"
           ],
           "Server-Timing": [
-            "start_processing.action_controller;dur=0.04, process_action.action_controller;dur=602.55"
+            "start_processing.action_controller;dur=0.11, sql.active_record;dur=5.92, instantiation.active_record;dur=1.10, process_action.action_controller;dur=29.26"
           ],
           "Transfer-Encoding": [
             "chunked"
@@ -147,10 +147,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"data\":{\"id\":null,\"type\":\"random_acts\",\"attributes\":{\"deed_names\":[\"Donate to your local food bank\",\"Clean out your closet and donate the clothes you've outgrown\",\"Pick up litter around your favorite park\"]}}}"
+          "string": "{\"data\":[{\"id\":\"1\",\"type\":\"users\",\"attributes\":{\"name\":\"Jasmine Hamou\",\"role\":\"user\",\"good_deeds\":[]}},{\"id\":\"2\",\"type\":\"users\",\"attributes\":{\"name\":\"John Smith\",\"role\":\"user\",\"good_deeds\":[]}}]}"
         }
       },
-      "recorded_at": "Sat, 15 Apr 2023 15:04:32 GMT"
+      "recorded_at": "Sat, 15 Apr 2023 21:14:00 GMT"
     }
   ],
   "recorded_with": "VCR 6.1.0"

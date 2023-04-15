@@ -1,0 +1,165 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users?param=1
+    body:
+      encoding: UTF-8
+      string: '{"query":{"provider":"google_oauth2","uid":"100000000000000000000","info":{"name":"John
+        Smith","email":"john@example.com"}}}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"811245ca487e6ab91dd42f9a9a84ace8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9f7f0154-baf8-464d-9ce3-84ebbc3ae41d
+      X-Runtime:
+      - '0.051887'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.17, sql.active_record;dur=17.31,
+        instantiation.active_record;dur=1.99, process_action.action_controller;dur=34.66
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"users","attributes":{"name":"John Smith","role":"user","good_deeds":[]}}}'
+  recorded_at: Fri, 14 Apr 2023 21:17:43 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users?param=1
+    body:
+      encoding: UTF-8
+      string: '{"query":{"provider":"google_oauth2","uid":"100000000000000000000","info":{"name":"John
+        Smith","email":"john@example.com"}}}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"811245ca487e6ab91dd42f9a9a84ace8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 119254db-0aa4-4a84-b283-028fce637e4e
+      X-Runtime:
+      - '0.010806'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.43, sql.active_record;dur=3.17, instantiation.active_record;dur=0.06,
+        process_action.action_controller;dur=5.16
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"users","attributes":{"name":"John Smith","role":"user","good_deeds":[]}}}'
+  recorded_at: Fri, 14 Apr 2023 21:17:43 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users?param=1
+    body:
+      encoding: UTF-8
+      string: '{"query":{"provider":"google_oauth2","uid":"100000000000000000000","info":{"name":"John
+        Smith","email":"john@example.com"}}}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"811245ca487e6ab91dd42f9a9a84ace8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 737a245a-3bb0-4b24-bbe2-6a54a898640a
+      X-Runtime:
+      - '0.007595'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=1.29, instantiation.active_record;dur=0.04,
+        process_action.action_controller;dur=2.76
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"users","attributes":{"name":"John Smith","role":"user","good_deeds":[]}}}'
+  recorded_at: Fri, 14 Apr 2023 21:17:43 GMT
+recorded_with: VCR 6.1.0

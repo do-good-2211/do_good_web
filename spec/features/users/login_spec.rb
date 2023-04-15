@@ -3,6 +3,7 @@ require "rails_helper"
 RSpec.describe "Login Page" do
   describe "when I visit the login page", :vcr do
     it " has a link to login with google" do
+      visit login_path
       expect(page).to have_link("Log in with Google")
     end
   end

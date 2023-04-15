@@ -23,14 +23,14 @@ RSpec.describe "Random Acts index page", type: :feature do
       expect(page).to have_content("You must be logged in to create a new good deed")
     end
 
-    xit "As a logged-in User, when I click on any deed I am redirected to the new good dedd page" do
-      info = { attributes:{name: "Bob"} }
-      user = User.new(info)
+    it "As a logged-in User, when I click on any deed I am redirected to the new good deed page" do
+      user = User.new(id: 1, attributes: { name: "Bob", email: "user@example.com", password_digest: "test1", role: "User" })
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       visit '/random_acts'
 
-      click_on("Deed 1")
+      click_on(@random_acts.first.name)
+
       expect(current_path).to eq("/user/good_deeds/new")
     end
   end

@@ -42,18 +42,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 238df1dc-2e26-43e1-a8ea-e93950122bb5
+      - a3ec6dca-6f3c-43ed-862b-6dea408cfe05
       X-Runtime:
-      - '0.039247'
+      - '0.011597'
       Server-Timing:
-      - start_processing.action_controller;dur=0.15, sql.active_record;dur=12.02,
-        instantiation.active_record;dur=0.29, process_action.action_controller;dur=24.44
+      - start_processing.action_controller;dur=0.12, sql.active_record;dur=1.96, instantiation.active_record;dur=0.22,
+        process_action.action_controller;dur=5.60
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"2","type":"users","attributes":{"name":"John Smith","role":"user","good_deeds":[]}}}'
-  recorded_at: Sat, 15 Apr 2023 17:06:02 GMT
+  recorded_at: Sat, 15 Apr 2023 20:15:04 GMT
 - request:
     method: post
     uri: http://localhost:3000/api/v1/users?param=1
@@ -96,18 +96,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b90e76bb-aae7-4d03-a6da-342841db0785
+      - 14e37a30-78c6-4848-865e-61d12bd88d4e
       X-Runtime:
-      - '0.007757'
+      - '0.007608'
       Server-Timing:
-      - start_processing.action_controller;dur=0.07, sql.active_record;dur=2.27, instantiation.active_record;dur=0.04,
-        process_action.action_controller;dur=3.53
+      - start_processing.action_controller;dur=0.11, sql.active_record;dur=1.36, instantiation.active_record;dur=0.04,
+        process_action.action_controller;dur=2.67
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"2","type":"users","attributes":{"name":"John Smith","role":"user","good_deeds":[]}}}'
-  recorded_at: Sat, 15 Apr 2023 17:06:02 GMT
+  recorded_at: Sat, 15 Apr 2023 20:15:04 GMT
 - request:
     method: post
     uri: http://localhost:3000/api/v1/users?param=1
@@ -150,16 +150,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 348d36bb-e93b-4e2d-b007-8439a949c4dd
+      - 8e22edff-cb32-4c6c-91a5-536793de2f02
       X-Runtime:
-      - '0.008790'
+      - '0.008528'
       Server-Timing:
-      - start_processing.action_controller;dur=0.07, sql.active_record;dur=1.90, instantiation.active_record;dur=0.05,
-        process_action.action_controller;dur=4.87
+      - start_processing.action_controller;dur=0.11, sql.active_record;dur=1.79, instantiation.active_record;dur=0.05,
+        process_action.action_controller;dur=3.35
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"2","type":"users","attributes":{"name":"John Smith","role":"user","good_deeds":[]}}}'
-  recorded_at: Sat, 15 Apr 2023 17:06:02 GMT
+  recorded_at: Sat, 15 Apr 2023 20:15:04 GMT
 recorded_with: VCR 6.1.0

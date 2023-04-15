@@ -13,7 +13,7 @@ RSpec.describe UserService, :vcr do
 
   it "returns a json object of all the users" do
     users = UserService.find_all_users
-    
+
     expect(users).to be_a(Hash)
 
     users[:data].each do |user|

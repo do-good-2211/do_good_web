@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# app/facades/user_facade.rb
 class UserFacade
   def initialize; end
 

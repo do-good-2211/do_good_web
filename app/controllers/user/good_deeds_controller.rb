@@ -2,10 +2,6 @@
 
 # app/controllers/good_deeds_controller.rb
 class User::GoodDeedsController < ApplicationController
-  def index
-    @deeds = GoodDeedFacade.new
-  end
-
   def new
     @good_deed = params[:good_deed]
     return unless current_user.nil?

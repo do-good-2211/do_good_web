@@ -62,8 +62,8 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
-  config.include ApplicationHelper 
-  #so we can access current_user in the tests
+  config.include ApplicationHelper
+  # so we can access current_user in the tests
 
   RSpec.configure do |config|
     config.include FactoryBot::Syntax::Methods
@@ -73,6 +73,7 @@ RSpec.configure do |config|
     config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
     config.hook_into :webmock
     config.configure_rspec_metadata!
+    config.default_cassette_options = { record: :new_episodes }
   end
 end
 

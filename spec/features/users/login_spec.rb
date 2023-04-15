@@ -13,7 +13,7 @@ RSpec.describe "Login Page" do
 
     omni_hash
     visit login_path
-    click_on "Log in with Google" 
+    click_on "Log in with Google"
   end
 
   describe "when I click to login", :vcr do

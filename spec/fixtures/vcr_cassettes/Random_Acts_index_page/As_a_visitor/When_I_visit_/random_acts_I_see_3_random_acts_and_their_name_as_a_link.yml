@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/good_deeds
+    uri: http://localhost:3000/api/v1/random_acts
     body:
       encoding: US-ASCII
       string: ''
@@ -35,19 +35,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      - W/"fd56c602bc15e14a81b1c1f9d71a806a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d34ef9d7-7561-4911-9152-67c258d103ea
+      - 4cad56fc-fde6-4498-804a-5bcea67bc193
       X-Runtime:
-      - '0.025756'
+      - '1.590685'
       Server-Timing:
-      - start_processing.action_controller;dur=0.09, sql.active_record;dur=1.43, process_action.action_controller;dur=16.56
+      - start_processing.action_controller;dur=0.17, process_action.action_controller;dur=1581.27
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Sat, 15 Apr 2023 15:37:13 GMT
+      string: '{"data":{"id":null,"type":"random_acts","attributes":{"deed_names":["Donate
+        blood at a local blood center","Volunteer at your local food pantry","Donate
+        to your local food bank"]}}}'
+  recorded_at: Sat, 15 Apr 2023 20:18:36 GMT
 recorded_with: VCR 6.1.0

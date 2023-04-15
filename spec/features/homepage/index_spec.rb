@@ -25,7 +25,7 @@ RSpec.describe "Home page" do
       expect(current_path).to eq(random_acts_path)
     end
 
-    it "I can see a link to log in but not a link to log out" do 
+    it "I can see a link to log in but not a link to log out" do
       visit root_path
 
       expect(page).to have_link("Log In")
@@ -33,8 +33,8 @@ RSpec.describe "Home page" do
     end
   end
 
-  describe "As a logged in user", :vcr do 
-    it "should have a link to logout" do 
+  describe "As a logged in user", :vcr do
+    it "should have a link to logout" do
       user = User.new(id: 1, attributes: { name: "Bob", email: "user@example.com", password_digest: "test1", role: "User" })
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
@@ -43,14 +43,14 @@ RSpec.describe "Home page" do
       expect(page).to have_link("Log Out")
     end
 
-    it "when I click log out, I am redirected to the homepage and I see a link to log in" do 
-      visit root_path 
+    it "when I click log out, I am redirected to the homepage and I see a link to log in" do
+      visit root_path
 
       expect(page).to have_link("Log In")
       click_on("Log In")
       expect(current_path).to eq(login_path)
       click_on("Log in with Google")
-      
+
       visit root_path
 
       click_on("Log Out")

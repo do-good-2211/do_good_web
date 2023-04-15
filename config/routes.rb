@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  root 'user/good_deeds#index'
+  root 'good_deeds#index'
 
   get "/login", to: "users#login"
+  get "/logout", to: "sessions#logout"
+
   get "/auth/:provider/callback", to: "sessions#omniauth"
   get "/dashboard", to: "users#show"
 

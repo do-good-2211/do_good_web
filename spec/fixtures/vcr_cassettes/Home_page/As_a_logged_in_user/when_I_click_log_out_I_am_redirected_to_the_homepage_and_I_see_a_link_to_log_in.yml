@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/random_acts
+    uri: http://localhost:3000/api/v1/good_deeds
     body:
       encoding: US-ASCII
       string: ''
@@ -35,26 +35,25 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"30fe1bef4b956ef212d8639729c99769"
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 032340d3-c50e-42f2-8d8c-35018befbec5
+      - 4147dbaf-146d-4b11-9bf7-d3fabf486111
       X-Runtime:
-      - '0.568235'
+      - '0.086328'
       Server-Timing:
-      - start_processing.action_controller;dur=0.08, process_action.action_controller;dur=563.19
+      - start_processing.action_controller;dur=0.12, sql.active_record;dur=14.63,
+        process_action.action_controller;dur=59.34
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":null,"type":"random_acts","attributes":{"deed_names":["Volunteer
-        and help out at a senior center","Contribute code or a monetary donation to
-        an open-source software project","Mow your neighbor''s lawn"]}}}'
-  recorded_at: Sat, 15 Apr 2023 20:15:09 GMT
+      string: '{"data":[]}'
+  recorded_at: Sat, 15 Apr 2023 21:41:20 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/random_acts
+    uri: http://localhost:3000/api/v1/good_deeds
     body:
       encoding: US-ASCII
       string: ''
@@ -87,26 +86,78 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"9a660ec5ad4635569e63092d12364799"
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a25d1e33-2871-4de3-aa33-7e5303a91b30
+      - d2d17c1c-cd73-432d-b369-b10792db650a
       X-Runtime:
-      - '0.588870'
+      - '0.017047'
       Server-Timing:
-      - start_processing.action_controller;dur=0.06, process_action.action_controller;dur=583.61
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=2.19, process_action.action_controller;dur=6.38
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":null,"type":"random_acts","attributes":{"deed_names":["Clean
-        out your closet and donate the clothes you''ve outgrown","Mow your neighbor''s
-        lawn","Pick up litter around your favorite park"]}}}'
-  recorded_at: Sat, 15 Apr 2023 20:15:09 GMT
+      string: '{"data":[]}'
+  recorded_at: Sat, 15 Apr 2023 21:41:51 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users?param=1
+    body:
+      encoding: UTF-8
+      string: '{"query":{"provider":"google_oauth2","uid":"100000000000000000000","info":{"name":"John
+        Smith","email":"john@example.com"}}}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"811245ca487e6ab91dd42f9a9a84ace8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - daee140a-a9ea-4615-8fe6-c299d19a2aba
+      X-Runtime:
+      - '0.362099'
+      Server-Timing:
+      - sql.active_record;dur=178.76, start_processing.action_controller;dur=0.11,
+        instantiation.active_record;dur=20.19, process_action.action_controller;dur=61.44
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"users","attributes":{"name":"John Smith","role":"user","good_deeds":[]}}}'
+  recorded_at: Sat, 15 Apr 2023 22:07:34 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/random_acts
+    uri: http://localhost:3000/api/v1/good_deeds
     body:
       encoding: US-ASCII
       string: ''
@@ -139,21 +190,19 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"f57d4de566124bf5e6b5473ae938525c"
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0d9b623a-f26d-4eec-b378-c63273d072a5
+      - 3d4496d7-f8de-4114-8055-bd8a09faee78
       X-Runtime:
-      - '0.547493'
+      - '0.007294'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, process_action.action_controller;dur=542.76
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.06, process_action.action_controller;dur=2.19
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":null,"type":"random_acts","attributes":{"deed_names":["Volunteer
-        at your local food bank","Donate blood at a local blood center","Volunteer
-        at your local food bank"]}}}'
-  recorded_at: Sat, 15 Apr 2023 20:15:10 GMT
+      string: '{"data":[]}'
+  recorded_at: Sat, 15 Apr 2023 22:07:34 GMT
 recorded_with: VCR 6.1.0

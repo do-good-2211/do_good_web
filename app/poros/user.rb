@@ -2,9 +2,7 @@
 
 # app/poros/user.rb
 class User
-  attr_reader :name,
-              :email,
-              :password_digest,
+  attr_reader :name,           
               :role,
               :id
 

@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/random_acts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"9b02c6e2b1fd79cce33fd69f8f36c3b4"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0a33f30e-e62e-41fd-ba82-97362c82dcbd
+      X-Runtime:
+      - '0.940170'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, process_action.action_controller;dur=931.04
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"random_acts","attributes":{"deed_names":["Find
+        a charity and donate to it","Find a charity and donate to it","Volunteer and
+        help out at a senior center"]}}}'
+  recorded_at: Sat, 15 Apr 2023 15:38:46 GMT
+recorded_with: VCR 6.1.0

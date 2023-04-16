@@ -1,0 +1,108 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/random_acts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"29f1bb5cdf204e0d90a3fa433e932bb8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0c05551c-172e-457d-94c6-3786091c9e35
+      X-Runtime:
+      - '0.814830'
+      Server-Timing:
+      - sql.active_record;dur=34.83, start_processing.action_controller;dur=0.06,
+        process_action.action_controller;dur=694.23
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"random_acts","attributes":{"deed_names":["Volunteer
+        at a local animal shelter","Donate blood at a local blood center","Donate
+        to your local food bank"]}}}'
+  recorded_at: Sat, 15 Apr 2023 15:16:38 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"c9697dadf57a68ccd80f02649001cfcd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ef698b74-400c-49b8-b5e1-e665f9560454
+      X-Runtime:
+      - '0.071733'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.12, sql.active_record;dur=36.15,
+        instantiation.active_record;dur=0.30, process_action.action_controller;dur=57.47
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"users","attributes":{"name":"Jasmine Hamou","role":"user","good_deeds":[]}},{"id":"2","type":"users","attributes":{"name":"John
+        Smith","role":"user","good_deeds":[]}}]}'
+  recorded_at: Sat, 15 Apr 2023 20:31:51 GMT
+recorded_with: VCR 6.1.0

@@ -4,8 +4,11 @@
 class SessionsController < ApplicationController
   def omniauth
     user = SessionsFacade.new.authorize_user(request.env["omniauth.auth"])
-    session[:user_id] = user.name
-    flash[:message] = "Welcome, #{user.name}!"
+    session[:user] = user
+   
+    if current_user
+      redirect_to "/dashboard"
+    end
 
     session[:token] = request.env["omniauth.auth"][:credentials][:token]
 
@@ -33,6 +36,5 @@ class SessionsController < ApplicationController
     # @calendar_list = service.list_calendar_lists.items
 
     redirect_to "/"
-
   end
 end

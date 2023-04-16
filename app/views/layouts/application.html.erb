@@ -11,15 +11,40 @@
   </head>
 
   <body>
-    <section id="header" class="h-14 bg-gradient-to-r from-orange-300 to-rose-300">
-      <a class="m-6 text-gray-900 text-2xl font-bold text-center" href="/">
-        Do Good
-      </a>
-    </section>
+    <header class="bg-neutral-200 bg-gradient-to-r from-orange-300 to-rose-400 lg:text-left">
+      <div class="p-4 text-left text-gray-900 font-bold dark:text-neutral-200">
+        <a class="text-gray-900 font-bold dark:text-neutral-400 hover:text-white"
+          href="/">
+          Do Good 
+        </a>
+        <!-- Below are only displayed when a user is logged in / Need to align right 
+        <a class="text-gray-900 font-bold dark:text-neutral-400 hover:text-white"
+          href="/dashboard">
+          My Page
+        </a>
+        <a class="text-gray-900 font-bold dark:text-neutral-400 hover:text-white"
+          href="/">
+          Log Out
+        </a> -->
+      </div>
+    </header>
 
-  <% flash.each do |type, message| %>
-    <p><%= message %></p>
-    <% end %>
-    <%= yield %>
+    <% flash.each do |type, message| %>
+      <p><%= message %></p>
+      <% end %>
+      <%= yield %>
+
+    <footer
+      class="bg-neutral-200 text-center bg-gradient-to-r from-indigo-500 to-fuchsia-600 lg:text-left">
+      <div class="p-4 text-center text-gray-900 font-bold dark:text-neutral-200">
+        Need more feel-goods? 
+        <a
+          class="text-gray-900 font-bold dark:text-neutral-400 hover:text-white"
+          href="https://www.mentalhealth.gov/get-help/immediate-help">
+          Get Help Today
+          </a>
+      </div>
+    </footer>
+
   </body>
 </html>

@@ -39,16 +39,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a892b260-a740-4bcb-9b0a-2269f06d761f
+      - a389d94e-b289-4660-aea6-e23800d0abd6
       X-Runtime:
-      - '0.074602'
+      - '0.009768'
       Server-Timing:
-      - sql.active_record;dur=22.45, start_processing.action_controller;dur=0.05,
-        process_action.action_controller;dur=7.24
+      - start_processing.action_controller;dur=0.11, sql.active_record;dur=0.90, process_action.action_controller;dur=5.19
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sat, 15 Apr 2023 15:32:00 GMT
+  recorded_at: Sat, 15 Apr 2023 20:15:04 GMT
 recorded_with: VCR 6.1.0

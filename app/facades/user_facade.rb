@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 # app/facades/user_facade.rb
+# frozen_string_literal: true
+
+# app/facades/user_facade.rb
 class UserFacade
   attr_reader :good_deed,
               :user

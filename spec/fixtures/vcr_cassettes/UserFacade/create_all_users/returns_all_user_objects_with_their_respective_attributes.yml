@@ -35,21 +35,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"c9697dadf57a68ccd80f02649001cfcd"
+      - W/"f199d47a3997b02fbe498facf29063d5"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 252853af-36f9-42f7-9fe5-9c4b261176eb
+      - d0bc247d-d4fd-495c-bd99-34e978506ade
       X-Runtime:
-      - '0.036749'
+      - '0.007617'
       Server-Timing:
-      - start_processing.action_controller;dur=0.03, sql.active_record;dur=14.71,
-        instantiation.active_record;dur=5.25, process_action.action_controller;dur=31.92
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=2.33, instantiation.active_record;dur=0.05,
+        process_action.action_controller;dur=3.73
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"users","attributes":{"name":"Jasmine Hamou","role":"user","good_deeds":[]}},{"id":"2","type":"users","attributes":{"name":"John
+      string: '{"data":[{"id":"1","type":"users","attributes":{"name":"Kara Jones-Hofmann","role":"user","good_deeds":[]}},{"id":"2","type":"users","attributes":{"name":"John
         Smith","role":"user","good_deeds":[]}}]}'
-  recorded_at: Sat, 15 Apr 2023 15:42:31 GMT
+  recorded_at: Sat, 15 Apr 2023 20:15:04 GMT
 recorded_with: VCR 6.1.0

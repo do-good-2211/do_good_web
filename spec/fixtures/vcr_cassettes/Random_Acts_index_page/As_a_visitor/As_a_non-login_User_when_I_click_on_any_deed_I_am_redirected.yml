@@ -35,27 +35,26 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"29f1bb5cdf204e0d90a3fa433e932bb8"
+      - W/"040222264563975e39b05a298196fbc6"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0c05551c-172e-457d-94c6-3786091c9e35
+      - 8d3eb0f4-6a39-4692-95d8-ac69762d5723
       X-Runtime:
-      - '0.814830'
+      - '0.518119'
       Server-Timing:
-      - sql.active_record;dur=34.83, start_processing.action_controller;dur=0.06,
-        process_action.action_controller;dur=694.23
+      - start_processing.action_controller;dur=0.05, process_action.action_controller;dur=513.43
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":null,"type":"random_acts","attributes":{"deed_names":["Volunteer
-        at a local animal shelter","Donate blood at a local blood center","Donate
-        to your local food bank"]}}}'
-  recorded_at: Sat, 15 Apr 2023 15:16:38 GMT
+        at your local food pantry","Volunteer at your local food bank","Donate blood
+        at a local blood center"]}}}'
+  recorded_at: Sat, 15 Apr 2023 20:15:07 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users
+    uri: http://localhost:3000/api/v1/random_acts
     body:
       encoding: US-ASCII
       string: ''
@@ -88,21 +87,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"c9697dadf57a68ccd80f02649001cfcd"
+      - W/"a3c982c1ad3caebdfa6af5ccc396223e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ef698b74-400c-49b8-b5e1-e665f9560454
+      - e7682d8e-ab12-43a3-b548-8942c90527ec
       X-Runtime:
-      - '0.071733'
+      - '0.521642'
       Server-Timing:
-      - start_processing.action_controller;dur=0.12, sql.active_record;dur=36.15,
-        instantiation.active_record;dur=0.30, process_action.action_controller;dur=57.47
+      - start_processing.action_controller;dur=0.09, process_action.action_controller;dur=516.69
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"users","attributes":{"name":"Jasmine Hamou","role":"user","good_deeds":[]}},{"id":"2","type":"users","attributes":{"name":"John
-        Smith","role":"user","good_deeds":[]}}]}'
-  recorded_at: Sat, 15 Apr 2023 20:31:51 GMT
+      string: '{"data":{"id":null,"type":"random_acts","attributes":{"deed_names":["Volunteer
+        at your local food pantry","Pick up litter around your favorite park","Volunteer
+        at a local animal shelter"]}}}'
+  recorded_at: Sat, 15 Apr 2023 20:15:08 GMT
 recorded_with: VCR 6.1.0

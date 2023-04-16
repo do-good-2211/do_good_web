@@ -10,4 +10,9 @@ class SessionsController < ApplicationController
 
     redirect_to "/dashboard"
   end
+
+  def logout
+    session[:user] = nil
+    redirect_to root_path
+  end
 end

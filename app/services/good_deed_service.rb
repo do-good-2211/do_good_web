@@ -14,4 +14,8 @@ class GoodDeedService
   def self.good_deeds
     get_url("/api/v1/good_deeds")
   end
+
+  def self.fetch_deed(user_id, deed_id)
+    get_url("/api/v1/users/#{user_id}/good_deeds/#{deed_id}")
+  end
 end

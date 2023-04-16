@@ -4,5 +4,11 @@
 class UsersController < ApplicationController
   def login; end
 
-  def show; end
+  def show; 
+    @email = current_user["email"].gsub("@gmail.com", "")
+
+    # May need these if Iframe doesnt workout
+    # token = session[:token]
+    # @calendars = CalendarFacade.new.list_calendars(@email, token)
+  end
 end

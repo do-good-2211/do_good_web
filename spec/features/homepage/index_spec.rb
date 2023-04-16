@@ -19,6 +19,8 @@ RSpec.describe "Home page", type: :feature do
     end
 
     it "When I click on the Random Act button I am redirected to the random acts page" do
+      user = { id: 1, attributes: { name: "Bob", email: "user@example.com", password_digest: "test1", role: "User" } }
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit root_path
 
       click_on "Random Act"
@@ -30,6 +32,23 @@ RSpec.describe "Home page", type: :feature do
 
       expect(page).to have_link("Log In")
       expect(page).to_not have_link("Log Out")
+    end
+
+    it "has a link to My Page and redirects me to my dashboard" do
+      user = { id: 1, attributes: { name: "Bob", email: "user@example.com", password_digest: "test1", role: "User" } }
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+      visit root_path
+
+      expect(page).to have_link("My Page")
+      click_on("My Page")
+      expect(current_path).to eq(dashboard_path)
+    end
+
+    it "has a link to the home page" do
+      visit root_path
+      expect(page).to have_link("DO GOOD")
+      click_on("DO GOOD")
+      expect(current_path).to eq(root_path)
     end
   end
 
@@ -49,13 +68,14 @@ RSpec.describe "Home page", type: :feature do
       expect(page).to have_link("Log In")
       click_on("Log In")
       expect(current_path).to eq(login_path)
-      click_on("Log in with Google")
+      click_link("Log in with Google")
 
       visit root_path
 
       click_on("Log Out")
       expect(page).to have_content("Log In")
       expect(page).to_not have_content("Log Out")
+      expect(page).to have_content("Successfully logged out")
     end
   end
 end

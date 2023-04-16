@@ -2,57 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/1
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Cache-Control:
-      - no-cache
-      X-Request-Id:
-      - 6bba88c7-2035-4cd0-9e37-72d5c7a35923
-      X-Runtime:
-      - '0.006292'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.07, sql.active_record;dur=0.79, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.85
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"errors":[{"status":"404","title":"Invalid Request","detail":["Couldn''t
-        find User with [WHERE \"users\".\"uid\" = $1]"]}]}'
-  recorded_at: Sat, 15 Apr 2023 20:15:11 GMT
-- request:
-    method: get
-    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1
+    uri: http://localhost:3000/api/v1/good_deeds
     body:
       encoding: US-ASCII
       string: ''
@@ -68,12 +18,6 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Sun, 16 Apr 2023 21:42:38 GMT
-      Connection:
-      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -91,19 +35,72 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"27f9ad7cd35120d38c74136a722d4c3e"
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b475c659-bad8-4da5-8e45-ea135821e1ec
+      - c35fc3aa-59d6-4371-becb-99a74202f083
       X-Runtime:
-      - '0.004829'
+      - '0.006196'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.28, process_action.action_controller;dur=1.95
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"users","attributes":{"name":"John Smith","role":"user","good_deeds":[]}}}'
-  recorded_at: Sun, 16 Apr 2023 21:42:38 GMT
+      string: '{"data":[]}'
+  recorded_at: Sun, 16 Apr 2023 18:01:39 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/random_acts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"e69fe67a0bc17e435a36fb14acdda37a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e5a5cccd-2a0a-4029-b18b-b0bfe38d2c31
+      X-Runtime:
+      - '0.545900'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, process_action.action_controller;dur=541.50
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"random_acts","attributes":{"deed_names":["Contribute
+        code or a monetary donation to an open-source software project","Clean out
+        your closet and donate the clothes you''ve outgrown","Volunteer at your local
+        food bank"]}}}'
+  recorded_at: Sun, 16 Apr 2023 18:01:40 GMT
 recorded_with: VCR 6.1.0

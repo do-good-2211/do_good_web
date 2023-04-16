@@ -1,9 +1,5 @@
-<%if current_user %>
-  <%=link_to "Log Out", "/logout"%>
-<% else %>
-  <div id= "header">
-    <%= link_to "Log In", login_path %>
-  </div>
+<% if current_user.nil?%>
+  <%= link_to "Log In", login_path %>
 <% end %>
 
 <div id= "title">

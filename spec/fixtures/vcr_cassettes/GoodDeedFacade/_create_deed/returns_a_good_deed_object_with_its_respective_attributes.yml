@@ -2,7 +2,64 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/api/v1/users/2/good_deeds?param=1
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/2/good_deeds?param=1
+    body:
+      encoding: UTF-8
+      string: '{"name":"High-five a stranger.","date":"02-02-2024","time":"2000-01-01T16:00:00.000Z","attendees":[1]}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sun, 16 Apr 2023 22:05:21 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 5809cd12-dded-418b-a4e2-d6b3301c43c3
+      X-Runtime:
+      - '0.132358'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"status":"404","title":"Invalid Request","detail":["Couldn''t
+        find User with ''id''=2"]}]}'
+  recorded_at: Sun, 16 Apr 2023 22:05:21 GMT
+- request:
+    method: post
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds?param=1
     body:
       encoding: UTF-8
       string: '{"name":"High-five a stranger.","date":"02-02-2024","time":"2000-01-01T16:00:00.000Z","attendees":[1]}'
@@ -20,6 +77,12 @@ http_interactions:
       code: 201
       message: Created
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sun, 16 Apr 2023 22:14:39 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -37,22 +100,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"37a66d9b53e204b854d5f719a8fa331a"
+      - W/"2c969a325ed1e55f7f59bcc9137bf534"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3e172ded-3987-4f94-bcfd-48462c4624e4
+      - 87b27e3c-b119-4722-86c8-654fe8f0cbf1
       X-Runtime:
-      - '0.213494'
-      Server-Timing:
-      - sql.active_record;dur=29.35, start_processing.action_controller;dur=0.29,
-        instantiation.active_record;dur=1.45, process_action.action_controller;dur=33.64
+      - '0.062474'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"6","type":"good_deeds_create","attributes":{"name":"High-five
+      string: '{"data":{"id":"9","type":"good_deeds_create","attributes":{"name":"High-five
         a stranger.","media_link":null,"notes":null,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
-        Progress","host_id":2}}}'
-  recorded_at: Sat, 15 Apr 2023 23:21:07 GMT
+        Progress","host_id":1}}}'
+  recorded_at: Sun, 16 Apr 2023 22:14:39 GMT
 recorded_with: VCR 6.1.0

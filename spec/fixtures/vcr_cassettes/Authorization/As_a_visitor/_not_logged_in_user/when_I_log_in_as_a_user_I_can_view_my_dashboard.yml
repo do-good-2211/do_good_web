@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/1
+    uri: http://localhost:3000/api/v1/good_deeds
     body:
       encoding: US-ASCII
       string: ''
@@ -15,8 +15,8 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -34,20 +34,20 @@ http_interactions:
       - application/json; charset=utf-8
       Vary:
       - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b0b446d9-5bb3-4f66-a400-4a8fe943a8a0
+      - 993830ce-8ab4-4e2a-9481-16687cfcfc02
       X-Runtime:
-      - '0.138111'
+      - '0.135642'
       Server-Timing:
-      - start_processing.action_controller;dur=0.59, sql.active_record;dur=55.98,
-        process_action.action_controller;dur=102.02
+      - start_processing.action_controller;dur=0.12, sql.active_record;dur=2.61, process_action.action_controller;dur=120.85
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"errors":[{"status":"404","title":"Invalid Request","detail":["Couldn''t
-        find User with ''id''={:id=\u003e\"1\"}"]}]}'
-  recorded_at: Sun, 16 Apr 2023 02:04:27 GMT
+      string: '{"data":[]}'
+  recorded_at: Sun, 16 Apr 2023 18:01:39 GMT
 recorded_with: VCR 6.1.0

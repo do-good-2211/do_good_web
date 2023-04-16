@@ -11,6 +11,11 @@
   </head>
 
   <body>
+  <% if current_user %>
+    <%= link_to "My Page", dashboard_path %>
+    <%= link_to "Log Out", logout_path %>
+  <% end %>
+  <%= link_to "DO GOOD", root_path%>
   <% flash.each do |type, message| %>
     <p><%= message %></p>
     <% end %>

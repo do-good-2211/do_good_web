@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get "/dashboard", to: "users#show"
 
   namespace :user do
-    resources :good_deeds, only: [:new]
+    resources :good_deeds, only: [:new, :create]
   end
 
   resources :random_acts, only: [:index]

@@ -1,0 +1,19 @@
+<header>
+  <h3><%= @facade.good_deed %></h3>
+</header>
+
+<section id="new_good_deed">
+  <%= form_with url: user_good_deeds_path, method: :post, local: true do |f| %>
+    <%= f.hidden_field :name, value: @facade.good_deed %>
+    <%= f.label :date %>
+    <%= f.date_field :date, min: Date.today  %>
+    <%= f.label :time %>
+    <%= f.time_field :time %>
+    <%= f.label :atendees, 'Invite Other Users' %><br>
+      <% @facade.fetch_all_but_user.each do |user| %>
+        <%= f.check_box :attendees, { multiple: true }, user.id, false %>
+        <%= f.label :attendees, "#{user.name}" %><br>
+      <% end %>
+    <%= f.submit 'Create Good!' %>
+  <% end %>
+</section>

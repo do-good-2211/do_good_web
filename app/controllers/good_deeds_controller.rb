@@ -3,6 +3,6 @@
 # app/controllers/good_deeds_controller.rb
 class GoodDeedsController < ApplicationController
   def index
-    @deeds = GoodDeedFacade.new
+    @deeds = GoodDeedFacade.new(params, nil)
   end
 end

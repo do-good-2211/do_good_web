@@ -8,7 +8,7 @@ class Deed
 
   def initialize(info)
     @id = info[:id].to_i
-    @name = info[:attributes][:deed_name]
+    @name = info[:attributes][:name]
     @media_link = info[:attributes][:media_link]
   end
 end

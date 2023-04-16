@@ -37,17 +37,17 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 2b3aeadc-988d-4d3f-853a-41580e5d2551
+      - b0b446d9-5bb3-4f66-a400-4a8fe943a8a0
       X-Runtime:
-      - '0.190501'
+      - '0.138111'
       Server-Timing:
-      - sql.active_record;dur=118.57, start_processing.action_controller;dur=0.10,
-        process_action.action_controller;dur=69.52
+      - start_processing.action_controller;dur=0.59, sql.active_record;dur=55.98,
+        process_action.action_controller;dur=102.02
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"errors":[{"status":"404","title":"Invalid Request","detail":["Couldn''t
         find User with ''id''={:id=\u003e\"1\"}"]}]}'
-  recorded_at: Sat, 15 Apr 2023 21:32:05 GMT
+  recorded_at: Sun, 16 Apr 2023 02:04:27 GMT
 recorded_with: VCR 6.1.0

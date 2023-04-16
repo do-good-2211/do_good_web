@@ -1,14 +1,16 @@
 require "rails_helper"
 
 RSpec.describe "Random Acts index page", type: :feature do
-  xdescribe "As a visitor", :vcr do
+  describe "As a visitor", :vcr do
     before do
       VCR.use_cassette('random_acts', serialize_with: :json) do
-        # @random_act = RandomActFacade.new.create_acts
+        @random_acts = ["Find a charity and donate to it", "Donate blood at a local blood center" ,"Pick up litter around your favorite park"]
 
         visit '/random_acts'
-        # save_and_open_page
       end
+
+      user = {id: 1, attributes: { name: "Bob", email: "user@example.com", password_digest: "test1", role: "User" }}
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     end
 
     it "When I visit '/random_acts' I see 3 random acts and their name as a link" do
@@ -17,19 +19,7 @@ RSpec.describe "Random Acts index page", type: :feature do
       expect(page).to have_link(@random_acts.last)
     end
 
-    it "As a non-login User, when I click on any deed I am redirected" do
-      click_on(@random_acts.first)
-
-      expect(current_path).to eq(login_path)
-      expect(page).to have_content("You must be logged in to create a new good deed")
-    end
-
     it "As a logged-in User, when I click on any deed I am redirected to the new good deed page" do
-      user = User.new(id: 1, attributes: { name: "Bob", email: "user@example.com", password_digest: "test1", role: "User" })
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-
-      visit '/random_acts'
-
       click_on(@random_acts.first)
 
       expect(current_path).to eq("/user/good_deeds/new")

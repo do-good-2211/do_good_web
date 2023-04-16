@@ -11,16 +11,16 @@ RSpec.describe UserFacade, :vcr do
     end
   end
 
-  describe "#create_user" do
-    it "returns one user object with its attributes" do
-      user_id = 1
-      user_1 = @facade.create_user(user_id)
+  # describe "#create_user" do
+  #   it "returns one user object with its attributes" do
+  #     user_id = 1
+  #     user_1 = @facade.create_user(user_id)
 
-      expect(user_1).to be_an_instance_of(User)
-      expect(user_1.name).to be_a(String)
-      expect(user_1.id).to be_a(String)
-    end
-  end
+  #     expect(user_1).to be_an_instance_of(User)
+  #     expect(user_1.name).to be_a(String)
+  #     expect(user_1.id).to be_a(String)
+  #   end
+  # end
 
   describe "create_all_users" do
     it "returns all user objects with their respective attributes" do

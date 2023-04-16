@@ -1,0 +1,107 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users?param=1
+    body:
+      encoding: UTF-8
+      string: '{"query":{"provider":"google_oauth2","uid":"100000000000000000000","info":{"name":"John
+        Smith","email":"john@example.com"}}}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"811245ca487e6ab91dd42f9a9a84ace8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6de34a53-a45a-4048-a251-028130b7e8ca
+      X-Runtime:
+      - '0.010709'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=4.59, instantiation.active_record;dur=0.05,
+        process_action.action_controller;dur=6.17
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"users","attributes":{"name":"John Smith","role":"user","good_deeds":[]}}}'
+  recorded_at: Sat, 15 Apr 2023 20:15:05 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/good_deeds
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6f7175c5-5eff-44ed-a288-365194d6850f
+      X-Runtime:
+      - '0.005964'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.89, process_action.action_controller;dur=1.54
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Sat, 15 Apr 2023 20:15:05 GMT
+recorded_with: VCR 6.1.0

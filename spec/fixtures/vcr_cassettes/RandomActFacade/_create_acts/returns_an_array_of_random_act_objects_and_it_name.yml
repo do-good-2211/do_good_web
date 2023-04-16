@@ -1,15 +1,12 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: http://localhost:3000/api/v1/users?param=1
+    method: get
+    uri: http://localhost:3000/api/v1/random_acts
     body:
-      encoding: UTF-8
-      string: '{"query":{"provider":"google_oauth2","uid":"100000000000000000000","info":{"name":"John
-        Smith","email":"john@example.com"}}}'
+      encoding: US-ASCII
+      string: ''
     headers:
-      Content-Type:
-      - application/json
       User-Agent:
       - Faraday v2.7.4
       Accept-Encoding:
@@ -38,20 +35,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"811245ca487e6ab91dd42f9a9a84ace8"
+      - W/"11dd7364514af31b42a18fe5082e93fb"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 85c61cae-89c9-42bc-ba09-f0f3bbf90414
+      - 11681c5e-b475-4f63-b782-1feed6510c6b
       X-Runtime:
-      - '0.008422'
+      - '0.612623'
       Server-Timing:
-      - start_processing.action_controller;dur=0.08, sql.active_record;dur=1.27, instantiation.active_record;dur=0.05,
-        process_action.action_controller;dur=3.47
+      - start_processing.action_controller;dur=0.05, process_action.action_controller;dur=608.10
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"users","attributes":{"name":"John Smith","role":"user","good_deeds":[]}}}'
-  recorded_at: Fri, 14 Apr 2023 21:17:44 GMT
+      string: '{"data":{"id":null,"type":"random_acts","attributes":{"deed_names":["Volunteer
+        at your local food bank","Volunteer and help out at a senior center","Pick
+        up litter around your favorite park"]}}}'
+  recorded_at: Sat, 15 Apr 2023 20:15:04 GMT
 recorded_with: VCR 6.1.0

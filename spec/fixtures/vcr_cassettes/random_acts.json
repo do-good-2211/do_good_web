@@ -1,0 +1,81 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "get",
+        "uri": "http://localhost:3000/api/v1/random_acts",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.7.4"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Xss-Protection": [
+            "0"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Download-Options": [
+            "noopen"
+          ],
+          "X-Permitted-Cross-Domain-Policies": [
+            "none"
+          ],
+          "Referrer-Policy": [
+            "strict-origin-when-cross-origin"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Vary": [
+            "Accept"
+          ],
+          "Etag": [
+            "W/\"54d2c54382d2d5d6e7a91873a7ed7af1\""
+          ],
+          "Cache-Control": [
+            "max-age=0, private, must-revalidate"
+          ],
+          "X-Request-Id": [
+            "78bcdcd4-34c3-458a-bba4-cd5192d56261"
+          ],
+          "X-Runtime": [
+            "0.624472"
+          ],
+          "Server-Timing": [
+            "start_processing.action_controller;dur=0.15, process_action.action_controller;dur=614.18"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"data\":{\"id\":null,\"type\":\"random_acts\",\"attributes\":{\"deed_names\":[\"Find a charity and donate to it\",\"Donate blood at a local blood center\",\"Pick up litter around your favorite park\"]}}}"
+        }
+      },
+      "recorded_at": "Sun, 16 Apr 2023 01:54:44 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.1.0"
+}

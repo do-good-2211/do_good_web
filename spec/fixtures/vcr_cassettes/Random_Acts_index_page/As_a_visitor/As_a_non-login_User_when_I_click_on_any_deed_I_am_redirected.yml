@@ -1,0 +1,107 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/random_acts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"040222264563975e39b05a298196fbc6"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8d3eb0f4-6a39-4692-95d8-ac69762d5723
+      X-Runtime:
+      - '0.518119'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, process_action.action_controller;dur=513.43
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"random_acts","attributes":{"deed_names":["Volunteer
+        at your local food pantry","Volunteer at your local food bank","Donate blood
+        at a local blood center"]}}}'
+  recorded_at: Sat, 15 Apr 2023 20:15:07 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/random_acts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"a3c982c1ad3caebdfa6af5ccc396223e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e7682d8e-ab12-43a3-b548-8942c90527ec
+      X-Runtime:
+      - '0.521642'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.09, process_action.action_controller;dur=516.69
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"random_acts","attributes":{"deed_names":["Volunteer
+        at your local food pantry","Pick up litter around your favorite park","Volunteer
+        at a local animal shelter"]}}}'
+  recorded_at: Sat, 15 Apr 2023 20:15:08 GMT
+recorded_with: VCR 6.1.0

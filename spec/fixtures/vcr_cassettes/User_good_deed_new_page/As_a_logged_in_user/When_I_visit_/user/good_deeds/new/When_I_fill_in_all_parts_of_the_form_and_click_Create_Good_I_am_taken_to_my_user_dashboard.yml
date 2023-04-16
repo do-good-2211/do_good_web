@@ -1,0 +1,130 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"54b0cf204699eed12655d04ece367b6d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1bf85acd-d972-4752-b40c-8b2f6c20651b
+      X-Runtime:
+      - '0.030877'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.11, sql.active_record;dur=2.87, instantiation.active_record;dur=0.39,
+        process_action.action_controller;dur=21.26
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"users","attributes":{"name":"Jasmine Hamou","role":"user","good_deeds":[{"id":2,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-15T22:20:38.037Z","updated_at":"2023-04-15T22:20:38.037Z"},{"id":5,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-15T22:26:42.755Z","updated_at":"2023-04-15T22:26:42.755Z"},{"id":6,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-15T23:21:07.177Z","updated_at":"2023-04-15T23:21:07.177Z"},{"id":7,"name":"Contribute
+        code or a monetary donation to an open-source software project","host_id":1,"date":"2023-04-15","time":"2000-01-01T23:41:43.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-15T23:42:04.681Z","updated_at":"2023-04-15T23:42:04.681Z"},{"id":7,"name":"Contribute
+        code or a monetary donation to an open-source software project","host_id":1,"date":"2023-04-15","time":"2000-01-01T23:41:43.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-15T23:42:04.681Z","updated_at":"2023-04-15T23:42:04.681Z"}]}},{"id":"2","type":"users","attributes":{"name":"John
+        Smith","role":"user","good_deeds":[{"id":2,"name":"High-five a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-15T22:20:38.037Z","updated_at":"2023-04-15T22:20:38.037Z"},{"id":2,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-15T22:20:38.037Z","updated_at":"2023-04-15T22:20:38.037Z"},{"id":5,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-15T22:26:42.755Z","updated_at":"2023-04-15T22:26:42.755Z"},{"id":6,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-15T23:21:07.177Z","updated_at":"2023-04-15T23:21:07.177Z"},{"id":7,"name":"Contribute
+        code or a monetary donation to an open-source software project","host_id":1,"date":"2023-04-15","time":"2000-01-01T23:41:43.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-15T23:42:04.681Z","updated_at":"2023-04-15T23:42:04.681Z"}]}}]}'
+  recorded_at: Sun, 16 Apr 2023 02:33:35 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/1/good_deeds?param=1
+    body:
+      encoding: UTF-8
+      string: '{"name":"Contribute code or a monetary donation to an open-source software
+        project","date":"2023-04-15","time":"2023-04-15 19:33:35 -0700","attendees":["1","2"]}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"7c6acd8f23327ed9e9afccbd78c58e54"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a827eb56-0b37-4059-8a1f-8458e720c3e4
+      X-Runtime:
+      - '0.048956'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=22.84,
+        instantiation.active_record;dur=0.24, process_action.action_controller;dur=43.31
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"9","type":"good_deeds_create","attributes":{"name":"Contribute
+        code or a monetary donation to an open-source software project","media_link":null,"notes":null,"date":"2023-04-15","time":"2000-01-02T02:33:35.000Z","status":"In
+        Progress","host_id":1}}}'
+  recorded_at: Sun, 16 Apr 2023 02:33:35 GMT
+recorded_with: VCR 6.1.0

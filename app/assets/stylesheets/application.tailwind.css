@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 /*
+*= require_tree .
+*= require_self
 
 @layer components {
   .btn-primary {

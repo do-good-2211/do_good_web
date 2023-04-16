@@ -7,11 +7,16 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+    <section id="header" class="h-14 bg-gradient-to-r from-orange-300 to-rose-300">
+      <a class="m-6 text-gray-900 text-2xl font-bold text-center" href="/">
+        Do Good
+      </a>
+    </section>
+
   <% flash.each do |type, message| %>
     <p><%= message %></p>
     <% end %>

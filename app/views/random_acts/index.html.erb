@@ -1,3 +1,52 @@
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mb-12">
+    <article>
+        <h2 class="py-20 text-2xl font-extrabold text-gray-900 text-center">Choose a Random Act of Kindess!</h2>
+        <section class="mt-6 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8">
+            <article class="bg-indigo-400 relative w-full h-64 bg-cover bg-center group rounded-lg overflow-hidden shadow-lg hover:shadow-2xl  transition duration-300 ease-in-out">
+                <div class="absolute inset-0 bg-black bg-opacity-10 group-hover:opacity-75 transition duration-300 ease-in-out"></div>
+                <div class="relative w-full h-full px-4 sm:px-6 lg:px-4 flex justify-center items-center">
+                    <h3 class="text-center">
+                        <a class="text-white text-2xl font-bold text-center" href="/user/good_deeds/new">
+                            <span class="absolute inset-0"></span>
+                            <%= link_to @acts.create_acts[0].name, "/user/good_deeds/new", style: "color: white; font-size: 2rem; font-weight: bold; text-align: center;" %>
+                        </a>
+                    </h3>
+                </div>
+            </article>
+            <article class="bg-indigo-400 relative w-full h-64 bg-cover bg-center group rounded-lg overflow-hidden shadow-lg hover:shadow-2xl  transition duration-300 ease-in-out">
+                <div class="absolute inset-0 bg-black bg-opacity-10 group-hover:opacity-75 transition duration-300 ease-in-out"></div>
+                <div class="relative w-full h-full px-4 sm:px-6 lg:px-4 flex justify-center items-center">
+                    <h3 class="text-center">
+                        <a class="text-white text-2xl font-bold text-center" href="/user/good_deeds/new">
+                            <span class="absolute inset-0"></span>
+                            <%= link_to @acts.create_acts[1].name, "/user/good_deeds/new", style: "color: white; font-size: 2rem; font-weight: bold; text-align: center;" %>
+                        </a>
+                    </h3>
+                </div>
+            </article>
+            <article class="bg-indigo-400 relative w-full h-64 bg-cover bg-center group rounded-lg overflow-hidden shadow-lg hover:shadow-2xl  transition duration-300 ease-in-out">
+                <div class="absolute inset-0 bg-black bg-opacity-10 group-hover:opacity-75 transition duration-300 ease-in-out"></div>
+                <div class="relative w-full h-full px-4 sm:px-6 lg:px-4 flex justify-center items-center">
+                    <h3 class="text-center">
+                        <a class="text-white text-2xl font-bold text-center" href="/user/good_deeds/new">
+                            <span class="absolute inset-0"></span>
+                            <%= link_to @acts.create_acts[2].name, "/user/good_deeds/new", style: "color: white; font-size: 2rem; font-weight: bold; text-align: center;" %>
+                        </a>
+                    </h3>
+                </div>
+            </article>
+        </section>
+    </article>
+</section>
+
+<!-- ORIGINAL VIEW: 
 <% @acts.create_acts.each do |act| %>
   <%= link_to act.name, "/user/good_deeds/new" %>
-<%end%>
+<%end%> 
+-->
+
+<!-- Good Code to Save:  
+style="background-image: url('<%= asset_path 'do_good.jpg' %>');"> 
+<article class="bg-gradient-to-r from-indigo-400 to-teal-300 relative w-full h-64 bg-cover bg-center group rounded-lg overflow-hidden shadow-lg hover:shadow-2xl  transition duration-300 ease-in-out">
+-->
+

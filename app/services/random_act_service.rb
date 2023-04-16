@@ -3,7 +3,7 @@
 # app/services/random_act_service.rb
 class RandomActService
   def self.conn
-    Faraday.new(url: "http://localhost:3000")
+    Faraday.new(url: "http://localhost:5000")
   end
 
   def self.get_url(url)

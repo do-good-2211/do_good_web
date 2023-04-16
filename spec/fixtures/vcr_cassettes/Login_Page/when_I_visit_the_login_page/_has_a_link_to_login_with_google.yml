@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:5000/api/v1/users?param=1
+    uri: http://localhost:3000/api/v1/users?param=1
     body:
       encoding: UTF-8
       string: '{"query":{"provider":"google_oauth2","uid":"100000000000000000000","info":{"name":"John
@@ -38,20 +38,20 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"811245ca487e6ab91dd42f9a9a84ace8"
+      - W/"1cf7c9c23f0e3b943b9ad826a7e59e1b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b7dbc029-a39e-48a5-afce-cc36820152f3
+      - a0bb99a2-e4f0-457f-8827-ca0656b3ac77
       X-Runtime:
-      - '0.016008'
+      - '0.014896'
       Server-Timing:
-      - start_processing.action_controller;dur=0.07, sql.active_record;dur=3.24, instantiation.active_record;dur=0.06,
-        process_action.action_controller;dur=11.43
+      - start_processing.action_controller;dur=0.14, sql.active_record;dur=1.94, instantiation.active_record;dur=0.15,
+        process_action.action_controller;dur=4.67
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"users","attributes":{"name":"John Smith","role":"user","good_deeds":[]}}}'
-  recorded_at: Fri, 14 Apr 2023 21:17:44 GMT
+      string: '{"data":{"id":"5","type":"users","attributes":{"name":"John Smith","role":"user","good_deeds":[]}}}'
+  recorded_at: Sun, 16 Apr 2023 23:06:21 GMT
 recorded_with: VCR 6.1.0

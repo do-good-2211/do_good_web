@@ -11,7 +11,7 @@
       "id": "2",
       "type": "good_deed",
       "attributes":{
-          "deed_name": "Volunteer at the food bank",
+          "name": "Volunteer at the food bank",
           "media_link": "www.image.com/picture2"
         }  
       },
@@ -19,7 +19,7 @@
         "id": "3",
         "type": "good_deed",
         "attributes":{
-            "deed_name": "Pick up trash",
+            "name": "Pick up trash",
             "media_link": "www.image.com/picture3"
           }  
         },
@@ -27,7 +27,7 @@
           "id": "4",
           "type": "good_deed",
           "attributes":{
-              "deed_name": "Donate blood",
+              "name": "Donate blood",
               "media_link": "www.image.com/picture4"
             }  
           }]

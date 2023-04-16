@@ -5,11 +5,11 @@
 <% end %> -->
 
 <!-- Logo / Moto / Login -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mb-12">
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mb-1">
   <article class="p-12 text-center">
     <%= image_tag("do_good.jpg", alt: "Do Good Logo", class: "mx-auto w-1/5 h-auto") %>
     <h2 class="py-8 text-lg font-normal text-gray-900">Ok, I'm Convinced. I wanna join the fun</h2>
-    <button class="p-2 mb-4 bg-red-500 hover:bg-red-600 text-white font-base rounded">
+    <button class="p-2 mb-4 bg-red-500 hover:bg-indigo-500 text-white font-base rounded">
       <%= link_to "Login/Register", login_path %>
     </button>
   </article>
@@ -18,7 +18,7 @@
 <!-- Good Deed Cards -->
 <section class='flex items-center justify-center min-h-screen bg-gradient-to-br px-2'>
   <article>
-    <section class="mt-6 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8">
+    <section class="mt-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8 pb-10">
       <% @deeds.get_deeds.each do |deed| %> 
         <div class='max-w-md  mx-auto bg-white rounded-lg shadow-xl overflow-hidden w-80'>
           <div class='max-w-md mx-auto'>

@@ -10,14 +10,14 @@ RSpec.describe "User good deed new page" do
         VCR.use_cassette('random_acts', serialize_with: :json) do
           visit random_acts_path
 
-          click_link "Contribute code or a monetary donation to an open-source software project", match: :first
+          click_link "Pick up litter around your favorite park", match: :first
         end
 
-        @users = UserFacade.new({ good_deed: "Contribute code or a monetary donation to an open-source software project" }, @user).fetch_all_but_user
+        @users = UserFacade.new({ good_deed: "Pick up litter around your favorite park" }, @user).fetch_all_but_user
       end
 
       it "I see the name of the good deed, a form with fields for date, time and checkboxes for other users and a button 'Do Good'" do
-        expect(page).to have_content('Contribute code or a monetary donation to an open-source software project')
+        expect(page).to have_content('Pick up litter around your favorite park')
 
         within '#new_good_deed' do
           expect(page).to have_field(:date)

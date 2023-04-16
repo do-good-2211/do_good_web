@@ -7,7 +7,7 @@ RSpec.describe "Random Acts index page", type: :feature do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       VCR.use_cassette('random_acts', serialize_with: :json) do
-        @random_acts = ["Contribute code or a monetary donation to an open-source software project", "Contribute code or a monetary donation to an open-source software project", "Clean out your closet and donate the clothes you've outgrown"]
+        @random_acts = ["Pick up litter around your favorite park", "Volunteer at a local animal shelter", "Volunteer and help out at a senior center"]
 
         visit '/random_acts'
       end

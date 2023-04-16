@@ -3,14 +3,14 @@ require "rails_helper"
 RSpec.describe "Random Acts index page", type: :feature do
   describe "When I visit '/random_acts'", :vcr do
     before do
+      user = { id: 1, attributes: { name: "Bob", email: "user@example.com", password_digest: "test1", role: "User" } }
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
       VCR.use_cassette('random_acts', serialize_with: :json) do
         @random_acts = ["Pick up litter around your favorite park", "Volunteer at a local animal shelter", "Volunteer and help out at a senior center"]
 
         visit '/random_acts'
       end
-
-      user = { id: 1, attributes: { name: "Bob", email: "user@example.com", password_digest: "test1", role: "User" } }
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     end
 
     it "I see 3 random acts and their name as a link" do

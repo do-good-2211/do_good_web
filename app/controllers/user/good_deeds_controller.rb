@@ -2,6 +2,8 @@
 
 # app/controllers/user/good_deeds_controller.rb
 class User::GoodDeedsController < ApplicationController
+  before_action :not_authorized
+
   def new
     @facade = UserFacade.new(params, current_user)
   end

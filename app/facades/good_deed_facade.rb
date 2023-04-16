@@ -2,7 +2,7 @@
 
 # app/facades/good_deed_facade.rb
 class GoodDeedFacade
-  def initialize (params, id)
+  def initialize(params, id)
     @name = params[:name]
     @date = params[:date]
     @time = params[:time]
@@ -16,12 +16,12 @@ class GoodDeedFacade
 
   def create_deed
     deed = DoGoodService.create_deed(@id,
-      {
-        name: @name,
-        date: @date,
-        time: @time,
-        attendees: @attendees
-      })
+                                     {
+                                       name: @name,
+                                       date: @date,
+                                       time: @time,
+                                       attendees: @attendees
+                                     })
 
     Deed.new(deed[:data])
   end

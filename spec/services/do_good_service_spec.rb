@@ -15,11 +15,11 @@ RSpec.describe DoGoodService, :vcr do
 
   it "returns a json object of a good deed" do
     good_deed = DoGoodService.create_deed(2, {
-      name: "High-five a stranger.",
-      date: "02-02-2024",
-      time: "2000-01-01T16:00:00.000Z",
-      attendees: [1]
-     } )
+                                            name: "High-five a stranger.",
+                                            date: "02-02-2024",
+                                            time: "2000-01-01T16:00:00.000Z",
+                                            attendees: [1]
+                                          })
 
     expect(good_deed).to be_a(Hash)
 

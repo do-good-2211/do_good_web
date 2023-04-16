@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe UserFacade, :vcr do
   before do
-    @facade = UserFacade.new({}, {id: 2, attributes: { name: "John Smith", role: "User" }})
+    @facade = UserFacade.new({}, { id: 2, attributes: { name: "John Smith", role: "User" } })
   end
 
   describe "initialize" do
@@ -13,11 +13,11 @@ RSpec.describe UserFacade, :vcr do
 
   describe "#fetch_user" do
     it "returns one user object with its attributes" do
-      user_1 = @facade.fetch_user
+      user1 = @facade.fetch_user
 
-      expect(user_1).to be_an_instance_of(User)
-      expect(user_1.name).to be_a(String)
-      expect(user_1.id).to be_a(String)
+      expect(user1).to be_an_instance_of(User)
+      expect(user1.name).to be_a(String)
+      expect(user1.id).to be_a(String)
     end
   end
 

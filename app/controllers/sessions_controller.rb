@@ -22,19 +22,13 @@ class SessionsController < ApplicationController
     event= Google::Apis::CalendarV3::Event.new(
         summary: "Help people", 
         description: "Help people more",
-        start: {date: "2023-06-30", dateTime: '2023-05-29T13:15:03Z', timeZone: 'local'},
-        end: {date: "2023-06-30", dateTime: '2023-05-29T13:15:03Z', timeZone: 'local'}
+        start: {date: "2023-07-30", dateTime: '2023-05-29T13:15:03Z', timeZone: 'local'},
+        end: {date: "2023-07-30", dateTime: '2023-05-29T13:15:03Z', timeZone: 'local'}
     )
 
     service.insert_event("menyeart1@gmail.com", event)
 
-    # binding.pry
-    # post
-
-
     # Listing Calendar On A Page
     # @calendar_list = service.list_calendar_lists.items
-
-    redirect_to "/"
   end
 end

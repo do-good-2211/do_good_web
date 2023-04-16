@@ -7,6 +7,32 @@ class SessionsController < ApplicationController
     session[:user_id] = user.name
     flash[:message] = "Welcome, #{user.name}!"
 
-    redirect_to "/login"
+    session[:token] = request.env["omniauth.auth"][:credentials][:token]
+
+    service = Google::Apis::CalendarV3::CalendarService.new
+
+    service.authorization = session[:token]
+
+    s = DateTime.new(2023, 12, 9, 12, 0, 0)
+    e = DateTime.new(2023, 12, 9, 13, 0, 0)
+ 
+    event= Google::Apis::CalendarV3::Event.new(
+        summary: "Help people", 
+        description: "Help people more",
+        start: {date: "2023-06-30", dateTime: '2023-05-29T13:15:03Z', timeZone: 'local'},
+        end: {date: "2023-06-30", dateTime: '2023-05-29T13:15:03Z', timeZone: 'local'}
+    )
+
+    service.insert_event("menyeart1@gmail.com", event)
+
+    # binding.pry
+    # post
+
+
+    # Listing Calendar On A Page
+    # @calendar_list = service.list_calendar_lists.items
+
+    redirect_to "/"
+
   end
 end

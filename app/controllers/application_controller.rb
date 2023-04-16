@@ -7,4 +7,17 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= session[:user] if session[:user]
   end
+
+  def current_user?
+    current_user && !current_user.nil?
+  end
+
+  private
+
+  def not_authorized
+    return if current_user?
+
+    redirect_to root_path
+    flash[:alert] = "You are not authorized to access this page"
+  end
 end

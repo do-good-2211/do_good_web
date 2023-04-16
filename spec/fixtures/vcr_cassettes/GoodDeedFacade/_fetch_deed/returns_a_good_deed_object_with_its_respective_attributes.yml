@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/2/good_deeds/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"a8ab868638364bfffb2ce11cbd525216"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 82d6efe2-6fea-4210-a732-34d80af85eed
+      X-Runtime:
+      - '0.053641'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.12, sql.active_record;dur=21.48,
+        instantiation.active_record;dur=0.15, process_action.action_controller;dur=44.18
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
+        Progress","notes":null,"media_link":null}}}'
+  recorded_at: Sun, 16 Apr 2023 17:41:06 GMT
+recorded_with: VCR 6.1.0

@@ -24,6 +24,6 @@ class UserFacade
   end
 
   def fetch_all_but_user
-    @users.reject { |user| user.name == @user[:attributes][:name] }
+    @users.reject { |user| user.name == @user["name"] }
   end
 end

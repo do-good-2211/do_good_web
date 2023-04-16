@@ -27,7 +27,7 @@ RSpec.describe "The good deeds index page" do
 
       click_button("Login/Register")
       # expect(current_path).to eq(login_path)
-      #Since this tests passes it's still being tested? If you have ideas on an expect statement please add.
+      # Since this tests passes it's still being tested? If you have ideas on an expect statement please add.
     end
 
     it "When I click on Home linkI am redirected to Home" do

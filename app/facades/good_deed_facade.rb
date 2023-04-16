@@ -7,7 +7,8 @@ class GoodDeedFacade
     @date = params[:date]
     @time = params[:time]
     @attendees = params[:attendees]
-    @id = id
+    @deed_id = params[:id]
+    @user_id = id
   end
 
   def get_deeds
@@ -15,7 +16,7 @@ class GoodDeedFacade
   end
 
   def create_deed
-    deed = DoGoodService.create_deed(@id,
+    deed = DoGoodService.create_deed(@user_id,
                                      {
                                        name: @name,
                                        date: @date,
@@ -24,5 +25,10 @@ class GoodDeedFacade
                                      })
 
     Deed.new(deed[:data])
+  end
+
+  def fetch_deed
+    data = GoodDeedService.fetch_deed(@user_id, @user_id)
+    Deed.new(data[:data])
   end
 end

@@ -9,7 +9,7 @@ RSpec.describe "Random Acts index page", type: :feature do
         visit '/random_acts'
       end
 
-      user = {id: 1, attributes: { name: "Bob", email: "user@example.com", password_digest: "test1", role: "User" }}
+      user = { id: 1, attributes: { name: "Bob", email: "user@example.com", password_digest: "test1", role: "User" } }
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     end
 

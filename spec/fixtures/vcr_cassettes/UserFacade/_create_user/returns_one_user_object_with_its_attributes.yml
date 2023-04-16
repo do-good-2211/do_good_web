@@ -15,8 +15,8 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -34,21 +34,20 @@ http_interactions:
       - application/json; charset=utf-8
       Vary:
       - Accept
-      Etag:
-      - W/"9ba5fcc6507fd5961a61e646e4382c02"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - afa786f2-f826-4c2f-8346-7efaedae6f69
+      - b0b446d9-5bb3-4f66-a400-4a8fe943a8a0
       X-Runtime:
-      - '0.164768'
+      - '0.138111'
       Server-Timing:
-      - sql.active_record;dur=47.88, start_processing.action_controller;dur=0.07,
-        instantiation.active_record;dur=10.53, process_action.action_controller;dur=44.33
+      - start_processing.action_controller;dur=0.59, sql.active_record;dur=55.98,
+        process_action.action_controller;dur=102.02
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"users","attributes":{"name":"Jasmine Hamou","role":"user","good_deeds":[]}}}'
-  recorded_at: Sat, 15 Apr 2023 15:50:52 GMT
+      string: '{"errors":[{"status":"404","title":"Invalid Request","detail":["Couldn''t
+        find User with ''id''={:id=\u003e\"1\"}"]}]}'
+  recorded_at: Sun, 16 Apr 2023 02:04:27 GMT
 recorded_with: VCR 6.1.0

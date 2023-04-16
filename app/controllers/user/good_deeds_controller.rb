@@ -7,7 +7,12 @@ class User::GoodDeedsController < ApplicationController
   end
 
   def create
-    GoodDeedFacade.new(params, current_user[:id]).create_deed
-    redirect_to dashboard_path
+    if params[:date].present? && params[:time].present?
+      GoodDeedFacade.new(params, current_user[:id]).create_deed
+      redirect_to dashboard_path
+    else
+      redirect_to new_user_good_deed_path
+      flash[:notice] = "Please fill in all parts."
+    end
   end
 end

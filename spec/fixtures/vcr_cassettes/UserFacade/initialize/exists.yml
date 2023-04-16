@@ -2,57 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/2
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"811245ca487e6ab91dd42f9a9a84ace8"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 744bb2df-7dee-46cf-a390-d8ad1e1b1fd4
-      X-Runtime:
-      - '0.029889'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.15, sql.active_record;dur=2.11, instantiation.active_record;dur=0.23,
-        process_action.action_controller;dur=19.00
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"2","type":"users","attributes":{"name":"John Smith","role":"user","good_deeds":[]}}}'
-  recorded_at: Sat, 15 Apr 2023 21:37:35 GMT
-- request:
-    method: get
     uri: http://localhost:3000/api/v1/users
     body:
       encoding: US-ASCII
@@ -90,12 +39,12 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8d7dcd5f-6762-4ba4-b3f5-88c67329b715
+      - 7e46924d-5af2-4174-8783-3cb4beabb0e3
       X-Runtime:
-      - '0.010806'
+      - '0.175978'
       Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=3.65, instantiation.active_record;dur=0.10,
-        process_action.action_controller;dur=6.00
+      - sql.active_record;dur=68.69, start_processing.action_controller;dur=0.06,
+        instantiation.active_record;dur=18.97, process_action.action_controller;dur=53.57
       Transfer-Encoding:
       - chunked
     body:

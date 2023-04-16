@@ -3,11 +3,11 @@ require "rails_helper"
 RSpec.describe GoodDeedFacade, :vcr do
   before do
     @facade = GoodDeedFacade.new({
-      name: "High-five a stranger.",
-      date: "02-02-2024",
-      time: "2000-01-01T16:00:00.000Z",
-      attendees: [1]
-     }, 2 )
+                                   name: "High-five a stranger.",
+                                   date: "02-02-2024",
+                                   time: "2000-01-01T16:00:00.000Z",
+                                   attendees: [1]
+                                 }, 2)
   end
 
   describe "#initialize" do
@@ -36,7 +36,7 @@ RSpec.describe GoodDeedFacade, :vcr do
 
       expect(good_deed).to be_a Deed
       expect(good_deed.id).to be_an Integer
-      expect(good_deed.name).to be_a String 
+      expect(good_deed.name).to be_a String
     end
   end
 end

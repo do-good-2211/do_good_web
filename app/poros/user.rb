@@ -2,7 +2,7 @@
 
 # app/poros/user.rb
 class User
-  attr_reader :name,           
+  attr_reader :name,
               :role,
               :id
 

@@ -6,7 +6,7 @@
   <%= form_with url: user_good_deeds_path, method: :post, local: true do |f| %>
     <%= f.hidden_field :name, value: @facade.good_deed %>
     <%= f.label :date %>
-    <%= f.date_field :date %>
+    <%= f.date_field :date, min: Date.today  %>
     <%= f.label :time %>
     <%= f.time_field :time %>
     <%= f.label :atendees, 'Invite Other Users' %><br>

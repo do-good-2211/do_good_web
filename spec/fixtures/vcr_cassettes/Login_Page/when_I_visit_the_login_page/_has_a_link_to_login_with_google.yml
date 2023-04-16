@@ -42,16 +42,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f9cb5242-0546-41da-9dab-e4045811cc61
+      - 9a323eae-f4d4-4330-a0d0-b0c15d7a15a2
       X-Runtime:
-      - '0.246172'
+      - '0.012514'
       Server-Timing:
-      - sql.active_record;dur=119.59, start_processing.action_controller;dur=0.19,
-        instantiation.active_record;dur=10.81, process_action.action_controller;dur=83.26
+      - start_processing.action_controller;dur=5.33, sql.active_record;dur=1.27, instantiation.active_record;dur=0.09,
+        process_action.action_controller;dur=3.27
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"2","type":"users","attributes":{"name":"John Smith","role":"user","good_deeds":[]}}}'
-  recorded_at: Sat, 15 Apr 2023 17:02:20 GMT
+  recorded_at: Sat, 15 Apr 2023 20:15:10 GMT
 recorded_with: VCR 6.1.0

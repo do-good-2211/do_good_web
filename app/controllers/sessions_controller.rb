@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if current_user
       redirect_to "/dashboard"
     end
-
+  
     session[:token] = request.env["omniauth.auth"][:credentials][:token]
 
     service = Google::Apis::CalendarV3::CalendarService.new
@@ -29,6 +29,13 @@ class SessionsController < ApplicationController
     service.insert_event("menyeart1@gmail.com", event)
 
     # Listing Calendar On A Page
-    # @calendar_list = service.list_calendar_lists.items
+    # @calendar_list = service.list_calendar_lists.items  
+
+
+  end
+
+  def logout
+    session[:user] = nil
+    redirect_to root_path
   end
 end

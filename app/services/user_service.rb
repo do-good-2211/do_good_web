@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# app/services/user_service.rb
 class UserService
   def self.conn
     Faraday.new(url: "http://localhost:3000")

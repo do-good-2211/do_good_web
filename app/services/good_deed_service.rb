@@ -3,7 +3,7 @@
 # app/services/good_deed_service.rb
 class GoodDeedService
   def self.conn
-    Faraday.new(url: "http://localhost:5000")
+    Faraday.new(url: "http://localhost:3000")
   end
 
   def self.get_url(url)

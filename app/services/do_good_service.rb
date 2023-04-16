@@ -10,7 +10,7 @@ class DoGoodService
   end
 
   def self.conn
-    Faraday.new(url: "http://localhost:5000",
+    Faraday.new(url: "http://localhost:3000",
                 params: { param: "1" },
                 headers: { "Content-Type" => "application/json" })
   end

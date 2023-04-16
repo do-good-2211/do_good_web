@@ -3,7 +3,7 @@
     "id": "1",
     "type": "good_deed",
     "attributes":{
-        "deed_name": "Mow the neighbors lawn",
+        "name": "Mow the neighbors lawn",
         "media_link": "www.image.com/picture1"
       }  
     },

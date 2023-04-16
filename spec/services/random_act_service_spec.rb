@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe RandomActService do
   before do
     random_acts = File.read("./spec/fixtures/random_acts.json")
-    stub_request(:get, "http://localhost:3000/api/v1/random_acts")
+    stub_request(:get, "http://localhost:5/api/v1/random_acts")
       .to_return(status: 200, body: random_acts)
   end
 

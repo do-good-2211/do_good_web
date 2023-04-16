@@ -4,7 +4,7 @@ RSpec.describe "The good deeds service" do
   describe "Class Methods" do
     before do
       deeds = File.read("./spec/fixtures/good_deeds.json")
-      stub_request(:get, "http://localhost:3000/api/v1/good_deeds").to_return(status: 200, body: deeds)
+      stub_request(:get, "http://localhost:5000/api/v1/good_deeds").to_return(status: 200, body: deeds)
     end
     it "returns a json object" do
       data = GoodDeedService.good_deeds

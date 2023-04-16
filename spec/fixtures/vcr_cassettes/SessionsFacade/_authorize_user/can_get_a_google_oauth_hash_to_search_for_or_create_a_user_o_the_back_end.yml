@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/api/v1/users?param=1
+    uri: http://localhost:5000/api/v1/users?param=1
     body:
       encoding: UTF-8
       string: '{"query":{"provider":"google_oauth2","uid":"100000000000000000000","info":{"name":"John
@@ -56,7 +56,7 @@ http_interactions:
   recorded_at: Fri, 14 Apr 2023 21:17:43 GMT
 - request:
     method: post
-    uri: http://localhost:3000/api/v1/users?param=1
+    uri: http://localhost:5000/api/v1/users?param=1
     body:
       encoding: UTF-8
       string: '{"query":{"provider":"google_oauth2","uid":"100000000000000000000","info":{"name":"John
@@ -110,7 +110,7 @@ http_interactions:
   recorded_at: Fri, 14 Apr 2023 21:17:43 GMT
 - request:
     method: post
-    uri: http://localhost:3000/api/v1/users?param=1
+    uri: http://localhost:5000/api/v1/users?param=1
     body:
       encoding: UTF-8
       string: '{"query":{"provider":"google_oauth2","uid":"100000000000000000000","info":{"name":"John

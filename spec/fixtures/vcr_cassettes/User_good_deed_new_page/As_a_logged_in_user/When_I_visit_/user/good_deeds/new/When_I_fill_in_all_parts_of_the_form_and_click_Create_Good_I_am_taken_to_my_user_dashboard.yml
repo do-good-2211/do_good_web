@@ -127,4 +127,121 @@ http_interactions:
         code or a monetary donation to an open-source software project","media_link":null,"notes":null,"date":"2023-04-15","time":"2000-01-02T02:33:35.000Z","status":"In
         Progress","host_id":1}}}'
   recorded_at: Sun, 16 Apr 2023 02:33:35 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sun, 16 Apr 2023 21:50:36 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"037bb33a8a6c3fd8833a55fc4b8aa368"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d6e13777-07ab-4cda-b4d7-f516a9810b86
+      X-Runtime:
+      - '0.006305'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"users","attributes":{"name":"John Smith","role":"user","good_deeds":[]}}]}'
+  recorded_at: Sun, 16 Apr 2023 21:50:37 GMT
+- request:
+    method: post
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds?param=1
+    body:
+      encoding: UTF-8
+      string: '{"name":"Pick up litter around your favorite park","date":"2023-04-16","time":"2023-04-16
+        15:50:37 -0600","attendees":["1"]}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sun, 16 Apr 2023 21:50:36 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"f1d0b48e3fd2db747849707eace55b09"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e4933bfe-c95d-4fd1-92ca-fb45ecb7d141
+      X-Runtime:
+      - '0.018609'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5","type":"good_deeds_create","attributes":{"name":"Pick
+        up litter around your favorite park","media_link":null,"notes":null,"date":"2023-04-16","time":"2000-01-01T21:50:37.000Z","status":"In
+        Progress","host_id":1}}}'
+  recorded_at: Sun, 16 Apr 2023 21:50:37 GMT
 recorded_with: VCR 6.1.0

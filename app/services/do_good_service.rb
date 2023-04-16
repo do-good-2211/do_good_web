@@ -6,6 +6,7 @@ class DoGoodService
     response = conn.post("/api/v1/users") do |req|
       req.body = { query: oauth_hash }.to_json
     end
+    # require 'pry'; binding.pry
     JSON.parse(response.body, symbolize_names: true)
   end
 

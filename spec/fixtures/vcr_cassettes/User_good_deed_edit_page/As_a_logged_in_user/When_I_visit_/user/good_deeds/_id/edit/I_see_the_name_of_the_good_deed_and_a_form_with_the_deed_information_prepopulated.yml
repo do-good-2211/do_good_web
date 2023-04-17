@@ -192,4 +192,158 @@ http_interactions:
         (5.6.5) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":20180,"id":25,"trace":"puma
         (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}]}}'
   recorded_at: Mon, 17 Apr 2023 12:34:12 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users//good_deeds/5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 17 Apr 2023 21:42:05 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      X-Request-Id:
+      - b1c6d17b-4e86-4b07-960a-ff0636714d31
+      X-Runtime:
+      - '0.000821'
+      Content-Length:
+      - '0'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Mon, 17 Apr 2023 21:42:05 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 17 Apr 2023 21:48:53 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"19327cb35046be30a9e1bebed4331443"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d662603b-e81f-4d54-8df8-052948da4ecd
+      X-Runtime:
+      - '0.009521'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5","type":"good_deed","attributes":{"name":"Pick up
+        litter around your favorite park","date":"2023-04-17","time":"2000-01-01T14:36:10.000Z","status":"In
+        Progress","notes":"","media_link":null,"attendees":[]}}}'
+  recorded_at: Mon, 17 Apr 2023 21:48:53 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 17 Apr 2023 21:48:54 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"19327cb35046be30a9e1bebed4331443"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - cc2a5593-bb90-4f0d-a99e-1cfa93fbc4a9
+      X-Runtime:
+      - '0.006816'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5","type":"good_deed","attributes":{"name":"Pick up
+        litter around your favorite park","date":"2023-04-17","time":"2000-01-01T14:36:10.000Z","status":"In
+        Progress","notes":"","media_link":null,"attendees":[]}}}'
+  recorded_at: Mon, 17 Apr 2023 21:48:55 GMT
 recorded_with: VCR 6.1.0

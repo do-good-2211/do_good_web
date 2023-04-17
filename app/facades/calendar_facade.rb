@@ -15,9 +15,9 @@ class CalendarFacade
     service.insert_event(email, event)
   end
 
-  def list_calendars(email, token)
+  def list_events(email, token)
     service = CalendarService.calendar_api
     service.authorization = token
-    service.get_calendar('primary')
+    service.list_events(@email)
   end
 end

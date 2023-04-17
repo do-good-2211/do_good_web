@@ -4,8 +4,8 @@
 class SessionsController < ApplicationController
   def omniauth
     user = SessionsFacade.new.authorize_user(request.env["omniauth.auth"])
-    session[:user] = user
     session[:token] = request.env["omniauth.auth"][:credentials][:token]
+    session[:user] = user
     if current_user
       redirect_to "/dashboard"
     end

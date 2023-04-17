@@ -9,7 +9,7 @@ RSpec.describe "Authorization" do
     end
 
     it "When I am logged in as a user I can view my dashboard" do
-      user = { id: 1, attributes: { name: "Bob", email: "user@example.com", password_digest: "test1", role: "User" } }
+      user = { "id" => "1", "name" => "Bob", "email" => "user@gmail.com", "password_digest"=> "test1", "role" => "User"}
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit root_path
       click_on "My Page"
@@ -26,7 +26,7 @@ RSpec.describe "Authorization" do
     end
 
     it "When I am logged in as a user, I can visit /random_acts" do
-      user = { id: 1, attributes: { name: "Bob", email: "user@example.com", password_digest: "test1", role: "User" } }
+      user = { "id" => "1", "attributes"=> { "name" => "Bob", "email" => "user@gmail.com", "password_digest"=> "test1", "role" => "User" } }
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit random_acts_path
       expect(current_path).to eq(random_acts_path)
@@ -40,7 +40,7 @@ RSpec.describe "Authorization" do
     end
 
     it "When I am logged in as a user, I can visit the new good deed page" do
-      user = { id: 1, attributes: { name: "Bob", email: "user@example.com", password_digest: "test1", role: "User" } }
+      user = { "id" => "1", "attributes"=> { "name" => "Bob", "email" => "user@gmail.com", "password_digest"=> "test1", "role" => "User" } }
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       visit new_user_good_deed_path

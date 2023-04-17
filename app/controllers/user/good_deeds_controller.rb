@@ -8,7 +8,7 @@ class User::GoodDeedsController < ApplicationController
 
   def create
     if params[:date].present? && params[:time].present?
-      GoodDeedFacade.new(params, current_user["id"]).create_deed
+      GoodDeedFacade.new(params, current_user[:id]).create_deed
       redirect_to dashboard_path
     else
       redirect_to new_user_good_deed_path

@@ -10,8 +10,8 @@ class Deed
               :time,
               :status,
               :notes,
-              :media_link,
-              :attendees
+              :media_link
+              # :attendees
 
   def initialize(info)
     @id = info[:id].to_i
@@ -21,6 +21,6 @@ class Deed
     @status = info[:attributes][:status]
     @notes = info[:attributes][:notes]
     @media_link = info[:attributes][:media_link]
-    @attendees = info[:attributes][:attendees].map { |attendee| Attendee.new(attendee) }
+    # @attendees = info[:attributes][:attendees].map { |attendee| Attendee.new(attendee) }
   end
 end

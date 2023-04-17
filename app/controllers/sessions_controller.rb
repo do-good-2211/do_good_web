@@ -13,6 +13,7 @@ class SessionsController < ApplicationController
 
   def logout
     session[:user] = nil
+    session[:token] = nil
     redirect_to root_path
     flash[:message] = "Successfully logged out"
   end

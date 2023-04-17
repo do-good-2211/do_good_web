@@ -35,49 +35,73 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"54b0cf204699eed12655d04ece367b6d"
+      - W/"c3759a5dbee0b8ab1e8ab61f411c72aa"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1bf85acd-d972-4752-b40c-8b2f6c20651b
+      - 1d7ce854-ee2f-46ce-9ed4-18124ebdc1e4
       X-Runtime:
-      - '0.030877'
+      - '0.052489'
       Server-Timing:
-      - start_processing.action_controller;dur=0.11, sql.active_record;dur=2.87, instantiation.active_record;dur=0.39,
-        process_action.action_controller;dur=21.26
+      - start_processing.action_controller;dur=0.10, sql.active_record;dur=5.74, instantiation.active_record;dur=0.34,
+        process_action.action_controller;dur=31.91
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"users","attributes":{"name":"Jasmine Hamou","role":"user","good_deeds":[{"id":2,"name":"High-five
         a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-15T22:20:38.037Z","updated_at":"2023-04-15T22:20:38.037Z"},{"id":5,"name":"High-five
-        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-15T22:26:42.755Z","updated_at":"2023-04-15T22:26:42.755Z"},{"id":6,"name":"High-five
+        Progress","created_at":"2023-04-15T22:20:38.037Z","updated_at":"2023-04-15T22:20:38.037Z"},{"id":6,"name":"High-five
         a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
         Progress","created_at":"2023-04-15T23:21:07.177Z","updated_at":"2023-04-15T23:21:07.177Z"},{"id":7,"name":"Contribute
         code or a monetary donation to an open-source software project","host_id":1,"date":"2023-04-15","time":"2000-01-01T23:41:43.000Z","notes":null,"media_link":null,"status":"In
         Progress","created_at":"2023-04-15T23:42:04.681Z","updated_at":"2023-04-15T23:42:04.681Z"},{"id":7,"name":"Contribute
         code or a monetary donation to an open-source software project","host_id":1,"date":"2023-04-15","time":"2000-01-01T23:41:43.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-15T23:42:04.681Z","updated_at":"2023-04-15T23:42:04.681Z"}]}},{"id":"2","type":"users","attributes":{"name":"John
+        Progress","created_at":"2023-04-15T23:42:04.681Z","updated_at":"2023-04-15T23:42:04.681Z"},{"id":9,"name":"Contribute
+        code or a monetary donation to an open-source software project","host_id":1,"date":"2023-04-15","time":"2000-01-01T02:33:35.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T02:33:35.566Z","updated_at":"2023-04-16T02:33:35.566Z"},{"id":9,"name":"Contribute
+        code or a monetary donation to an open-source software project","host_id":1,"date":"2023-04-15","time":"2000-01-01T02:33:35.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T02:33:35.566Z","updated_at":"2023-04-16T02:33:35.566Z"},{"id":10,"name":"Contribute
+        code or a monetary donation to an open-source software project","host_id":1,"date":"2001-02-03","time":"2000-01-01T16:25:03.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T16:25:03.733Z","updated_at":"2023-04-16T16:25:03.733Z"},{"id":10,"name":"Contribute
+        code or a monetary donation to an open-source software project","host_id":1,"date":"2001-02-03","time":"2000-01-01T16:25:03.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T16:25:03.733Z","updated_at":"2023-04-16T16:25:03.733Z"},{"id":11,"name":"Volunteer
+        at a local animal shelter","host_id":1,"date":"2023-04-16","time":"2000-01-01T23:33:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T18:33:45.488Z","updated_at":"2023-04-16T18:33:45.488Z"},{"id":12,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T22:56:57.513Z","updated_at":"2023-04-16T22:56:57.513Z"},{"id":13,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T10:21:32.500Z","updated_at":"2023-04-17T10:21:32.500Z"},{"id":5,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":"This
+        was awesome","media_link":"http://picture.jpg","status":"In Progress","created_at":"2023-04-15T22:26:42.755Z","updated_at":"2023-04-17T11:33:11.268Z"}]}},{"id":"2","type":"users","attributes":{"name":"John
         Smith","role":"user","good_deeds":[{"id":2,"name":"High-five a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
         Progress","created_at":"2023-04-15T22:20:38.037Z","updated_at":"2023-04-15T22:20:38.037Z"},{"id":2,"name":"High-five
         a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-15T22:20:38.037Z","updated_at":"2023-04-15T22:20:38.037Z"},{"id":5,"name":"High-five
-        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-15T22:26:42.755Z","updated_at":"2023-04-15T22:26:42.755Z"},{"id":6,"name":"High-five
+        Progress","created_at":"2023-04-15T22:20:38.037Z","updated_at":"2023-04-15T22:20:38.037Z"},{"id":6,"name":"High-five
         a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
         Progress","created_at":"2023-04-15T23:21:07.177Z","updated_at":"2023-04-15T23:21:07.177Z"},{"id":7,"name":"Contribute
         code or a monetary donation to an open-source software project","host_id":1,"date":"2023-04-15","time":"2000-01-01T23:41:43.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-15T23:42:04.681Z","updated_at":"2023-04-15T23:42:04.681Z"}]}}]}'
-  recorded_at: Sun, 16 Apr 2023 02:33:35 GMT
+        Progress","created_at":"2023-04-15T23:42:04.681Z","updated_at":"2023-04-15T23:42:04.681Z"},{"id":9,"name":"Contribute
+        code or a monetary donation to an open-source software project","host_id":1,"date":"2023-04-15","time":"2000-01-01T02:33:35.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T02:33:35.566Z","updated_at":"2023-04-16T02:33:35.566Z"},{"id":10,"name":"Contribute
+        code or a monetary donation to an open-source software project","host_id":1,"date":"2001-02-03","time":"2000-01-01T16:25:03.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T16:25:03.733Z","updated_at":"2023-04-16T16:25:03.733Z"},{"id":11,"name":"Volunteer
+        at a local animal shelter","host_id":1,"date":"2023-04-16","time":"2000-01-01T23:33:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T18:33:45.488Z","updated_at":"2023-04-16T18:33:45.488Z"},{"id":12,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T22:56:57.513Z","updated_at":"2023-04-16T22:56:57.513Z"},{"id":13,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T10:21:32.500Z","updated_at":"2023-04-17T10:21:32.500Z"},{"id":5,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":"This
+        was awesome","media_link":"http://picture.jpg","status":"In Progress","created_at":"2023-04-15T22:26:42.755Z","updated_at":"2023-04-17T11:33:11.268Z"}]}}]}'
+  recorded_at: Mon, 17 Apr 2023 11:36:59 GMT
 - request:
     method: post
     uri: http://localhost:3000/api/v1/users/1/good_deeds?param=1
     body:
       encoding: UTF-8
       string: '{"name":"Contribute code or a monetary donation to an open-source software
-        project","date":"2023-04-15","time":"2023-04-15 19:33:35 -0700","attendees":["1","2"]}'
+        project","date":"2023-04-17","time":"2023-04-17 04:36:59 -0700","attendees":["1","2"]}'
     headers:
       Content-Type:
       - application/json
@@ -109,22 +133,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"7c6acd8f23327ed9e9afccbd78c58e54"
+      - W/"46484ab8a82318abb4f636a88d50a6fc"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a827eb56-0b37-4059-8a1f-8458e720c3e4
+      - 5843af59-cbdc-469b-9c6a-6120401dac01
       X-Runtime:
-      - '0.048956'
+      - '0.038568'
       Server-Timing:
-      - start_processing.action_controller;dur=0.08, sql.active_record;dur=22.84,
-        instantiation.active_record;dur=0.24, process_action.action_controller;dur=43.31
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=25.60,
+        instantiation.active_record;dur=0.16, process_action.action_controller;dur=33.39
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"9","type":"good_deeds_create","attributes":{"name":"Contribute
-        code or a monetary donation to an open-source software project","media_link":null,"notes":null,"date":"2023-04-15","time":"2000-01-02T02:33:35.000Z","status":"In
+      string: '{"data":{"id":"14","type":"good_deeds_create","attributes":{"name":"Contribute
+        code or a monetary donation to an open-source software project","media_link":null,"notes":null,"date":"2023-04-17","time":"2000-01-01T11:36:59.000Z","status":"In
         Progress","host_id":1}}}'
-  recorded_at: Sun, 16 Apr 2023 02:33:35 GMT
+  recorded_at: Mon, 17 Apr 2023 11:36:59 GMT
 recorded_with: VCR 6.1.0

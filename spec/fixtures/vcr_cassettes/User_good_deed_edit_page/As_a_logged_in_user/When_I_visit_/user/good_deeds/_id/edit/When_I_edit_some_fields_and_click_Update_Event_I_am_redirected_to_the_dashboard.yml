@@ -1,0 +1,164 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/1/good_deeds/5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"48a21b96f1e543fc3be6b40adf1804f1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 76e8d32e-eec2-4433-b264-dd2f03aaa588
+      X-Runtime:
+      - '0.007745'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=1.93, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.64
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"Completed","notes":null,"media_link":null}}}'
+  recorded_at: Mon, 17 Apr 2023 11:23:36 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/1/good_deeds/5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"48a21b96f1e543fc3be6b40adf1804f1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 86a7e7f2-e42d-4359-b17e-4d77229d789b
+      X-Runtime:
+      - '0.006361'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.63, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.59
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"Completed","notes":null,"media_link":null}}}'
+  recorded_at: Mon, 17 Apr 2023 11:24:46 GMT
+- request:
+    method: patch
+    uri: http://localhost:3000/api/v1/users/1/good_deeds/5?param=1
+    body:
+      encoding: UTF-8
+      string: '{"name":"High-five a stranger.","date":"2023-04-17","time":"2023-04-17
+        04:27:08 -0700","status":"In Progress","notes":"","media_link":null}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"63d0d9d5c1d9b6ddf7028ebaf46036a2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 52f80032-4116-48f3-8d57-98f4c0843897
+      X-Runtime:
+      - '0.044970'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.24, sql.active_record;dur=18.86,
+        instantiation.active_record;dur=0.32, unpermitted_parameters.action_controller;dur=0.10,
+        process_action.action_controller;dur=31.32
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2023-04-17","time":"2000-01-01T11:27:08.000Z","status":"In
+        Progress","notes":"","media_link":null}}}'
+  recorded_at: Mon, 17 Apr 2023 11:27:08 GMT
+recorded_with: VCR 6.1.0

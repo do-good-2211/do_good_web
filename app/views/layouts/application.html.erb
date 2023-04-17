@@ -5,20 +5,54 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+  <!-- ORIGINAL CODE:  
   <% if current_user %>
     <%= link_to "My Page", dashboard_path %>
     <%= link_to "Log Out", logout_path %>
-  <% end %>
-  <%= link_to "DO GOOD", root_path%>
-  <% flash.each do |type, message| %>
-    <p><%= message %></p>
-    <% end %>
-    <%= yield %>
+  <% end %> --> 
+  
+    <header class="bg-neutral-200 bg-gradient-to-r from-orange-300 to-rose-400 lg:text-left">
+      <div class="p-4 text-left text-gray-900 font-bold dark:text-neutral-200">
+        <a class="text-gray-900 font-bold dark:text-neutral-400 hover:text-white"
+          href="/">
+          Home
+        </a>
+        <!-- Below are only displayed when a user is logged in / Need to align right -->
+        <% if current_user %>
+          <a class="text-gray-900 font-bold dark:text-neutral-400 hover:text-white"
+            href="/dashboard">
+            My Page
+          </a>
+          <a class="text-gray-900 font-bold dark:text-neutral-400 hover:text-white"
+            href="/logout">
+            Log Out
+          </a> 
+        <% end %> 
+      </div>
+    </header>
+
+    <% flash.each do |type, message| %>
+      <p><%= message %></p>
+      <% end %>
+      <%= yield %>
+
+    <footer
+      class="bg-neutral-200 text-center bg-gradient-to-r from-indigo-500 to-fuchsia-600 lg:text-left fixed inset-x-0 bottom-0">
+      <div class="p-4 text-center text-gray-900 font-bold dark:text-neutral-200">
+        Need more feel-goods? 
+        <a
+          class="text-gray-900 font-bold dark:text-neutral-400 hover:text-white"
+          href="https://www.mentalhealth.gov/get-help/immediate-help">
+          Get Help Today
+          </a>
+      </div>
+    </footer>
+
   </body>
 </html>

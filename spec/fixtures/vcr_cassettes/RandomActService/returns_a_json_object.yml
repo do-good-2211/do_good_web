@@ -2,58 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/random_acts
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"621c1c9a15c914b41eb2fb2ca89f8568"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - '0659a348-96ab-4ab2-aa59-be364fe78596'
-      X-Runtime:
-      - '0.551272'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.11, process_action.action_controller;dur=546.44
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":null,"type":"random_acts","attributes":{"deed_names":["Donate
-        blood at a local blood center","Volunteer at your local food bank","Volunteer
-        and help out at a senior center"]}}}'
-  recorded_at: Sat, 15 Apr 2023 20:15:11 GMT
-- request:
-    method: get
     uri: https://warm-temple-59633.herokuapp.com/api/v1/random_acts
     body:
       encoding: US-ASCII
@@ -73,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sun, 16 Apr 2023 21:42:38 GMT
+      - Mon, 17 Apr 2023 17:24:25 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -93,21 +41,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"e317ac5a0a3059b4568023f6df2c0d60"
+      - W/"f7d65a3930f152fab06da864ec6cc761"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 18e0092d-46c9-4806-a789-55ea02997aea
+      - abcce2ef-6180-47aa-98ba-0065a6d7d93d
       X-Runtime:
-      - '0.070124'
+      - '0.047693'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":null,"type":"random_acts","attributes":{"deed_names":["Donate
-        to your local food bank","Volunteer at a local animal shelter","Pick up litter
-        around your favorite park"]}}}'
-  recorded_at: Sun, 16 Apr 2023 21:42:38 GMT
+      string: '{"data":{"id":null,"type":"random_acts","attributes":{"deed_names":["Volunteer
+        at your local food pantry","Volunteer at your local food pantry","Volunteer
+        at a local animal shelter"]}}}'
+  recorded_at: Mon, 17 Apr 2023 17:24:25 GMT
 recorded_with: VCR 6.1.0

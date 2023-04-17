@@ -3,11 +3,12 @@ require "rails_helper"
 RSpec.describe GoodDeedFacade, :vcr do
   before do
     @facade = GoodDeedFacade.new({
-                                  id: 1, 
+                                  id: 5, 
                                   name: "High-five a stranger.",
                                    date: "02-02-2024",
                                    time: "2000-01-01T16:00:00.000Z",
-                                   attendees: [1]
+                                   attendees: [1],
+                                   status: 1
                                  }, 2)
   end
 
@@ -44,6 +45,21 @@ RSpec.describe GoodDeedFacade, :vcr do
   describe "#fetch_deed" do
     it 'returns a good deed object with its respective attributes' do
       good_deed = @facade.fetch_deed
+
+      expect(good_deed).to be_a Deed
+      expect(good_deed.id).to be_an Integer
+      expect(good_deed.name).to be_a String
+      expect(good_deed.date).to be_a String
+      expect(good_deed.time).to be_a String
+      expect(good_deed.status).to be_a String
+      expect(good_deed.notes).to be_a(String).or eq(nil)
+      expect(good_deed.media_link).to be_a(String).or eq(nil)
+    end
+  end
+
+  describe '#update_deed' do
+    it 'returns an updated deed object with its respective attributes' do
+      good_deed = @facade.update_deed
 
       expect(good_deed).to be_a Deed
       expect(good_deed.id).to be_an Integer

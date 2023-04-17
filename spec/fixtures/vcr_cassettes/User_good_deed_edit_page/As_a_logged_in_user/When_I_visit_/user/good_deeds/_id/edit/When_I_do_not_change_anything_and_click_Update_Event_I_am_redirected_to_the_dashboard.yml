@@ -158,4 +158,92 @@ http_interactions:
       string: '{"data":{"id":"5","type":"good_deed","attributes":{"name":"High-five
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"Completed","notes":null,"media_link":null}}}'
   recorded_at: Mon, 17 Apr 2023 11:24:46 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users//good_deeds/5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - 112cc518-1650-43f5-85af-6298cad7c9c1
+      X-Runtime:
+      - '0.006347'
+      Server-Timing:
+      - ''
+      Content-Length:
+      - '6420'
+    body:
+      encoding: UTF-8
+      string: '{"status":404,"error":"Not Found","exception":"#\u003cActionController::RoutingError:
+        No route matches [GET] \"/api/v1/users/good_deeds/5\"\u003e","traces":{"Application
+        Trace":[],"Framework Trace":[{"exception_object_id":20300,"id":0,"trace":"actionpack
+        (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":20300,"id":1,"trace":"actionpack
+        (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call''"},{"exception_object_id":20300,"id":2,"trace":"railties
+        (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":20300,"id":3,"trace":"railties
+        (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":20300,"id":4,"trace":"activesupport
+        (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":20300,"id":5,"trace":"activesupport
+        (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":20300,"id":6,"trace":"activesupport
+        (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":20300,"id":7,"trace":"railties
+        (7.0.4.3) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":20300,"id":8,"trace":"actionpack
+        (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":20300,"id":9,"trace":"actionpack
+        (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":20300,"id":10,"trace":"rack
+        (2.2.6.4) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":20300,"id":11,"trace":"activesupport
+        (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":20300,"id":12,"trace":"actionpack (7.0.4.3)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":20300,"id":13,"trace":"actionpack
+        (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":20300,"id":14,"trace":"actionpack
+        (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":20300,"id":15,"trace":"actionpack
+        (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":20300,"id":16,"trace":"actionpack
+        (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":20300,"id":17,"trace":"rack
+        (2.2.6.4) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":20300,"id":18,"trace":"actionpack
+        (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call''"},{"exception_object_id":20300,"id":19,"trace":"railties
+        (7.0.4.3) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":20300,"id":20,"trace":"puma
+        (5.6.5) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":20300,"id":21,"trace":"puma
+        (5.6.5) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":20300,"id":22,"trace":"puma
+        (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":20300,"id":23,"trace":"puma
+        (5.6.5) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":20300,"id":24,"trace":"puma
+        (5.6.5) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":20300,"id":25,"trace":"puma
+        (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":20300,"id":0,"trace":"actionpack
+        (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":20300,"id":1,"trace":"actionpack
+        (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call''"},{"exception_object_id":20300,"id":2,"trace":"railties
+        (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":20300,"id":3,"trace":"railties
+        (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":20300,"id":4,"trace":"activesupport
+        (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":20300,"id":5,"trace":"activesupport
+        (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":20300,"id":6,"trace":"activesupport
+        (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":20300,"id":7,"trace":"railties
+        (7.0.4.3) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":20300,"id":8,"trace":"actionpack
+        (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":20300,"id":9,"trace":"actionpack
+        (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":20300,"id":10,"trace":"rack
+        (2.2.6.4) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":20300,"id":11,"trace":"activesupport
+        (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":20300,"id":12,"trace":"actionpack (7.0.4.3)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":20300,"id":13,"trace":"actionpack
+        (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":20300,"id":14,"trace":"actionpack
+        (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":20300,"id":15,"trace":"actionpack
+        (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":20300,"id":16,"trace":"actionpack
+        (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":20300,"id":17,"trace":"rack
+        (2.2.6.4) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":20300,"id":18,"trace":"actionpack
+        (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call''"},{"exception_object_id":20300,"id":19,"trace":"railties
+        (7.0.4.3) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":20300,"id":20,"trace":"puma
+        (5.6.5) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":20300,"id":21,"trace":"puma
+        (5.6.5) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":20300,"id":22,"trace":"puma
+        (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":20300,"id":23,"trace":"puma
+        (5.6.5) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":20300,"id":24,"trace":"puma
+        (5.6.5) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":20300,"id":25,"trace":"puma
+        (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}]}}'
+  recorded_at: Mon, 17 Apr 2023 12:34:12 GMT
 recorded_with: VCR 6.1.0

@@ -1,8 +1,9 @@
 require "rails_helper"
 
-RSpec.describe "Login Page" do
+RSpec.describe "Login Page", type: :feature do
   describe "when I visit the login page", :vcr do
     it " has a link to login with google" do
+      visit login_path
       expect(page).to have_link("Log in with Google")
     end
   end
@@ -15,10 +16,9 @@ RSpec.describe "Login Page" do
     click_on "Log in with Google"
   end
 
-  describe "when I visit the login page", :vcr do
+  describe "when I click to login", :vcr do
     it "takes me to log in with my google credentials" do
-      expect(current_path).to eq("/login")
-      expect(page).to have_content("Welcome, John Smith!")
+      expect(current_path).to eq("/dashboard")
     end
   end
 end

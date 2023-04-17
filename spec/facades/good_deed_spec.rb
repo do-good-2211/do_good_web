@@ -1,12 +1,13 @@
 require "rails_helper"
-require "./app/facades/good_deed_facade"
 
-RSpec.describe GoodDeedFacade do
+RSpec.describe GoodDeedFacade, :vcr do
   before do
-    deeds = File.read("./spec/fixtures/good_deeds.json")
-    stub_request(:get, "http://localhost:3000/api/v1/good_deeds").to_return(status: 200, body: deeds)
-
-    @facade = GoodDeedFacade.new
+    @facade = GoodDeedFacade.new({
+                                   name: "High-five a stranger.",
+                                   date: "02-02-2024",
+                                   time: "2000-01-01T16:00:00.000Z",
+                                   attendees: [1]
+                                 }, 1)
   end
 
   describe "#initialize" do
@@ -15,15 +16,27 @@ RSpec.describe GoodDeedFacade do
     end
   end
 
-  describe "#methods" do
+  describe "#get_deeds" do
     it "retuns an array of good deed objects with their respective attributes" do
       good = @facade.get_deeds
-      expect(good).to be_a(Array)
+
+      expect(good).to be_an(Array)
+
       good.each do |deed|
-        expect(deed.id).to be_a(Integer)
+        expect(deed.id).to be_an(Integer)
         expect(deed.name).to be_a(String)
         expect(deed.media_link).to be_a(String)
       end
+    end
+  end
+
+  describe "#create_deed" do
+    it "returns a good deed object with its respective attributes" do
+      good_deed = @facade.create_deed
+
+      expect(good_deed).to be_a Deed
+      expect(good_deed.id).to be_an Integer
+      expect(good_deed.name).to be_a String
     end
   end
 end

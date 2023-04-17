@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
-  get "/", to: "good_deeds#index"
+  root 'good_deeds#index'
 
-  get "/login", to: "good_deeds#login"
-
-  get "/random_acts", to: "random_acts#index"
-
-  get "/user/good_deeds/new", to: "good_deeds#new"
+  get "/login", to: "users#login"
+  get "/logout", to: "sessions#logout"
 
   get "/auth/:provider/callback", to: "sessions#omniauth"
+  get "/dashboard", to: "users#show"
+
+  namespace :user do
+    resources :good_deeds, only: [:new, :create]
+  end
+
+  resources :random_acts, only: [:index]
 end

@@ -11,21 +11,28 @@
   </head>
 
   <body>
+  <!-- ORIGINAL CODE: <% if current_user %>
+    <%= link_to "My Page", dashboard_path %>
+    <%= link_to "Log Out", logout_path %>
+  <% end %> -->
+  
     <header class="bg-neutral-200 bg-gradient-to-r from-orange-300 to-rose-400 lg:text-left">
       <div class="p-4 text-left text-gray-900 font-bold dark:text-neutral-200">
         <a class="text-gray-900 font-bold dark:text-neutral-400 hover:text-white"
           href="/">
           Home
         </a>
-        <!-- Below are only displayed when a user is logged in / Need to align right 
-        <a class="text-gray-900 font-bold dark:text-neutral-400 hover:text-white"
-          href="/dashboard">
-          My Page
-        </a>
-        <a class="text-gray-900 font-bold dark:text-neutral-400 hover:text-white"
-          href="/">
-          Log Out
-        </a> -->
+        <!-- Below are only displayed when a user is logged in / Need to align right -->
+        <% if current_user %>
+          <a class="text-gray-900 font-bold dark:text-neutral-400 hover:text-white"
+            href="/dashboard">
+            My Page
+          </a>
+          <a class="text-gray-900 font-bold dark:text-neutral-400 hover:text-white"
+            href="/logout">
+            Log Out
+          </a> 
+        <% end %>
       </div>
     </header>
 

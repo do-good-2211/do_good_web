@@ -1,4 +1,4 @@
-require_relative "boot"
+# frozen_string_literal: truerequire_relative "boot"
 
 require "rails"
 # Pick the frameworks you want:
@@ -17,7 +17,6 @@ require "action_cable/engine"
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-
 module DoGoodWeb
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.

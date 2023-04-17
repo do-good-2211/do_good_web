@@ -1,7 +1,7 @@
 require "rails_helper"
 
-RSpec.describe "Random Acts index page" do
-  describe "As a visitor" do
+RSpec.describe "Random Acts index page", type: :feature do
+  describe "As a logged in user, when I visit '/random_acts'", :vcr do
     before do
       random_acts = File.read("./spec/fixtures/random_acts.json")
       stub_request(:get, "http://localhost:3000/api/v1/random_acts")
@@ -11,18 +11,18 @@ RSpec.describe "Random Acts index page" do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     end
 
-    it "When I visit '/random_acts I see 3 random acts and their name as a link" do
+    it "I see 3 random acts and their name as a link" do
       visit '/random_acts'
 
       expect(page).to have_link("Deed 1")
       expect(page).to have_link("Deed 2")
       expect(page).to have_link("Deed 3")
     end
-
-    it "As a login User, when I click on any deed I am redirected to" do
+       
+    it "when I click on any deed I am redirected to the new good deed page" do
       visit '/random_acts'
-
       click_on("Deed 1")
+
       expect(current_path).to eq("/user/good_deeds/new")
     end
   end

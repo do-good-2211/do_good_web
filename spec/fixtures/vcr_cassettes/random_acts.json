@@ -1,0 +1,175 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://warm-temple-59633.herokuapp.com/api/v1/random_acts",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.7.4"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Server": [
+            "Cowboy"
+          ],
+          "Date": [
+            "Sun, 16 Apr 2023 21:47:33 GMT"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Xss-Protection": [
+            "0"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Download-Options": [
+            "noopen"
+          ],
+          "X-Permitted-Cross-Domain-Policies": [
+            "none"
+          ],
+          "Referrer-Policy": [
+            "strict-origin-when-cross-origin"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Vary": [
+            "Accept"
+          ],
+          "Etag": [
+            "W/\"03816128efb8fbf7712e5dc9c9be96d7\""
+          ],
+          "Cache-Control": [
+            "max-age=0, private, must-revalidate"
+          ],
+          "X-Request-Id": [
+            "333c472a-f6fa-4d56-8df0-ce51ae24e081"
+          ],
+          "X-Runtime": [
+            "0.037841"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Via": [
+            "1.1 vegur"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"data\":{\"id\":null,\"type\":\"random_acts\",\"attributes\":{\"deed_names\":[\"Pick up litter around your favorite park\",\"Volunteer at a local animal shelter\",\"Volunteer and help out at a senior center\"]}}}"
+        }
+      },
+      "recorded_at": "Sun, 16 Apr 2023 21:47:33 GMT"
+    },
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://warm-temple-59633.herokuapp.com/api/v1/users",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.7.4"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Server": [
+            "Cowboy"
+          ],
+          "Date": [
+            "Sun, 16 Apr 2023 21:50:35 GMT"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Xss-Protection": [
+            "0"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Download-Options": [
+            "noopen"
+          ],
+          "X-Permitted-Cross-Domain-Policies": [
+            "none"
+          ],
+          "Referrer-Policy": [
+            "strict-origin-when-cross-origin"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Vary": [
+            "Accept"
+          ],
+          "Etag": [
+            "W/\"037bb33a8a6c3fd8833a55fc4b8aa368\""
+          ],
+          "Cache-Control": [
+            "max-age=0, private, must-revalidate"
+          ],
+          "X-Request-Id": [
+            "adbd51df-6c7f-403f-8b09-4a22c171f6b0"
+          ],
+          "X-Runtime": [
+            "0.004821"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Via": [
+            "1.1 vegur"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"data\":[{\"id\":\"1\",\"type\":\"users\",\"attributes\":{\"name\":\"John Smith\",\"role\":\"user\",\"good_deeds\":[]}}]}"
+        }
+      },
+      "recorded_at": "Sun, 16 Apr 2023 21:50:36 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.1.0"
+}

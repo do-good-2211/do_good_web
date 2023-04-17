@@ -21,5 +21,10 @@ class User::GoodDeedsController < ApplicationController
   end
 
   def update
+    GoodDeedFacade.new(params, current_user[:id]).update_deed
+    redirect_to dashboard_path
+  end
+
+  def destroy
   end
 end

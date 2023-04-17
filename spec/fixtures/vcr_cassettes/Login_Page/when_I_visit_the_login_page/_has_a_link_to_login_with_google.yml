@@ -38,22 +38,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"811245ca487e6ab91dd42f9a9a84ace8"
+      - W/"1cf7c9c23f0e3b943b9ad826a7e59e1b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9a323eae-f4d4-4330-a0d0-b0c15d7a15a2
+      - a0bb99a2-e4f0-457f-8827-ca0656b3ac77
       X-Runtime:
-      - '0.012514'
+      - '0.014896'
       Server-Timing:
-      - start_processing.action_controller;dur=5.33, sql.active_record;dur=1.27, instantiation.active_record;dur=0.09,
-        process_action.action_controller;dur=3.27
+      - start_processing.action_controller;dur=0.14, sql.active_record;dur=1.94, instantiation.active_record;dur=0.15,
+        process_action.action_controller;dur=4.67
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"users","attributes":{"name":"John Smith","role":"user","good_deeds":[]}}}'
-  recorded_at: Sat, 15 Apr 2023 20:15:10 GMT
+      string: '{"data":{"id":"5","type":"users","attributes":{"name":"John Smith","role":"user","good_deeds":[]}}}'
+  recorded_at: Sun, 16 Apr 2023 23:06:21 GMT
 - request:
     method: post
     uri: https://warm-temple-59633.herokuapp.com/api/v1/users?param=1
@@ -78,7 +78,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sun, 16 Apr 2023 21:42:36 GMT
+      - Mon, 17 Apr 2023 17:24:23 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -98,19 +98,43 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"27f9ad7cd35120d38c74136a722d4c3e"
+      - W/"4528283f4c0eed6e033dfc9bf8312355"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 65dc3ef6-98e2-49dc-b400-c6361548c874
+      - c0114eed-a84c-45ca-9ba7-8776c0529874
       X-Runtime:
-      - '0.004529'
+      - '0.007376'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"users","attributes":{"name":"John Smith","role":"user","good_deeds":[]}}}'
-  recorded_at: Sun, 16 Apr 2023 21:42:36 GMT
+      string: '{"data":{"id":"1","type":"users","attributes":{"name":"John Smith","role":"user","good_deeds":[{"id":9,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T22:14:39.834Z","updated_at":"2023-04-16T22:14:39.834Z"},{"id":9,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T22:14:39.834Z","updated_at":"2023-04-16T22:14:39.834Z"},{"id":10,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T22:17:10.606Z","updated_at":"2023-04-16T22:17:10.606Z"},{"id":12,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T14:33:17.406Z","updated_at":"2023-04-17T14:33:17.406Z"},{"id":13,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T14:35:54.383Z","updated_at":"2023-04-17T14:35:54.383Z"},{"id":14,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T14:35:55.622Z","updated_at":"2023-04-17T14:35:55.622Z"},{"id":14,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T14:35:55.622Z","updated_at":"2023-04-17T14:35:55.622Z"},{"id":5,"name":"Pick
+        up litter around your favorite park","host_id":1,"date":"2023-04-17","time":"2000-01-01T14:36:10.000Z","notes":"","media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T21:50:37.570Z","updated_at":"2023-04-17T14:36:10.846Z"},{"id":5,"name":"Pick
+        up litter around your favorite park","host_id":1,"date":"2023-04-17","time":"2000-01-01T14:36:10.000Z","notes":"","media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T21:50:37.570Z","updated_at":"2023-04-17T14:36:10.846Z"},{"id":15,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T14:36:12.580Z","updated_at":"2023-04-17T14:36:12.580Z"},{"id":16,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T17:24:12.822Z","updated_at":"2023-04-17T17:24:12.822Z"},{"id":16,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T17:24:12.822Z","updated_at":"2023-04-17T17:24:12.822Z"}],"email":"john@example.com"}}}'
+  recorded_at: Mon, 17 Apr 2023 17:24:23 GMT
 recorded_with: VCR 6.1.0

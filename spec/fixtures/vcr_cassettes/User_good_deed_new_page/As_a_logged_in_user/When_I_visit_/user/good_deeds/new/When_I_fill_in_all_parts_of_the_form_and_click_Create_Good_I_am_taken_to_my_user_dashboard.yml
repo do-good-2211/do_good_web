@@ -35,73 +35,54 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"c3759a5dbee0b8ab1e8ab61f411c72aa"
+      - W/"6167c9a85aec1087c257912e6325845c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1d7ce854-ee2f-46ce-9ed4-18124ebdc1e4
+      - c6d31108-ff93-415d-b6db-7d741a0ebb6c
       X-Runtime:
-      - '0.052489'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.10, sql.active_record;dur=5.74, instantiation.active_record;dur=0.34,
-        process_action.action_controller;dur=31.91
+      - '0.087990'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"users","attributes":{"name":"Jasmine Hamou","role":"user","good_deeds":[{"id":2,"name":"High-five
         a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-15T22:20:38.037Z","updated_at":"2023-04-15T22:20:38.037Z"},{"id":6,"name":"High-five
+        Progress","created_at":"2023-04-17T18:51:52.320Z","updated_at":"2023-04-17T18:51:52.320Z"},{"id":19,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T18:51:53.943Z","updated_at":"2023-04-17T18:51:53.943Z"},{"id":19,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T18:51:53.943Z","updated_at":"2023-04-17T18:51:53.943Z"}],"email":"john@example.com"}},{"id":"2","type":"users","attributes":{"name":"Jean-Luc
+        Picard","role":"user","good_deeds":[{"id":10,"name":"High-five a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T22:17:10.606Z","updated_at":"2023-04-16T22:17:10.606Z"},{"id":12,"name":"High-five
         a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-15T23:21:07.177Z","updated_at":"2023-04-15T23:21:07.177Z"},{"id":7,"name":"Contribute
-        code or a monetary donation to an open-source software project","host_id":1,"date":"2023-04-15","time":"2000-01-01T23:41:43.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-15T23:42:04.681Z","updated_at":"2023-04-15T23:42:04.681Z"},{"id":7,"name":"Contribute
-        code or a monetary donation to an open-source software project","host_id":1,"date":"2023-04-15","time":"2000-01-01T23:41:43.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-15T23:42:04.681Z","updated_at":"2023-04-15T23:42:04.681Z"},{"id":9,"name":"Contribute
-        code or a monetary donation to an open-source software project","host_id":1,"date":"2023-04-15","time":"2000-01-01T02:33:35.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-16T02:33:35.566Z","updated_at":"2023-04-16T02:33:35.566Z"},{"id":9,"name":"Contribute
-        code or a monetary donation to an open-source software project","host_id":1,"date":"2023-04-15","time":"2000-01-01T02:33:35.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-16T02:33:35.566Z","updated_at":"2023-04-16T02:33:35.566Z"},{"id":10,"name":"Contribute
-        code or a monetary donation to an open-source software project","host_id":1,"date":"2001-02-03","time":"2000-01-01T16:25:03.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-16T16:25:03.733Z","updated_at":"2023-04-16T16:25:03.733Z"},{"id":10,"name":"Contribute
-        code or a monetary donation to an open-source software project","host_id":1,"date":"2001-02-03","time":"2000-01-01T16:25:03.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-16T16:25:03.733Z","updated_at":"2023-04-16T16:25:03.733Z"},{"id":11,"name":"Volunteer
-        at a local animal shelter","host_id":1,"date":"2023-04-16","time":"2000-01-01T23:33:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-16T18:33:45.488Z","updated_at":"2023-04-16T18:33:45.488Z"},{"id":12,"name":"High-five
+        Progress","created_at":"2023-04-17T14:33:17.406Z","updated_at":"2023-04-17T14:33:17.406Z"},{"id":13,"name":"High-five
         a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-16T22:56:57.513Z","updated_at":"2023-04-16T22:56:57.513Z"},{"id":13,"name":"High-five
+        Progress","created_at":"2023-04-17T14:35:54.383Z","updated_at":"2023-04-17T14:35:54.383Z"},{"id":15,"name":"High-five
         a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-17T10:21:32.500Z","updated_at":"2023-04-17T10:21:32.500Z"},{"id":5,"name":"High-five
-        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":"This
-        was awesome","media_link":"http://picture.jpg","status":"In Progress","created_at":"2023-04-15T22:26:42.755Z","updated_at":"2023-04-17T11:33:11.268Z"}]}},{"id":"2","type":"users","attributes":{"name":"John
-        Smith","role":"user","good_deeds":[{"id":2,"name":"High-five a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-15T22:20:38.037Z","updated_at":"2023-04-15T22:20:38.037Z"},{"id":2,"name":"High-five
+        Progress","created_at":"2023-04-17T14:36:12.580Z","updated_at":"2023-04-17T14:36:12.580Z"},{"id":17,"name":"High-five
         a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-15T22:20:38.037Z","updated_at":"2023-04-15T22:20:38.037Z"},{"id":6,"name":"High-five
+        Progress","created_at":"2023-04-17T17:24:24.335Z","updated_at":"2023-04-17T17:24:24.335Z"},{"id":18,"name":"High-five
         a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-15T23:21:07.177Z","updated_at":"2023-04-15T23:21:07.177Z"},{"id":7,"name":"Contribute
-        code or a monetary donation to an open-source software project","host_id":1,"date":"2023-04-15","time":"2000-01-01T23:41:43.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-15T23:42:04.681Z","updated_at":"2023-04-15T23:42:04.681Z"},{"id":9,"name":"Contribute
-        code or a monetary donation to an open-source software project","host_id":1,"date":"2023-04-15","time":"2000-01-01T02:33:35.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-16T02:33:35.566Z","updated_at":"2023-04-16T02:33:35.566Z"},{"id":10,"name":"Contribute
-        code or a monetary donation to an open-source software project","host_id":1,"date":"2001-02-03","time":"2000-01-01T16:25:03.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-16T16:25:03.733Z","updated_at":"2023-04-16T16:25:03.733Z"},{"id":11,"name":"Volunteer
-        at a local animal shelter","host_id":1,"date":"2023-04-16","time":"2000-01-01T23:33:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-16T18:33:45.488Z","updated_at":"2023-04-16T18:33:45.488Z"},{"id":12,"name":"High-five
-        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-16T22:56:57.513Z","updated_at":"2023-04-16T22:56:57.513Z"},{"id":13,"name":"High-five
-        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-17T10:21:32.500Z","updated_at":"2023-04-17T10:21:32.500Z"},{"id":5,"name":"High-five
-        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":"This
-        was awesome","media_link":"http://picture.jpg","status":"In Progress","created_at":"2023-04-15T22:26:42.755Z","updated_at":"2023-04-17T11:33:11.268Z"}]}}]}'
-  recorded_at: Mon, 17 Apr 2023 11:36:59 GMT
+        Progress","created_at":"2023-04-17T18:51:52.320Z","updated_at":"2023-04-17T18:51:52.320Z"}],"email":"captain@uss-enterprise.com"}},{"id":"3","type":"users","attributes":{"name":"William
+        Riker","role":"user","good_deeds":[{"id":7,"name":"Help Others4.","host_id":3,"date":"2023-01-01","time":"2000-01-01T16:00:00.000Z","notes":"Worth
+        it!","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","status":"Completed","created_at":"2023-04-16T22:13:45.317Z","updated_at":"2023-04-16T22:13:45.317Z"}],"email":"number2@uss-enterprise.com"}},{"id":"4","type":"users","attributes":{"name":"Data","role":"user","good_deeds":[{"id":7,"name":"Help
+        Others4.","host_id":3,"date":"2023-01-01","time":"2000-01-01T16:00:00.000Z","notes":"Worth
+        it!","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","status":"Completed","created_at":"2023-04-16T22:13:45.317Z","updated_at":"2023-04-16T22:13:45.317Z"},{"id":8,"name":"Help
+        Others5.","host_id":4,"date":"2023-01-01","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T22:13:45.332Z","updated_at":"2023-04-16T22:13:45.332Z"}],"email":"data@uss-enterprise.com"}},{"id":"5","type":"users","attributes":{"name":"Geordi
+        La Forge","role":"user","good_deeds":[{"id":7,"name":"Help Others4.","host_id":3,"date":"2023-01-01","time":"2000-01-01T16:00:00.000Z","notes":"Worth
+        it!","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","status":"Completed","created_at":"2023-04-16T22:13:45.317Z","updated_at":"2023-04-16T22:13:45.317Z"}],"email":"chief-engineer@uss-enterprise.com"}},{"id":"6","type":"users","attributes":{"name":"Kara
+        Jones-Hofmann","role":"user","good_deeds":[],"email":"karajhturing@gmail.com"}},{"id":"7","type":"users","attributes":{"name":"Jasmine
+        Hamou","role":"user","good_deeds":[],"email":"jasmine.mahabadi@gmail.com"}}]}'
+  recorded_at: Mon, 17 Apr 2023 19:50:23 GMT
 - request:
     method: post
     uri: http://localhost:3000/api/v1/users/1/good_deeds?param=1
     body:
       encoding: UTF-8
-      string: '{"name":"Contribute code or a monetary donation to an open-source software
-        project","date":"2023-04-17","time":"2023-04-17 04:36:59 -0700","attendees":["1","2"]}'
+      string: '{"name":"Volunteer at a local animal shelter","date":"2023-04-17","time":"2023-04-17
+        13:52:30 -0600","attendees":["1"]}'
     headers:
       Content-Type:
       - application/json
@@ -133,31 +114,84 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"46484ab8a82318abb4f636a88d50a6fc"
+      - W/"63934840e7a156968f5ada98d5284e10"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5843af59-cbdc-469b-9c6a-6120401dac01
+      - cd1c4d2e-a3ce-4f06-b0ef-2c0e0a36ad3c
       X-Runtime:
-      - '0.038568'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.09, sql.active_record;dur=25.60,
-        instantiation.active_record;dur=0.16, process_action.action_controller;dur=33.39
+      - '0.019892'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"14","type":"good_deeds_create","attributes":{"name":"Contribute
-        code or a monetary donation to an open-source software project","media_link":null,"notes":null,"date":"2023-04-17","time":"2000-01-01T11:36:59.000Z","status":"In
+      string: '{"data":{"id":"20","type":"good_deeds_create","attributes":{"name":"Volunteer
+        at a local animal shelter","media_link":null,"notes":null,"date":"2023-04-17","time":"2000-01-01T19:52:30.000Z","status":"In
         Progress","host_id":1}}}'
-  recorded_at: Mon, 17 Apr 2023 11:36:59 GMT
+  recorded_at: Sun, 16 Apr 2023 02:33:35 GMT
 - request:
-    method: post
-    uri: http://localhost:3000/api/v1/users//good_deeds?param=1
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 17 Apr 2023 19:50:22 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"6167c9a85aec1087c257912e6325845c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c6d31108-ff93-415d-b6db-7d741a0ebb6c
+      X-Runtime:
+      - '0.087990'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"name":"Contribute code or a monetary donation to an open-source software
-        project","date":"2023-04-17","time":"2023-04-17 05:34:13 -0700","attendees":["1","2"]}'
+      string: '{"data":[{"id":"1","type":"users","attributes":{"name":"John Smith","role":"user","good_deeds":[]}}]}'
+  recorded_at: Sun, 16 Apr 2023 21:50:37 GMT
+- request:
+    method: post
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/id/good_deeds?param=1
+    body:
+      encoding: UTF-8
+      string: '{"name":"Volunteer at a local animal shelter","date":"2023-04-17","time":"2023-04-17
+        15:00:52 -0600","attendees":["1"]}'
     headers:
       Content-Type:
       - application/json
@@ -172,74 +206,41 @@ http_interactions:
       code: 404
       message: Not Found
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 17 Apr 2023 21:00:53 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
       Content-Type:
-      - application/json; charset=UTF-8
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
       X-Request-Id:
-      - bfaa56b0-785a-4798-8597-d5b10ab72209
+      - 2dafee92-b165-4412-bb8c-16a85a4daed3
       X-Runtime:
-      - '0.007031'
-      Server-Timing:
-      - ''
-      Content-Length:
-      - '6419'
+      - '0.012528'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"status":404,"error":"Not Found","exception":"#\u003cActionController::RoutingError:
-        No route matches [POST] \"/api/v1/users/good_deeds\"\u003e","traces":{"Application
-        Trace":[],"Framework Trace":[{"exception_object_id":20420,"id":0,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":20420,"id":1,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call''"},{"exception_object_id":20420,"id":2,"trace":"railties
-        (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":20420,"id":3,"trace":"railties
-        (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":20420,"id":4,"trace":"activesupport
-        (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":20420,"id":5,"trace":"activesupport
-        (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":20420,"id":6,"trace":"activesupport
-        (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":20420,"id":7,"trace":"railties
-        (7.0.4.3) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":20420,"id":8,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":20420,"id":9,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":20420,"id":10,"trace":"rack
-        (2.2.6.4) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":20420,"id":11,"trace":"activesupport
-        (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
-        `call''"},{"exception_object_id":20420,"id":12,"trace":"actionpack (7.0.4.3)
-        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":20420,"id":13,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":20420,"id":14,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":20420,"id":15,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":20420,"id":16,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":20420,"id":17,"trace":"rack
-        (2.2.6.4) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":20420,"id":18,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call''"},{"exception_object_id":20420,"id":19,"trace":"railties
-        (7.0.4.3) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":20420,"id":20,"trace":"puma
-        (5.6.5) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":20420,"id":21,"trace":"puma
-        (5.6.5) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":20420,"id":22,"trace":"puma
-        (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":20420,"id":23,"trace":"puma
-        (5.6.5) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":20420,"id":24,"trace":"puma
-        (5.6.5) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":20420,"id":25,"trace":"puma
-        (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":20420,"id":0,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":20420,"id":1,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call''"},{"exception_object_id":20420,"id":2,"trace":"railties
-        (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":20420,"id":3,"trace":"railties
-        (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":20420,"id":4,"trace":"activesupport
-        (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":20420,"id":5,"trace":"activesupport
-        (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":20420,"id":6,"trace":"activesupport
-        (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":20420,"id":7,"trace":"railties
-        (7.0.4.3) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":20420,"id":8,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":20420,"id":9,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":20420,"id":10,"trace":"rack
-        (2.2.6.4) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":20420,"id":11,"trace":"activesupport
-        (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
-        `call''"},{"exception_object_id":20420,"id":12,"trace":"actionpack (7.0.4.3)
-        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":20420,"id":13,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":20420,"id":14,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":20420,"id":15,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":20420,"id":16,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":20420,"id":17,"trace":"rack
-        (2.2.6.4) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":20420,"id":18,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call''"},{"exception_object_id":20420,"id":19,"trace":"railties
-        (7.0.4.3) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":20420,"id":20,"trace":"puma
-        (5.6.5) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":20420,"id":21,"trace":"puma
-        (5.6.5) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":20420,"id":22,"trace":"puma
-        (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":20420,"id":23,"trace":"puma
-        (5.6.5) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":20420,"id":24,"trace":"puma
-        (5.6.5) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":20420,"id":25,"trace":"puma
-        (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}]}}'
-  recorded_at: Mon, 17 Apr 2023 12:34:13 GMT
+      string: '{"errors":[{"status":"404","title":"Invalid Request","detail":["Couldn''t
+        find User with ''id''=0"]}]}'
+  recorded_at: Mon, 17 Apr 2023 21:00:53 GMT
 recorded_with: VCR 6.1.0

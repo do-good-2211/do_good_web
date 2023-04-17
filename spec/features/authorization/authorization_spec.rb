@@ -18,22 +18,17 @@ RSpec.describe "Authorization" do
       expect(page).to_not have_content("You are not authorized to access this page")
     end
 
-    it "When clicking Random Acts or naviagting to /random_acts, I see a message that I do not have access, and I'm redirected to the home page'" do
-      visit root_path
-      click_on "Random Acts"
-      expect(current_path).to eq(root_path)
-      expect(page).to have_content("You are not authorized to access this page")
-
+    it "When naviagting to /random_acts, I see a message that I do not have access, and I'm redirected to the home page'" do
       visit random_acts_path
+
+      expect(current_path).to eq(root_path)
       expect(page).to have_content("You are not authorized to access this page")
     end
 
     it "When I am logged in as a user, I can visit /random_acts" do
       user = { id: 1, attributes: { name: "Bob", email: "user@example.com", password_digest: "test1", role: "User" } }
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-      visit root_path
-      click_on "Random Acts"
-
+      visit random_acts_path
       expect(current_path).to eq(random_acts_path)
       expect(page).to_not have_content("You are not authorized to access this page")
     end

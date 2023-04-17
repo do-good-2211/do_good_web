@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/random_acts
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/good_deeds
     body:
       encoding: US-ASCII
       string: ''
@@ -18,6 +18,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 17 Apr 2023 18:10:49 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -35,26 +41,24 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"040222264563975e39b05a298196fbc6"
+      - W/"90d0241e3615667c572a37a612495c25"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8d3eb0f4-6a39-4692-95d8-ac69762d5723
+      - 31077841-4a25-4917-a989-1b9998ad4b6d
       X-Runtime:
-      - '0.518119'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.05, process_action.action_controller;dur=513.43
+      - '0.004587'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":null,"type":"random_acts","attributes":{"deed_names":["Volunteer
-        at your local food pantry","Volunteer at your local food bank","Donate blood
-        at a local blood center"]}}}'
-  recorded_at: Sat, 15 Apr 2023 20:15:07 GMT
+      string: '{"data":[{"id":"7","type":"good_deeds","attributes":{"name":"Help Others4.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}}]}'
+  recorded_at: Mon, 17 Apr 2023 18:10:50 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/random_acts
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/good_deeds
     body:
       encoding: US-ASCII
       string: ''
@@ -70,6 +74,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 17 Apr 2023 18:10:49 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -87,21 +97,19 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"a3c982c1ad3caebdfa6af5ccc396223e"
+      - W/"90d0241e3615667c572a37a612495c25"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e7682d8e-ab12-43a3-b548-8942c90527ec
+      - 2e466d05-0207-42b8-b0e6-9c9673854972
       X-Runtime:
-      - '0.521642'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.09, process_action.action_controller;dur=516.69
+      - '0.007195'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":null,"type":"random_acts","attributes":{"deed_names":["Volunteer
-        at your local food pantry","Pick up litter around your favorite park","Volunteer
-        at a local animal shelter"]}}}'
-  recorded_at: Sat, 15 Apr 2023 20:15:08 GMT
+      string: '{"data":[{"id":"7","type":"good_deeds","attributes":{"name":"Help Others4.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}}]}'
+  recorded_at: Mon, 17 Apr 2023 18:10:50 GMT
 recorded_with: VCR 6.1.0

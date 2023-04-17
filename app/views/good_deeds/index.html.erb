@@ -1,19 +1,42 @@
-<% if current_user.nil?%>
-  <%= link_to "Log In", login_path %>
-<% end %>
 
-<div id= "title">
-  <h1>"Do Good"</h1>
-  <p><%= "Ok, I'm Convinced. I wanna join the fun" %></p>
-</div>
 
-<div id= "random_act">
-  <%= button_to "Random Acts", "/random_acts", method: :get %>
-</div>
+<!-- ORIGINAL VIEW:  %>
+<% @deeds.get_deeds.each do |deed| %>  
+  <%= deed.media_link %>
+  <%= deed.name %>
+<% end %> -->
 
-<div class= “deeds”>
-  <% @deeds.get_deeds.each do |deed|%>
-    <%= deed.name %>
-    <%= deed.media_link %>
-  <%end%>
-</div>
+<!-- Logo / Moto / Login -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mb-1">
+  <article class="p-12 text-center" id="logo">
+    <%= image_tag("do_good.jpg", alt: "Do Good Logo", class: "mx-auto w-1/5 h-auto") %>
+    <h2 class="py-8 text-lg font-normal text-gray-900">
+      Ok, I'm Convinced. I wanna join the fun
+    </h2>
+    <button class="p-2 mb-4 bg-red-500 hover:bg-indigo-500 text-white font-base rounded" href='/auth/google_oauth2'>
+      <!-- If we want to keep a login page we can use this code: -->
+      <!-- <%= button_to "Login/Register", login_path, method: :get, class: "p-2 mb-4 bg-red-500 hover:bg-indigo-500 text-white font-base rounded" %> -->
+      <%= link_to "Login/Register", '/auth/google_oauth2'%>
+    </button>
+  </article>
+</section>
+
+<!-- Good Deed Cards -->
+<section class='flex items-center justify-center min-h-screen bg-gradient-to-br px-2'>
+  <article>
+    <section class="mt-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8 pb-10">
+      <% @deeds.get_deeds.each do |deed| %> 
+        <div class='max-w-md  mx-auto bg-white rounded-lg shadow-xl overflow-hidden w-80'>
+          <div class='max-w-md mx-auto'>
+            <div class='h-[400px]' style='background-image:url(<%= deed.media_link %>);background-size:cover;background-position:center'>
+              </div>
+                <div class='p-4 sm:p-6'>
+                  <p class='font-bold text-gray-700 text-[15px] leading-7 mb-1'><%= deed.name %></p>
+                </div>
+            </div>
+          </div>
+        </div>
+      <% end %> 
+    </section>
+  </article>
+</section>

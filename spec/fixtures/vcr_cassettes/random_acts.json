@@ -30,7 +30,7 @@
             "Cowboy"
           ],
           "Date": [
-            "Sun, 16 Apr 2023 21:47:33 GMT"
+            "Mon, 17 Apr 2023 17:43:57 GMT"
           ],
           "Connection": [
             "keep-alive"
@@ -60,16 +60,16 @@
             "Accept"
           ],
           "Etag": [
-            "W/\"03816128efb8fbf7712e5dc9c9be96d7\""
+            "W/\"a233ca22f215030a8ec498a98615346f\""
           ],
           "Cache-Control": [
             "max-age=0, private, must-revalidate"
           ],
           "X-Request-Id": [
-            "333c472a-f6fa-4d56-8df0-ce51ae24e081"
+            "2e80b108-9d11-4659-bd8f-0a16af3f8035"
           ],
           "X-Runtime": [
-            "0.037841"
+            "0.076700"
           ],
           "Transfer-Encoding": [
             "chunked"
@@ -80,10 +80,95 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"data\":{\"id\":null,\"type\":\"random_acts\",\"attributes\":{\"deed_names\":[\"Pick up litter around your favorite park\",\"Volunteer at a local animal shelter\",\"Volunteer and help out at a senior center\"]}}}"
+          "string": "{\"data\":{\"id\":null,\"type\":\"random_acts\",\"attributes\":{\"deed_names\":[\"Find a charity and donate to it\",\"Volunteer at a local animal shelter\",\"Volunteer at your local food pantry\"]}}}"
         }
       },
-      "recorded_at": "Sun, 16 Apr 2023 21:47:33 GMT"
+      "recorded_at": "Mon, 17 Apr 2023 17:43:57 GMT"
+    },
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://warm-temple-59633.herokuapp.com/api/v1/random_acts",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.7.4"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Server": [
+            "Cowboy"
+          ],
+          "Date": [
+            "Mon, 17 Apr 2023 17:43:58 GMT"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Xss-Protection": [
+            "0"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Download-Options": [
+            "noopen"
+          ],
+          "X-Permitted-Cross-Domain-Policies": [
+            "none"
+          ],
+          "Referrer-Policy": [
+            "strict-origin-when-cross-origin"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Vary": [
+            "Accept"
+          ],
+          "Etag": [
+            "W/\"499c4b1f30a490ddc5dcea1a8902ebb5\""
+          ],
+          "Cache-Control": [
+            "max-age=0, private, must-revalidate"
+          ],
+          "X-Request-Id": [
+            "ecb369c4-7dfb-4781-b1b1-9e317a39ac6e"
+          ],
+          "X-Runtime": [
+            "0.035309"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Via": [
+            "1.1 vegur"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"data\":{\"id\":null,\"type\":\"random_acts\",\"attributes\":{\"deed_names\":[\"Volunteer at a local animal shelter\",\"Donate blood at a local blood center\",\"Contribute code or a monetary donation to an open-source software project\"]}}}"
+        }
+      },
+      "recorded_at": "Mon, 17 Apr 2023 17:43:58 GMT"
     },
     {
       "request": {
@@ -115,7 +200,7 @@
             "Cowboy"
           ],
           "Date": [
-            "Sun, 16 Apr 2023 21:50:35 GMT"
+            "Mon, 17 Apr 2023 18:10:55 GMT"
           ],
           "Connection": [
             "keep-alive"
@@ -145,16 +230,16 @@
             "Accept"
           ],
           "Etag": [
-            "W/\"037bb33a8a6c3fd8833a55fc4b8aa368\""
+            "W/\"346cf40f6c9b8fb6c73f821ceff2bd33\""
           ],
           "Cache-Control": [
             "max-age=0, private, must-revalidate"
           ],
           "X-Request-Id": [
-            "adbd51df-6c7f-403f-8b09-4a22c171f6b0"
+            "fce4a09d-9b8a-4ccf-b16b-a3b6c82fdbdc"
           ],
           "X-Runtime": [
-            "0.004821"
+            "0.028432"
           ],
           "Transfer-Encoding": [
             "chunked"
@@ -165,10 +250,95 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"data\":[{\"id\":\"1\",\"type\":\"users\",\"attributes\":{\"name\":\"John Smith\",\"role\":\"user\",\"good_deeds\":[]}}]}"
+          "string": "{\"data\":[{\"id\":\"1\",\"type\":\"users\",\"attributes\":{\"name\":\"John Smith\",\"role\":\"user\",\"good_deeds\":[{\"id\":9,\"name\":\"High-five a stranger.\",\"host_id\":1,\"date\":\"2024-02-02\",\"time\":\"2000-01-01T16:00:00.000Z\",\"notes\":null,\"media_link\":null,\"status\":\"In Progress\",\"created_at\":\"2023-04-16T22:14:39.834Z\",\"updated_at\":\"2023-04-16T22:14:39.834Z\"},{\"id\":9,\"name\":\"High-five a stranger.\",\"host_id\":1,\"date\":\"2024-02-02\",\"time\":\"2000-01-01T16:00:00.000Z\",\"notes\":null,\"media_link\":null,\"status\":\"In Progress\",\"created_at\":\"2023-04-16T22:14:39.834Z\",\"updated_at\":\"2023-04-16T22:14:39.834Z\"},{\"id\":10,\"name\":\"High-five a stranger.\",\"host_id\":2,\"date\":\"2024-02-02\",\"time\":\"2000-01-01T16:00:00.000Z\",\"notes\":null,\"media_link\":null,\"status\":\"In Progress\",\"created_at\":\"2023-04-16T22:17:10.606Z\",\"updated_at\":\"2023-04-16T22:17:10.606Z\"},{\"id\":12,\"name\":\"High-five a stranger.\",\"host_id\":2,\"date\":\"2024-02-02\",\"time\":\"2000-01-01T16:00:00.000Z\",\"notes\":null,\"media_link\":null,\"status\":\"In Progress\",\"created_at\":\"2023-04-17T14:33:17.406Z\",\"updated_at\":\"2023-04-17T14:33:17.406Z\"},{\"id\":13,\"name\":\"High-five a stranger.\",\"host_id\":2,\"date\":\"2024-02-02\",\"time\":\"2000-01-01T16:00:00.000Z\",\"notes\":null,\"media_link\":null,\"status\":\"In Progress\",\"created_at\":\"2023-04-17T14:35:54.383Z\",\"updated_at\":\"2023-04-17T14:35:54.383Z\"},{\"id\":14,\"name\":\"High-five a stranger.\",\"host_id\":1,\"date\":\"2024-02-02\",\"time\":\"2000-01-01T16:00:00.000Z\",\"notes\":null,\"media_link\":null,\"status\":\"In Progress\",\"created_at\":\"2023-04-17T14:35:55.622Z\",\"updated_at\":\"2023-04-17T14:35:55.622Z\"},{\"id\":14,\"name\":\"High-five a stranger.\",\"host_id\":1,\"date\":\"2024-02-02\",\"time\":\"2000-01-01T16:00:00.000Z\",\"notes\":null,\"media_link\":null,\"status\":\"In Progress\",\"created_at\":\"2023-04-17T14:35:55.622Z\",\"updated_at\":\"2023-04-17T14:35:55.622Z\"},{\"id\":5,\"name\":\"Pick up litter around your favorite park\",\"host_id\":1,\"date\":\"2023-04-17\",\"time\":\"2000-01-01T14:36:10.000Z\",\"notes\":\"\",\"media_link\":null,\"status\":\"In Progress\",\"created_at\":\"2023-04-16T21:50:37.570Z\",\"updated_at\":\"2023-04-17T14:36:10.846Z\"},{\"id\":5,\"name\":\"Pick up litter around your favorite park\",\"host_id\":1,\"date\":\"2023-04-17\",\"time\":\"2000-01-01T14:36:10.000Z\",\"notes\":\"\",\"media_link\":null,\"status\":\"In Progress\",\"created_at\":\"2023-04-16T21:50:37.570Z\",\"updated_at\":\"2023-04-17T14:36:10.846Z\"},{\"id\":15,\"name\":\"High-five a stranger.\",\"host_id\":2,\"date\":\"2024-02-02\",\"time\":\"2000-01-01T16:00:00.000Z\",\"notes\":null,\"media_link\":null,\"status\":\"In Progress\",\"created_at\":\"2023-04-17T14:36:12.580Z\",\"updated_at\":\"2023-04-17T14:36:12.580Z\"},{\"id\":16,\"name\":\"High-five a stranger.\",\"host_id\":1,\"date\":\"2024-02-02\",\"time\":\"2000-01-01T16:00:00.000Z\",\"notes\":null,\"media_link\":null,\"status\":\"In Progress\",\"created_at\":\"2023-04-17T17:24:12.822Z\",\"updated_at\":\"2023-04-17T17:24:12.822Z\"},{\"id\":16,\"name\":\"High-five a stranger.\",\"host_id\":1,\"date\":\"2024-02-02\",\"time\":\"2000-01-01T16:00:00.000Z\",\"notes\":null,\"media_link\":null,\"status\":\"In Progress\",\"created_at\":\"2023-04-17T17:24:12.822Z\",\"updated_at\":\"2023-04-17T17:24:12.822Z\"},{\"id\":17,\"name\":\"High-five a stranger.\",\"host_id\":2,\"date\":\"2024-02-02\",\"time\":\"2000-01-01T16:00:00.000Z\",\"notes\":null,\"media_link\":null,\"status\":\"In Progress\",\"created_at\":\"2023-04-17T17:24:24.335Z\",\"updated_at\":\"2023-04-17T17:24:24.335Z\"}],\"email\":\"john@example.com\"}},{\"id\":\"2\",\"type\":\"users\",\"attributes\":{\"name\":\"Jean-Luc Picard\",\"role\":\"user\",\"good_deeds\":[{\"id\":10,\"name\":\"High-five a stranger.\",\"host_id\":2,\"date\":\"2024-02-02\",\"time\":\"2000-01-01T16:00:00.000Z\",\"notes\":null,\"media_link\":null,\"status\":\"In Progress\",\"created_at\":\"2023-04-16T22:17:10.606Z\",\"updated_at\":\"2023-04-16T22:17:10.606Z\"},{\"id\":12,\"name\":\"High-five a stranger.\",\"host_id\":2,\"date\":\"2024-02-02\",\"time\":\"2000-01-01T16:00:00.000Z\",\"notes\":null,\"media_link\":null,\"status\":\"In Progress\",\"created_at\":\"2023-04-17T14:33:17.406Z\",\"updated_at\":\"2023-04-17T14:33:17.406Z\"},{\"id\":13,\"name\":\"High-five a stranger.\",\"host_id\":2,\"date\":\"2024-02-02\",\"time\":\"2000-01-01T16:00:00.000Z\",\"notes\":null,\"media_link\":null,\"status\":\"In Progress\",\"created_at\":\"2023-04-17T14:35:54.383Z\",\"updated_at\":\"2023-04-17T14:35:54.383Z\"},{\"id\":15,\"name\":\"High-five a stranger.\",\"host_id\":2,\"date\":\"2024-02-02\",\"time\":\"2000-01-01T16:00:00.000Z\",\"notes\":null,\"media_link\":null,\"status\":\"In Progress\",\"created_at\":\"2023-04-17T14:36:12.580Z\",\"updated_at\":\"2023-04-17T14:36:12.580Z\"},{\"id\":17,\"name\":\"High-five a stranger.\",\"host_id\":2,\"date\":\"2024-02-02\",\"time\":\"2000-01-01T16:00:00.000Z\",\"notes\":null,\"media_link\":null,\"status\":\"In Progress\",\"created_at\":\"2023-04-17T17:24:24.335Z\",\"updated_at\":\"2023-04-17T17:24:24.335Z\"}],\"email\":\"captain@uss-enterprise.com\"}},{\"id\":\"3\",\"type\":\"users\",\"attributes\":{\"name\":\"William Riker\",\"role\":\"user\",\"good_deeds\":[{\"id\":7,\"name\":\"Help Others4.\",\"host_id\":3,\"date\":\"2023-01-01\",\"time\":\"2000-01-01T16:00:00.000Z\",\"notes\":\"Worth it!\",\"media_link\":\"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\\u0026cs=tinysrgb\\u0026fit=max\\u0026fm=jpg\\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\\u0026ixlib=rb-4.0.3\\u0026q=80\\u0026w=400\",\"status\":\"Completed\",\"created_at\":\"2023-04-16T22:13:45.317Z\",\"updated_at\":\"2023-04-16T22:13:45.317Z\"}],\"email\":\"number2@uss-enterprise.com\"}},{\"id\":\"4\",\"type\":\"users\",\"attributes\":{\"name\":\"Data\",\"role\":\"user\",\"good_deeds\":[{\"id\":7,\"name\":\"Help Others4.\",\"host_id\":3,\"date\":\"2023-01-01\",\"time\":\"2000-01-01T16:00:00.000Z\",\"notes\":\"Worth it!\",\"media_link\":\"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\\u0026cs=tinysrgb\\u0026fit=max\\u0026fm=jpg\\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\\u0026ixlib=rb-4.0.3\\u0026q=80\\u0026w=400\",\"status\":\"Completed\",\"created_at\":\"2023-04-16T22:13:45.317Z\",\"updated_at\":\"2023-04-16T22:13:45.317Z\"},{\"id\":8,\"name\":\"Help Others5.\",\"host_id\":4,\"date\":\"2023-01-01\",\"time\":\"2000-01-01T16:00:00.000Z\",\"notes\":null,\"media_link\":null,\"status\":\"In Progress\",\"created_at\":\"2023-04-16T22:13:45.332Z\",\"updated_at\":\"2023-04-16T22:13:45.332Z\"}],\"email\":\"data@uss-enterprise.com\"}},{\"id\":\"5\",\"type\":\"users\",\"attributes\":{\"name\":\"Geordi La Forge\",\"role\":\"user\",\"good_deeds\":[{\"id\":7,\"name\":\"Help Others4.\",\"host_id\":3,\"date\":\"2023-01-01\",\"time\":\"2000-01-01T16:00:00.000Z\",\"notes\":\"Worth it!\",\"media_link\":\"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\\u0026cs=tinysrgb\\u0026fit=max\\u0026fm=jpg\\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\\u0026ixlib=rb-4.0.3\\u0026q=80\\u0026w=400\",\"status\":\"Completed\",\"created_at\":\"2023-04-16T22:13:45.317Z\",\"updated_at\":\"2023-04-16T22:13:45.317Z\"}],\"email\":\"chief-engineer@uss-enterprise.com\"}},{\"id\":\"6\",\"type\":\"users\",\"attributes\":{\"name\":\"Kara Jones-Hofmann\",\"role\":\"user\",\"good_deeds\":[],\"email\":\"karajhturing@gmail.com\"}}]}"
         }
       },
-      "recorded_at": "Sun, 16 Apr 2023 21:50:36 GMT"
+      "recorded_at": "Mon, 17 Apr 2023 18:10:56 GMT"
+    },
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://warm-temple-59633.herokuapp.com/api/v1/good_deeds",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.7.4"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Server": [
+            "Cowboy"
+          ],
+          "Date": [
+            "Mon, 17 Apr 2023 19:13:33 GMT"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Xss-Protection": [
+            "0"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Download-Options": [
+            "noopen"
+          ],
+          "X-Permitted-Cross-Domain-Policies": [
+            "none"
+          ],
+          "Referrer-Policy": [
+            "strict-origin-when-cross-origin"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Vary": [
+            "Accept"
+          ],
+          "Etag": [
+            "W/\"90d0241e3615667c572a37a612495c25\""
+          ],
+          "Cache-Control": [
+            "max-age=0, private, must-revalidate"
+          ],
+          "X-Request-Id": [
+            "2807443d-6d51-42d8-96a7-5fa07351458d"
+          ],
+          "X-Runtime": [
+            "0.003522"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Via": [
+            "1.1 vegur"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"data\":[{\"id\":\"7\",\"type\":\"good_deeds\",\"attributes\":{\"name\":\"Help Others4.\",\"media_link\":\"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\\u0026cs=tinysrgb\\u0026fit=max\\u0026fm=jpg\\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\\u0026ixlib=rb-4.0.3\\u0026q=80\\u0026w=400\",\"time\":\"2000-01-01T16:00:00.000Z\",\"date\":\"2023-01-01\"}}]}"
+        }
+      },
+      "recorded_at": "Mon, 17 Apr 2023 19:13:34 GMT"
     }
   ],
   "recorded_with": "VCR 6.1.0"

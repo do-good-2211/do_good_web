@@ -10,8 +10,8 @@ RSpec.describe "The good deeds service", :vcr do
         expect(deed).to have_key(:id)
         expect(deed).to have_key(:type)
         expect(deed).to have_key(:attributes)
-        expect(deed[:attributes]).to have_key(:deed_name)
-        expect(deed[:attributes][:deed_name]).to be_a(String)
+        expect(deed[:attributes]).to have_key(:name)
+        expect(deed[:attributes][:name]).to be_a(String)
         expect(deed[:attributes]).to have_key(:media_link)
         expect(deed[:attributes][:media_link]).to be_a(String)
       end

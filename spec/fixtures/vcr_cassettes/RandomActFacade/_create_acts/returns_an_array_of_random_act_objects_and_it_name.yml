@@ -52,4 +52,62 @@ http_interactions:
         at your local food bank","Volunteer and help out at a senior center","Pick
         up litter around your favorite park"]}}}'
   recorded_at: Sat, 15 Apr 2023 20:15:04 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/random_acts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sun, 16 Apr 2023 21:42:29 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"5c0a94bf0e9103cdd3503fd1ee04f578"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 03bd08c8-6f80-4f78-857b-1029a9812161
+      X-Runtime:
+      - '0.054989'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"random_acts","attributes":{"deed_names":["Clean
+        out your closet and donate the clothes you''ve outgrown","Volunteer at a local
+        animal shelter","Volunteer and help out at a senior center"]}}}'
+  recorded_at: Sun, 16 Apr 2023 21:42:29 GMT
 recorded_with: VCR 6.1.0

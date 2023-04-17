@@ -39,20 +39,20 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a389d94e-b289-4660-aea6-e23800d0abd6
+      - da068dc6-bcdc-40f4-9320-4c1a2514f9e0
       X-Runtime:
-      - '0.009768'
+      - '0.017182'
       Server-Timing:
-      - start_processing.action_controller;dur=0.11, sql.active_record;dur=0.90, process_action.action_controller;dur=5.19
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=4.27, process_action.action_controller;dur=9.03
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sat, 15 Apr 2023 20:15:04 GMT
+  recorded_at: Sun, 16 Apr 2023 17:53:54 GMT
 - request:
     method: get
-    uri: https://warm-temple-59633.herokuapp.com/api/v1/good_deeds
+    uri: http://localhost:3000/api/v1/good_deeds
     body:
       encoding: US-ASCII
       string: ''
@@ -68,12 +68,6 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Sun, 16 Apr 2023 21:42:32 GMT
-      Connection:
-      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -95,15 +89,65 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4f29af27-9b7e-465d-a2be-8b0cea02f3c9
+      - d4a937f1-100b-45b0-aa48-4ec7dd94f485
       X-Runtime:
-      - '0.002744'
+      - '0.006105'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.19, process_action.action_controller;dur=2.05
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sun, 16 Apr 2023 21:42:32 GMT
+  recorded_at: Sun, 16 Apr 2023 17:53:54 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/good_deeds
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2f35cc61-24a1-40d2-9836-5fbf583af1eb
+      X-Runtime:
+      - '0.014563'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.10, sql.active_record;dur=2.26, process_action.action_controller;dur=5.88
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Sun, 16 Apr 2023 17:58:05 GMT
 recorded_with: VCR 6.1.0

@@ -6,6 +6,7 @@ class DoGoodService
     response = conn.post("/api/v1/users") do |req|
       req.body = { query: oauth_hash }.to_json
     end
+    # require 'pry'; binding.pry
     JSON.parse(response.body, symbolize_names: true)
   end
 
@@ -24,7 +25,7 @@ class DoGoodService
   end
 
   def self.conn
-    Faraday.new(url: "http://localhost:3000",
+    Faraday.new(url: "https://warm-temple-59633.herokuapp.com/",
                 params: { param: "1" },
                 headers: { "Content-Type" => "application/json" })
   end

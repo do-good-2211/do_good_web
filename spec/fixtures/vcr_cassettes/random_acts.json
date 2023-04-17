@@ -3,7 +3,7 @@
     {
       "request": {
         "method": "get",
-        "uri": "http://localhost:3000/api/v1/random_acts",
+        "uri": "https://warm-temple-59633.herokuapp.com/api/v1/random_acts",
         "body": {
           "encoding": "US-ASCII",
           "string": ""
@@ -26,6 +26,15 @@
           "message": "OK"
         },
         "headers": {
+          "Server": [
+            "Cowboy"
+          ],
+          "Date": [
+            "Sun, 16 Apr 2023 21:47:33 GMT"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
           "X-Frame-Options": [
             "SAMEORIGIN"
           ],
@@ -51,35 +60,35 @@
             "Accept"
           ],
           "Etag": [
-            "W/\"96347f517c348c28b90cd8b0acd45021\""
+            "W/\"03816128efb8fbf7712e5dc9c9be96d7\""
           ],
           "Cache-Control": [
             "max-age=0, private, must-revalidate"
           ],
           "X-Request-Id": [
-            "65864919-30d0-474e-91c6-52f543dafdc3"
+            "333c472a-f6fa-4d56-8df0-ce51ae24e081"
           ],
           "X-Runtime": [
-            "0.728116"
-          ],
-          "Server-Timing": [
-            "start_processing.action_controller;dur=0.11, process_action.action_controller;dur=718.06"
+            "0.037841"
           ],
           "Transfer-Encoding": [
             "chunked"
+          ],
+          "Via": [
+            "1.1 vegur"
           ]
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"data\":{\"id\":null,\"type\":\"random_acts\",\"attributes\":{\"deed_names\":[\"Contribute code or a monetary donation to an open-source software project\",\"Contribute code or a monetary donation to an open-source software project\",\"Clean out your closet and donate the clothes you've outgrown\"]}}}"
+          "string": "{\"data\":{\"id\":null,\"type\":\"random_acts\",\"attributes\":{\"deed_names\":[\"Pick up litter around your favorite park\",\"Volunteer at a local animal shelter\",\"Volunteer and help out at a senior center\"]}}}"
         }
       },
-      "recorded_at": "Sat, 15 Apr 2023 20:34:36 GMT"
+      "recorded_at": "Sun, 16 Apr 2023 21:47:33 GMT"
     },
     {
       "request": {
         "method": "get",
-        "uri": "http://localhost:3000/api/v1/users",
+        "uri": "https://warm-temple-59633.herokuapp.com/api/v1/users",
         "body": {
           "encoding": "US-ASCII",
           "string": ""
@@ -102,6 +111,15 @@
           "message": "OK"
         },
         "headers": {
+          "Server": [
+            "Cowboy"
+          ],
+          "Date": [
+            "Sun, 16 Apr 2023 21:50:35 GMT"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
           "X-Frame-Options": [
             "SAMEORIGIN"
           ],
@@ -127,30 +145,30 @@
             "Accept"
           ],
           "Etag": [
-            "W/\"c9697dadf57a68ccd80f02649001cfcd\""
+            "W/\"037bb33a8a6c3fd8833a55fc4b8aa368\""
           ],
           "Cache-Control": [
             "max-age=0, private, must-revalidate"
           ],
           "X-Request-Id": [
-            "ecd0beff-4407-473f-b5f7-44684eb43f51"
+            "adbd51df-6c7f-403f-8b09-4a22c171f6b0"
           ],
           "X-Runtime": [
-            "0.038631"
-          ],
-          "Server-Timing": [
-            "start_processing.action_controller;dur=0.11, sql.active_record;dur=5.92, instantiation.active_record;dur=1.10, process_action.action_controller;dur=29.26"
+            "0.004821"
           ],
           "Transfer-Encoding": [
             "chunked"
+          ],
+          "Via": [
+            "1.1 vegur"
           ]
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"data\":[{\"id\":\"1\",\"type\":\"users\",\"attributes\":{\"name\":\"Jasmine Hamou\",\"role\":\"user\",\"good_deeds\":[]}},{\"id\":\"2\",\"type\":\"users\",\"attributes\":{\"name\":\"John Smith\",\"role\":\"user\",\"good_deeds\":[]}}]}"
+          "string": "{\"data\":[{\"id\":\"1\",\"type\":\"users\",\"attributes\":{\"name\":\"John Smith\",\"role\":\"user\",\"good_deeds\":[]}}]}"
         }
       },
-      "recorded_at": "Sat, 15 Apr 2023 21:14:00 GMT"
+      "recorded_at": "Sun, 16 Apr 2023 21:50:36 GMT"
     }
   ],
   "recorded_with": "VCR 6.1.0"

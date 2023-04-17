@@ -42,7 +42,8 @@ RSpec.describe DoGoodService, :vcr do
                                               date: "02-02-2024",
                                               time: "2000-01-01T16:00:00.000Z",
                                               attendees: [1],
-                                              notes: "This was awesome"
+                                              notes: "This was awesome",
+                                              media_link: "http://picture.jpg"
                                             })
 
       expect(good_deed).to be_a(Hash)
@@ -55,6 +56,7 @@ RSpec.describe DoGoodService, :vcr do
       expect(good_deed[:data][:attributes]).to have_key(:time)
       expect(good_deed[:data][:attributes]).to have_key(:status)
       expect(good_deed[:data][:attributes]).to have_key(:notes)
+      expect(good_deed[:data][:attributes]).to have_key(:media_link)
     end
   end
 end

@@ -10,7 +10,6 @@ RSpec.describe "Login Page", type: :feature do
 
   before do
     OmniAuth.config.mock_auth[:google_oauth2] = nil
-
     omni_hash
     visit login_path
     click_on "Log in with Google"

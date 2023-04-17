@@ -28,6 +28,8 @@ RSpec.describe "Home page", type: :feature do
 
         expect(current_path).to eq("/")
       end
+
+      # add test to confirm completed deeds are displayed on page: media_link & deed name only
     end
 
     describe "As a logged in user", :vcr do

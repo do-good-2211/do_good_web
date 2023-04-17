@@ -19,6 +19,38 @@ class UserFacade
     User.new(user_info[:data])
   end
 
+  def fetch_user_dashboard
+    user = fetch_user
+    all_deeds = user.good_deeds
+
+    array_of_deed_objects = all_deeds.map do |deed_hash|
+      Deed.new(deed_hash)
+    end
+
+    hosting_deeds = []
+    invited_deeds = []
+    completed_deeds = []
+    
+    array_of_deed_objects.each do |deed|
+      if deed[:status] == "Completed"
+        completed_deeds << deed
+      elsif deed[:host_id] == user.id # && deed[:status] == "In Progress" 
+        hosting_deeds << deed
+      else
+        invited_deeds << deed
+      end
+    end
+
+    {
+    name: user.name
+    id: user.id
+    role: user.role
+    hosting_deeds: hosting_deeds 
+    invited_deeds: invited_deeds 
+    completed_deeds: completed_deeds
+    }
+  end
+
   def fetch_all_users
     @users
   end

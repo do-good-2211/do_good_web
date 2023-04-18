@@ -19,4 +19,15 @@ class User::GoodDeedsController < ApplicationController
       flash[:notice] = "Please fill in all parts."
     end
   end
+
+  def edit
+    @facade = GoodDeedFacade.new(params, current_user["id"])
+  end
+
+  def update
+    GoodDeedFacade.new(params, current_user["id"]).update_deed
+    redirect_to dashboard_path
+  end
+
+  def destroy; end
 end

@@ -7,9 +7,9 @@ RSpec.describe "User good deed edit page" do
         @user = { "id" => "1", "attributes" => { "name" => "Bob", "email" => "user@gmail.com", "password_digest" => "test1", "role" => "User" } }
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
 
-        visit edit_user_good_deed_path(5)
+        visit edit_user_good_deed_path(4)
 
-        @good_deed = GoodDeedFacade.new({ id: 5 }, 1).fetch_deed
+        @good_deed = GoodDeedFacade.new({ id: 4 }, 1).fetch_deed
       end
 
       it 'I see the name of the good deed and a form with the deed information prepopulated' do

@@ -15,13 +15,13 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       Server:
       - Cowboy
       Date:
-      - Tue, 18 Apr 2023 02:43:15 GMT
+      - Tue, 18 Apr 2023 18:15:02 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -40,27 +40,24 @@ http_interactions:
       - application/json; charset=utf-8
       Vary:
       - Accept
-      Etag:
-      - W/"23afc4993cf02d11770a5bab95d81741"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - ba87b041-71f9-4b29-abef-0b935a1a3b72
+      - bd31ae1b-e08a-4cb0-984d-fa11b78f11e0
       X-Runtime:
-      - '0.006057'
+      - '0.003791'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"5","type":"good_deed","attributes":{"name":"Pick up
-        litter around your favorite park","date":"2023-04-17","time":"2000-01-01T21:48:58.000Z","status":"In
-        Progress","notes":"","media_link":null,"attendees":[]}}}'
-  recorded_at: Tue, 18 Apr 2023 02:43:16 GMT
+      string: '{"errors":[{"status":"404","title":"Invalid Request","detail":["Couldn''t
+        find GoodDeed with ''id''=5"]}]}'
+  recorded_at: Tue, 18 Apr 2023 18:15:03 GMT
 - request:
     method: get
-    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/5
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/4
     body:
       encoding: US-ASCII
       string: ''
@@ -79,7 +76,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 18 Apr 2023 02:54:03 GMT
+      - Tue, 18 Apr 2023 18:17:30 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -99,33 +96,31 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"05ff213f8c100de409b6cc07d39045eb"
+      - W/"4fa65f026e38bc5a7ecf600df7a62168"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - dd3f07ee-2a78-4006-b53d-f84d23f27445
+      - b03afb59-a685-4854-8311-5f31a07565bf
       X-Runtime:
-      - '0.005182'
+      - '0.005924'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"5","type":"good_deed","attributes":{"name":"Pick up
-        litter around your favorite park","date":"2023-04-17","time":"2000-01-01T21:48:00.000Z","status":"In
-        Progress","notes":"","media_link":null,"attendees":[]}}}'
-  recorded_at: Tue, 18 Apr 2023 02:54:03 GMT
+      string: '{"data":{"id":"4","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
+        Picard","attendees":[]}}}'
+  recorded_at: Tue, 18 Apr 2023 18:17:31 GMT
 - request:
-    method: patch
-    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/5?param=1
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/4
     body:
-      encoding: UTF-8
-      string: '{"name":"Pick up litter around your favorite park","date":"2023-04-17","time":"2023-04-17
-        19:54:03 -0700","status":"In Progress","notes":"","media_link":null}'
+      encoding: US-ASCII
+      string: ''
     headers:
-      Content-Type:
-      - application/json
       User-Agent:
       - Faraday v2.7.4
       Accept-Encoding:
@@ -140,7 +135,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 18 Apr 2023 02:54:03 GMT
+      - Tue, 18 Apr 2023 18:17:31 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -160,21 +155,434 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"1a8777f03585845582dfed2f0b4aa17f"
+      - W/"4fa65f026e38bc5a7ecf600df7a62168"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f109bec5-13cd-43f8-904d-349857e8da77
+      - 4ff7d51e-63e9-4f3e-94f5-879277ad18b4
       X-Runtime:
-      - '0.012512'
+      - '0.006222'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"5","type":"good_deed","attributes":{"name":"Pick up
-        litter around your favorite park","date":"2023-04-17","time":"2000-01-02T02:54:03.000Z","status":"In
-        Progress","notes":"","media_link":null,"attendees":[]}}}'
-  recorded_at: Tue, 18 Apr 2023 02:54:04 GMT
+      string: '{"data":{"id":"4","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
+        Picard","attendees":[]}}}'
+  recorded_at: Tue, 18 Apr 2023 18:17:31 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 18 Apr 2023 18:17:31 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"4fa65f026e38bc5a7ecf600df7a62168"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 11a6cb61-66d8-4493-b9e1-5d2948c1cf83
+      X-Runtime:
+      - '0.005610'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
+        Picard","attendees":[]}}}'
+  recorded_at: Tue, 18 Apr 2023 18:17:32 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 18 Apr 2023 18:17:32 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"4fa65f026e38bc5a7ecf600df7a62168"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6bc5d054-49d6-40bc-b85b-d6e72798a2ee
+      X-Runtime:
+      - '0.005920'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
+        Picard","attendees":[]}}}'
+  recorded_at: Tue, 18 Apr 2023 18:17:32 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 18 Apr 2023 18:17:32 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"4fa65f026e38bc5a7ecf600df7a62168"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6ef34347-af05-46b0-bfd9-992178cc5146
+      X-Runtime:
+      - '0.006290'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
+        Picard","attendees":[]}}}'
+  recorded_at: Tue, 18 Apr 2023 18:17:33 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 18 Apr 2023 18:17:33 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"4fa65f026e38bc5a7ecf600df7a62168"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d8bb567a-2969-4928-93bc-1985ac8830de
+      X-Runtime:
+      - '0.006609'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
+        Picard","attendees":[]}}}'
+  recorded_at: Tue, 18 Apr 2023 18:17:33 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 18 Apr 2023 18:17:33 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"4fa65f026e38bc5a7ecf600df7a62168"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b5d35a3b-2110-40ef-8117-13786661412b
+      X-Runtime:
+      - '0.005897'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
+        Picard","attendees":[]}}}'
+  recorded_at: Tue, 18 Apr 2023 18:17:33 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 18 Apr 2023 18:17:34 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"4fa65f026e38bc5a7ecf600df7a62168"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f055044a-7813-4036-8422-4a5577b58765
+      X-Runtime:
+      - '0.006867'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
+        Picard","attendees":[]}}}'
+  recorded_at: Tue, 18 Apr 2023 18:17:34 GMT
+- request:
+    method: patch
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/4?param=1
+    body:
+      encoding: UTF-8
+      string: '{"name":"High-five a stranger.","date":"2023-04-18","time":"2023-04-18
+        11:17:34 -0700","status":"0","notes":"","media_link":null}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 18 Apr 2023 18:17:33 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - cc999b9d-f86b-49fc-9364-cb9b4bb2f3b1
+      X-Runtime:
+      - '0.005647'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"status":"404","title":"Invalid Request","detail":["Couldn''t
+        find GoodDeed with ''id''=4 [WHERE \"user_good_deeds\".\"user_id\" = $1]"]}]}'
+  recorded_at: Tue, 18 Apr 2023 18:17:34 GMT
 recorded_with: VCR 6.1.0

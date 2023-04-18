@@ -8,5 +8,6 @@ class UsersController < ApplicationController
   def show
     token = session[:token]
     @email = current_user["email"].gsub("@gmail.com", "")
+    @events = CalendarFacade.new.list_events(token)
   end
 end

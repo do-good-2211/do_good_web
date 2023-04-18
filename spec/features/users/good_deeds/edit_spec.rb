@@ -17,6 +17,7 @@ RSpec.describe "User good deed edit page" do
           expect(page).to have_field(:name, with: @good_deed.name)
           expect(page).to have_field(:date)
           expect(page).to have_field(:time)
+          expect(page).to have_content('Attendees')
           expect(page).to have_unchecked_field(:status)
           expect(page).to have_field(:notes)
           expect(page).to have_field(:media_link)

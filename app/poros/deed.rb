@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # app/poros/deed.rb
-require './app/poros/attendee.rb'
+require './app/poros/attendee'
 
 class Deed
   attr_reader :id,
@@ -25,6 +25,6 @@ class Deed
   end
 
   def make_attendees(data)
-    data.map { |attendee| Attendee.new(attendee) } unless data == nil
+    data.map { |attendee| Attendee.new(attendee) } unless data.nil?
   end
 end

@@ -4,14 +4,14 @@ RSpec.describe "User good deed new page" do
   describe "As a logged in user", :vcr do
     context "When I visit '/user/good_deeds/new" do
       before do
-        @user = { "id" => "1", "attributes"=> { "name" => "Bob", "email" => "user@gmail.com", "password_digest"=> "test1", "role" => "User" } }
+        @user = { "id" => "1", "attributes" => { "name" => "Bob", "email" => "user@gmail.com", "password_digest" => "test1", "role" => "User" } }
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
 
         VCR.use_cassette('random_acts', serialize_with: :json) do
           visit random_acts_path
           click_link "Volunteer at a local animal shelter", match: :first
         end
-      
+
         @users = UserFacade.new({ good_deed: "Volunteer at a local animal shelter" }, @user).fetch_all_but_user
       end
 

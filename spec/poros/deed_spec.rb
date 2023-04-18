@@ -1,19 +1,19 @@
 require 'rails_helper'
 
 RSpec.describe Deed do
-  let(:info) { { id: "55", 
-                type: "good_deed", 
-                attributes: { 
-                  name: "High-five a stranger",
-                  date: "2024-02-02",
-                  time: "2000-01-01T16:00:00",
-                  status: "In Progress",
-                  notes: "This was awesome!",
-                  media_link: "www.image.com/high_five_yo!",
-                  attendees: [{"user_id": 2, "name": "Peter"}, {"user_id": 3, "name": "Jane"}] 
-                } 
-              } 
-            }
+  let(:info) {
+    { id: "55",
+      type: "good_deed",
+      attributes: {
+        name: "High-five a stranger",
+        date: "2024-02-02",
+        time: "2000-01-01T16:00:00",
+        status: "In Progress",
+        notes: "This was awesome!",
+        media_link: "www.image.com/high_five_yo!",
+        attendees: [{ "user_id": 2, "name": "Peter" }, { "user_id": 3, "name": "Jane" }]
+      } }
+  }
   let(:deed1) { Deed.new(info) }
 
   it "exists & has attributes" do

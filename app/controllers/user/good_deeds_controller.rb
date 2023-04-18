@@ -27,6 +27,5 @@ class User::GoodDeedsController < ApplicationController
     redirect_to dashboard_path
   end
 
-  def destroy
-  end
+  def destroy; end
 end

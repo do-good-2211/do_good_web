@@ -4,12 +4,12 @@ RSpec.describe "User good deed edit page" do
   describe "As a logged in user", :vcr do
     context "When I visit '/user/good_deeds/:id/edit" do
       before do
-        @user = { "id" => "1", "attributes"=> { "name" => "Bob", "email" => "user@gmail.com", "password_digest"=> "test1", "role" => "User" } }
+        @user = { "id" => "1", "attributes" => { "name" => "Bob", "email" => "user@gmail.com", "password_digest" => "test1", "role" => "User" } }
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
 
         visit edit_user_good_deed_path(5)
-        
-        @good_deed = GoodDeedFacade.new({id: 5}, 1).fetch_deed
+
+        @good_deed = GoodDeedFacade.new({ id: 5 }, 1).fetch_deed
       end
 
       it 'I see the name of the good deed and a form with the deed information prepopulated' do
@@ -35,7 +35,7 @@ RSpec.describe "User good deed edit page" do
 
         expect(current_path).to eq(dashboard_path)
       end
-      
+
       it 'When I do not change anything and click "Update Event", I am redirected to the dashboard' do
         click_button 'Update Event'
 
@@ -46,7 +46,7 @@ RSpec.describe "User good deed edit page" do
         fill_in :date, with: Date.today
         fill_in :time, with: Time.now
         click_button 'Update Event'
-        
+
         expect(current_path).to eq(dashboard_path)
       end
     end

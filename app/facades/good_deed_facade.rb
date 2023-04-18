@@ -21,13 +21,13 @@ class GoodDeedFacade
   end
 
   def create_deed
-    deed = DoGoodService.create_deed(@user_id,
-                                     {
-                                       name: @name,
-                                       date: @date,
-                                       time: @time,
-                                       attendees: @attendees
-                                     })
+    DoGoodService.create_deed(@user_id,
+                              {
+                                name: @name,
+                                date: @date,
+                                time: @time,
+                                attendees: @attendees
+                              })
   end
 
   def fetch_deed
@@ -40,8 +40,7 @@ class GoodDeedFacade
       name: @name,
       date: @date,
       time: @time,
-      # attendees: @attendees,
-      status: status,
+      status:,
       notes: @notes,
       media_link: @media_link
     }
@@ -49,11 +48,12 @@ class GoodDeedFacade
   end
 
   private
-    def status
-      if @status == 1
-        @status = "Completed"
-      else
-        @status = "In Progress"
-      end
-    end
+
+  def status
+    @status = if @status == 1
+                "Completed"
+              else
+                "In Progress"
+              end
+  end
 end

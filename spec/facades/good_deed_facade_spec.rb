@@ -33,12 +33,13 @@ RSpec.describe GoodDeedFacade, :vcr do
   end
 
   describe "#create_deed" do
-    it "returns a good deed object with its respective attributes" do
+    it "returns a good deed hash with its respective attributes" do
       good_deed = @facade.create_deed
+      deed = Deed.new(good_deed[:data])
 
-      expect(good_deed).to be_a Deed
-      expect(good_deed.id).to be_an Integer
-      expect(good_deed.name).to be_a String
+      expect(deed).to be_a Deed
+      expect(deed.id).to be_an Integer
+      expect(deed.name).to be_a String
     end
   end
 
@@ -60,7 +61,6 @@ RSpec.describe GoodDeedFacade, :vcr do
   describe '#update_deed' do
     xit 'returns an updated deed object with its respective attributes' do
       new_good_deed = @facade.create_deed
-      require 'pry'; binding.pry
       good_deed = @facade.update_deed
 
       expect(good_deed).to be_a Deed

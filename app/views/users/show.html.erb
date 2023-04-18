@@ -1,2 +1,47 @@
 <h1><%= @facade[:name] %>'s Do Good Page</h1>
+<br>
 
+<br>
+<p>You're Hosting!</p>
+<% @facade[:hosting_deeds].each do |deed| %>
+  <div id= "hosting-<%= deed.id %>">
+    <%= deed.name %>
+    <%= deed.date %>
+    <%= deed.time %>
+    <% deed.attendees.each do |invitee| %>
+      <%= invitee[:name] %>
+    <% end %>
+    <!-- udpate button -->
+    <br>
+  </div>
+<% end %> 
+
+<p>You're Invited!</p>
+<% @facade[:invited_deeds].each do |deed| %>
+  <div id= "invited-<%= deed.id %>">
+    <%= deed.name %>
+    <%= deed.date %>
+    <%= deed.time %>
+    <%= deed.host_name %> 
+    <% deed.attendees.each do |invitee| %>
+      <%= invitee[:name] %>
+    <% end %>
+    <br>
+  </div>
+<% end %>
+
+<p>Past Good Deeds</p>
+<% @facade[:completed_deeds].each do |deed| %>
+  <div id= "completed-<%= deed.id %>">
+    <%= deed.media_link %>
+    <%= deed.name %>
+    <%= deed.date %>
+    <%= deed.time %>
+    <% deed.attendees.each do |invitee| %>
+      <%= invitee[:name] %>
+    <% end %>
+    <%= deed.notes %>
+    <!-- IF host_id == user's id display: udpate button // else NO button displayed-->
+    <br>
+  </div>
+<% end %>

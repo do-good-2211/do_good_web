@@ -21,22 +21,21 @@ class UserFacade
 
   def fetch_user_dashboard
     user = fetch_user
-    all_deeds = user.good_deeds
+    all_deeds_array = user.good_deeds
 
 
-    array_of_deed_objects = all_deeds[:data].map do |deed_hash|
-      # require 'pry'; binding.pry
+    array_of_deed_objects = all_deeds_array.map do |deed_hash|
       new_hash = { 
         id: deed_hash[:id], 
         attributes: { 
-          name: deed_hash[:name],
-          host_id: deed_hash[:host_id],                 
-          date: deed_hash[:date],         
-          time: deed_hash[:time],
-          status: deed_hash[:status],
-          notes: deed_hash[:notes],
-          media_link: deed_hash[:media_link],
-          #attendees: 
+          name: deed_hash[:attributes][:name],
+          host_id: deed_hash[:attributes][:host_id],                 
+          date: deed_hash[:attributes][:date],         
+          time: deed_hash[:attributes][:time],
+          status: deed_hash[:attributes][:status],
+          notes: deed_hash[:attributes][:notes],
+          media_link: deed_hash[:attributes][:media_link],
+          attendees: deed_hash[:attributes][:attendees]
         } 
       }
       Deed.new(new_hash)

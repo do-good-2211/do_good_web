@@ -11,7 +11,7 @@ RSpec.describe "User good deed new page" do
           visit random_acts_path
           click_link "Volunteer at a local animal shelter", match: :first
         end
-      
+
         @users = UserFacade.new({ good_deed: "Volunteer at a local animal shelter" }, @user).fetch_all_but_user
       end
 

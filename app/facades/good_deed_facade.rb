@@ -22,7 +22,7 @@ class GoodDeedFacade
                                        time: @time,
                                        attendees: @attendees
                                      })
-                                    
+
     Deed.new(deed[:data])
   end
 end

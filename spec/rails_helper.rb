@@ -82,11 +82,11 @@ def omni_hash
   OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
                                                                        "provider" => "google_oauth2",
                                                                        "uid" => "100000000000000000000",
-                                                                       "credentials" => {"token" => 'test'},
+                                                                       "credentials" => { "token" => 'test' },
                                                                        "info" => {
                                                                          "name" => "John Smith",
-                                                                         "email" => "john@example.com", 
-                                                                         "token"=>
+                                                                         "email" => "john@example.com",
+                                                                         "token" =>
                                                                          "test"
                                                                        }
                                                                      })

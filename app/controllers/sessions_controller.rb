@@ -4,6 +4,7 @@
 class SessionsController < ApplicationController
   def omniauth
     user = SessionsFacade.new.authorize_user(request.env["omniauth.auth"])
+    session[:token] = request.env["omniauth.auth"][:credentials][:token]
     session[:user] = user
     return unless current_user
 
@@ -12,6 +13,7 @@ class SessionsController < ApplicationController
 
   def logout
     session[:user] = nil
+    session[:token] = nil
     redirect_to root_path
     flash[:message] = "Successfully logged out"
   end

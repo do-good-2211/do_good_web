@@ -9,8 +9,8 @@ RSpec.describe "Login Page", type: :feature do
   end
 
   before do
+    allow_any_instance_of(CalendarFacade).to receive(:list_events).and_return(12)
     OmniAuth.config.mock_auth[:google_oauth2] = nil
-
     omni_hash
     visit login_path
     click_on "Log in with Google"

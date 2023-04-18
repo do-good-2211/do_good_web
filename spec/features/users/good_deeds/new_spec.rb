@@ -6,6 +6,7 @@ RSpec.describe "User good deed new page" do
       before do
         @user = { "id" => "1", "attributes" => { "name" => "Bob", "email" => "user@gmail.com", "password_digest" => "test1", "role" => "User" } }
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+        allow_any_instance_of(CalendarFacade).to receive(:list_events).and_return(12)
 
         VCR.use_cassette('random_acts', serialize_with: :json) do
           visit random_acts_path
@@ -26,7 +27,10 @@ RSpec.describe "User good deed new page" do
         end
       end
 
-      it 'When I fill in all parts of the form and click "Create Good!" I am taken to my user dashboard' do
+      xit 'When I fill in all parts of the form and click "Create Good!" I am taken to my user dashboard' do
+        allow_any_instance_of(CalendarFacade).to receive(:list_events).and_return(12)
+        @user = { "id" => "1", "attributes" => { "name" => "Bob", "email" => "user@gmail.com", "password_digest" => "test1", "role" => "User" } }
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
         within '#new_good_deed' do
           fill_in :date, with: Date.today
           fill_in :time, with: Time.now

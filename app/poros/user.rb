@@ -4,11 +4,13 @@
 class User
   attr_reader :name,
               :role,
-              :id
+              :id,
+              :email
 
   def initialize(info)
     @id = info[:id]
     @name = info[:attributes][:name]
     @role = info[:attributes][:role]
+    @email = info[:attributes][:email]
   end
 end

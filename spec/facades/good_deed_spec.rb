@@ -7,7 +7,7 @@ RSpec.describe GoodDeedFacade, :vcr do
                                    date: "02-02-2024",
                                    time: "2000-01-01T16:00:00.000Z",
                                    attendees: [1]
-                                 }, 1)
+                                 }, "Jimmy", 1)
   end
 
   describe "#initialize" do

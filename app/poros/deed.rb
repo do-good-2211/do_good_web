@@ -5,6 +5,7 @@ class Deed
   attr_reader :id, 
               :name,
               :host_id,
+              :host_name,
               :date,
               :time,
               :status,
@@ -16,6 +17,7 @@ class Deed
     @id = info[:id].to_i
     @name = info[:attributes][:name]
     @host_id = info[:attributes][:host_id]
+    @host_name = info[:attributes][:host_name]
     @date = info[:attributes][:date]
     @time = info[:attributes][:time]
     @status = info[:attributes][:status]

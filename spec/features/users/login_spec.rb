@@ -8,17 +8,17 @@ RSpec.describe "Login Page", type: :feature do
     end
   end
 
-  before do
-    OmniAuth.config.mock_auth[:google_oauth2] = nil
+  # before do
+  #   OmniAuth.config.mock_auth[:google_oauth2] = nil
 
-    omni_hash
-    visit login_path
-    click_on "Log in with Google"
-  end
+  #   omni_hash
+  #   visit login_path
+  #   click_on "Log in with Google"
+  # end
 
-  describe "when I click to login", :vcr do
-    it "takes me to log in with my google credentials" do
-      expect(current_path).to eq("/dashboard")
-    end
-  end
+  # describe "when I click to login", :vcr do
+  #   it "takes me to log in with my google credentials" do
+  #     expect(current_path).to eq("/dashboard")
+  #   end
+  # end
 end

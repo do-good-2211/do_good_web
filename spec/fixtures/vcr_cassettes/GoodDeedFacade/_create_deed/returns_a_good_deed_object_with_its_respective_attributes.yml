@@ -5,7 +5,7 @@ http_interactions:
     uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds?param=1
     body:
       encoding: UTF-8
-      string: '{"name":"High-five a stranger.","date":"02-02-2024","time":"2000-01-01T16:00:00.000Z","attendees":[1]}'
+      string: '{"name":"High-five a stranger.","date":"02-02-2024","time":"2000-01-01T16:00:00.000Z","attendees":[1],"host_name":"Jimmy"}'
     headers:
       Content-Type:
       - application/json
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 17 Apr 2023 17:24:12 GMT
+      - Tue, 18 Apr 2023 02:27:26 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -43,21 +43,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"4dff21915d874d11c599f18c925b3b85"
+      - W/"d513e5b7ea785b152cabe66556847cff"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c8541a78-eab5-4b46-84d0-6f6ebec34e6a
+      - efa261cd-4eb3-4798-9e49-3e02b6a2d9dc
       X-Runtime:
-      - '0.048499'
+      - '0.042996'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"16","type":"good_deeds_create","attributes":{"name":"High-five
+      string: '{"data":{"id":"37","type":"good_deeds_create","attributes":{"name":"High-five
         a stranger.","media_link":null,"notes":null,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","host_id":1}}}'
-  recorded_at: Mon, 17 Apr 2023 17:24:12 GMT
+  recorded_at: Tue, 18 Apr 2023 02:27:27 GMT
 recorded_with: VCR 6.1.0

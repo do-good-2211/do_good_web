@@ -3,18 +3,21 @@ require 'rails_helper'
 RSpec.describe "/dashboard", type: :feature do
   describe "As a logged in user, when I visit the users's show page" do
     describe "when successful" do
-      let(:deed1) { Deed.new( { id: "55", type: "good_deed", attributes: { name: "Deed1 High-five a stranger", media_link: "www.image.com/high_five_yo!" } } ) }
-      let(:user) { User.new(id: 1, attributes: { name: "John Smith", role: "User", good_deeds: [ deed1 ] } ) }
+      let(:deed1) { { id: "55", type: "good_deed", attributes: { host_name: "Sally", host_id: 2, name: "Deed1 High-five a stranger", date: "2024-02-02", time: "2000-01-01T16:00:00.000Z", status: "In Progress", media_link: "www.image.com/high_five_yo!", notes: "fun", "host_name": "John Smith" attendees: [ { name: "Tink"}, { name: "Hook"}] } } }
+      let(:deed2) { { id: "44", type: "good_deed", attributes: { host_name: "Sally", host_id: 2, name: "Deed2 High-five a stranger", date: "2024-02-02", time: "2000-01-01T16:00:00.000Z", status: "Completed", media_link: "www.image.com/high_five_yo!", notes: "fun", "host_name": "John Smith" attendees: [ { name: "Sneezy"}, { name: "Grumpy"}] } } }
+      let(:deed3) { { id: "33", type: "good_deed", attributes: { host_name: "John", host_id: 1, name: "Deed3 High-five a stranger", date: "2024-02-02", time: "2000-01-01T16:00:00.000Z", status: "Completed", media_link: "www.image.com/high_five_yo!", notes: "fun", "host_name": "John Smith" attendees: [ { name: "Dory"}, { name: "Nemo"}] } } }
+      let(:deed4) { { id: "22", type: "good_deed", attributes: { host_name: "John", host_id: 1, name: "Deed4 High-five a stranger", date: "2024-02-02", time: "2000-01-01T16:00:00.000Z", status: "In Progress", media_link: "www.image.com/high_five_yo!", notes: "fun", "host_name": "John Smith" attendees: [ { name: "Harry"}, { name: "Rom"}] } } }
+
+      let(:user) { User.new(id: 1, attributes: { name: "John Smith", role: "User", good_deeds: { data: [ deed1, deed2, deed3, deed4 ]} } ) }
+      let(:user2) { User.new(id: 2, attributes: { name: "Sally", role: "User" } ) }
+
 
       before(:each) do
         john = { id: 1, attributes: { name: "John Smith", email: "john@example.com", password_digest: "test1", role: "User" } }
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(john)
-  # require 'pry'; binding.pry
         allow_any_instance_of(UserFacade).to receive(:fetch_user).and_return(user)
 
         VCR.use_cassette('dashboard', serialize_with: :json) do
-          # @facade = UserFacade.new(params, john).fetch_user
-          # @random_acts = ["Volunteer at a local animal shelter", "Donate blood at a local blood center", "Contribute code or a monetary donation to an open-source software project"]
           visit '/dashboard'
         end
       end

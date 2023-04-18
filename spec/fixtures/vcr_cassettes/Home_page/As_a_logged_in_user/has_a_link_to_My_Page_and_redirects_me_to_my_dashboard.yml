@@ -112,4 +112,312 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":[{"id":"7","type":"good_deeds","attributes":{"name":"Help Others4.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}}]}'
   recorded_at: Mon, 17 Apr 2023 18:10:54 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 18 Apr 2023 02:29:49 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"4b79ec127ffa7b7bab63aca85d53452f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c14eec70-4bcb-4d01-b5fc-11bbd7c13e7d
+      X-Runtime:
+      - '0.024775'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"users","attributes":{"name":"John Smith","role":"user","good_deeds":[{"id":9,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T22:14:39.834Z","updated_at":"2023-04-16T22:14:39.834Z"},{"id":9,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T22:14:39.834Z","updated_at":"2023-04-16T22:14:39.834Z"},{"id":10,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T22:17:10.606Z","updated_at":"2023-04-16T22:17:10.606Z"},{"id":12,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T14:33:17.406Z","updated_at":"2023-04-17T14:33:17.406Z"},{"id":13,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T14:35:54.383Z","updated_at":"2023-04-17T14:35:54.383Z"},{"id":14,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T14:35:55.622Z","updated_at":"2023-04-17T14:35:55.622Z"},{"id":14,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T14:35:55.622Z","updated_at":"2023-04-17T14:35:55.622Z"},{"id":15,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T14:36:12.580Z","updated_at":"2023-04-17T14:36:12.580Z"},{"id":16,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T17:24:12.822Z","updated_at":"2023-04-17T17:24:12.822Z"},{"id":16,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T17:24:12.822Z","updated_at":"2023-04-17T17:24:12.822Z"},{"id":17,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T17:24:24.335Z","updated_at":"2023-04-17T17:24:24.335Z"},{"id":18,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T18:51:52.320Z","updated_at":"2023-04-17T18:51:52.320Z"},{"id":19,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T18:51:53.943Z","updated_at":"2023-04-17T18:51:53.943Z"},{"id":19,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T18:51:53.943Z","updated_at":"2023-04-17T18:51:53.943Z"},{"id":20,"name":"Volunteer
+        at a local animal shelter","host_id":1,"date":"2023-04-17","time":"2000-01-01T19:52:30.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T19:52:31.189Z","updated_at":"2023-04-17T19:52:31.189Z"},{"id":20,"name":"Volunteer
+        at a local animal shelter","host_id":1,"date":"2023-04-17","time":"2000-01-01T19:52:30.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T19:52:31.189Z","updated_at":"2023-04-17T19:52:31.189Z"},{"id":23,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T21:28:27.654Z","updated_at":"2023-04-17T21:28:27.654Z"},{"id":24,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T21:42:02.360Z","updated_at":"2023-04-17T21:42:02.360Z"},{"id":25,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T21:42:07.301Z","updated_at":"2023-04-17T21:42:07.301Z"},{"id":26,"name":"Volunteer
+        at a local animal shelter","host_id":1,"date":"2023-04-17","time":"2000-01-01T21:47:34.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T21:47:40.239Z","updated_at":"2023-04-17T21:47:40.239Z"},{"id":26,"name":"Volunteer
+        at a local animal shelter","host_id":1,"date":"2023-04-17","time":"2000-01-01T21:47:34.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T21:47:40.239Z","updated_at":"2023-04-17T21:47:40.239Z"},{"id":5,"name":"Pick
+        up litter around your favorite park","host_id":1,"date":"2023-04-17","time":"2000-01-01T21:48:58.000Z","notes":"","media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T21:50:37.570Z","updated_at":"2023-04-17T21:48:58.916Z"},{"id":5,"name":"Pick
+        up litter around your favorite park","host_id":1,"date":"2023-04-17","time":"2000-01-01T21:48:58.000Z","notes":"","media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T21:50:37.570Z","updated_at":"2023-04-17T21:48:58.916Z"},{"id":27,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T21:57:45.450Z","updated_at":"2023-04-17T21:57:45.450Z"},{"id":28,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T21:58:14.251Z","updated_at":"2023-04-17T21:58:14.251Z"},{"id":29,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T22:00:16.245Z","updated_at":"2023-04-17T22:00:16.245Z"},{"id":32,"name":"Mow
+        your neighbor''s lawn","host_id":1,"date":"2023-04-27","time":"2000-01-01T18:32:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T23:30:02.537Z","updated_at":"2023-04-17T23:30:02.537Z"},{"id":36,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-18T01:37:58.592Z","updated_at":"2023-04-18T01:37:58.592Z"},{"id":37,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-18T02:27:27.525Z","updated_at":"2023-04-18T02:27:27.525Z"},{"id":37,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-18T02:27:27.525Z","updated_at":"2023-04-18T02:27:27.525Z"}],"email":"john@example.com"}},{"id":"2","type":"users","attributes":{"name":"Jean-Luc
+        Picard","role":"user","good_deeds":[{"id":10,"name":"High-five a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T22:17:10.606Z","updated_at":"2023-04-16T22:17:10.606Z"},{"id":12,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T14:33:17.406Z","updated_at":"2023-04-17T14:33:17.406Z"},{"id":13,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T14:35:54.383Z","updated_at":"2023-04-17T14:35:54.383Z"},{"id":15,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T14:36:12.580Z","updated_at":"2023-04-17T14:36:12.580Z"},{"id":17,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T17:24:24.335Z","updated_at":"2023-04-17T17:24:24.335Z"},{"id":18,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T18:51:52.320Z","updated_at":"2023-04-17T18:51:52.320Z"},{"id":21,"name":"Donate
+        to your local food bank","host_id":8,"date":"2023-04-20","time":"2000-01-01T19:44:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T20:44:31.140Z","updated_at":"2023-04-17T20:44:31.140Z"},{"id":23,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T21:28:27.654Z","updated_at":"2023-04-17T21:28:27.654Z"},{"id":24,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T21:42:02.360Z","updated_at":"2023-04-17T21:42:02.360Z"},{"id":25,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T21:42:07.301Z","updated_at":"2023-04-17T21:42:07.301Z"},{"id":27,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T21:57:45.450Z","updated_at":"2023-04-17T21:57:45.450Z"},{"id":28,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T21:58:14.251Z","updated_at":"2023-04-17T21:58:14.251Z"},{"id":29,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T22:00:16.245Z","updated_at":"2023-04-17T22:00:16.245Z"},{"id":36,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-18T01:37:58.592Z","updated_at":"2023-04-18T01:37:58.592Z"}],"email":"captain@uss-enterprise.com"}},{"id":"3","type":"users","attributes":{"name":"William
+        Riker","role":"user","good_deeds":[{"id":7,"name":"Help Others4.","host_id":3,"date":"2023-01-01","time":"2000-01-01T16:00:00.000Z","notes":"Worth
+        it!","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","status":"Completed","created_at":"2023-04-16T22:13:45.317Z","updated_at":"2023-04-16T22:13:45.317Z"},{"id":21,"name":"Donate
+        to your local food bank","host_id":8,"date":"2023-04-20","time":"2000-01-01T19:44:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T20:44:31.140Z","updated_at":"2023-04-17T20:44:31.140Z"},{"id":31,"name":"Mow
+        your neighbor''s lawn","host_id":7,"date":"2023-04-22","time":"2000-01-01T08:29:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T23:29:16.166Z","updated_at":"2023-04-17T23:29:16.166Z"},{"id":33,"name":"Volunteer
+        at your local food bank","host_id":9,"date":"2023-04-19","time":"2000-01-01T18:35:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T23:34:19.106Z","updated_at":"2023-04-17T23:34:19.106Z"}],"email":"number2@uss-enterprise.com"}},{"id":"4","type":"users","attributes":{"name":"Data","role":"user","good_deeds":[{"id":7,"name":"Help
+        Others4.","host_id":3,"date":"2023-01-01","time":"2000-01-01T16:00:00.000Z","notes":"Worth
+        it!","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","status":"Completed","created_at":"2023-04-16T22:13:45.317Z","updated_at":"2023-04-16T22:13:45.317Z"},{"id":8,"name":"Help
+        Others5.","host_id":4,"date":"2023-01-01","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T22:13:45.332Z","updated_at":"2023-04-16T22:13:45.332Z"},{"id":21,"name":"Donate
+        to your local food bank","host_id":8,"date":"2023-04-20","time":"2000-01-01T19:44:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T20:44:31.140Z","updated_at":"2023-04-17T20:44:31.140Z"},{"id":30,"name":"Pick
+        up litter around your favorite park","host_id":7,"date":"2023-04-19","time":"2000-01-01T16:13:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T23:12:04.721Z","updated_at":"2023-04-17T23:12:04.721Z"},{"id":33,"name":"Volunteer
+        at your local food bank","host_id":9,"date":"2023-04-19","time":"2000-01-01T18:35:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T23:34:19.106Z","updated_at":"2023-04-17T23:34:19.106Z"}],"email":"data@uss-enterprise.com"}},{"id":"5","type":"users","attributes":{"name":"Geordi
+        La Forge","role":"user","good_deeds":[{"id":7,"name":"Help Others4.","host_id":3,"date":"2023-01-01","time":"2000-01-01T16:00:00.000Z","notes":"Worth
+        it!","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","status":"Completed","created_at":"2023-04-16T22:13:45.317Z","updated_at":"2023-04-16T22:13:45.317Z"},{"id":34,"name":"Mow
+        your neighbor''s lawn","host_id":9,"date":"2023-04-18","time":"2000-01-01T19:05:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-18T00:00:07.475Z","updated_at":"2023-04-18T00:00:07.475Z"}],"email":"chief-engineer@uss-enterprise.com"}},{"id":"6","type":"users","attributes":{"name":"Kara
+        Jones-Hofmann","role":"user","good_deeds":[{"id":32,"name":"Mow your neighbor''s
+        lawn","host_id":1,"date":"2023-04-27","time":"2000-01-01T18:32:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T23:30:02.537Z","updated_at":"2023-04-17T23:30:02.537Z"},{"id":34,"name":"Mow
+        your neighbor''s lawn","host_id":9,"date":"2023-04-18","time":"2000-01-01T19:05:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-18T00:00:07.475Z","updated_at":"2023-04-18T00:00:07.475Z"}],"email":"karajhturing@gmail.com"}},{"id":"7","type":"users","attributes":{"name":"Jasmine
+        Hamou","role":"user","good_deeds":[{"id":30,"name":"Pick up litter around
+        your favorite park","host_id":7,"date":"2023-04-19","time":"2000-01-01T16:13:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T23:12:04.721Z","updated_at":"2023-04-17T23:12:04.721Z"},{"id":31,"name":"Mow
+        your neighbor''s lawn","host_id":7,"date":"2023-04-22","time":"2000-01-01T08:29:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T23:29:16.166Z","updated_at":"2023-04-17T23:29:16.166Z"},{"id":32,"name":"Mow
+        your neighbor''s lawn","host_id":1,"date":"2023-04-27","time":"2000-01-01T18:32:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T23:30:02.537Z","updated_at":"2023-04-17T23:30:02.537Z"},{"id":35,"name":"Pick
+        up litter around your favorite park","host_id":9,"date":"2023-04-19","time":"2000-01-01T19:08:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-18T00:08:23.737Z","updated_at":"2023-04-18T00:08:23.737Z"}],"email":"jasmine.mahabadi@gmail.com"}},{"id":"8","type":"users","attributes":{"name":"Mel
+        Travelz","role":"user","good_deeds":[{"id":21,"name":"Donate to your local
+        food bank","host_id":8,"date":"2023-04-20","time":"2000-01-01T19:44:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T20:44:31.140Z","updated_at":"2023-04-17T20:44:31.140Z"},{"id":35,"name":"Pick
+        up litter around your favorite park","host_id":9,"date":"2023-04-19","time":"2000-01-01T19:08:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-18T00:08:23.737Z","updated_at":"2023-04-18T00:08:23.737Z"}],"email":"meltravelz@gmail.com"}},{"id":"9","type":"users","attributes":{"name":"Huy
+        Phan","role":"user","good_deeds":[{"id":33,"name":"Volunteer at your local
+        food bank","host_id":9,"date":"2023-04-19","time":"2000-01-01T18:35:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T23:34:19.106Z","updated_at":"2023-04-17T23:34:19.106Z"},{"id":34,"name":"Mow
+        your neighbor''s lawn","host_id":9,"date":"2023-04-18","time":"2000-01-01T19:05:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-18T00:00:07.475Z","updated_at":"2023-04-18T00:00:07.475Z"},{"id":35,"name":"Pick
+        up litter around your favorite park","host_id":9,"date":"2023-04-19","time":"2000-01-01T19:08:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-18T00:08:23.737Z","updated_at":"2023-04-18T00:08:23.737Z"}],"email":"huyphan520@gmail.com"}},{"id":"10","type":"users","attributes":{"name":"menyeart1@gmail.com","role":"user","good_deeds":[],"email":"menyeart1@gmail.com"}}]}'
+  recorded_at: Tue, 18 Apr 2023 02:29:50 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 18 Apr 2023 02:29:49 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"89ef63f7895afcf8f518636bf46af389"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ae48c1d8-33d5-47ec-bf4d-1e3f8e452050
+      X-Runtime:
+      - '0.008773'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"users","attributes":{"name":"John Smith","role":"user","good_deeds":[{"id":9,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T22:14:39.834Z","updated_at":"2023-04-16T22:14:39.834Z"},{"id":9,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T22:14:39.834Z","updated_at":"2023-04-16T22:14:39.834Z"},{"id":10,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T22:17:10.606Z","updated_at":"2023-04-16T22:17:10.606Z"},{"id":12,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T14:33:17.406Z","updated_at":"2023-04-17T14:33:17.406Z"},{"id":13,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T14:35:54.383Z","updated_at":"2023-04-17T14:35:54.383Z"},{"id":14,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T14:35:55.622Z","updated_at":"2023-04-17T14:35:55.622Z"},{"id":14,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T14:35:55.622Z","updated_at":"2023-04-17T14:35:55.622Z"},{"id":15,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T14:36:12.580Z","updated_at":"2023-04-17T14:36:12.580Z"},{"id":16,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T17:24:12.822Z","updated_at":"2023-04-17T17:24:12.822Z"},{"id":16,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T17:24:12.822Z","updated_at":"2023-04-17T17:24:12.822Z"},{"id":17,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T17:24:24.335Z","updated_at":"2023-04-17T17:24:24.335Z"},{"id":18,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T18:51:52.320Z","updated_at":"2023-04-17T18:51:52.320Z"},{"id":19,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T18:51:53.943Z","updated_at":"2023-04-17T18:51:53.943Z"},{"id":19,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T18:51:53.943Z","updated_at":"2023-04-17T18:51:53.943Z"},{"id":20,"name":"Volunteer
+        at a local animal shelter","host_id":1,"date":"2023-04-17","time":"2000-01-01T19:52:30.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T19:52:31.189Z","updated_at":"2023-04-17T19:52:31.189Z"},{"id":20,"name":"Volunteer
+        at a local animal shelter","host_id":1,"date":"2023-04-17","time":"2000-01-01T19:52:30.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T19:52:31.189Z","updated_at":"2023-04-17T19:52:31.189Z"},{"id":23,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T21:28:27.654Z","updated_at":"2023-04-17T21:28:27.654Z"},{"id":24,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T21:42:02.360Z","updated_at":"2023-04-17T21:42:02.360Z"},{"id":25,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T21:42:07.301Z","updated_at":"2023-04-17T21:42:07.301Z"},{"id":26,"name":"Volunteer
+        at a local animal shelter","host_id":1,"date":"2023-04-17","time":"2000-01-01T21:47:34.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T21:47:40.239Z","updated_at":"2023-04-17T21:47:40.239Z"},{"id":26,"name":"Volunteer
+        at a local animal shelter","host_id":1,"date":"2023-04-17","time":"2000-01-01T21:47:34.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T21:47:40.239Z","updated_at":"2023-04-17T21:47:40.239Z"},{"id":5,"name":"Pick
+        up litter around your favorite park","host_id":1,"date":"2023-04-17","time":"2000-01-01T21:48:58.000Z","notes":"","media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T21:50:37.570Z","updated_at":"2023-04-17T21:48:58.916Z"},{"id":5,"name":"Pick
+        up litter around your favorite park","host_id":1,"date":"2023-04-17","time":"2000-01-01T21:48:58.000Z","notes":"","media_link":null,"status":"In
+        Progress","created_at":"2023-04-16T21:50:37.570Z","updated_at":"2023-04-17T21:48:58.916Z"},{"id":27,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T21:57:45.450Z","updated_at":"2023-04-17T21:57:45.450Z"},{"id":28,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T21:58:14.251Z","updated_at":"2023-04-17T21:58:14.251Z"},{"id":29,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T22:00:16.245Z","updated_at":"2023-04-17T22:00:16.245Z"},{"id":32,"name":"Mow
+        your neighbor''s lawn","host_id":1,"date":"2023-04-27","time":"2000-01-01T18:32:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-17T23:30:02.537Z","updated_at":"2023-04-17T23:30:02.537Z"},{"id":36,"name":"High-five
+        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-18T01:37:58.592Z","updated_at":"2023-04-18T01:37:58.592Z"},{"id":37,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-18T02:27:27.525Z","updated_at":"2023-04-18T02:27:27.525Z"},{"id":37,"name":"High-five
+        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
+        Progress","created_at":"2023-04-18T02:27:27.525Z","updated_at":"2023-04-18T02:27:27.525Z"}],"email":"john@example.com"}}}'
+  recorded_at: Tue, 18 Apr 2023 02:29:50 GMT
 recorded_with: VCR 6.1.0

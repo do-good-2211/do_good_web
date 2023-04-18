@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 18 Apr 2023 20:13:21 GMT
+      - Tue, 18 Apr 2023 21:08:09 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -45,9 +45,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 42afaa27-c93c-4cc6-8ee1-9dd2101c3a01
+      - a3138729-e27c-43b6-ba1d-d26c6327c251
       X-Runtime:
-      - '0.004317'
+      - '0.003538'
       Transfer-Encoding:
       - chunked
       Via:
@@ -55,7 +55,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"7","type":"good_deeds","attributes":{"name":"Help Others4.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}}]}'
-  recorded_at: Tue, 18 Apr 2023 20:13:21 GMT
+  recorded_at: Tue, 18 Apr 2023 21:08:10 GMT
 - request:
     method: get
     uri: https://warm-temple-59633.herokuapp.com/api/v1/good_deeds
@@ -77,7 +77,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 18 Apr 2023 20:13:21 GMT
+      - Tue, 18 Apr 2023 21:08:10 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -101,9 +101,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 50b84608-999a-4e39-a7bd-3e6623eb5903
+      - 507c5e27-4452-4bf3-b733-a742a6a39ed0
       X-Runtime:
-      - '0.003738'
+      - '0.003299'
       Transfer-Encoding:
       - chunked
       Via:
@@ -111,7 +111,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"7","type":"good_deeds","attributes":{"name":"Help Others4.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}}]}'
-  recorded_at: Tue, 18 Apr 2023 20:13:22 GMT
+  recorded_at: Tue, 18 Apr 2023 21:08:10 GMT
 - request:
     method: get
     uri: https://warm-temple-59633.herokuapp.com/api/v1/users
@@ -133,7 +133,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 18 Apr 2023 20:13:21 GMT
+      - Tue, 18 Apr 2023 21:08:11 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -153,13 +153,13 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"c1e342b7c333b434908b0a05873a1e30"
+      - W/"9affae04945c473a8cba3d7bff0e6a4b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - eb877fbd-5e9d-4e41-b8d4-6096f9334397
+      - fbf46693-798c-4508-997e-d35cec6cbaab
       X-Runtime:
-      - '0.183117'
+      - '0.184187'
       Transfer-Encoding:
       - chunked
       Via:
@@ -217,6 +217,13 @@ http_interactions:
         at a local animal shelter","date":"2023-04-17","time":"2000-01-01T21:47:34.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":1,"host_name":"John Smith","attendees":[]}},{"id":"26","type":"good_deed","attributes":{"name":"Volunteer
         at a local animal shelter","date":"2023-04-17","time":"2000-01-01T21:47:34.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":1,"host_name":"John Smith","attendees":[]}},{"id":"58","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
+        Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}},{"id":"59","type":"good_deed","attributes":{"name":"Volunteer
+        at a local animal shelter","date":"2023-04-18","time":"2000-01-01T21:02:31.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":1,"host_name":"John Smith","attendees":[]}},{"id":"59","type":"good_deed","attributes":{"name":"Volunteer
+        at a local animal shelter","date":"2023-04-18","time":"2000-01-01T21:02:31.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":1,"host_name":"John Smith","attendees":[]}},{"id":"27","type":"good_deed","attributes":{"name":"High-five
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
@@ -237,7 +244,10 @@ http_interactions:
         Progress","notes":null,"media_link":null,"host_id":1,"host_name":"John Smith","attendees":[]}},{"id":"38","type":"good_deed","attributes":{"name":"Volunteer
         and help out at a senior center","date":"2023-04-20","time":"2000-01-01T13:46:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":10,"host_name":"menyeart1@gmail.com","attendees":[{"id":1,"name":"John
-        Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}},{"id":"42","type":"good_deed","attributes":{"name":"High-five
+        Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}},{"id":"60","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
+        Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}},{"id":"42","type":"good_deed","attributes":{"name":"High-five
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
         Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}},{"id":"43","type":"good_deed","attributes":{"name":"High-five
@@ -291,6 +301,9 @@ http_interactions:
         Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}},{"id":"25","type":"good_deed","attributes":{"name":"High-five
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
+        Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}},{"id":"58","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
         Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}},{"id":"27","type":"good_deed","attributes":{"name":"High-five
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
@@ -298,6 +311,9 @@ http_interactions:
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
         Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}},{"id":"36","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
+        Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}},{"id":"60","type":"good_deed","attributes":{"name":"High-five
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
         Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}},{"id":"42","type":"good_deed","attributes":{"name":"High-five
@@ -335,8 +351,12 @@ http_interactions:
         it!","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","host_id":3,"host_name":"William
         Riker","attendees":[{"id":4,"name":"Data","email":"data@uss-enterprise.com","password_digest":"$2a$12$cZZGXKbSLLKCo.gkoBBLfOw6FAAlZ7YTaZ9PE5q84y8So3SOI5AVa","role":"user","created_at":"2023-04-16T22:13:45.028Z","updated_at":"2023-04-16T22:13:45.028Z","uid":"33033","provider":"Google
         Baby!"},{"id":5,"name":"Geordi La Forge","email":"chief-engineer@uss-enterprise.com","password_digest":"$2a$12$mqbVKHxMyUsfOozJrIVyxeG8kKEanjO0yZgp4QBNlZ.pJid8AbV2S","role":"user","created_at":"2023-04-16T22:13:45.287Z","updated_at":"2023-04-16T22:13:45.287Z","uid":"44044","provider":"Google
-        Baby!"}]}},{"id":"21","type":"good_deed","attributes":{"name":"Donate to your
-        local food bank","date":"2023-04-20","time":"2000-01-01T19:44:00.000Z","status":"In
+        Baby!"}]}},{"id":"54","type":"good_deed","attributes":{"name":"Pick up litter
+        around your favorite park","date":"2023-04-21","time":"2000-01-01T16:28:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":7,"host_name":"Jasmine
+        Hamou","attendees":[{"id":3,"name":"William Riker","email":"number2@uss-enterprise.com","password_digest":"$2a$12$j8ptlySJR2/YaH5BPwdMterGWvGO7LcRj6sOzk04QuaTkokY9g2Oi","role":"user","created_at":"2023-04-16T22:13:44.778Z","updated_at":"2023-04-16T22:13:44.778Z","uid":"22022","provider":"Google
+        Baby!"},{"id":11,"name":"Jennifer Dmytrenko","email":"jdmytrenko615@gmail.com","password_digest":null,"role":"user","created_at":"2023-04-18T14:37:49.740Z","updated_at":"2023-04-18T14:37:49.740Z","uid":"115675445223378100535","provider":"google_oauth2"}]}},{"id":"21","type":"good_deed","attributes":{"name":"Donate
+        to your local food bank","date":"2023-04-20","time":"2000-01-01T19:44:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":8,"host_name":"Mel Travelz","attendees":[{"id":2,"name":"Jean-Luc
         Picard","email":"captain@uss-enterprise.com","password_digest":"$2a$12$58YYqS8Mi3CykkvjpyA28.LAosNfS3W.7Z3P1Xs/DIGyZ.qeJYb1S","role":"user","created_at":"2023-04-16T22:10:30.108Z","updated_at":"2023-04-16T22:10:30.108Z","uid":"55055","provider":"Google
         Baby!"},{"id":3,"name":"William Riker","email":"number2@uss-enterprise.com","password_digest":"$2a$12$j8ptlySJR2/YaH5BPwdMterGWvGO7LcRj6sOzk04QuaTkokY9g2Oi","role":"user","created_at":"2023-04-16T22:13:44.778Z","updated_at":"2023-04-16T22:13:44.778Z","uid":"22022","provider":"Google
@@ -383,7 +403,11 @@ http_interactions:
         lawn","date":"2023-04-18","time":"2000-01-01T19:05:00.000Z","status":"In Progress","notes":null,"media_link":null,"host_id":9,"host_name":"Huy
         Phan","attendees":[{"id":5,"name":"Geordi La Forge","email":"chief-engineer@uss-enterprise.com","password_digest":"$2a$12$mqbVKHxMyUsfOozJrIVyxeG8kKEanjO0yZgp4QBNlZ.pJid8AbV2S","role":"user","created_at":"2023-04-16T22:13:45.287Z","updated_at":"2023-04-16T22:13:45.287Z","uid":"44044","provider":"Google
         Baby!"},{"id":6,"name":"Kara Jones-Hofmann","email":"karajhturing@gmail.com","password_digest":"$2a$12$4tQU4YcEWkKmOuqBv6uM1.JxnK8Ee01cPVNUrlhMym5LiKlRy/2hu","role":"user","created_at":"2023-04-16T22:18:50.796Z","updated_at":"2023-04-16T22:18:50.796Z","uid":"111021676679827005112","provider":"google_oauth2"}]}}]}}},{"id":"6","type":"users","attributes":{"name":"Kara
-        Jones-Hofmann","role":"user","email":"karajhturing@gmail.com","good_deeds":{"data":[{"id":"32","type":"good_deed","attributes":{"name":"Mow
+        Jones-Hofmann","role":"user","email":"karajhturing@gmail.com","good_deeds":{"data":[{"id":"55","type":"good_deed","attributes":{"name":"Pick
+        up litter around your favorite park","date":"2023-04-18","time":"2000-01-01T18:31:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":7,"host_name":"Jasmine
+        Hamou","attendees":[{"id":6,"name":"Kara Jones-Hofmann","email":"karajhturing@gmail.com","password_digest":"$2a$12$4tQU4YcEWkKmOuqBv6uM1.JxnK8Ee01cPVNUrlhMym5LiKlRy/2hu","role":"user","created_at":"2023-04-16T22:18:50.796Z","updated_at":"2023-04-16T22:18:50.796Z","uid":"111021676679827005112","provider":"google_oauth2"},{"id":10,"name":"menyeart1@gmail.com","email":"menyeart1@gmail.com","password_digest":"$2a$12$6NN109QuvNJg40SFJX0egO13Rj3YTkn9Ao2bM4uB5UKYmY5mRIkOq","role":"user","created_at":"2023-04-18T01:53:51.178Z","updated_at":"2023-04-18T01:53:51.178Z","uid":"101776878166784970527","provider":"google_oauth2"},{"id":11,"name":"Jennifer
+        Dmytrenko","email":"jdmytrenko615@gmail.com","password_digest":null,"role":"user","created_at":"2023-04-18T14:37:49.740Z","updated_at":"2023-04-18T14:37:49.740Z","uid":"115675445223378100535","provider":"google_oauth2"}]}},{"id":"32","type":"good_deed","attributes":{"name":"Mow
         your neighbor''s lawn","date":"2023-04-27","time":"2000-01-01T18:32:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":1,"host_name":"John Smith","attendees":[{"id":6,"name":"Kara
         Jones-Hofmann","email":"karajhturing@gmail.com","password_digest":"$2a$12$4tQU4YcEWkKmOuqBv6uM1.JxnK8Ee01cPVNUrlhMym5LiKlRy/2hu","role":"user","created_at":"2023-04-16T22:18:50.796Z","updated_at":"2023-04-16T22:18:50.796Z","uid":"111021676679827005112","provider":"google_oauth2"},{"id":7,"name":"Jasmine
@@ -397,7 +421,21 @@ http_interactions:
         Hamou","attendees":[{"id":6,"name":"Kara Jones-Hofmann","email":"karajhturing@gmail.com","password_digest":"$2a$12$4tQU4YcEWkKmOuqBv6uM1.JxnK8Ee01cPVNUrlhMym5LiKlRy/2hu","role":"user","created_at":"2023-04-16T22:18:50.796Z","updated_at":"2023-04-16T22:18:50.796Z","uid":"111021676679827005112","provider":"google_oauth2"},{"id":8,"name":"Mel
         Travelz","email":"meltravelz@gmail.com","password_digest":"$2a$12$ks6TP4cyoYBgJPUzcrf74efV7D1WLth1OfKkUjevAcRte4AsVZFhS","role":"user","created_at":"2023-04-17T20:28:14.084Z","updated_at":"2023-04-17T20:28:14.084Z","uid":"117104532482641534725","provider":"google_oauth2"},{"id":9,"name":"Huy
         Phan","email":"huyphan520@gmail.com","password_digest":"$2a$12$ODkoxUOqUkqixnWl12kL9OprFac6Z0uR1qXhVdw1GSJ8Y5e28NG2y","role":"user","created_at":"2023-04-17T23:32:24.386Z","updated_at":"2023-04-17T23:32:24.386Z","uid":"115160514392428970745","provider":"google_oauth2"},{"id":10,"name":"menyeart1@gmail.com","email":"menyeart1@gmail.com","password_digest":"$2a$12$6NN109QuvNJg40SFJX0egO13Rj3YTkn9Ao2bM4uB5UKYmY5mRIkOq","role":"user","created_at":"2023-04-18T01:53:51.178Z","updated_at":"2023-04-18T01:53:51.178Z","uid":"101776878166784970527","provider":"google_oauth2"}]}}]}}},{"id":"7","type":"users","attributes":{"name":"Jasmine
-        Hamou","role":"user","email":"jasmine.mahabadi@gmail.com","good_deeds":{"data":[{"id":"30","type":"good_deed","attributes":{"name":"Pick
+        Hamou","role":"user","email":"jasmine.mahabadi@gmail.com","good_deeds":{"data":[{"id":"54","type":"good_deed","attributes":{"name":"Pick
+        up litter around your favorite park","date":"2023-04-21","time":"2000-01-01T16:28:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":7,"host_name":"Jasmine
+        Hamou","attendees":[{"id":3,"name":"William Riker","email":"number2@uss-enterprise.com","password_digest":"$2a$12$j8ptlySJR2/YaH5BPwdMterGWvGO7LcRj6sOzk04QuaTkokY9g2Oi","role":"user","created_at":"2023-04-16T22:13:44.778Z","updated_at":"2023-04-16T22:13:44.778Z","uid":"22022","provider":"Google
+        Baby!"},{"id":11,"name":"Jennifer Dmytrenko","email":"jdmytrenko615@gmail.com","password_digest":null,"role":"user","created_at":"2023-04-18T14:37:49.740Z","updated_at":"2023-04-18T14:37:49.740Z","uid":"115675445223378100535","provider":"google_oauth2"}]}},{"id":"55","type":"good_deed","attributes":{"name":"Pick
+        up litter around your favorite park","date":"2023-04-18","time":"2000-01-01T18:31:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":7,"host_name":"Jasmine
+        Hamou","attendees":[{"id":6,"name":"Kara Jones-Hofmann","email":"karajhturing@gmail.com","password_digest":"$2a$12$4tQU4YcEWkKmOuqBv6uM1.JxnK8Ee01cPVNUrlhMym5LiKlRy/2hu","role":"user","created_at":"2023-04-16T22:18:50.796Z","updated_at":"2023-04-16T22:18:50.796Z","uid":"111021676679827005112","provider":"google_oauth2"},{"id":10,"name":"menyeart1@gmail.com","email":"menyeart1@gmail.com","password_digest":"$2a$12$6NN109QuvNJg40SFJX0egO13Rj3YTkn9Ao2bM4uB5UKYmY5mRIkOq","role":"user","created_at":"2023-04-18T01:53:51.178Z","updated_at":"2023-04-18T01:53:51.178Z","uid":"101776878166784970527","provider":"google_oauth2"},{"id":11,"name":"Jennifer
+        Dmytrenko","email":"jdmytrenko615@gmail.com","password_digest":null,"role":"user","created_at":"2023-04-18T14:37:49.740Z","updated_at":"2023-04-18T14:37:49.740Z","uid":"115675445223378100535","provider":"google_oauth2"}]}},{"id":"56","type":"good_deed","attributes":{"name":"Clean
+        out your closet and donate the clothes you''ve outgrown","date":"2023-04-28","time":"2000-01-01T13:43:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":7,"host_name":"Jasmine
+        Hamou","attendees":[]}},{"id":"57","type":"good_deed","attributes":{"name":"Find
+        a charity and donate to it","date":"2023-04-30","time":"2000-01-01T18:01:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":7,"host_name":"Jasmine
+        Hamou","attendees":[]}},{"id":"30","type":"good_deed","attributes":{"name":"Pick
         up litter around your favorite park","date":"2023-04-19","time":"2000-01-01T16:13:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":7,"host_name":"Jasmine
         Hamou","attendees":[{"id":4,"name":"Data","email":"data@uss-enterprise.com","password_digest":"$2a$12$cZZGXKbSLLKCo.gkoBBLfOw6FAAlZ7YTaZ9PE5q84y8So3SOI5AVa","role":"user","created_at":"2023-04-16T22:13:45.028Z","updated_at":"2023-04-16T22:13:45.028Z","uid":"33033","provider":"Google
@@ -468,7 +506,11 @@ http_interactions:
         Progress","notes":null,"media_link":null,"host_id":7,"host_name":"Jasmine
         Hamou","attendees":[{"id":6,"name":"Kara Jones-Hofmann","email":"karajhturing@gmail.com","password_digest":"$2a$12$4tQU4YcEWkKmOuqBv6uM1.JxnK8Ee01cPVNUrlhMym5LiKlRy/2hu","role":"user","created_at":"2023-04-16T22:18:50.796Z","updated_at":"2023-04-16T22:18:50.796Z","uid":"111021676679827005112","provider":"google_oauth2"},{"id":8,"name":"Mel
         Travelz","email":"meltravelz@gmail.com","password_digest":"$2a$12$ks6TP4cyoYBgJPUzcrf74efV7D1WLth1OfKkUjevAcRte4AsVZFhS","role":"user","created_at":"2023-04-17T20:28:14.084Z","updated_at":"2023-04-17T20:28:14.084Z","uid":"117104532482641534725","provider":"google_oauth2"},{"id":9,"name":"Huy
-        Phan","email":"huyphan520@gmail.com","password_digest":"$2a$12$ODkoxUOqUkqixnWl12kL9OprFac6Z0uR1qXhVdw1GSJ8Y5e28NG2y","role":"user","created_at":"2023-04-17T23:32:24.386Z","updated_at":"2023-04-17T23:32:24.386Z","uid":"115160514392428970745","provider":"google_oauth2"},{"id":10,"name":"menyeart1@gmail.com","email":"menyeart1@gmail.com","password_digest":"$2a$12$6NN109QuvNJg40SFJX0egO13Rj3YTkn9Ao2bM4uB5UKYmY5mRIkOq","role":"user","created_at":"2023-04-18T01:53:51.178Z","updated_at":"2023-04-18T01:53:51.178Z","uid":"101776878166784970527","provider":"google_oauth2"}]}}]}}},{"id":"10","type":"users","attributes":{"name":"menyeart1@gmail.com","role":"user","email":"menyeart1@gmail.com","good_deeds":{"data":[{"id":"38","type":"good_deed","attributes":{"name":"Volunteer
+        Phan","email":"huyphan520@gmail.com","password_digest":"$2a$12$ODkoxUOqUkqixnWl12kL9OprFac6Z0uR1qXhVdw1GSJ8Y5e28NG2y","role":"user","created_at":"2023-04-17T23:32:24.386Z","updated_at":"2023-04-17T23:32:24.386Z","uid":"115160514392428970745","provider":"google_oauth2"},{"id":10,"name":"menyeart1@gmail.com","email":"menyeart1@gmail.com","password_digest":"$2a$12$6NN109QuvNJg40SFJX0egO13Rj3YTkn9Ao2bM4uB5UKYmY5mRIkOq","role":"user","created_at":"2023-04-18T01:53:51.178Z","updated_at":"2023-04-18T01:53:51.178Z","uid":"101776878166784970527","provider":"google_oauth2"}]}}]}}},{"id":"10","type":"users","attributes":{"name":"menyeart1@gmail.com","role":"user","email":"menyeart1@gmail.com","good_deeds":{"data":[{"id":"55","type":"good_deed","attributes":{"name":"Pick
+        up litter around your favorite park","date":"2023-04-18","time":"2000-01-01T18:31:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":7,"host_name":"Jasmine
+        Hamou","attendees":[{"id":6,"name":"Kara Jones-Hofmann","email":"karajhturing@gmail.com","password_digest":"$2a$12$4tQU4YcEWkKmOuqBv6uM1.JxnK8Ee01cPVNUrlhMym5LiKlRy/2hu","role":"user","created_at":"2023-04-16T22:18:50.796Z","updated_at":"2023-04-16T22:18:50.796Z","uid":"111021676679827005112","provider":"google_oauth2"},{"id":10,"name":"menyeart1@gmail.com","email":"menyeart1@gmail.com","password_digest":"$2a$12$6NN109QuvNJg40SFJX0egO13Rj3YTkn9Ao2bM4uB5UKYmY5mRIkOq","role":"user","created_at":"2023-04-18T01:53:51.178Z","updated_at":"2023-04-18T01:53:51.178Z","uid":"101776878166784970527","provider":"google_oauth2"},{"id":11,"name":"Jennifer
+        Dmytrenko","email":"jdmytrenko615@gmail.com","password_digest":null,"role":"user","created_at":"2023-04-18T14:37:49.740Z","updated_at":"2023-04-18T14:37:49.740Z","uid":"115675445223378100535","provider":"google_oauth2"}]}},{"id":"38","type":"good_deed","attributes":{"name":"Volunteer
         and help out at a senior center","date":"2023-04-20","time":"2000-01-01T13:46:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":10,"host_name":"menyeart1@gmail.com","attendees":[{"id":1,"name":"John
         Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}},{"id":"41","type":"good_deed","attributes":{"name":"Volunteer
@@ -481,8 +523,16 @@ http_interactions:
         Hamou","attendees":[{"id":6,"name":"Kara Jones-Hofmann","email":"karajhturing@gmail.com","password_digest":"$2a$12$4tQU4YcEWkKmOuqBv6uM1.JxnK8Ee01cPVNUrlhMym5LiKlRy/2hu","role":"user","created_at":"2023-04-16T22:18:50.796Z","updated_at":"2023-04-16T22:18:50.796Z","uid":"111021676679827005112","provider":"google_oauth2"},{"id":8,"name":"Mel
         Travelz","email":"meltravelz@gmail.com","password_digest":"$2a$12$ks6TP4cyoYBgJPUzcrf74efV7D1WLth1OfKkUjevAcRte4AsVZFhS","role":"user","created_at":"2023-04-17T20:28:14.084Z","updated_at":"2023-04-17T20:28:14.084Z","uid":"117104532482641534725","provider":"google_oauth2"},{"id":9,"name":"Huy
         Phan","email":"huyphan520@gmail.com","password_digest":"$2a$12$ODkoxUOqUkqixnWl12kL9OprFac6Z0uR1qXhVdw1GSJ8Y5e28NG2y","role":"user","created_at":"2023-04-17T23:32:24.386Z","updated_at":"2023-04-17T23:32:24.386Z","uid":"115160514392428970745","provider":"google_oauth2"},{"id":10,"name":"menyeart1@gmail.com","email":"menyeart1@gmail.com","password_digest":"$2a$12$6NN109QuvNJg40SFJX0egO13Rj3YTkn9Ao2bM4uB5UKYmY5mRIkOq","role":"user","created_at":"2023-04-18T01:53:51.178Z","updated_at":"2023-04-18T01:53:51.178Z","uid":"101776878166784970527","provider":"google_oauth2"}]}}]}}},{"id":"11","type":"users","attributes":{"name":"Jennifer
-        Dmytrenko","role":"user","email":"jdmytrenko615@gmail.com","good_deeds":{"data":[]}}}]}'
-  recorded_at: Tue, 18 Apr 2023 20:13:22 GMT
+        Dmytrenko","role":"user","email":"jdmytrenko615@gmail.com","good_deeds":{"data":[{"id":"54","type":"good_deed","attributes":{"name":"Pick
+        up litter around your favorite park","date":"2023-04-21","time":"2000-01-01T16:28:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":7,"host_name":"Jasmine
+        Hamou","attendees":[{"id":3,"name":"William Riker","email":"number2@uss-enterprise.com","password_digest":"$2a$12$j8ptlySJR2/YaH5BPwdMterGWvGO7LcRj6sOzk04QuaTkokY9g2Oi","role":"user","created_at":"2023-04-16T22:13:44.778Z","updated_at":"2023-04-16T22:13:44.778Z","uid":"22022","provider":"Google
+        Baby!"},{"id":11,"name":"Jennifer Dmytrenko","email":"jdmytrenko615@gmail.com","password_digest":null,"role":"user","created_at":"2023-04-18T14:37:49.740Z","updated_at":"2023-04-18T14:37:49.740Z","uid":"115675445223378100535","provider":"google_oauth2"}]}},{"id":"55","type":"good_deed","attributes":{"name":"Pick
+        up litter around your favorite park","date":"2023-04-18","time":"2000-01-01T18:31:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":7,"host_name":"Jasmine
+        Hamou","attendees":[{"id":6,"name":"Kara Jones-Hofmann","email":"karajhturing@gmail.com","password_digest":"$2a$12$4tQU4YcEWkKmOuqBv6uM1.JxnK8Ee01cPVNUrlhMym5LiKlRy/2hu","role":"user","created_at":"2023-04-16T22:18:50.796Z","updated_at":"2023-04-16T22:18:50.796Z","uid":"111021676679827005112","provider":"google_oauth2"},{"id":10,"name":"menyeart1@gmail.com","email":"menyeart1@gmail.com","password_digest":"$2a$12$6NN109QuvNJg40SFJX0egO13Rj3YTkn9Ao2bM4uB5UKYmY5mRIkOq","role":"user","created_at":"2023-04-18T01:53:51.178Z","updated_at":"2023-04-18T01:53:51.178Z","uid":"101776878166784970527","provider":"google_oauth2"},{"id":11,"name":"Jennifer
+        Dmytrenko","email":"jdmytrenko615@gmail.com","password_digest":null,"role":"user","created_at":"2023-04-18T14:37:49.740Z","updated_at":"2023-04-18T14:37:49.740Z","uid":"115675445223378100535","provider":"google_oauth2"}]}}]}}}]}'
+  recorded_at: Tue, 18 Apr 2023 21:08:11 GMT
 - request:
     method: get
     uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1
@@ -504,7 +554,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 18 Apr 2023 20:13:22 GMT
+      - Tue, 18 Apr 2023 21:08:11 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -524,13 +574,13 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"494117b564e0d5882f282217d04a8c60"
+      - W/"b482c8013bb62222adba429d7757ac1a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 99b0e614-7124-454b-934d-e3d4be3be22d
+      - 7b3dfcb0-ad79-4afd-9c6e-e0cbe79ce2c5
       X-Runtime:
-      - '0.068440'
+      - '0.056120'
       Transfer-Encoding:
       - chunked
       Via:
@@ -588,6 +638,13 @@ http_interactions:
         at a local animal shelter","date":"2023-04-17","time":"2000-01-01T21:47:34.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":1,"host_name":"John Smith","attendees":[]}},{"id":"26","type":"good_deed","attributes":{"name":"Volunteer
         at a local animal shelter","date":"2023-04-17","time":"2000-01-01T21:47:34.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":1,"host_name":"John Smith","attendees":[]}},{"id":"58","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
+        Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}},{"id":"59","type":"good_deed","attributes":{"name":"Volunteer
+        at a local animal shelter","date":"2023-04-18","time":"2000-01-01T21:02:31.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":1,"host_name":"John Smith","attendees":[]}},{"id":"59","type":"good_deed","attributes":{"name":"Volunteer
+        at a local animal shelter","date":"2023-04-18","time":"2000-01-01T21:02:31.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":1,"host_name":"John Smith","attendees":[]}},{"id":"27","type":"good_deed","attributes":{"name":"High-five
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
@@ -608,7 +665,10 @@ http_interactions:
         Progress","notes":null,"media_link":null,"host_id":1,"host_name":"John Smith","attendees":[]}},{"id":"38","type":"good_deed","attributes":{"name":"Volunteer
         and help out at a senior center","date":"2023-04-20","time":"2000-01-01T13:46:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":10,"host_name":"menyeart1@gmail.com","attendees":[{"id":1,"name":"John
-        Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}},{"id":"42","type":"good_deed","attributes":{"name":"High-five
+        Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}},{"id":"60","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
+        Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}},{"id":"42","type":"good_deed","attributes":{"name":"High-five
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
         Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}},{"id":"43","type":"good_deed","attributes":{"name":"High-five
@@ -629,5 +689,5 @@ http_interactions:
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","notes":"This was awesome","media_link":"http://picture.jpg","host_id":2,"host_name":"Jean-Luc
         Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}}]}}}}'
-  recorded_at: Tue, 18 Apr 2023 20:13:23 GMT
+  recorded_at: Tue, 18 Apr 2023 21:08:11 GMT
 recorded_with: VCR 6.1.0

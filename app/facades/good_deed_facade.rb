@@ -28,8 +28,6 @@ class GoodDeedFacade
                                        time: @time,
                                        attendees: @attendees
                                      })
-                                    
-    Deed.new(deed[:data])
   end
 
   def fetch_deed
@@ -47,8 +45,7 @@ class GoodDeedFacade
       notes: @notes,
       media_link: @media_link
     }
-    data = DoGoodService.update_deed(@user_id, @deed_id, deed_hash)
-    Deed.new(data[:data])
+    DoGoodService.update_deed(@user_id, @deed_id, deed_hash)
   end
 
   private

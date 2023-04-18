@@ -27,5 +27,8 @@ class User::GoodDeedsController < ApplicationController
     redirect_to dashboard_path
   end
 
-  def destroy; end
+  def destroy
+    GoodDeedFacade.new(params, current_user["id"]).delete_deed
+    redirect_to dashboard_path
+  end
 end

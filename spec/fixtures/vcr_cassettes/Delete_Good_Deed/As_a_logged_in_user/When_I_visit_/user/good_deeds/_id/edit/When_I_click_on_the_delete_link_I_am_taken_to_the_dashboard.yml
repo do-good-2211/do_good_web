@@ -514,4 +514,70 @@ http_interactions:
       encoding: UTF-8
       string: ''
   recorded_at: Tue, 18 Apr 2023 18:14:50 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/calendar/v3/calendars/primary/events
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - unknown/0.0.0 google-api-ruby-client/0.11.0 Mac OS X/13.3.1 (gzip)
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Tue, 18 Apr 2023 19:27:00 GMT
+      X-Goog-Api-Client:
+      - gl-ruby/3.1.1 gdcl/1.11.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Encoding:
+      - gzip
+      Date:
+      - Tue, 18 Apr 2023 19:27:00 GMT
+      Server:
+      - ESF
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "error": {
+            "code": 403,
+            "message": "The request is missing a valid API key.",
+            "errors": [
+              {
+                "message": "The request is missing a valid API key.",
+                "domain": "global",
+                "reason": "forbidden"
+              }
+            ],
+            "status": "PERMISSION_DENIED"
+          }
+        }
+  recorded_at: Tue, 18 Apr 2023 19:27:00 GMT
 recorded_with: VCR 6.1.0

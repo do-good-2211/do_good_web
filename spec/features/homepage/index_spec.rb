@@ -60,6 +60,7 @@ RSpec.describe "Home page", type: :feature do
       # end
 
       it "has a link to My Page and redirects me to my dashboard" do
+        allow_any_instance_of(CalendarFacade).to receive(:list_events).and_return(12)
         user = { "id" => "1", "name" => "Bob", "email" => "user@gmail.com", "password_digest"=> "test1", "role" => "User"}
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
         

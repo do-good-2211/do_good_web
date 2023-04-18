@@ -23,25 +23,12 @@ class UserFacade
     user = fetch_user
     all_deeds_array = user.good_deeds
 
-
-    array_of_deed_objects = all_deeds_array.map do |deed_hash|
-      new_hash = { 
-        id: deed_hash[:id], 
-        attributes: { 
-          name: deed_hash[:attributes][:name],
-          host_id: deed_hash[:attributes][:host_id],                 
-          date: deed_hash[:attributes][:date],         
-          time: deed_hash[:attributes][:time],
-          status: deed_hash[:attributes][:status],
-          notes: deed_hash[:attributes][:notes],
-          media_link: deed_hash[:attributes][:media_link],
-          attendees: deed_hash[:attributes][:attendees]
-        } 
-      }
-      Deed.new(new_hash)
+    # make_deeds (helper method)
+    array_of_deed_objects = all_deeds_array[:data].map do |deed_hash|
+      Deed.new(deed_hash)
     end
 
-    # sorted_deeds = sort_deeds(array_of_deed_objects)
+    # sorted_deeds (helper method)
     hosting_deeds = []
     invited_deeds = []
     completed_deeds = []
@@ -56,6 +43,7 @@ class UserFacade
       end
     end
 
+    # hash that is returned to the view: (helper method?)
     {
     name: user.name,
     id: user.id,
@@ -82,3 +70,18 @@ class UserFacade
     @users.reject { |user| user.name == @user["name"] }
   end
 end
+
+# Save just in case: 
+    # new_hash = { 
+      #   id: deed_hash[:id], 
+      #   attributes: { 
+      #     name: deed_hash[:attributes][:name],
+      #     host_id: deed_hash[:attributes][:host_id],                 
+      #     date: deed_hash[:attributes][:date],         
+      #     time: deed_hash[:attributes][:time],
+      #     status: deed_hash[:attributes][:status],
+      #     notes: deed_hash[:attributes][:notes],
+      #     media_link: deed_hash[:attributes][:media_link],
+      #     attendees: deed_hash[:attributes][:attendees]
+      #   } 
+      # }

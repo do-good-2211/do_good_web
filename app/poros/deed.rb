@@ -14,7 +14,7 @@ class Deed
               :attendees
 
   def initialize(info)
-    @id = info[:id].to_i
+    @id = id_to_integer(info[:id])
     @name = info[:attributes][:name]
     @host_id = info[:attributes][:host_id]
     @host_name = info[:attributes][:host_name]
@@ -24,5 +24,9 @@ class Deed
     @media_link = info[:attributes][:media_link]
     @notes = info[:attributes][:notes]
     @attendees = info[:attributes][:attendees]
+  end
+
+  def id_to_integer(id)
+    id.to_i unless id.class == Integer
   end
 end

@@ -1,8 +1,6 @@
 require "rails_helper"
 
 RSpec.describe "Home page", type: :feature do
-  # describe "As a visitor", :vcr do
-
     describe "As a user who is NOT logged in", :vcr do
       it "When I visit '/' I see a link to home, a button to login/register, logo and moto, and footer" do
         visit "/"
@@ -19,7 +17,7 @@ RSpec.describe "Home page", type: :feature do
 
         click_button("Login/Register")
         # expect(current_path).to eq(login_path) -> Now goes to Google OAuth
-        # Since this tests passes it's still being tested? If you have ideas on an expect statement please add.
+        # Since this tests passes it's still being tested. If you have ideas on an expect statement please add.
       end
 
       it "When I click on Home link I am redirected to Home" do
@@ -71,5 +69,4 @@ RSpec.describe "Home page", type: :feature do
         expect(current_path).to eq(dashboard_path)
       end
     end
-  # end
 end

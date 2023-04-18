@@ -80,7 +80,7 @@ RSpec.describe GoodDeedFacade, :vcr do
       created_deed = @facade.create_deed
       deed_id = created_deed[:data][:id]
 
-      response = GoodDeedFacade.new({id: deed_id}, 2).delete_deed
+      response = GoodDeedFacade.new({ id: deed_id }, 2).delete_deed
 
       expect(response.status).to eq(204)
     end

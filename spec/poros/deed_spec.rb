@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Deed do
-  let(:info) {
+  let(:info) do
     { id: "55",
       type: "good_deed",
       attributes: {
@@ -13,7 +13,7 @@ RSpec.describe Deed do
         media_link: "www.image.com/high_five_yo!",
         attendees: [{ "user_id": 2, "name": "Peter" }, { "user_id": 3, "name": "Jane" }]
       } }
-  }
+  end
   let(:deed1) { Deed.new(info) }
 
   it "exists & has attributes" do

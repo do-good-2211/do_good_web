@@ -17,7 +17,7 @@ class GoodDeedFacade
   end
 
   def get_deeds
-    GoodDeedService.good_deeds[:data].map { |deed| Deed.new(deed) }
+    @_deeds ||= GoodDeedService.good_deeds[:data].map { |deed| Deed.new(deed) }
   end
 
   def create_deed
@@ -31,8 +31,8 @@ class GoodDeedFacade
   end
 
   def fetch_deed
-    data = GoodDeedService.fetch_deed(@user_id, @deed_id)
-    Deed.new(data[:data])
+    data ||= GoodDeedService.fetch_deed(@user_id, @deed_id)
+    @_deed ||= Deed.new(data[:data])
   end
 
   def update_deed

@@ -40,11 +40,15 @@ class GoodDeedFacade
       name: @name,
       date: @date,
       time: @time,
-      status:,
+      status: @status,
       notes: @notes,
       media_link: @media_link
     }
     DoGoodService.update_deed(@user_id, @deed_id, deed_hash)
+  end
+
+  def delete_deed
+    GoodDeedService.delete_deed(@user_id, @deed_id)
   end
 
   private

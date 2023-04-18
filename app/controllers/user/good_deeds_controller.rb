@@ -9,8 +9,10 @@ class User::GoodDeedsController < ApplicationController
   end
 
   def create
+    email = current_user["email"]
     if params[:date].present? && params[:time].present?
       GoodDeedFacade.new(params, current_user["id"]).create_deed
+      CalendarFacade.new.create_event(email, params, session[:token])
       redirect_to dashboard_path
     else
       redirect_to new_user_good_deed_path

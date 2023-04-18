@@ -10,9 +10,6 @@ class User::GoodDeedsController < ApplicationController
 
   def create
     if params[:date].present? && params[:time].present?
-      # This line will pass the test from: spec/features/users/good_deeds/new_spec.rb
-      # GoodDeedFacade.new(params, current_user[:id]).create_deed
-      # This line will pass when we run rails s
       GoodDeedFacade.new(params, current_user["id"]).create_deed
       redirect_to dashboard_path
     else
@@ -20,4 +17,15 @@ class User::GoodDeedsController < ApplicationController
       flash[:notice] = "Please fill in all parts."
     end
   end
+
+  def edit
+    @facade = GoodDeedFacade.new(params, current_user["id"])
+  end
+
+  def update
+    GoodDeedFacade.new(params, current_user["id"]).update_deed
+    redirect_to dashboard_path
+  end
+
+  def destroy; end
 end

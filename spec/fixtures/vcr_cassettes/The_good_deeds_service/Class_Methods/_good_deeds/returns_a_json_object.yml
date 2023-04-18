@@ -1,14 +1,12 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds?param=1
+    method: get
+    uri: http://localhost:3000/api/v1/good_deeds
     body:
-      encoding: UTF-8
-      string: '{"name":"High-five a stranger.","date":"02-02-2024","time":"2000-01-01T16:00:00.000Z","attendees":[1]}'
+      encoding: US-ASCII
+      string: ''
     headers:
-      Content-Type:
-      - application/json
       User-Agent:
       - Faraday v2.7.4
       Accept-Encoding:
@@ -17,15 +15,9 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 201
-      message: Created
+      code: 200
+      message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Mon, 17 Apr 2023 17:24:12 GMT
-      Connection:
-      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -43,32 +35,29 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"4dff21915d874d11c599f18c925b3b85"
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c8541a78-eab5-4b46-84d0-6f6ebec34e6a
+      - c55b5218-d1bf-43bd-94d1-907ad7d3b61e
       X-Runtime:
-      - '0.048499'
+      - '0.125913'
+      Server-Timing:
+      - sql.active_record;dur=24.60, start_processing.action_controller;dur=0.06,
+        process_action.action_controller;dur=8.19
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"16","type":"good_deeds_create","attributes":{"name":"High-five
-        a stranger.","media_link":null,"notes":null,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
-        Progress","host_id":1}}}'
-  recorded_at: Mon, 17 Apr 2023 17:24:12 GMT
+      string: '{"data":[]}'
+  recorded_at: Sun, 16 Apr 2023 17:22:21 GMT
 - request:
-    method: post
-    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/2/good_deeds?param=1
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/good_deeds
     body:
-      encoding: UTF-8
-      string: '{"name":"High-five a stranger.","date":"02-02-2024","time":"2000-01-01T16:00:00.000Z","attendees":[1]}'
+      encoding: US-ASCII
+      string: ''
     headers:
-      Content-Type:
-      - application/json
       User-Agent:
       - Faraday v2.7.4
       Accept-Encoding:
@@ -77,13 +66,13 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 201
-      message: Created
+      code: 200
+      message: OK
     headers:
       Server:
       - Cowboy
       Date:
-      - Mon, 17 Apr 2023 21:42:02 GMT
+      - Mon, 17 Apr 2023 21:42:07 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -103,21 +92,19 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"50e04b72bf1dc4f3e49c44bb60208dbc"
+      - W/"90d0241e3615667c572a37a612495c25"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 61389e7e-cddb-48c1-b0ab-15f9b60b469a
+      - fc8a0bd9-d7ca-4ef9-8c50-66e56f4f945f
       X-Runtime:
-      - '0.063132'
+      - '0.004059'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"24","type":"good_deeds_create","attributes":{"name":"High-five
-        a stranger.","media_link":null,"notes":null,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
-        Progress","host_id":2}}}'
-  recorded_at: Mon, 17 Apr 2023 21:42:02 GMT
+      string: '{"data":[{"id":"7","type":"good_deeds","attributes":{"name":"Help Others4.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}}]}'
+  recorded_at: Mon, 17 Apr 2023 21:42:08 GMT
 recorded_with: VCR 6.1.0

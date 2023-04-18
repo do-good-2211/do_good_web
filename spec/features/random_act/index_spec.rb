@@ -17,7 +17,7 @@ RSpec.describe "Random Acts index page", type: :feature do
       expect(page).to have_link("Donate blood at a local blood center")
       expect(page).to have_link("Contribute code or a monetary donation to an open-source software project")
     end
-       
+
     it "when I click on any deed I am redirected to the new good deed page" do
       click_on("Volunteer at a local animal shelter")
       expect(current_path).to eq("/user/good_deeds/new")

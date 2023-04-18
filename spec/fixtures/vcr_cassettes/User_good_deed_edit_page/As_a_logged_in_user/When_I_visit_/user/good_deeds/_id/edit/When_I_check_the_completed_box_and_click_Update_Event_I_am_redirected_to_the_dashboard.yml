@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/1/good_deeds/5
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/5
     body:
       encoding: US-ASCII
       string: ''
@@ -17,273 +17,47 @@ http_interactions:
     status:
       code: 200
       message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"48a21b96f1e543fc3be6b40adf1804f1"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - b19d1536-14ce-48ad-8814-3b2842add888
-      X-Runtime:
-      - '0.007947'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.08, sql.active_record;dur=0.77, instantiation.active_record;dur=0.08,
-        process_action.action_controller;dur=2.16
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"5","type":"good_deed","attributes":{"name":"High-five
-        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"Completed","notes":null,"media_link":null}}}'
-  recorded_at: Mon, 17 Apr 2023 11:20:42 GMT
-- request:
-    method: patch
-    uri: http://localhost:3000/api/v1/users/1/good_deeds/5?param=1
-    body:
-      encoding: UTF-8
-      string: '{"name":null,"date":"2024-02-02","time":"4:00 PM","status":"In Progress","notes":"","media_link":null}'
-    headers:
-      Content-Type:
-      - application/json
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"76cf782021d4c4d19358efdb86c20110"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 7afc0f61-3052-4b88-ab29-379c75e73e33
-      X-Runtime:
-      - '0.009453'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.09, sql.active_record;dur=2.22, instantiation.active_record;dur=0.07,
-        unpermitted_parameters.action_controller;dur=0.08, process_action.action_controller;dur=4.45
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"5","type":"good_deed","attributes":{"name":null,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
-        Progress","notes":"","media_link":null}}}'
-  recorded_at: Mon, 17 Apr 2023 11:20:43 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/1/good_deeds/5
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"48a21b96f1e543fc3be6b40adf1804f1"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - c29fd8aa-2807-4557-9c88-5ea689d9539b
-      X-Runtime:
-      - '0.006653'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.57, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.31
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"5","type":"good_deed","attributes":{"name":"High-five
-        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"Completed","notes":null,"media_link":null}}}'
-  recorded_at: Mon, 17 Apr 2023 11:24:46 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users//good_deeds/5
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      X-Request-Id:
-      - 837e0f00-62f0-4151-971f-8d1898d22d55
-      X-Runtime:
-      - '0.006705'
-      Server-Timing:
-      - ''
-      Content-Length:
-      - '6420'
-    body:
-      encoding: UTF-8
-      string: '{"status":404,"error":"Not Found","exception":"#\u003cActionController::RoutingError:
-        No route matches [GET] \"/api/v1/users/good_deeds/5\"\u003e","traces":{"Application
-        Trace":[],"Framework Trace":[{"exception_object_id":20240,"id":0,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":20240,"id":1,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call''"},{"exception_object_id":20240,"id":2,"trace":"railties
-        (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":20240,"id":3,"trace":"railties
-        (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":20240,"id":4,"trace":"activesupport
-        (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":20240,"id":5,"trace":"activesupport
-        (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":20240,"id":6,"trace":"activesupport
-        (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":20240,"id":7,"trace":"railties
-        (7.0.4.3) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":20240,"id":8,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":20240,"id":9,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":20240,"id":10,"trace":"rack
-        (2.2.6.4) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":20240,"id":11,"trace":"activesupport
-        (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
-        `call''"},{"exception_object_id":20240,"id":12,"trace":"actionpack (7.0.4.3)
-        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":20240,"id":13,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":20240,"id":14,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":20240,"id":15,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":20240,"id":16,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":20240,"id":17,"trace":"rack
-        (2.2.6.4) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":20240,"id":18,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call''"},{"exception_object_id":20240,"id":19,"trace":"railties
-        (7.0.4.3) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":20240,"id":20,"trace":"puma
-        (5.6.5) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":20240,"id":21,"trace":"puma
-        (5.6.5) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":20240,"id":22,"trace":"puma
-        (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":20240,"id":23,"trace":"puma
-        (5.6.5) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":20240,"id":24,"trace":"puma
-        (5.6.5) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":20240,"id":25,"trace":"puma
-        (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":20240,"id":0,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":20240,"id":1,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call''"},{"exception_object_id":20240,"id":2,"trace":"railties
-        (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":20240,"id":3,"trace":"railties
-        (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":20240,"id":4,"trace":"activesupport
-        (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":20240,"id":5,"trace":"activesupport
-        (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":20240,"id":6,"trace":"activesupport
-        (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":20240,"id":7,"trace":"railties
-        (7.0.4.3) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":20240,"id":8,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":20240,"id":9,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":20240,"id":10,"trace":"rack
-        (2.2.6.4) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":20240,"id":11,"trace":"activesupport
-        (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
-        `call''"},{"exception_object_id":20240,"id":12,"trace":"actionpack (7.0.4.3)
-        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":20240,"id":13,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":20240,"id":14,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":20240,"id":15,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":20240,"id":16,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":20240,"id":17,"trace":"rack
-        (2.2.6.4) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":20240,"id":18,"trace":"actionpack
-        (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call''"},{"exception_object_id":20240,"id":19,"trace":"railties
-        (7.0.4.3) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":20240,"id":20,"trace":"puma
-        (5.6.5) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":20240,"id":21,"trace":"puma
-        (5.6.5) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":20240,"id":22,"trace":"puma
-        (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":20240,"id":23,"trace":"puma
-        (5.6.5) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":20240,"id":24,"trace":"puma
-        (5.6.5) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":20240,"id":25,"trace":"puma
-        (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}]}}'
-  recorded_at: Mon, 17 Apr 2023 12:34:12 GMT
-- request:
-    method: get
-    uri: https://warm-temple-59633.herokuapp.com/api/v1/users//good_deeds/5
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
     headers:
       Server:
       - Cowboy
       Date:
-      - Mon, 17 Apr 2023 21:42:05 GMT
+      - Tue, 18 Apr 2023 02:43:14 GMT
       Connection:
       - keep-alive
-      Content-Type:
-      - text/html; charset=UTF-8
-      X-Request-Id:
-      - 9352b8d6-9402-4d28-86be-f2e68effb283
-      X-Runtime:
-      - '0.000754'
-      Content-Length:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
       - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"23afc4993cf02d11770a5bab95d81741"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7f27cd5e-1a64-4ec1-9883-abf2f0729e71
+      X-Runtime:
+      - '0.005792'
+      Transfer-Encoding:
+      - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: ''
-  recorded_at: Mon, 17 Apr 2023 21:42:05 GMT
+      string: '{"data":{"id":"5","type":"good_deed","attributes":{"name":"Pick up
+        litter around your favorite park","date":"2023-04-17","time":"2000-01-01T21:48:58.000Z","status":"In
+        Progress","notes":"","media_link":null,"attendees":[]}}}'
+  recorded_at: Tue, 18 Apr 2023 02:43:15 GMT
 - request:
     method: get
     uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/5
@@ -305,7 +79,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 17 Apr 2023 21:48:54 GMT
+      - Tue, 18 Apr 2023 02:54:01 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -325,13 +99,13 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"19327cb35046be30a9e1bebed4331443"
+      - W/"23afc4993cf02d11770a5bab95d81741"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 441e35c2-3509-4f9b-9e4e-0d5cb73405b5
+      - 2b6ec773-3418-4e03-b24c-44ac98e2d83e
       X-Runtime:
-      - '0.006109'
+      - '0.005707'
       Transfer-Encoding:
       - chunked
       Via:
@@ -339,73 +113,15 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":"5","type":"good_deed","attributes":{"name":"Pick up
-        litter around your favorite park","date":"2023-04-17","time":"2000-01-01T14:36:10.000Z","status":"In
+        litter around your favorite park","date":"2023-04-17","time":"2000-01-01T21:48:58.000Z","status":"In
         Progress","notes":"","media_link":null,"attendees":[]}}}'
-  recorded_at: Mon, 17 Apr 2023 21:48:55 GMT
-- request:
-    method: get
-    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/5
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Mon, 17 Apr 2023 21:48:55 GMT
-      Connection:
-      - keep-alive
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"19327cb35046be30a9e1bebed4331443"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - e221bda2-f7a8-4e54-b75c-8a9fccb5dd2f
-      X-Runtime:
-      - '0.005526'
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"5","type":"good_deed","attributes":{"name":"Pick up
-        litter around your favorite park","date":"2023-04-17","time":"2000-01-01T14:36:10.000Z","status":"In
-        Progress","notes":"","media_link":null,"attendees":[]}}}'
-  recorded_at: Mon, 17 Apr 2023 21:48:56 GMT
+  recorded_at: Tue, 18 Apr 2023 02:54:01 GMT
 - request:
     method: patch
     uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/5?param=1
     body:
       encoding: UTF-8
-      string: '{"name":"Pick up litter around your favorite park","date":"2023-04-17","time":"2:36
+      string: '{"name":"Pick up litter around your favorite park","date":"2023-04-17","time":"9:48
         PM","status":"In Progress","notes":"","media_link":null}'
     headers:
       Content-Type:
@@ -424,7 +140,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 17 Apr 2023 21:48:55 GMT
+      - Tue, 18 Apr 2023 02:54:01 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -444,13 +160,13 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"0b06d9b97330f2c639222ecc2a36f28a"
+      - W/"05ff213f8c100de409b6cc07d39045eb"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c1a7a455-fee0-4a0c-9024-5ee13932b023
+      - d0f99e9b-b7f9-4c42-83c4-9919ae51ad32
       X-Runtime:
-      - '0.015884'
+      - '0.015701'
       Transfer-Encoding:
       - chunked
       Via:
@@ -458,7 +174,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":"5","type":"good_deed","attributes":{"name":"Pick up
-        litter around your favorite park","date":"2023-04-17","time":"2000-01-01T14:36:00.000Z","status":"In
+        litter around your favorite park","date":"2023-04-17","time":"2000-01-01T21:48:00.000Z","status":"In
         Progress","notes":"","media_link":null,"attendees":[]}}}'
-  recorded_at: Mon, 17 Apr 2023 21:48:56 GMT
+  recorded_at: Tue, 18 Apr 2023 02:54:02 GMT
 recorded_with: VCR 6.1.0

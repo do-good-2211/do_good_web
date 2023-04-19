@@ -44,9 +44,9 @@ class UserFacade
       name: user.name,
       id: user.id,
       role: user.role,
-      hosting_deeds:,
-      invited_deeds:,
-      completed_deeds:
+      hosting_deeds: hosting_deeds,
+      invited_deeds: invited_deeds,
+      completed_deeds: completed_deeds
     }
   end
 
@@ -60,3 +60,7 @@ class UserFacade
     @users.reject { |user| user.name == @user.name }
   end
 end
+
+
+
+

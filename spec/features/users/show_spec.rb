@@ -25,7 +25,7 @@ RSpec.describe "/dashboard", type: :feature do
       it "displays message, Random Act button, & three sections of good deeds" do
         expect(page).to have_content("John Smith's Do Good Page")
         # expect(page).to have_button("Choose a Random Act of Kindess!") might need to change after adding Tailwind
-        expect(page).to have_link("Choose a Random Act of Kindess!")
+        expect(page).to have_link("Choose a Random Act of Kindess")
 
         expect(page).to have_content("You're Hosting!")
         within "#hosting-#{deed4[:id]}" do
@@ -81,8 +81,8 @@ RSpec.describe "/dashboard", type: :feature do
         allow_any_instance_of(RandomActFacade).to receive(:create_acts).and_return([ra1, ra2, ra3])
         
         VCR.use_cassette('random_acts', serialize_with: :json) do
-          click_on("Choose a Random Act of Kindess!")        
-          # click_button("Choose a Random Act of Kindess!") Add after Tailwind
+          click_on("Choose a Random Act of Kindess")        
+          # click_button("Choose a Random Act of Kindess") Add after Tailwind
           expect(current_path).to eq("/random_acts")
         end
       end

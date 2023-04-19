@@ -9,13 +9,21 @@
   <article class="p-12 text-center" id="logo">
     <%= image_tag("do_good.jpg", alt: "Do Good Logo", class: "mx-auto w-1/5 h-auto") %>
     <h2 class="py-8 text-lg font-normal text-gray-900">
-      Ok, I'm Convinced. I wanna join the fun
+      <% if current_user %>
+        Ready to do more good?
+      <% else %>
+        Ok, I'm Convinced. I wanna join the fun!
+      <% end %>
     </h2>
-    <button class="p-2 mb-4 bg-red-500 hover:bg-indigo-500 text-white font-base rounded" href='/auth/google_oauth2'>
-      <!-- If we want to keep a login page we can use this code: -->
-      <!-- <%= button_to "Login/Register", login_path, method: :get, class: "p-2 mb-4 bg-red-500 hover:bg-indigo-500 text-white font-base rounded" %> -->
-      <%= link_to "Login/Register", '/auth/google_oauth2'%>
-    </button>
+      <% if current_user %>
+        <button class="p-2 mb-4 bg-indigo-500 hover:bg-red-500 text-white font-base rounded" href='/random_acts'>
+          <%= link_to "Choose a Random Act of Kindess", '/random_acts'%>
+        </button>
+      <% else %>
+        <button class="p-2 mb-4 bg-red-500 hover:bg-indigo-500 text-white font-base rounded" href='/auth/google_oauth2'>
+          <%= link_to "Login/Register", '/auth/google_oauth2'%>
+        </button>
+      <% end %>
   </article>
 </section>
 

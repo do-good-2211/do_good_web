@@ -4,16 +4,16 @@ RSpec.describe "Delete Good Deed" do
   describe "As a logged in user", :vcr do
     context "When I visit '/user/good_deeds/:id/edit" do
       before do
-        @user = { "id" => "1", "name" => "Bob", "email" => "user@gmail.com", "role" => "User" }
+        @user = User.new(id: 1, attributes: { name: "John Smith", email: "user@gmail.com", role: "User" } )
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
         allow_any_instance_of(CalendarFacade).to receive(:list_events).and_return(12)
 
-        visit edit_user_good_deed_path(5)
+        visit edit_user_good_deed_path(2)
 
-        @good_deed = GoodDeedFacade.new({ id: 5 }, 1).fetch_deed
+        @good_deed = GoodDeedFacade.new({ id: 2 }, nil, 1).fetch_deed
       end
 
-      it 'Has a link to delete the event' do
+      it 'Has a link to delete the event if the event is in progress' do
         within '#delete_deed' do
           expect(page).to have_link('Delete Event')
         end

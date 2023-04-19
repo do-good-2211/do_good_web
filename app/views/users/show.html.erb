@@ -40,11 +40,19 @@
 <% @user_facade[:completed_deeds].each do |deed| %>
   <div id= "completed-<%= deed.id %>">
 
+
     <% if deed.media_link %>
       <%= image_tag deed.media_link %>
     <% else %>
         <%= image_tag("do_good.jpg", alt: "Do Good Logo") %>
     <% end %>
+
+    <img src=<%= "http://s3.amazonaws.com/#{ENV['S3_BUCKET_NAME']}/#{@good_deed.media_link}" %> ></img>
+
+
+    <%# <img src="<%= Aws::S3::Object.new(ENV['S3_BUCKET_NAME'], @good_deed.id.to_s).presigned_url(:get)" alt="do_good.jpg"> %> %>
+    <%# <%= image_tag("do_good.jpg", alt: "Do Good Logo", class: "mx-auto w-1/5 h-auto") %> %>
+    <%# <img src="<%= Aws::S3::Object.new(ENV['S3_BUCKET_NAME'], @good_deed.id.to_s).public_url %>" alt="do_good.jpg"> %>
 
     <%= deed.name %>
     <%= deed.date %>

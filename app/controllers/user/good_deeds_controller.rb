@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 # app/controllers/user/good_deeds_controller.rb
+require 'aws-sdk-s3'
 class User::GoodDeedsController < ApplicationController
   before_action :not_authorized
 
@@ -25,6 +26,16 @@ class User::GoodDeedsController < ApplicationController
   end
 
   def update
+
+    if params[:media_link].present?
+      image = params[:media_link]
+      filename = "#{SecureRandom.uuid}.#{image.original_filename.split(".").last}"
+      params[:media_link] = filename
+    end
+  
+    s3 = Aws::S3::Client.new
+    s3.put_object(bucket: ENV['S3_BUCKET_NAME'], key: filename, body: image.read)
+    
     GoodDeedFacade.new(params, nil, current_user.id).update_deed
     redirect_to dashboard_path
   end

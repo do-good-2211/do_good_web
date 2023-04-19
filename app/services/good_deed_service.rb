@@ -3,8 +3,8 @@
 # app/services/good_deed_service.rb
 class GoodDeedService
   def self.conn
-    # Faraday.new(url: "http://localhost:3000")
-    Faraday.new(url: "https://warm-temple-59633.herokuapp.com/")
+    Faraday.new(url: "http://localhost:3000")
+    # Faraday.new(url: "https://warm-temple-59633.herokuapp.com/")
   end
 
   def self.get_url(url)

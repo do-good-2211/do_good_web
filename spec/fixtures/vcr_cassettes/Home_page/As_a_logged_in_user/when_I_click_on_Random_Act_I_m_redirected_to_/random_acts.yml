@@ -112,4 +112,112 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":[{"id":"7","type":"good_deeds","attributes":{"name":"Help Others4.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}}]}'
   recorded_at: Wed, 19 Apr 2023 17:38:01 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/good_deeds
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0b216075230c91592ce53a738c8f3acd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 49713ebf-44d4-42c5-bf03-98d528bdb65a
+      X-Runtime:
+      - '0.005815'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.88, instantiation.active_record;dur=0.04,
+        process_action.action_controller;dur=1.99
+      Vary:
+      - Accept, Origin
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"good_deeds","attributes":{"name":"Help Others.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}},{"id":"2","type":"good_deeds","attributes":{"name":"Help
+        Others2.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}},{"id":"3","type":"good_deeds","attributes":{"name":"Help
+        Others3.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}},{"id":"4","type":"good_deeds","attributes":{"name":"Help
+        Others4.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}}]}'
+  recorded_at: Wed, 19 Apr 2023 19:59:49 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/good_deeds
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0b216075230c91592ce53a738c8f3acd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - eb23bfec-e17f-441e-b852-c7df401c23d8
+      X-Runtime:
+      - '0.007188'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=0.91, instantiation.active_record;dur=0.06,
+        process_action.action_controller;dur=2.20
+      Vary:
+      - Accept, Origin
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"good_deeds","attributes":{"name":"Help Others.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}},{"id":"2","type":"good_deeds","attributes":{"name":"Help
+        Others2.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}},{"id":"3","type":"good_deeds","attributes":{"name":"Help
+        Others3.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}},{"id":"4","type":"good_deeds","attributes":{"name":"Help
+        Others4.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}}]}'
+  recorded_at: Wed, 19 Apr 2023 19:59:49 GMT
 recorded_with: VCR 6.1.0

@@ -43,18 +43,21 @@ RSpec.describe "User good deed edit page" do
       it 'When I check the completed box, update the time, and click "Update Event", I am redirected to the dashboard' do
         fill_in :time, with: Time.now
         check :status
+        allow_any_instance_of(User::GoodDeedsController).to receive(:aws).and_return("123.jpg")
         click_button 'Update Event'
 
         expect(current_path).to eq(dashboard_path)
       end
 
       it 'When I do not change anything and click "Update Event", I am redirected to the dashboard' do
+        allow_any_instance_of(User::GoodDeedsController).to receive(:aws).and_return("123.jpg")
         click_button 'Update Event'
 
         expect(current_path).to eq(dashboard_path)
       end
 
       it 'When I edit some fields and click "Update Event", I am redirected to the dashboard' do
+        allow_any_instance_of(User::GoodDeedsController).to receive(:aws).and_return("123.jpg")
         fill_in :date, with: Date.today
         fill_in :time, with: Time.now
         click_button 'Update Event'

@@ -34,7 +34,8 @@ RSpec.describe "User good deed edit page" do
         end
       end
 
-      it 'When I check the completed box and click "Update Event", I am redirected to the dashboard' do
+      it 'When I check the completed box, update the time, and click "Update Event", I am redirected to the dashboard' do
+        fill_in :time, with: Time.now
         check :status
         click_button 'Update Event'
 

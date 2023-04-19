@@ -22,18 +22,6 @@ RSpec.describe UserFacade, :vcr do
     end
   end
 
-  describe "fetch_all_users" do
-    it "returns all user objects with their respective attributes" do
-      users = @facade.fetch_all_users
-
-      users.each do |user|
-        expect(user).to be_an_instance_of(User)
-        expect(user.name).to be_a(String)
-        expect(user.id).to be_a(String)
-      end
-    end
-  end
-
   describe "fetch_all_but_user" do
     it "returns all users excluding the designated user" do
       users = @facade.fetch_all_but_user

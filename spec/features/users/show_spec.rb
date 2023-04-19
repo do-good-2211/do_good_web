@@ -13,13 +13,8 @@ RSpec.describe "/dashboard", type: :feature do
       let(:user2) { User.new(id: 2, attributes: { name: "Sally Seashells", role: "User" } ) }
 
       before(:each) do
-        # john = { id: 1, attributes: { name: "John Smith", email: "john@gmail.com", password_digest: "test1", role: "User" } }
-        # john = { "id" => "1", "name" => "Bob", "email" => "user@gmail.com", "password_digest" => "test1", "role" => "User" } 
-
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
         allow_any_instance_of(CalendarFacade).to receive(:list_events).and_return(12)
-
-        # allow_any_instance_of(UserFacade).to receive(:fetch_user).and_return(user)
 
         VCR.use_cassette('dashboard', serialize_with: :json) do
           visit '/dashboard'

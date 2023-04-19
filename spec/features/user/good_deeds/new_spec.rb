@@ -43,7 +43,7 @@ RSpec.describe "User good deed new page" do
           find(:css, "#attendees_#{@users.second.id}").set true
           find(:css, "#attendees_#{@users.last.id}").set true
           click_button 'Create Good!'
-          save_and_open_page
+        
           expect(current_path).to eq(dashboard_path)
           exoect(page).to have_content("Volunteer at a local animal shelter")
         end

@@ -1,14 +1,16 @@
 <h1><%= @user_facade[:name] %>'s Do Good Page</h1>
 <br>
 <!-- Random Act button -->
+  <%= link_to "Choose a Random Act of Kindess!", '/random_acts'%>
+<br>
 <p>Good job, you've added <%=@events%> Do Good Events to your calendar so far!</p>
-
 <iframe src="https://calendar.google.com/calendar/embed?src=<%=@email%>%40gmail.com&ctz=America%2FDenver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 <br>
 <p>You're Hosting!</p>
 <% @user_facade[:hosting_deeds].each do |deed| %>
   <div id= "hosting-<%= deed.id %>">
-    <!-- <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good", class: "mx-auto w-1/5 h-auto") %> -->
+  <!-- <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good", class: "mx-auto w-1/5 h-auto") %> -->
+    <%= image_tag("upcoming_good.jpg") %>
     <%= deed.name %>
     <%= deed.date %>
     <%= deed.time.to_datetime.strftime("%l:%M %p").strip %>
@@ -25,6 +27,7 @@
 <% @user_facade[:invited_deeds].each do |deed| %>
   <div id= "invited-<%= deed.id %>">
     <!-- <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good", class: "mx-auto w-1/5 h-auto") %> -->
+   <%= image_tag("upcoming_good.jpg") %>
     <%= deed.name %>
     <%= deed.date %>
     <%= deed.time %>

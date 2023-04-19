@@ -32,7 +32,7 @@ class UserFacade
     array_of_deed_objects.each do |deed|
       if deed.status == "Completed"
         completed_deeds << deed
-      elsif deed.host_id == user.id # && deed[:status] == "In Progress" 
+      elsif deed.host_id == user.id && deed.status == "In Progress" 
         hosting_deeds << deed
       else
         invited_deeds << deed

@@ -42,7 +42,7 @@ class GoodDeedFacade
       name: @name,
       date: @date,
       time: @time,
-      status: @status,
+      status: status,
       notes: @notes,
       media_link: @media_link
     }
@@ -56,7 +56,7 @@ class GoodDeedFacade
   private
 
   def status
-    @status = if @status == 1
+    @status = if @status == "1"
                 "Completed"
               else
                 "In Progress"

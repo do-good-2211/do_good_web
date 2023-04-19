@@ -12,8 +12,8 @@ RSpec.describe Deed do
         notes: "This was awesome!",
         media_link: "www.image.com/high_five_yo!",
         attendees: [{ "user_id": 2, "name": "Peter" }, { "user_id": 3, "name": "Jane" }],
-        # host_name: "Captain Sparrow",
-        # host_id: "22"
+        host_name: "Captain Sparrow",
+        host_id: "22"
       } }
   }
   let(:deed1) { Deed.new(info) }
@@ -24,9 +24,14 @@ RSpec.describe Deed do
     expect(deed1.name).to eq("High-five a stranger")
     expect(deed1.date).to eq("2024-02-02")
     expect(deed1.time).to eq("4:00 PM")
+    expect(deed1.notes).to eq("This was awesome!")
     expect(deed1.media_link).to eq("www.image.com/high_five_yo!")
-    # expect(deed1.attendees).to be_an Array
-    # expect(deed1.attendees.count).to eq(2)
-    # expect(deed1.attendees.first.name).to eq("Peter")
+    expect(deed1.host_name).to eq("Captain Sparrow")
+    expect(deed1.host_id).to eq("22")
+
+    expect(deed1.attendees).to be_an Array
+    expect(deed1.attendees.count).to eq(2)
+    expect(deed1.attendees.first).to be_a(Attendee)
+    expect(deed1.attendees.first.name).to eq("Peter")
   end
 end

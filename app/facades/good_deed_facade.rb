@@ -4,7 +4,7 @@
 class GoodDeedFacade
   attr_reader :deed_id
 
-  def initialize(params, id)
+  def initialize(params, host_name, id)
     @name = params[:name]
     @date = params[:date]
     @time = params[:time]
@@ -13,6 +13,7 @@ class GoodDeedFacade
     @notes = params[:notes]
     @media_link = params[:media_link]
     @deed_id = params[:id]
+    @host_name = host_name
     @user_id = id
   end
 
@@ -26,7 +27,8 @@ class GoodDeedFacade
                                 name: @name,
                                 date: @date,
                                 time: @time,
-                                attendees: @attendees
+                                attendees: @attendees,
+                                host_name: @host_name
                               })
   end
 

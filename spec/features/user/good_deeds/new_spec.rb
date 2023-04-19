@@ -4,9 +4,16 @@ RSpec.describe "User good deed new page" do
   describe "As a logged in user", :vcr do
     context "When I visit '/user/good_deeds/new" do
       before do
-        @user = { "id" => "1", "attributes" => { "name" => "Bob", "email" => "user@gmail.com", "password_digest" => "test1", "role" => "User" } }
+        @user = User.new(id: 1, attributes: { name: "John Smith", email: "user@gmail.com", role: "User", good_deeds: { data: [] } } ) 
+        # @user = { "id" => "1", "attributes" => { "name" => "Bob", "email" => "user@gmail.com", "password_digest" => "test1", "role" => "User" } }
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
         allow_any_instance_of(CalendarFacade).to receive(:list_events).and_return(12)
+
+
+        ra1 = RandomAct.new("Volunteer at a local animal shelter")
+        ra2 = RandomAct.new("Pick up trash")
+        ra3 = RandomAct.new("Buy your mother flowers")
+        allow_any_instance_of(RandomActFacade).to receive(:create_acts).and_return([ra1, ra2, ra3])
 
         VCR.use_cassette('random_acts', serialize_with: :json) do
           visit random_acts_path
@@ -28,14 +35,16 @@ RSpec.describe "User good deed new page" do
       end
 
       xit 'When I fill in all parts of the form and click "Create Good!" I am taken to my user dashboard' do
-        allow_any_instance_of(CalendarFacade).to receive(:list_events).and_return(12)
-        @user = { "id" => "1", "attributes" => { "name" => "Bob", "email" => "user@gmail.com", "password_digest" => "test1", "role" => "User" } }
-        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+        # allow_any_instance_of(CalendarFacade).to receive(:list_events).and_return(12)
+
+        # Start here when I return: 
+        # @user = { "id" => "1", "attributes" => { "name" => "Bob", "email" => "user@gmail.com", "password_digest" => "test1", "role" => "User" } }
+        # allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
         within '#new_good_deed' do
           fill_in :date, with: Date.today
           fill_in :time, with: Time.now
 
-          find(:css, "#attendees_#{@users.first.id}").set true
+          # find(:css, "#attendees_#{@users.second.id}").set true
           # find(:css, "#attendees_#{@users.last.id}").set true
           click_button 'Create Good!'
 

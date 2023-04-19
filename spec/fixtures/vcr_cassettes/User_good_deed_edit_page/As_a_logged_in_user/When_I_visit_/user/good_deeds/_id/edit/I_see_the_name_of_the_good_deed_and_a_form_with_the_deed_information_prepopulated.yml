@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/5
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/1
     body:
       encoding: US-ASCII
       string: ''
@@ -430,7 +430,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 18 Apr 2023 18:17:22 GMT
+      - Tue, 18 Apr 2023 02:43:14 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -450,27 +450,26 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"4fa65f026e38bc5a7ecf600df7a62168"
+      - W/"23afc4993cf02d11770a5bab95d81741"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5ed06766-1571-4bb1-95e6-20071389693a
+      - bca445d3-53a9-4c01-9a28-b1236d5364e2
       X-Runtime:
-      - '0.006883'
+      - '0.075736'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"good_deed","attributes":{"name":"High-five
-        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
-        Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
-        Picard","attendees":[]}}}'
-  recorded_at: Tue, 18 Apr 2023 18:17:23 GMT
+      string: '{"data":{"id":"5","type":"good_deed","attributes":{"name":"Pick up
+        litter around your favorite park","date":"2023-04-17","time":"2000-01-01T21:48:58.000Z","status":"In
+        Progress","notes":"","media_link":null,"attendees":[]}}}'
+  recorded_at: Tue, 18 Apr 2023 02:43:14 GMT
 - request:
     method: get
-    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/4
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/5
     body:
       encoding: US-ASCII
       string: ''
@@ -489,7 +488,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 18 Apr 2023 18:17:23 GMT
+      - Tue, 18 Apr 2023 02:53:47 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -509,22 +508,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"4fa65f026e38bc5a7ecf600df7a62168"
+      - W/"23afc4993cf02d11770a5bab95d81741"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9561d304-e011-46dc-b47c-d2491aa87272
+      - 9149b30b-ea22-4989-9b3b-3d20ed5cc2fd
       X-Runtime:
-      - '0.005757'
+      - '0.005449'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"good_deed","attributes":{"name":"High-five
-        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
-        Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
-        Picard","attendees":[]}}}'
-  recorded_at: Tue, 18 Apr 2023 18:17:23 GMT
+      string: '{"data":{"id":"5","type":"good_deed","attributes":{"name":"Pick up
+        litter around your favorite park","date":"2023-04-17","time":"2000-01-01T21:48:58.000Z","status":"In
+        Progress","notes":"","media_link":null,"attendees":[]}}}'
+  recorded_at: Tue, 18 Apr 2023 02:53:47 GMT
 recorded_with: VCR 6.1.0

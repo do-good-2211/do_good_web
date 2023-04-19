@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 17 Apr 2023 17:24:16 GMT
+      - Tue, 18 Apr 2023 22:08:37 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -45,9 +45,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 450d56a4-caff-446a-bd2e-8571bee1a000
+      - 1e21ad88-704c-4cff-9bbd-316634bbb26a
       X-Runtime:
-      - '0.003864'
+      - '0.004448'
       Transfer-Encoding:
       - chunked
       Via:
@@ -55,7 +55,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"7","type":"good_deeds","attributes":{"name":"Help Others4.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}}]}'
-  recorded_at: Mon, 17 Apr 2023 17:24:16 GMT
+  recorded_at: Tue, 18 Apr 2023 22:08:38 GMT
 - request:
     method: get
     uri: https://warm-temple-59633.herokuapp.com/api/v1/good_deeds
@@ -77,7 +77,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 17 Apr 2023 17:24:16 GMT
+      - Tue, 18 Apr 2023 22:08:38 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -101,9 +101,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - '044338bf-4a41-4a4c-a8b0-a2135ac4b3ee'
+      - 96ee287f-d25d-41e0-a7e9-407e3a7587e3
       X-Runtime:
-      - '0.003993'
+      - '0.003428'
       Transfer-Encoding:
       - chunked
       Via:
@@ -111,7 +111,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"7","type":"good_deeds","attributes":{"name":"Help Others4.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}}]}'
-  recorded_at: Mon, 17 Apr 2023 17:24:17 GMT
+  recorded_at: Tue, 18 Apr 2023 22:08:38 GMT
 - request:
     method: get
     uri: https://warm-temple-59633.herokuapp.com/api/v1/good_deeds
@@ -133,7 +133,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 17 Apr 2023 17:24:17 GMT
+      - Tue, 18 Apr 2023 22:08:38 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -157,9 +157,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c3c3a412-b4a2-4009-97f2-91f5b7f42a82
+      - ce3a8c67-1e40-4a13-87e2-b5ff0ca71ab7
       X-Runtime:
-      - '0.003444'
+      - '0.003705'
       Transfer-Encoding:
       - chunked
       Via:
@@ -167,7 +167,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"7","type":"good_deeds","attributes":{"name":"Help Others4.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}}]}'
-  recorded_at: Mon, 17 Apr 2023 17:24:17 GMT
+  recorded_at: Tue, 18 Apr 2023 22:08:39 GMT
 - request:
     method: get
     uri: https://warm-temple-59633.herokuapp.com/api/v1/good_deeds
@@ -189,7 +189,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 17 Apr 2023 17:24:17 GMT
+      - Tue, 18 Apr 2023 22:08:38 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -213,9 +213,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3c3956dc-0212-4c7d-af7e-99485fd94ed4
+      - 9f0e9348-5a05-4c89-8dba-a4d8d4840b97
       X-Runtime:
-      - '0.003228'
+      - '0.003634'
       Transfer-Encoding:
       - chunked
       Via:
@@ -223,5 +223,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"7","type":"good_deeds","attributes":{"name":"Help Others4.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}}]}'
-  recorded_at: Mon, 17 Apr 2023 17:24:17 GMT
+  recorded_at: Tue, 18 Apr 2023 22:08:39 GMT
 recorded_with: VCR 6.1.0

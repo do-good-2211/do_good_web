@@ -1,4 +1,63 @@
+<h1><%= @user_facade[:name] %>'s Do Good Page</h1>
+<br>
+<!-- Random Act button -->
 <p>Good job, you've added <%=@events%> Do Good Events to your calendar so far!</p>
 
 <iframe src="https://calendar.google.com/calendar/embed?src=<%=@email%>%40gmail.com&ctz=America%2FDenver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<br>
+<p>You're Hosting!</p>
+<% @user_facade[:hosting_deeds].each do |deed| %>
+  <div id= "hosting-<%= deed.id %>">
+    <%= deed.name %>
+    <%= deed.date %>
+    <%= deed.time %>
+    <% deed.attendees.each do |invitee| %>
+      <%= invitee.name %>
+    <% end %>
+    <!-- udpate button 
+    <%= link_to "Update", '/'%> -->
+    <br>
+  </div>
+<% end %> 
 
+<p>You're Invited!</p>
+<% @user_facade[:invited_deeds].each do |deed| %>
+  <div id= "invited-<%= deed.id %>">
+    <%= deed.name %>
+    <%= deed.date %>
+    <%= deed.time %>
+    <%= deed.host_name %> 
+    <% deed.attendees.each do |invitee| %>
+      <%= invitee.name %>
+    <% end %>
+    <br>
+  </div>
+<% end %>
+
+<p>Past Good Deeds</p>
+<% @user_facade[:completed_deeds].each do |deed| %>
+  <div id= "completed-<%= deed.id %>">
+
+    <% if deed.media_link %>
+      <%= image_tag deed.media_link %>
+    <% else %>
+        <%= image_tag("do_good.jpg", alt: "Do Good Logo") %>
+    <% end %>
+
+    <%= deed.name %>
+    <%= deed.date %>
+    <%= deed.time %>
+
+    
+
+    <% deed.attendees.each do |invitee| %>
+      <%= invitee.name %>
+    <% end %>
+
+    <% if deed.notes %>
+      <%= deed.notes %>
+    <% end %>
+    <!-- IF host_id == user's id display: udpate button // else NO button displayed-->
+    <br>
+  </div>
+<% end %>

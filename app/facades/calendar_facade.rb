@@ -17,6 +17,6 @@ class CalendarFacade
   def list_events(token)
     service = CalendarService.calendar_api
     service.authorization = token
-    service.list_events("primary").items.map { |event| event if event.summary.include?("Do Good") }.compact.count
+    service.list_events("primary").items.map { |event| event if event.summary && event.summary.include?("Do Good") }.compact.count
   end
 end

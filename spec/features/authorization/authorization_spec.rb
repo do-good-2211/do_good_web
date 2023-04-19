@@ -11,7 +11,7 @@ RSpec.describe "Authorization" do
     end
 
     it "When I am logged in as a user I can view my dashboard" do
-      user = { "id" => "1", "name" => "Bob", "email" => "user@gmail.com", "password_digest" => "test1", "role" => "User" }
+      user = User.new(id: 1, attributes: { name: "John Smith", email: "user@gmail.com", role: "User", good_deeds: { data: [] } } ) 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       allow_any_instance_of(CalendarFacade).to receive(:list_events).and_return(12)
       visit root_path
@@ -43,7 +43,7 @@ RSpec.describe "Authorization" do
     end
 
     it "When I am logged in as a user, I can visit the new good deed page" do
-      user = { "id" => "1", "attributes" => { "name" => "Bob", "email" => "user@gmail.com", "password_digest" => "test1", "role" => "User" } }
+      user = User.new(id: 1, attributes: { name: "John Smith", email: "user@gmail.com", role: "User", good_deeds: { data: [] } } ) 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       visit new_user_good_deed_path

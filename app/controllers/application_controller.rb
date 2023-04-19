@@ -5,7 +5,10 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def current_user
-    @current_user ||= session[:user] if session[:user]
+    if session[:user] != nil
+      info = { id: session[:user]["id"], attributes: { name: session[:user]["name"], email: session[:user]["email"] } }
+      @current_user ||= User.new(info)
+    end
   end
 
   def current_user?

@@ -3,4 +3,3 @@ Aws.config.update({
   secret_access_key:  ENV['AWS_SECRET_ACCESS_KEY'],
   region: ENV['AWS_REGION']})
 
-# s3 = AWS::S3.new.buckets[ 'S3_BUCKET_NAME' ]

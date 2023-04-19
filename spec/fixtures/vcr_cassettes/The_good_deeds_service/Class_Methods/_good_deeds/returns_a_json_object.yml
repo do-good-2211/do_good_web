@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://warm-temple-59633.herokuapp.com/api/v1/good_deeds
+    uri: http://localhost:3000/api/v1/good_deeds
     body:
       encoding: US-ASCII
       string: ''
@@ -18,12 +18,6 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Mon, 17 Apr 2023 17:24:18 GMT
-      Connection:
-      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -41,21 +35,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"90d0241e3615667c572a37a612495c25"
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c0e7fcce-337b-460e-9542-661da1e575d7
+      - c55b5218-d1bf-43bd-94d1-907ad7d3b61e
       X-Runtime:
-      - '0.003741'
+      - '0.125913'
+      Server-Timing:
+      - sql.active_record;dur=24.60, start_processing.action_controller;dur=0.06,
+        process_action.action_controller;dur=8.19
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"7","type":"good_deeds","attributes":{"name":"Help Others4.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}}]}'
-  recorded_at: Mon, 17 Apr 2023 17:24:18 GMT
+      string: '{"data":[]}'
+  recorded_at: Sun, 16 Apr 2023 17:22:21 GMT
 - request:
     method: get
     uri: https://warm-temple-59633.herokuapp.com/api/v1/good_deeds
@@ -77,7 +72,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 17 Apr 2023 17:24:19 GMT
+      - Mon, 17 Apr 2023 21:42:07 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -101,9 +96,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 897c5d12-0a56-49ac-b4a8-c3c6f46f5dbf
+      - fc8a0bd9-d7ca-4ef9-8c50-66e56f4f945f
       X-Runtime:
-      - '0.003719'
+      - '0.004059'
       Transfer-Encoding:
       - chunked
       Via:
@@ -111,5 +106,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"7","type":"good_deeds","attributes":{"name":"Help Others4.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}}]}'
-  recorded_at: Mon, 17 Apr 2023 17:24:19 GMT
+  recorded_at: Mon, 17 Apr 2023 21:42:08 GMT
 recorded_with: VCR 6.1.0

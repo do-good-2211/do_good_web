@@ -9,14 +9,17 @@ RSpec.describe "/dashboard", type: :feature do
       let(:deed3) { { id: "33", type: "good_deed", attributes: { host_name: "John Smith", host_id: 1, name: "Deed3 Pick up Trash.", date: "2024-05-30", time: "2000-01-01T14:00:00.000Z", status: "Completed", media_link: image_url, notes: "super fun", attendees: [{ name: "Dori"}, { name: "Nemo" }] } } }
       let(:deed4) { { id: "22", type: "good_deed", attributes: { host_name: "John Smith", host_id: 1, name: "Deed4 Tip Generously.", date: "2024-11-11", time: "2000-01-01T22:00:00.000Z", status: "In Progress", media_link: nil, notes: nil, attendees: [{ name: "Harry"}, { name: "Ron" }] } } }
 
-      let(:user) { User.new(id: 1, attributes: { name: "John Smith", role: "User", good_deeds: { data: [ deed1, deed2, deed3, deed4 ]} } ) }
+      let(:user) { User.new(id: 1, attributes: { name: "John Smith", email: "john@gmail.com", role: "User", good_deeds: { data: [ deed1, deed2, deed3, deed4 ]} } ) }
       let(:user2) { User.new(id: 2, attributes: { name: "Sally Seashells", role: "User" } ) }
 
-
       before(:each) do
-        john = { id: 1, attributes: { name: "John Smith", email: "john@example.com", password_digest: "test1", role: "User" } }
-        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(john)
-        allow_any_instance_of(UserFacade).to receive(:fetch_user).and_return(user)
+        # john = { id: 1, attributes: { name: "John Smith", email: "john@gmail.com", password_digest: "test1", role: "User" } }
+        # john = { "id" => "1", "name" => "Bob", "email" => "user@gmail.com", "password_digest" => "test1", "role" => "User" } 
+
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+        allow_any_instance_of(CalendarFacade).to receive(:list_events).and_return(12)
+
+        # allow_any_instance_of(UserFacade).to receive(:fetch_user).and_return(user)
 
         VCR.use_cassette('dashboard', serialize_with: :json) do
           visit '/dashboard'
@@ -32,7 +35,7 @@ RSpec.describe "/dashboard", type: :feature do
         within "#hosting-#{deed4[:id]}" do
           expect(page).to have_content("Deed4 Tip Generously.")
           expect(page).to have_content("2024-11-11")
-          expect(page).to have_content("2000-01-01T22:00:00.000Z")
+          expect(page).to have_content("2000-01-01T22:00:00.000Z".to_datetime.strftime("%l:%M %p").strip)
           expect(page).to have_content("Harry")
           expect(page).to have_content("Ron")
           # ADD: update button
@@ -42,7 +45,7 @@ RSpec.describe "/dashboard", type: :feature do
         within "#invited-#{deed1[:id]}" do
           expect(page).to have_content("Deed1 High-five a stranger")
           expect(page).to have_content("2024-09-10")
-          expect(page).to have_content("2000-01-01T13:00:00.000Z")
+          expect(page).to have_content("2000-01-01T13:00:00.000Z".to_datetime.strftime("%l:%M %p").strip)
           expect(page).to have_content("Sally Seashells")
           expect(page).to have_content("Tink")
           expect(page).to have_content("Hook")
@@ -53,7 +56,7 @@ RSpec.describe "/dashboard", type: :feature do
         within "#completed-#{deed3[:id]}" do
           expect(page).to have_content("Deed3 Pick up Trash.")
           expect(page).to have_content("2024-05-30")
-          expect(page).to have_content("2000-01-01T14:00:00.000Z")
+          expect(page).to have_content("2000-01-01T14:00:00.000Z".to_datetime.strftime("%l:%M %p").strip)
           expect(page).to have_content("Dori")
           expect(page).to have_content("Nemo")
           expect(page).to have_content("super fun")
@@ -65,7 +68,7 @@ RSpec.describe "/dashboard", type: :feature do
         within "#completed-#{deed2[:id]}" do
           expect(page).to have_content("Deed2 Donate Blood.")
           expect(page).to have_content("2024-02-02")
-          expect(page).to have_content("2000-01-01T16:00:00.000Z")
+          expect(page).to have_content("2000-01-01T16:00:00.000Z".to_datetime.strftime("%l:%M %p").strip)
           expect(page).to have_content("Sneezy")
           expect(page).to have_content("Grumpy")
           expect(page).to have_content("fun")

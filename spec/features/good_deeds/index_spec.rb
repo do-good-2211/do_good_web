@@ -60,7 +60,8 @@ RSpec.describe "Home page", type: :feature do
       # end
 
       it "has a link to My Page and redirects me to my dashboard" do
-        user = { id: 1, attributes: { name: "Bob", email: "user@example.com", password_digest: "test1", role: "User" } }
+        user = User.new(id: 1, attributes: { name: "John Smith", email: "user@gmail.com", role: "User", good_deeds: { data: [] } } ) 
+        # user = { id: 1, name: "Bob", email: "user@gmail.com", role: "User" }
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
         
         visit root_path

@@ -1,6 +1,9 @@
 <h1><%= @facade[:name] %>'s Do Good Page</h1>
 <br>
 <!-- Random Act button -->
+<p>Good job, you've added <%=@events%> Do Good Events to your calendar so far!</p>
+
+<iframe src="https://calendar.google.com/calendar/embed?src=<%=@email%>%40gmail.com&ctz=America%2FDenver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 <br>
 <p>You're Hosting!</p>
 <% @facade[:hosting_deeds].each do |deed| %>
@@ -9,7 +12,7 @@
     <%= deed.date %>
     <%= deed.time %>
     <% deed.attendees.each do |invitee| %>
-      <%= invitee[:name] %>
+      <%= invitee.name %>
     <% end %>
     <!-- udpate button 
     <%= link_to "Update", '/'%> -->
@@ -25,7 +28,7 @@
     <%= deed.time %>
     <%= deed.host_name %> 
     <% deed.attendees.each do |invitee| %>
-      <%= invitee[:name] %>
+      <%= invitee.name %>
     <% end %>
     <br>
   </div>
@@ -44,9 +47,11 @@
     <%= deed.name %>
     <%= deed.date %>
     <%= deed.time %>
+
     
+
     <% deed.attendees.each do |invitee| %>
-      <%= invitee[:name] %>
+      <%= invitee.name %>
     <% end %>
 
     <% if deed.notes %>

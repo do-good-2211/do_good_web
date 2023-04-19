@@ -8,21 +8,20 @@ class UserFacade
   attr_reader :good_deed,
               :user
 
-  def initialize(params, user)
+  def initialize(params, current_user)
     @good_deed = params[:good_deed]
-    @user = user
+    @user = current_user
     @users ||= UserService.find_all_users[:data].map { |user| User.new(user) }
   end
 
   def fetch_user
-    user_info = UserService.find_user(@user[:id])
+    user_info = UserService.find_user(@user.id)
     User.new(user_info[:data])
   end
 
   def fetch_user_dashboard
-    user = fetch_user
-    all_deeds_array = user.good_deeds
-
+    # user = fetch_user
+    all_deeds_array = @user.good_deeds
     # make_deeds (helper method)
     array_of_deed_objects = all_deeds_array[:data].map do |deed_hash|
       Deed.new(deed_hash)
@@ -67,7 +66,7 @@ class UserFacade
   end
 
   def fetch_all_but_user
-    @users.reject { |user| user.name == @user["name"] }
+    @users.reject { |user| user.name == @user.name }
   end
 end
 

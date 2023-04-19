@@ -6,18 +6,20 @@ class User
   attr_reader :name,
               :role,
               :id, 
-              :good_deeds
+              :good_deeds,
+              :email
 
   def initialize(info)
     @id = info[:id]
+    # @id = id_to_integer(info[:id])
     @name = info[:attributes][:name]
     @role = info[:attributes][:role]
-    @good_deeds = info[:attributes][:good_deeds] #[:data]
-    # @good_deeds = make_deeds(info[:attributes][:good_deeds]) unless !info[:attributes][:good_deeds].present?
+    @good_deeds = info[:attributes][:good_deeds] 
+    @email = info[:attributes][:email]
   end
 
-  # def make_deeds(data)
-  #   data.map { |deed| Deed.new(deed) } unless data.nil?  
+  # def id_to_integer(id)
+  #   x = id.to_i unless id.class == Integer
   # end
 
 end

@@ -33,11 +33,17 @@ class User::GoodDeedsController < ApplicationController
       params[:media_link] = filename
     end
   
-    s3 = Aws::S3::Client.new
-    s3.put_object(bucket: ENV['S3_BUCKET_NAME'], key: filename, body: image.read)
+    # s3 = Aws::S3::Client.new
+    # s3.put_object(bucket: ENV['S3_BUCKET_NAME'], key: filename, body: image.read)
+    aws(image, filename)
     
     GoodDeedFacade.new(params, nil, current_user.id).update_deed
     redirect_to dashboard_path
+  end
+
+  def aws(image, filename)
+    s3 = Aws::S3::Client.new
+    s3.put_object(bucket: ENV['S3_BUCKET_NAME'], key: filename, body: image.read)
   end
 
   def destroy; end

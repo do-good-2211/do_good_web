@@ -1175,4 +1175,112 @@ http_interactions:
         Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
         Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}}]}}}}'
   recorded_at: Wed, 19 Apr 2023 04:05:02 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/1/good_deeds/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fea24399b4b90397cbc7ad7b110c898a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - caefc5ec-8467-4644-8d31-9483985043fe
+      X-Runtime:
+      - '0.007578'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=1.98, instantiation.active_record;dur=0.07,
+        process_action.action_controller;dur=3.61
+      Vary:
+      - Accept, Origin
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"good_deed","attributes":{"name":"Help Others.","date":"2023-01-01","time":"2000-01-01T16:00:00.000Z","status":"Completed","notes":"Worth
+        it!","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","host_id":1,"host_name":"Jean-Luc
+        Picard","attendees":[{"id":2,"name":"William Riker","email":"number2@gmail.com","role":"user","created_at":"2023-04-19T16:11:24.633Z","updated_at":"2023-04-19T16:11:24.633Z","uid":"22022","provider":"Google
+        Baby!"}]}}}'
+  recorded_at: Wed, 19 Apr 2023 19:59:49 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/1/good_deeds/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fea24399b4b90397cbc7ad7b110c898a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 14bde261-732d-4940-9858-d6dc23d90e39
+      X-Runtime:
+      - '0.007594'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=1.98, instantiation.active_record;dur=0.07,
+        process_action.action_controller;dur=3.58
+      Vary:
+      - Accept, Origin
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"good_deed","attributes":{"name":"Help Others.","date":"2023-01-01","time":"2000-01-01T16:00:00.000Z","status":"Completed","notes":"Worth
+        it!","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","host_id":1,"host_name":"Jean-Luc
+        Picard","attendees":[{"id":2,"name":"William Riker","email":"number2@gmail.com","role":"user","created_at":"2023-04-19T16:11:24.633Z","updated_at":"2023-04-19T16:11:24.633Z","uid":"22022","provider":"Google
+        Baby!"}]}}}'
+  recorded_at: Wed, 19 Apr 2023 19:59:49 GMT
 recorded_with: VCR 6.1.0

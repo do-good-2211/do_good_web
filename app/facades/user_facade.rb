@@ -60,3 +60,7 @@ class UserFacade
     @users.reject { |user| user.name == @user.name }
   end
 end
+
+
+
+

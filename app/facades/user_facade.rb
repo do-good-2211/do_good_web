@@ -28,11 +28,11 @@ class UserFacade
     hosting_deeds = []
     invited_deeds = []
     completed_deeds = []
-    
+
     array_of_deed_objects.each do |deed|
       if deed.status == "Completed"
         completed_deeds << deed
-      elsif deed.host_id == user.id # && deed[:status] == "In Progress" 
+      elsif deed.host_id == user.id && deed.status == "In Progress"
         hosting_deeds << deed
       else
         invited_deeds << deed
@@ -41,12 +41,12 @@ class UserFacade
 
     # hash that is returned to the view: (helper method?)
     {
-    name: user.name,
-    id: user.id,
-    role: user.role,
-    hosting_deeds: hosting_deeds,
-    invited_deeds: invited_deeds,
-    completed_deeds: completed_deeds
+      name: user.name,
+      id: user.id,
+      role: user.role,
+      hosting_deeds: hosting_deeds,
+      invited_deeds: invited_deeds,
+      completed_deeds: completed_deeds
     }
   end
 

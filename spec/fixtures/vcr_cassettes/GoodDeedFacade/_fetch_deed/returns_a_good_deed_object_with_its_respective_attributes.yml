@@ -281,4 +281,54 @@ http_interactions:
         Progress","notes":null,"media_link":null,"attendees":[{"id":1,"name":"John
         Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}}}'
   recorded_at: Mon, 17 Apr 2023 22:36:44 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/2/good_deeds/29
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - e16baeca-8c92-4429-abb0-36efdcfcbe1b
+      X-Runtime:
+      - '0.009548'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.11, sql.active_record;dur=1.02, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=4.05
+      Vary:
+      - Accept, Origin
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"status":"404","title":"Invalid Request","detail":["Couldn''t
+        find GoodDeed with ''id''=29"]}]}'
+  recorded_at: Wed, 19 Apr 2023 19:59:46 GMT
 recorded_with: VCR 6.1.0

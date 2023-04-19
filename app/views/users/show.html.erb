@@ -23,6 +23,10 @@
 
 <p>You're Invited!</p>
 <% @user_facade[:invited_deeds].each do |deed| %>
+
+<img src=<%= "https://#{ENV['S3_BUCKET_NAME']}.s3.#{ENV['AWS_REGION']}.amazonaws.com/#{deed.media_link}" %> ></img>
+
+
   <div id= "invited-<%= deed.id %>">
     <!-- <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good", class: "mx-auto w-1/5 h-auto") %> -->
    <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good") %>
@@ -48,13 +52,6 @@
       <!-- <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good", class: "mx-auto w-1/5 h-auto") %> -->
       <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good") %>
     <% end %>
-
-    <img src=<%= "http://s3.amazonaws.com/#{ENV['S3_BUCKET_NAME']}/#{@good_deed.media_link}" %> ></img>
-
-
-    <%# <img src="<%= Aws::S3::Object.new(ENV['S3_BUCKET_NAME'], @good_deed.id.to_s).presigned_url(:get)" alt="do_good.jpg"> %> %>
-    <%# <%= image_tag("do_good.jpg", alt: "Do Good Logo", class: "mx-auto w-1/5 h-auto") %> %>
-    <%# <img src="<%= Aws::S3::Object.new(ENV['S3_BUCKET_NAME'], @good_deed.id.to_s).public_url %>" alt="do_good.jpg"> %>
 
     <%= deed.name %>
     <%= deed.date %>

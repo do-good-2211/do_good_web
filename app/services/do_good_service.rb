@@ -27,5 +27,8 @@ class DoGoodService
     Faraday.new(url: "https://warm-temple-59633.herokuapp.com/",
                 params: { param: "1" },
                 headers: { "Content-Type" => "application/json" })
-  end
+  #   Faraday.new(url: "http://localhost:3000",
+  #               params: { param: "1" },
+  #               headers: { "Content-Type" => "application/json" })
+   end
 end

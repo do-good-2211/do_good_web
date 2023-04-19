@@ -8,7 +8,6 @@ RSpec.describe "User good deed new page" do
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
         allow_any_instance_of(CalendarFacade).to receive(:list_events).and_return(12)
 
-
         ra1 = RandomAct.new("Volunteer at a local animal shelter")
         ra2 = RandomAct.new("Pick up trash")
         ra3 = RandomAct.new("Buy your mother flowers")

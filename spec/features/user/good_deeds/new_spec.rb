@@ -5,7 +5,13 @@ RSpec.describe "User good deed new page" do
     context "When I visit '/user/good_deeds/new" do
       before do
         @user = User.new(id: 1, attributes: { name: "John Smith", email: "user@gmail.com", role: "User", good_deeds: { data: [] } } ) 
+        @user2 = User.new(id: 2, attributes: { name: "John Smith", email: "user@gmail.com", role: "User", good_deeds: { data: [] } } ) 
+        @user3 = User.new(id: 3, attributes: { name: "John Smith", email: "user@gmail.com", role: "User", good_deeds: { data: [] } } ) 
+        
+        @all_but_the_user = [@user2, @user3]
+
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+        allow_any_instance_of(UserFacade).to receive(:fetch_all_but_user).and_return(@all_but_the_user)
         allow_any_instance_of(CalendarFacade).to receive(:list_events).and_return(12)
 
 
@@ -13,12 +19,12 @@ RSpec.describe "User good deed new page" do
         ra2 = RandomAct.new("Pick up trash")
         ra3 = RandomAct.new("Buy your mother flowers")
         allow_any_instance_of(RandomActFacade).to receive(:create_acts).and_return([ra1, ra2, ra3])
-
+        
         VCR.use_cassette('random_acts', serialize_with: :json) do
           visit random_acts_path
           click_link "Volunteer at a local animal shelter", match: :first
         end
-
+        
         @users = UserFacade.new({ good_deed: "Volunteer at a local animal shelter" }, @user).fetch_all_but_user
       end
 
@@ -39,8 +45,8 @@ RSpec.describe "User good deed new page" do
           fill_in :date, with: Date.today
           fill_in :time, with: Time.now
 
-          # find(:css, "#attendees_#{@users.second.id}").set true
-          # find(:css, "#attendees_#{@users.last.id}").set true
+          find(:css, "#attendees_#{@users.first.id}").set true
+          find(:css, "#attendees_#{@users.last.id}").set true
           click_button 'Create Good!'
 
           expect(current_path).to eq(dashboard_path)

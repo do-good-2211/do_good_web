@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
 # app/facades/user_facade.rb
-# frozen_string_literal: true
-
-# app/facades/user_facade.rb
 class UserFacade
   attr_reader :good_deed,
               :user
@@ -14,14 +11,14 @@ class UserFacade
     @users ||= UserService.find_all_users[:data].map { |user| User.new(user) }
   end
 
-  # Refactor: Don't actually need this method cuz line 13 above
   def fetch_user
     user_info = UserService.find_user(@user.id)
     User.new(user_info[:data])
   end
 
   def fetch_user_dashboard
-    all_deeds_array = @user.good_deeds
+    user = fetch_user
+    all_deeds_array = user.good_deeds
     # make_deeds (helper method)
     array_of_deed_objects = all_deeds_array[:data].map do |deed_hash|
       Deed.new(deed_hash)
@@ -57,10 +54,6 @@ class UserFacade
     all_deeds.map do |deed_hash|
       Deed.new(deed_hash)
     end
-  end
-
-  def fetch_all_users
-    @users
   end
 
   def fetch_all_but_user

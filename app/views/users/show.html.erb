@@ -8,9 +8,10 @@
 <p>You're Hosting!</p>
 <% @user_facade[:hosting_deeds].each do |deed| %>
   <div id= "hosting-<%= deed.id %>">
+    <!-- <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good", class: "mx-auto w-1/5 h-auto") %> -->
     <%= deed.name %>
     <%= deed.date %>
-    <%= deed.time %>
+    <%= deed.time.to_datetime.strftime("%l:%M %p").strip %>
     <% deed.attendees.each do |invitee| %>
       <%= invitee.name %>
     <% end %>
@@ -23,6 +24,7 @@
 <p>You're Invited!</p>
 <% @user_facade[:invited_deeds].each do |deed| %>
   <div id= "invited-<%= deed.id %>">
+    <!-- <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good", class: "mx-auto w-1/5 h-auto") %> -->
     <%= deed.name %>
     <%= deed.date %>
     <%= deed.time %>

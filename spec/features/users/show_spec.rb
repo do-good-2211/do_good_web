@@ -14,6 +14,7 @@ RSpec.describe "/dashboard", type: :feature do
 
       before(:each) do
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+        allow_any_instance_of(UserFacade).to receive(:fetch_user).and_return(user)
         allow_any_instance_of(CalendarFacade).to receive(:list_events).and_return(12)
 
         VCR.use_cassette('dashboard', serialize_with: :json) do
@@ -28,6 +29,7 @@ RSpec.describe "/dashboard", type: :feature do
         
         expect(page).to have_content("You're Hosting!")
         within "#hosting-#{deed4[:id]}" do
+          # add css upcoming good image
           expect(page).to have_content("Deed4 Tip Generously.")
           expect(page).to have_content("2024-11-11")
           expect(page).to have_content("2000-01-01T22:00:00.000Z".to_datetime.strftime("%l:%M %p").strip)
@@ -38,6 +40,7 @@ RSpec.describe "/dashboard", type: :feature do
 
         expect(page).to have_content("You're Invited!")
         within "#invited-#{deed1[:id]}" do
+          # add css upcoming good image
           expect(page).to have_content("Deed1 High-five a stranger")
           expect(page).to have_content("2024-09-10")
           expect(page).to have_content("2000-01-01T13:00:00.000Z".to_datetime.strftime("%l:%M %p").strip)

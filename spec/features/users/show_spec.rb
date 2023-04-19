@@ -35,9 +35,8 @@ RSpec.describe "/dashboard", type: :feature do
           expect(page).to have_content("2000-01-01T22:00:00.000Z".to_datetime.strftime("%l:%M %p").strip)
           expect(page).to have_content("Harry")
           expect(page).to have_content("Ron")
-          # ADD: update button
+          expect(page).to have_link("Update")
         end
-save_and_open_page
 
         expect(page).to have_content("You're Invited!")
         within "#invited-#{deed1[:id]}" do
@@ -60,7 +59,7 @@ save_and_open_page
           expect(page).to have_content("Nemo")
           expect(page).to have_content("super fun")
           expect(page).to have_css("img[src*='#{image_url}']")
-          # ADD: update button
+          expect(page).to have_link("Update")
         end
 
         # Completed & Invited
@@ -87,6 +86,30 @@ save_and_open_page
           expect(current_path).to eq("/random_acts")
         end
       end
+
+      it "when I click on the Update button under You're Hosting, I'm redirected to /user/good_deeds/:id/edit" do
+        deed4_object = Deed.new( { id: "22", type: "good_deed", attributes: { host_name: "John Smith", host_id: 1, name: "Deed4 Tip Generously.", date: "2024-11-11", time: "2000-01-01T22:00:00.000Z", status: "In Progress", media_link: nil, notes: nil, attendees: [{ name: "Harry"}, { name: "Ron" }] } } )
+        allow_any_instance_of(GoodDeedFacade).to receive(:fetch_deed).and_return(deed4_object)
+
+        within "#hosting-#{deed4[:id]}" do
+            click_on("Update")
+            # click_button("Update") Add after Tailwind
+          end
+          expect(current_path).to eq("/user/good_deeds/#{deed4_object.id}/edit")
+      end
+      
+      it "when I click on the Update button under Past Good Deeds that were hosted, I'm redirected to /user/good_deeds/:id/edit" do
+        deed3_object = Deed.new( { id: "33", type: "good_deed", attributes: { host_name: "John Smith", host_id: 1, name: "Deed3 Pick up Trash.", date: "2024-05-30", time: "2000-01-01T14:00:00.000Z", status: "Completed", media_link: image_url, notes: "super fun", attendees: [{ name: "Dori"}, { name: "Nemo" }] } } )
+        allow_any_instance_of(GoodDeedFacade).to receive(:fetch_deed).and_return(deed3_object)
+
+        within "#completed-#{deed3[:id]}" do
+          click_on("Update")
+            # click_button("Update") Add after Tailwind
+          end
+          expect(current_path).to eq("/user/good_deeds/#{deed3_object.id}/edit")
+      end
+
+
     end
 
     describe "when NOT successful" do

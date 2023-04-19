@@ -11,7 +11,9 @@ RSpec.describe Deed do
         status: "In Progress",
         notes: "This was awesome!",
         media_link: "www.image.com/high_five_yo!",
-        attendees: [{ "user_id": 2, "name": "Peter" }, { "user_id": 3, "name": "Jane" }]
+        attendees: [{ "user_id": 2, "name": "Peter" }, { "user_id": 3, "name": "Jane" }],
+        # host_name: "Captain Sparrow",
+        # host_id: "22"
       } }
   }
   let(:deed1) { Deed.new(info) }

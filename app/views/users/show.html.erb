@@ -1,6 +1,5 @@
 <h1><%= @user_facade[:name] %>'s Do Good Page</h1>
 <br>
-<!-- Random Act button -->
   <%= link_to "Choose a Random Act of Kindess!", '/random_acts'%>
 <br>
 <p>Good job, you've added <%=@events%> Do Good Events to your calendar so far!</p>
@@ -10,15 +9,14 @@
 <% @user_facade[:hosting_deeds].each do |deed| %>
   <div id= "hosting-<%= deed.id %>">
   <!-- <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good", class: "mx-auto w-1/5 h-auto") %> -->
-    <%= image_tag("upcoming_good.jpg") %>
+    <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good") %>
     <%= deed.name %>
     <%= deed.date %>
     <%= deed.time.to_datetime.strftime("%l:%M %p").strip %>
     <% deed.attendees.each do |invitee| %>
       <%= invitee.name %>
     <% end %>
-    <!-- udpate button 
-    <%= link_to "Update", '/'%> -->
+    <%= link_to "Update", "/user/good_deeds/#{deed.id}/edit" %>
     <br>
   </div>
 <% end %> 
@@ -27,7 +25,7 @@
 <% @user_facade[:invited_deeds].each do |deed| %>
   <div id= "invited-<%= deed.id %>">
     <!-- <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good", class: "mx-auto w-1/5 h-auto") %> -->
-   <%= image_tag("upcoming_good.jpg") %>
+   <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good") %>
     <%= deed.name %>
     <%= deed.date %>
     <%= deed.time %>
@@ -46,14 +44,13 @@
     <% if deed.media_link %>
       <%= image_tag deed.media_link %>
     <% else %>
-        <%= image_tag("do_good.jpg", alt: "Do Good Logo") %>
+      <!-- <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good", class: "mx-auto w-1/5 h-auto") %> -->
+      <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good") %>
     <% end %>
 
     <%= deed.name %>
     <%= deed.date %>
     <%= deed.time %>
-
-    
 
     <% deed.attendees.each do |invitee| %>
       <%= invitee.name %>
@@ -62,7 +59,10 @@
     <% if deed.notes %>
       <%= deed.notes %>
     <% end %>
-    <!-- IF host_id == user's id display: udpate button // else NO button displayed-->
+
+    <% if deed.host_id == @user_facade[:id] %>
+      <%= link_to "Update", "/user/good_deeds/#{deed.id}/edit" %>
+    <% end %>
     <br>
   </div>
 <% end %>

@@ -8,7 +8,7 @@
     <%= f.label :date %>
     <%= f.date_field :date, value: @facade.fetch_deed.date, min: Date.today %><br>
     <%= f.label :time %>
-    <%= f.time_field :time, value: @facade.fetch_deed.time %><br>
+    <%= f.time_field :time, required: true %><br>
     <%= f.label :attendees %>
     <% @facade.fetch_deed.attendees.each do |attendee| %>
       <%= f.label :attendee, value: attendee.name %>

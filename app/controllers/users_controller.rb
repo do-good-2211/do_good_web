@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def login; end
 
   def show
-    @facade = UserFacade.new(params, current_user).fetch_user_dashboard
+    @user_facade = UserFacade.new(params, current_user).fetch_user_dashboard
     token = session[:token]
     @email = current_user.email.gsub("@gmail.com", "")
     @events = CalendarFacade.new.list_events(token)

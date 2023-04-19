@@ -97,7 +97,7 @@ RSpec.describe "/dashboard", type: :feature do
           end
           expect(current_path).to eq("/user/good_deeds/#{deed4_object.id}/edit")
       end
-      
+
       it "when I click on the Update button under Past Good Deeds that were hosted, I'm redirected to /user/good_deeds/:id/edit" do
         deed3_object = Deed.new( { id: "33", type: "good_deed", attributes: { host_name: "John Smith", host_id: 1, name: "Deed3 Pick up Trash.", date: "2024-05-30", time: "2000-01-01T14:00:00.000Z", status: "Completed", media_link: image_url, notes: "super fun", attendees: [{ name: "Dori"}, { name: "Nemo" }] } } )
         allow_any_instance_of(GoodDeedFacade).to receive(:fetch_deed).and_return(deed3_object)
@@ -108,8 +108,6 @@ RSpec.describe "/dashboard", type: :feature do
           end
           expect(current_path).to eq("/user/good_deeds/#{deed3_object.id}/edit")
       end
-
-
     end
 
     describe "when NOT successful" do

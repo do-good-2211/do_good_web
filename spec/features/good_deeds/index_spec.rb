@@ -9,7 +9,7 @@ RSpec.describe "Home page", type: :feature do
         expect(page).to have_css("img[src*='do_good']")
         expect(page).to have_content("Ok, I'm Convinced. I wanna join the fun")
         expect(page).to have_link("Login/Register")
-        expect(page).to have_link("Get Help Today", href: "https://www.mentalhealth.gov/get-help/immediate-help")
+        expect(page).to have_link("Chat with someone now!", href: "https://www.7cups.com/")
       end
 
       it "When I click on Login/Register button I am redirected" do

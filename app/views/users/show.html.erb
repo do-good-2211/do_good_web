@@ -12,7 +12,7 @@
     <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good") %>
     <%= deed.name %>
     <%= deed.date %>
-    <%= deed.time.to_datetime.strftime("%l:%M %p").strip %>
+    <%= deed.time %>
     <% deed.attendees.each do |invitee| %>
       <%= invitee.name %>
     <% end %>

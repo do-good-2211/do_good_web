@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def login; end
 
   def show
+    # token, events, email are all nil when testing show_spec ??
     @user_facade = UserFacade.new(params, current_user).fetch_user_dashboard
     token = session[:token]
     @email = current_user.email.gsub("@gmail.com", "")

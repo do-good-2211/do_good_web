@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe "Random Acts index page", type: :feature do
   describe "As a logged in user, when I visit '/random_acts'", :vcr do
     before do
-      user = User.new(id: 1, attributes: { name: "John Smith", email: "user@gmail.com", role: "User", good_deeds: { data: [] } } ) 
+      user = User.new(id: 1, attributes: { name: "John Smith", email: "user@gmail.com", role: "User", good_deeds: { data: [] } })
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       VCR.use_cassette('random_acts', serialize_with: :json) do

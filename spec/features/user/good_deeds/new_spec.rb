@@ -14,7 +14,6 @@ RSpec.describe "User good deed new page" do
         allow_any_instance_of(UserFacade).to receive(:fetch_all_but_user).and_return(@all_but_the_user)
         allow_any_instance_of(CalendarFacade).to receive(:list_events).and_return(12)
 
-
         ra1 = RandomAct.new("Volunteer at a local animal shelter")
         ra2 = RandomAct.new("Pick up trash")
         ra3 = RandomAct.new("Buy your mother flowers")
@@ -40,7 +39,9 @@ RSpec.describe "User good deed new page" do
       end
 
       xit 'When I fill in all parts of the form and click "Create Good!" I am taken to my user dashboard' do
-        # allow_any_instance_of(CalendarFacade).to receive(:list_events).and_return(12)
+        allow_any_instance_of(CalendarFacade).to receive(:list_events).and_return(12)
+        allow_any_instance_of(CalendarFacade).to receive(:create_event).and_return("Calendar Event Created")
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
         within '#new_good_deed' do
           fill_in :date, with: Date.today
           fill_in :time, with: Time.now
@@ -48,8 +49,9 @@ RSpec.describe "User good deed new page" do
           find(:css, "#attendees_#{@users.first.id}").set true
           find(:css, "#attendees_#{@users.last.id}").set true
           click_button 'Create Good!'
-
+        
           expect(current_path).to eq(dashboard_path)
+          exoect(page).to have_content("Volunteer at a local animal shelter")
         end
       end
 

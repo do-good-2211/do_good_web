@@ -4,7 +4,7 @@
 require './app/poros/attendee'
 
 class Deed
-  attr_reader :id, 
+  attr_reader :id,
               :name,
               :host_id,
               :host_name,
@@ -33,6 +33,6 @@ class Deed
   end
 
   def id_to_integer(id)
-    id.to_i unless id.class == Integer
+    id.to_i unless id.instance_of?(Integer)
   end
 end

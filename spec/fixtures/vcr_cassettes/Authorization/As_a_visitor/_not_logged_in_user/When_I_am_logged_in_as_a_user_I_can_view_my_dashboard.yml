@@ -975,7 +975,11 @@ http_interactions:
       Server:
       - Cowboy
       Date:
+<<<<<<< HEAD
       - Wed, 19 Apr 2023 05:14:10 GMT
+=======
+      - Wed, 19 Apr 2023 04:04:59 GMT
+>>>>>>> 45ccf101e1f24b6308933359430c6df3760adf09
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -999,9 +1003,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
+<<<<<<< HEAD
       - 1a0005b0-bfc0-4198-a6ce-037c3e7ea75f
       X-Runtime:
       - '0.139108'
+=======
+      - 0761dd64-32bd-49ac-b0b0-74009ef7458d
+      X-Runtime:
+      - '0.059069'
+>>>>>>> 45ccf101e1f24b6308933359430c6df3760adf09
       Transfer-Encoding:
       - chunked
       Via:
@@ -1110,5 +1120,9 @@ http_interactions:
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
         Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}}]}}}}'
+<<<<<<< HEAD
   recorded_at: Wed, 19 Apr 2023 05:14:11 GMT
+=======
+  recorded_at: Wed, 19 Apr 2023 04:04:59 GMT
+>>>>>>> 45ccf101e1f24b6308933359430c6df3760adf09
 recorded_with: VCR 6.1.0

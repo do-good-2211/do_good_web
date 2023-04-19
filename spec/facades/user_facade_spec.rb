@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe UserFacade, :vcr do
   before do
-    user = User.new(id: 1, attributes: { name: "John Smith", email: "user@gmail.com", role: "User", good_deeds: { data: [] } } ) 
+    user = User.new(id: 1, attributes: { name: "John Smith", email: "user@gmail.com", role: "User", good_deeds: { data: [] } })
     @facade = UserFacade.new({}, user)
   end
 

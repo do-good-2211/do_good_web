@@ -51,6 +51,7 @@ RSpec.describe "User good deed new page" do
           click_button 'Create Good!'
         
           expect(current_path).to eq(dashboard_path)
+          expect(page).to have_content("Event created!")
           expect(page).to have_content("Volunteer at a local animal shelter")
       end
 
@@ -64,7 +65,7 @@ RSpec.describe "User good deed new page" do
         end
 
         expect(current_path).to eq(new_user_good_deed_path)
-        expect(page).to have_content("Please fill in all parts.")
+        expect(page).to have_content("Please fill in a date and time.")
       end
     end
   end

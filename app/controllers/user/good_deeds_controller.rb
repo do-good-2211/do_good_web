@@ -12,12 +12,12 @@ class User::GoodDeedsController < ApplicationController
   def create
     email = current_user.email
     if params[:date].present? && params[:time].present?
-      GoodDeedFacade.new(params, current_user.name, current_user.id).create_deed
+      new_deed = GoodDeedFacade.new(params, current_user.name, current_user.id).create_deed
       CalendarFacade.new.create_event(email, params, session[:token])
-      redirect_to dashboard_path
+      new_deed_check(new_deed, params)
     else
-      redirect_to new_user_good_deed_path
-      flash[:notice] = "Please fill in all parts."
+      redirect_to "/user/good_deeds/new?good_deed=#{params[:name]}"
+      flash[:notice] = "Please fill in a date and time."
     end
   end
 
@@ -34,8 +34,9 @@ class User::GoodDeedsController < ApplicationController
                           #image in the bucket
     end
  
-    GoodDeedFacade.new(params, nil, current_user.id).update_deed
-    redirect_to dashboard_path
+    updated_deed = GoodDeedFacade.new(params, nil, current_user.id).update_deed
+    # require 'pry'; binding.pry
+    updated_deed_check(updated_deed, params)
   end
 
   def aws(image, filename)
@@ -47,4 +48,26 @@ class User::GoodDeedsController < ApplicationController
     GoodDeedFacade.new(params, nil, current_user.id).delete_deed
     redirect_to dashboard_path
   end
+
+  private
+
+    def new_deed_check(new_deed, params)
+      if new_deed.has_key?(:errors)
+        redirect_to "/user/good_deeds/new?good_deed=#{params[:name]}"
+        flash[:error] = "Event could not be created."
+      else
+        redirect_to dashboard_path
+        flash[:success] = "Event created!"
+      end
+    end
+
+    def updated_deed_check(updated_deed, params)
+      if updated_deed.has_key?(:errors)
+        redirect_to "/user/good_deeds/#{current_user.id}/edit"
+        flash[:error] = "Event could not be updated."
+      else
+        redirect_to dashboard_path
+        flash[:success] = "Event updated!"
+      end
+    end
 end

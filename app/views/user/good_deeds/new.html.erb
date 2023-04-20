@@ -1,4 +1,56 @@
+<!-- New Deed Form -->
+<div class="min-h-screen bg-indigo-50 py-6 flex flex-col justify-center sm:py-12">
+  <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+    <div class="relative px-4 py-10 bg-white mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
+      <div class="w-full mx-auto">
 
+        <div class="flex items-center space-x-5">
+          <%= image_tag("do_good.jpg", alt: "Do Good Logo", class: "mx-auto w-1/5 h-auto") %>
+          <div class="block pl-2 font-semibold text-xl self-start text-gray-700">
+            <h2 class="leading-relaxed mt-5"><%= @facade.good_deed %></h2>
+            <p class="text-sm text-gray-500 font-normal leading-relaxed">Complete form, invite others, & do good!</p>
+          </div>
+        </div>
+
+        <section id="new_good_deed">
+          <%= form_with url: user_good_deeds_path, method: :post, local: true do |f| %>
+          <%= f.hidden_field :name, value: @facade.good_deed %>
+
+            <div class="divide-y divide-gray-200">
+              <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+                <div class="flex items-center justify-center space-x-10">
+                  <div class="flex flex-col">
+                    <label class="leading-loose font-semibold text-indigo-500"><%= f.label :date %></label>
+                    <%= f.date_field :date, min: Date.today  %>
+                  </div>
+                  <div class="flex flex-col">
+                    <label class="leading-loose font-semibold text-indigo-500"><%= f.label :time %></label>
+                    <%= f.time_field :time %>
+                  </div>
+                </div>
+                <div class="flex flex-col place-items-center">
+                  <label class="leading-loose font-semibold text-indigo-500"><%= f.label :atendees, 'Invite Other Users' %></label>
+                  <div class="flex flex-col justify-self-start">
+                    <% @facade.fetch_all_but_user.each do |user| %>
+                      <p><%= f.check_box :attendees, { multiple: true }, user.id, false %>
+                      <%= f.label :attendees, "#{user.name}" %></p>
+                    <% end %>   
+                  </div>         
+                </div>
+              </div>
+              <div class="pt-8 flex items-center space-x-4">
+                  <button class="bg-red-500 hover:bg-indigo-500 flex justify-center items-center w-full text-white px-4 py-3 rounded-md focus:outline-none"><%= f.submit 'Create Good!' %></button>
+              </div>
+            </div>
+          <% end %>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ORIGINAL CODE: 
 <h3><%= @facade.good_deed %></h3>
 
 <section id="new_good_deed">
@@ -15,4 +67,4 @@
       <% end %>
     <%= f.submit 'Create Good!' %>
   <% end %>
-</section>
+</section> -->

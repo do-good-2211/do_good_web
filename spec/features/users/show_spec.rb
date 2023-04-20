@@ -86,16 +86,22 @@ RSpec.describe "/dashboard", type: :feature do
         end
       end
 
-      xit "when I click on the Random Acts button, I'm redirected to /random_acts" do
+      it "displays displays a count of good deeds added to the users calendar " do
+        expect(page).to have_content("Good job, you've added 12 Do Good Events to your calendar so far!")
+      end
+
+      it "when I click on the Random Acts button, I'm redirected to /random_acts" do
         ra1 = RandomAct.new("Volunteer at a local animal shelter")
         ra2 = RandomAct.new("Pick up trash")
         ra3 = RandomAct.new("Buy your mother flowers")
         allow_any_instance_of(RandomActFacade).to receive(:create_acts).and_return([ra1, ra2, ra3])
 
         VCR.use_cassette('random_acts', serialize_with: :json) do
-          click_button("Choose a Random Act of Kindess")
-          # click_button("Choose a Random Act of Kindess") Add after Tailwind
+          click_link("Choose a Random Act of Kindess")
           expect(current_path).to eq("/random_acts")
+          expect(page).to have_content("Volunteer at a local animal shelter")
+          expect(page).to have_content("Pick up trash")
+          expect(page).to have_content("Buy your mother flowers")
         end
       end
 
@@ -117,7 +123,6 @@ RSpec.describe "/dashboard", type: :feature do
 
         within "#completed-#{deed3[:id]}" do
           click_on("Update")
-          # click_button("Update") Add after Tailwind
         end
         expect(current_path).to eq("/user/good_deeds/#{deed3_object.id}/edit")
       end

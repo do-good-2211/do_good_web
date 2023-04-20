@@ -12,10 +12,10 @@ RSpec.describe "Random Acts index page", type: :feature do
       end
     end
 
-    xit "I see 3 random acts and their name as a link" do
+    it "I see 3 random acts and their name as a link" do
+      expect(page).to have_link("Find a charity and donate to it")
       expect(page).to have_link("Volunteer at a local animal shelter")
-      expect(page).to have_link("Donate blood at a local blood center")
-      expect(page).to have_link("Contribute code or a monetary donation to an open-source software project")
+      expect(page).to have_link("Volunteer at your local food pantry")
     end
 
     it "when I click on any deed I am redirected to the new good deed page" do

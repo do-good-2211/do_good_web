@@ -4,7 +4,6 @@ RSpec.describe SessionsFacade do
   before do
     OmniAuth.config.mock_auth[:google_oauth2] = nil
     @facade = SessionsFacade.new
-
     omni_hash
   end
 

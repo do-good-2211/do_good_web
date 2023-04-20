@@ -8,7 +8,7 @@
     <button class="p-2 mb-4 bg-red-500 hover:bg-indigo-500 text-white font-base rounded" href='/random_acts'>
       <%= link_to "Choose a Random Act of Kindess", '/random_acts' %>
     </button>
-    <h4 class="p-8 text-lg">
+    <h4 class="p-8 font-bold text-lg">
       Good job, you've added <%=@events%> Do Good Events to your calendar so far!
     </h4>
     <iframe class="mx-auto" src="https://calendar.google.com/calendar/embed?src=<%=@email%>%40gmail.com&ctz=America%2FDenver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
@@ -26,13 +26,17 @@
 <!-- Invited Good Deed Cards -->
 <section class='flex items-center justify-center min-h-screen bg-gradient-to-br px-2'>
   <article>
+      
+      <h2 class="py-12 text-2xl font-bold text-gray-900">
+        <p>You're Invited!</p>
+      </h2>
+
     <section class="mt-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8 pb-10">
       <% @user_facade[:invited_deeds].each do |deed| %>
         <div class='max-w-md mx-auto  bg-white rounded-lg shadow-xl overflow-hidden' id= "invited-<%= deed.id %>">
           <div class='max-w-md mx-auto'>
             <div class='h-[400px]' style="background-image: url('<%= asset_path 'upcoming_good.jpg' %>');background-size:cover;background-position:center">
             </div>
-            
               <div class='p-4 sm:p-6'>
                 
                 <p class='font-bold text-gray-700 text-[17px] text-center leading-7 mb-1'><%= deed.name %></p>
@@ -59,20 +63,112 @@
                   <% end %>
                 </div>
 
-                <!-- <p class='text-[#7C7C80] font-[15px] mt-6'>Our shrimp sauce is made with mozarella, a creamy taste of shrimp with extra kick of spices.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %> 
+    </section>
+  </article>
+</section>
 
-                <% if deed.notes %>
-                  <div class='flex flex-row ml-10'>
-                    <p class='text-[#3C3C4399] text-[15px] mr-2'>Notes:</p>
-                    <p class='text-[15px] text-[#6366f1]'><%= deed.notes %></p>
-                  </div>
-                <% end %> -->
+<!-- You're Hosting Good Deed Cards -->
+<section class='flex items-center justify-center min-h-screen bg-gradient-to-br px-2'>
+  <article>
+      
+      <h2 class="py-12 text-2xl font-bold text-gray-900">
+        <p>You're Hosting!</p>
+      </h2>
 
+    <section class="mt-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8 pb-10">
+      <% @user_facade[:hosting_deeds].each do |deed| %>
+        <div class='max-w-md mx-auto  bg-white rounded-lg shadow-xl overflow-hidden' id= "hosted-<%= deed.id %>">
+          <div class='max-w-md mx-auto'>
+            <div class='h-[400px]' style="background-image: url('<%= asset_path 'upcoming_good.jpg' %>');background-size:cover;background-position:center">
+            </div>
+              <div class='p-4 sm:p-6'>
+                
+                <p class='font-bold text-gray-700 text-[17px] text-center leading-7 mb-1'><%= deed.name %></p>
+
+                 <div class='flex flex-row mt-10 ml-10'>
+                  <p class='text-[#3C3C4399] text-[15px] mr-2'>Date:</p>
+                  <p class='text-[15px] text-[#6366f1]'><%= deed.date %></p>
+                </div>
+
+                <div class='flex flex-row ml-10'>
+                  <p class='text-[#3C3C4399] text-[15px] mr-2'>Time:</p>
+                  <p class='text-[15px] text-[#6366f1]'><%= deed.time %></p>
+                </div>
+
+                <div class='flex flex-col ml-10'>
+                  <p class='text-[#3C3C4399] text-[15px] mr-2'>Attendees:</p>
+                  <% deed.attendees.each do |invitee| %>
+                    <p class='text-[15px] text-[#6366f1]'><%= invitee.name %></p>
+                  <% end %>
+                </div>
 
                 <a target='_blank' href="/user/good_deeds/<%= deed.id %>/edit" class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#6366f1] rounded-[14px] hover:bg-[#ef4444] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
                     Update
                 </a>
 
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %> 
+    </section>
+  </article>
+</section>
+
+
+<!-- Completed Good Deed Cards -->
+<section class='flex items-center justify-center min-h-screen bg-gradient-to-br px-2'>
+  <article>
+      
+      <h2 class="py-12 text-2xl font-bold text-gray-900">
+        <p>Past Good Deeds</p>
+      </h2>
+
+    <section class="mt-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8 pb-10">
+      <% @user_facade[:completed_deeds].each do |deed| %>
+        <div class='max-w-md mx-auto  bg-white rounded-lg shadow-xl overflow-hidden' id= "completed-<%= deed.id %>">
+          <div class='max-w-md mx-auto'>
+            <div class='h-[400px]' style="background-image: url('<%= asset_path 'upcoming_good.jpg' %>');background-size:cover;background-position:center">
+            </div>
+              <div class='p-4 sm:p-6'>
+                
+                <p class='font-bold text-gray-700 text-[17px] text-center leading-7 mb-1'><%= deed.name %></p>
+
+                 <div class='flex flex-row mt-10 ml-10'>
+                  <p class='text-[#3C3C4399] text-[15px] mr-2'>Date:</p>
+                  <p class='text-[15px] text-[#6366f1]'><%= deed.date %></p>
+                </div>
+
+                <div class='flex flex-row ml-10'>
+                  <p class='text-[#3C3C4399] text-[15px] mr-2'>Time:</p>
+                  <p class='text-[15px] text-[#6366f1]'><%= deed.time %></p>
+                </div>
+
+                <div class='flex flex-col ml-10'>
+                  <p class='text-[#3C3C4399] text-[15px] mr-2'>Attendees:</p>
+                  <% deed.attendees.each do |invitee| %>
+                    <p class='text-[15px] text-[#6366f1]'><%= invitee.name %></p>
+                  <% end %>
+                </div>
+
+                <% if deed.notes == nil || deed.notes == "" %>
+                <% else %>
+                  <div class='flex flex-row ml-10'>
+                    <p class='text-[#3C3C4399] text-[15px] mr-2'>Notes:</p>
+                    <p class='text-[15px] text-[#6366f1]'><%= deed.notes %></p>
+                  </div>
+                <% end %>
+
+                <% if deed.host_id == @user_facade[:id].to_i %>
+                  <a target='_blank' href="/user/good_deeds/<%= deed.id %>/edit" class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#6366f1] rounded-[14px] hover:bg-[#ef4444] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
+                      Update
+                  </a>
+                <% end %>
 
               </div>
             </div>
@@ -98,7 +194,7 @@
             </div>
 
             
-            <%# <p class='text-[#7C7C80] font-[15px] mt-6'><%= deed.notes %></p> 
+            <%# <p class='text-[#7C7C80] font-[15px] mt-6'><%= deed.notes %>
             
 
               <a target='_blank' href='foodiesapp://food/1001' class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#FFC933] rounded-[14px] hover:bg-[#FFC933DD] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
@@ -116,11 +212,30 @@
 
 
 
-<!-- Orinigial Code -->
+<!-- Original Code -->
+<!-- 
+<p>You're Invited!</p>
+<% @user_facade[:invited_deeds].each do |deed| %>
+  <div id= "invited-<%= deed.id %>">
+     <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good", class: "mx-auto w-1/5 h-auto") %> 
+   <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good") %>
+    <%= deed.name %>
+    <%= deed.date %>
+    <%= deed.time %>
+    <%= deed.host_name %> 
+    <% deed.attendees.each do |invitee| %>
+      <%= invitee.name %>
+    <% end %>
+    <br>
+  </div>
+<% end %> 
+
+
+
 <p>You're Hosting!</p>
 <% @user_facade[:hosting_deeds].each do |deed| %>
   <div id= "hosting-<%= deed.id %>">
-  <!-- <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good", class: "mx-auto w-1/5 h-auto") %> -->
+  <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good", class: "mx-auto w-1/5 h-auto") %>
     <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good") %>
     <%= deed.name %>
     <%= deed.date %>
@@ -132,44 +247,14 @@
     <br>
   </div>
 <% end %> 
+-->
 
-
-
-<p>You're Invited!</p>
-<% @user_facade[:invited_deeds].each do |deed| %>
-
-<!-- **THIS IS THE WORKING IMAGE LINK TO DISPLAY AWS BUCKET IMAGES TO THE VIEW. MOVE IT WHEREVER BUT DONT CHANGE THE SYNTAX PLEASE** -->
-<img src=<%= "https://#{ENV['S3_BUCKET_NAME']}.s3.#{ENV['AWS_REGION']}.amazonaws.com/#{deed.media_link}" %> ></img>
-<!-- **THIS IS THE WORKING IMAGE LINK TO DISPLAY AWS BUCKET IMAGES TO THE VIEW. MOVE IT WHEREVER BUT DONT CHANGE THE SYNTAX PLEASE** -->
-
-
-  <div id= "invited-<%= deed.id %>">
-    <!-- <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good", class: "mx-auto w-1/5 h-auto") %> -->
-   <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good") %>
-    <%= deed.name %>
-    <%= deed.date %>
-    <%= deed.time %>
-    <%= deed.host_name %> 
-    <% deed.attendees.each do |invitee| %>
-      <%= invitee.name %>
-    <% end %>
-    <br>
-  </div>
-<% end %>
-
-
-
-<p>Past Good Deeds</p>
+<!-- <p>Past Good Deeds</p>
 <% @user_facade[:completed_deeds].each do |deed| %>
   <div id= "completed-<%= deed.id %>">
 
 
-    <% if deed.media_link %>
-      <%= image_tag deed.media_link %>
-    <% else %>
-      <!-- <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good", class: "mx-auto w-1/5 h-auto") %> -->
-      <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good") %>
-    <% end %>
+    
 
     <%= deed.name %>
     <%= deed.date %>
@@ -188,4 +273,4 @@
     <% end %>
     <br>
   </div>
-<% end %>
+<% end %> -->

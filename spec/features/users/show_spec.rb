@@ -50,16 +50,16 @@ RSpec.describe "/dashboard", type: :feature do
           expect(page).to have_link("Update")
         end
 
-        # expect(page).to have_content("You're Invited!")
-        # within "#invited-#{deed1[:id]}" do
-        #   expect(page).to have_css("img[src*='upcoming_good']")
-        #   expect(page).to have_content("Deed1 High-five a stranger")
-        #   expect(page).to have_content("2024-09-10")
-        #   expect(page).to have_content("2000-01-01T13:00:00.000Z".to_datetime.strftime("%l:%M %p").strip)
-        #   expect(page).to have_content("Sally Seashells")
-        #   expect(page).to have_content("Tink")
-        #   expect(page).to have_content("Hook")
-        # end
+        expect(page).to have_content("You're Invited!")
+        within "#invited-#{deed1[:id]}" do
+          # expect(page).to have_css("img[src*='upcoming_good']")
+          expect(page).to have_content("Deed1 High-five a stranger")
+          expect(page).to have_content("2024-09-10")
+          expect(page).to have_content("2000-01-01T13:00:00.000Z".to_datetime.strftime("%l:%M %p").strip)
+          expect(page).to have_content("Sally Seashells")
+          expect(page).to have_content("Tink")
+          expect(page).to have_content("Hook")
+        end
 
         expect(page).to have_content("Past Good Deeds")
         # Completed & Hosted

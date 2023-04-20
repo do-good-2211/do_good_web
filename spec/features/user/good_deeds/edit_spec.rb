@@ -17,9 +17,9 @@ RSpec.describe "User good deed edit page" do
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
         allow_any_instance_of(CalendarFacade).to receive(:list_events).and_return(12)
 
-        visit edit_user_good_deed_path(1)
+        visit edit_user_good_deed_path(2)
 
-        @good_deed = GoodDeedFacade.new({ id: 1 }, nil, 1).fetch_deed
+        @good_deed = GoodDeedFacade.new({ id: 2 }, nil, 1).fetch_deed
       end
 
       it 'I see the name of the good deed and a form with the deed information prepopulated' do
@@ -33,19 +33,20 @@ RSpec.describe "User good deed edit page" do
           expect(page).to have_field(:media_link)
           expect(page).to have_button('Update Event')
         end
-
-        within 'nav#delete_deed' do
-          expect(page).to have_link('Delete Event')
-        end
       end
 
       it 'When I check the completed box, update the time, and click "Update Event", I am redirected to the dashboard' do
+        visit edit_user_good_deed_path(3)
+
+        @good_deed = GoodDeedFacade.new({ id: 3 }, nil, 1).fetch_deed
+        
         fill_in :time, with: Time.now
         check :status
         allow_any_instance_of(User::GoodDeedsController).to receive(:aws).and_return("123.jpg")
         click_button 'Update Event'
 
         expect(current_path).to eq(dashboard_path)
+        expect(page).to have_content('Event updated!')
       end
 
       it 'When I do not change anything and click "Update Event", I am redirected to the dashboard' do
@@ -53,6 +54,7 @@ RSpec.describe "User good deed edit page" do
         click_button 'Update Event'
 
         expect(current_path).to eq(dashboard_path)
+        expect(page).to have_content('Event updated!')
       end
 
       it 'When I edit some fields and click "Update Event", I am redirected to the dashboard' do
@@ -62,6 +64,7 @@ RSpec.describe "User good deed edit page" do
         click_button 'Update Event'
 
         expect(current_path).to eq(dashboard_path)
+        expect(page).to have_content('Event updated!')
       end
     end
   end

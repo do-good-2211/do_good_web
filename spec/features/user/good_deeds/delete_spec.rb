@@ -9,7 +9,7 @@ RSpec.describe "Delete Good Deed" do
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
         allow_any_instance_of(CalendarFacade).to receive(:list_events).and_return(12)
 
-        visit edit_user_good_deed_path(1)
+        visit edit_user_good_deed_path(2)
 
         @good_deed = GoodDeedFacade.new({ id: 1 }, nil, 1).fetch_deed
       end

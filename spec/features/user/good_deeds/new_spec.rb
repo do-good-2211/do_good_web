@@ -38,21 +38,20 @@ RSpec.describe "User good deed new page" do
         end
       end
 
-      xit 'When I fill in all parts of the form and click "Create Good!" I am taken to my user dashboard' do
+      it 'When I fill in all parts of the form and click "Create Good!" I am taken to my user dashboard' do
         allow_any_instance_of(CalendarFacade).to receive(:list_events).and_return(12)
         allow_any_instance_of(CalendarFacade).to receive(:create_event).and_return("Calendar Event Created")
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
         within '#new_good_deed' do
           fill_in :date, with: Date.today
           fill_in :time, with: Time.now
-
+        end  
           find(:css, "#attendees_#{@users.first.id}").set true
           find(:css, "#attendees_#{@users.last.id}").set true
           click_button 'Create Good!'
         
           expect(current_path).to eq(dashboard_path)
-          exoect(page).to have_content("Volunteer at a local animal shelter")
-        end
+          expect(page).to have_content("Volunteer at a local animal shelter")
       end
 
       it 'When I leave the date or time blank and click "Create Good!" I am redirected to the new page with a message' do

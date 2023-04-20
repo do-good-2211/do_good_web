@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/good_deeds
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 20 Apr 2023 19:57:52 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"be48005ed649ed17a4acd98d0ce0fc12"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 113bbcdd-40f4-4982-a9c6-9f5c5db87e0f
+      X-Runtime:
+      - '0.002995'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"7","type":"good_deeds","attributes":{"name":"Help Others4.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}},{"id":"66","type":"good_deeds","attributes":{"name":"Mow
+        your neighbor''s lawn","media_link":"64b094be-be12-4a13-9106-d002d1dd6ebc.jpg","time":"2000-01-01T10:50:00.000Z","date":"2023-04-20"}},{"id":"65","type":"good_deeds","attributes":{"name":"Made
+        website for cousin","media_link":"e75c3610-346b-44b3-81a4-e73d617f7092.jpg","time":"2000-01-01T13:30:00.000Z","date":"2023-04-26"}},{"id":"72","type":"good_deeds","attributes":{"name":"Volunteer
+        at your local food bank","media_link":"63ac3441-6f93-41ea-96d1-5a04a5dc9a1b.jpg","time":"2000-01-01T23:30:00.000Z","date":"2023-04-21"}},{"id":"77","type":"good_deeds","attributes":{"name":"Feed
+        Camels","media_link":"c061b285-0278-4f57-92d0-8575c70838e1.jpg","time":"2000-01-01T11:43:00.000Z","date":"2023-04-20"}}]}'
+  recorded_at: Thu, 20 Apr 2023 19:57:52 GMT
+recorded_with: VCR 6.1.0

@@ -9,7 +9,7 @@ RSpec.describe "Delete Good Deed" do
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
         allow_any_instance_of(CalendarFacade).to receive(:list_events).and_return(12)
 
-        visit edit_user_good_deed_path(1)
+        visit edit_user_good_deed_path(2)
 
         @good_deed = GoodDeedFacade.new({ id: 1 }, nil, 1).fetch_deed
       end
@@ -20,13 +20,11 @@ RSpec.describe "Delete Good Deed" do
         end
       end
 
-      xit 'Does not have a link to delete the event if the event is completed' do
-        save_and_open_page
-        fill_in :time, with: Time.now
+      it 'Does not have a link to delete the event if the event is completed' do
         check 'Completed'
         click_button 'Update Event'
-
         visit edit_user_good_deed_path(1)
+        
         within '#delete_deed' do
           expect(page).to_not have_link('Delete Event')
         end

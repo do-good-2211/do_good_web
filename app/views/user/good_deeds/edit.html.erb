@@ -4,17 +4,21 @@
     <div class="relative px-4 py-10 bg-white mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
       <div class="w-full mx-auto">
 
-        <div class="flex items-center space-x-5">
-          <%= image_tag("do_good.jpg", alt: "Do Good Logo", class: "mx-auto w-1/5 h-auto") %>
-          <div class="block pl-2 font-semibold text-xl self-start text-gray-700">
-            <h2 class="leading-relaxed mt-5"><% @facade.fetch_deed.name %></h2>
-            <p class="text-sm text-gray-500 font-normal leading-relaxed">Complete form, invite others, & do good!</p>
-          </div>
-        </div>
-
-        <section id="edit_deed">
-          <% if @facade.fetch_deed.status == 'In Progress' %>
+       <section id="edit_deed">
+       <% @facade_fetched_deed = @facade.fetch_deed %>
+          <% if @facade_fetched_deed.status == 'In Progress' %>
             <%= form_with url: user_good_deed_path(@facade.deed_id), method: :patch, local: true do |f| %>
+            <%= f.hidden_field :name, value: @facade_fetched_deed.name, readonly: true %>
+
+              <!-- Logo & Deed Name -->
+              <div class="flex items-center space-x-5">
+                <%= image_tag("do_good.jpg", alt: "Do Good Logo", class: "mx-auto w-1/5 h-auto") %>
+                <div class="block pl-2 font-semibold text-xl self-start text-gray-700">
+                  <h2 class="leading-relaxed mt-5"><%= @facade_fetched_deed.name %></h2>
+                  <p class="text-sm text-gray-500 font-normal leading-relaxed">Complete form, invite others, & do good!</p>
+                </div>
+              </div>
+
               <div class="divide-y divide-gray-200">
                 <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
 
@@ -22,11 +26,11 @@
                   <div class="flex items-center justify-center space-x-10">
                     <div class="flex flex-col">
                       <label class="leading-loose font-semibold text-gray-800"><%= f.label :date %></label>
-                      <%= f.date_field :date, value: @facade.fetch_deed.date, min: Date.today %>
+                      <%= f.date_field :date, value: @facade_fetched_deed.date, min: Date.today %>
                     </div>
                     <div class="flex flex-col">
                       <label class="leading-loose font-semibold text-gray-800"><%= f.label :time %></label>
-                      <%= f.time_field :time, value: @facade.fetch_deed.time.to_datetime.strftime("%H:%M") %>
+                      <%= f.time_field :time, value: @facade_fetched_deed.time.to_datetime.strftime("%H:%M") %>
                     </div>
                   </div>
 
@@ -34,7 +38,7 @@
                   <div class="flex flex-col place-items-center">
                     <label class="leading-loose font-semibold text-gray-800"><%= f.label :attendees %></label>
                     <div class="flex flex-col justify-self-start">
-                      <% @facade.fetch_deed.attendees.each do |attendee| %>
+                      <% @facade_fetched_deed.attendees.each do |attendee| %>
                         <p><%= f.text_field :attendee, value: attendee.name, readonly: true %></p>
                       <% end %>   
                     </div>    
@@ -43,24 +47,24 @@
                   <!-- Notes -->
                     <div class="flex flex-col place-items-center">
                       <label class="leading-loose font-semibold text-indigo-500"><%= f.label :notes %></label>
-                          <%= f.text_area :notes, value: @facade.fetch_deed.notes %>
+                          <%= f.text_area :notes, value: @facade_fetched_deed.notes %>
                     </div>
 
                   <!-- Image Upload -->
                   <div class="flex flex-col place-items-center">
                       <label class="leading-loose font-semibold text-indigo-500"><%= f.label :media_link %></label>
                       <div class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600">
-                      <%= f.file_field :media_link, value: @facade.fetch_deed.media_link %>
+                      <%= f.file_field :media_link, value: @facade_fetched_deed.media_link %>
                       </div>
                   </div>
                 </div>
 
                 <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                   <div class="flex flex-col place-items-center">
-                  <!-- Completed Checkbox -->
+                  <!-- Attendees -->
                     <div class="flex items-start">
                       <div class="flex items-center h-5">
-                        <label class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                        <label class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 rounded">
                         <%= f.check_box :status %>
                         </label>
                       </div>
@@ -80,9 +84,19 @@
               </div>
             <% end %>
 
-          <% elsif @facade.fetch_deed.status == 'Completed' %>
-
+          <% elsif @facade_fetched_deed.status == 'Completed' %>
             <%= form_with url: user_good_deed_path(@facade.deed_id), method: :patch, local: true do |f| %>
+            <%= f.hidden_field :name, value: @facade_fetched_deed.name, readonly: true %>
+                  
+              <!-- Logo & Deed Name -->
+              <div class="flex items-center space-x-5">
+                <%= image_tag("do_good.jpg", alt: "Do Good Logo", class: "mx-auto w-1/5 h-auto") %>
+                <div class="block pl-2 font-semibold text-xl self-start text-gray-700">
+                  <h2 class="leading-relaxed mt-5"><%= @facade_fetched_deed.name %></h2>
+                  <p class="text-sm text-gray-500 font-normal leading-relaxed">Complete form, invite others, & do good!</p>
+                </div>
+              </div>
+    
               <div class="divide-y divide-gray-200">
                 <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
 
@@ -90,11 +104,11 @@
                   <div class="flex items-center justify-center space-x-10">
                     <div class="flex flex-col">
                       <label class="leading-loose font-semibold text-gray-800"><%= f.label :date %></label>
-                      <%= f.date_field :date, value: @facade.fetch_deed.date, readonly: true %>
+                      <%= f.date_field :date, value: @facade_fetched_deed.date, readonly: true %>
                     </div>
                     <div class="flex flex-col">
                       <label class="leading-loose font-semibold text-gray-800"><%= f.label :time %></label>
-                      <%= f.text_field :time, value: @facade.fetch_deed.time, readonly: true %>
+                      <%= f.text_field :time, value: @facade_fetched_deed.time, readonly: true %>
                     </div>
                   </div>
 
@@ -102,8 +116,8 @@
                   <div class="flex flex-col place-items-center">
                     <label class="leading-loose font-semibold text-gray-800"><%= f.label :attendees %></label>
                     <div class="flex flex-col justify-self-start">
-                      <% @facade.fetch_deed.attendees.each do |attendee| %>
-                        <p><%= f.label :attendee, value: attendee.name %></p>
+                      <% @facade_fetched_deed.attendees.each do |attendee| %>
+                        <p><%= f.text_field :attendee, value: attendee.name, readonly: true %></p>
                       <% end %>   
                     </div>    
                   </div>
@@ -111,14 +125,14 @@
                   <!-- Notes -->
                     <div class="flex flex-col place-items-center">
                       <label class="leading-loose font-semibold text-indigo-500"><%= f.label :notes %></label>
-                          <%= f.text_area :notes, value: @facade.fetch_deed.notes %>
+                          <%= f.text_area :notes, value: @facade_fetched_deed.notes %>
                     </div>
 
                   <!-- Image Upload -->
                   <div class="flex flex-col place-items-center">
                       <label class="leading-loose font-semibold text-indigo-500"><%= f.label :media_link %></label>
                       <div class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600">
-                      <%= f.file_field :media_link, value: @facade.fetch_deed.media_link %>
+                      <%= f.file_field :media_link, value: @facade_fetched_deed.media_link %>
                       </div>
                   </div>
                 </div>
@@ -131,8 +145,6 @@
             <% end %>
           <% end %>
         </section>
-
-
 
       </div>
     </div>
@@ -150,7 +162,7 @@
 
 
     <%= form_with url: user_good_deed_path(@facade.deed_id), method: :patch, local: true do |f| %>
-      <h3><%= f.text_field :name, value: "#{@facade.fetch_deed.name}", readonly: true %></h3>
+      <h3><%= f.text_field :name, value: @facade.fetch_deed.name, readonly: true %></h3>
       <%= f.label :date %>
       <%= f.date_field :date, value: @facade.fetch_deed.date, min: Date.today %><br>
       <%= f.label :time %>
@@ -168,7 +180,7 @@
       <%= f.submit "Update Event" %>
     <% end %>
 
-  <% elsif @facade.fetch_deed.status == 'Completed' %> -->
+  <% elsif @facade.fetch_deed.status == 'Completed' %>
 
     <%= form_with url: user_good_deed_path(@facade.deed_id), method: :patch, local: true do |f| %>
       <h3><%= f.text_field :name, value: @facade.fetch_deed.name, readonly: true %></h3>
@@ -199,3 +211,4 @@
     <%= link_to "Delete Event", user_good_deed_path(@facade.deed_id), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
   <% end %>
 </nav>
+-->

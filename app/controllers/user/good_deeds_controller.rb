@@ -39,7 +39,7 @@ class User::GoodDeedsController < ApplicationController
   end
 
   def aws(image, filename)
-    s3 = Aws::S3::Client.new
+    s3 = Aws::S3::Client.new(region: ENV['AWS_REGION'])
     s3.put_object(bucket: ENV['S3_BUCKET_NAME'], key: filename, body: image.read)
   end
 

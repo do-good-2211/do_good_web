@@ -5,7 +5,7 @@
 <section id="edit_deed">
   <% if @facade.fetch_deed.status == 'In Progress' %>
     <%= form_with url: user_good_deed_path(@facade.deed_id), method: :patch, local: true do |f| %>
-      <h3><%= f.text_field :name, value: "#{@facade.fetch_deed.name}", read_only: true %></h3>
+      <h3><%= f.text_field :name, value: "#{@facade.fetch_deed.name}", readonly: true %></h3>
       <%= f.label :date %>
       <%= f.date_field :date, value: @facade.fetch_deed.date, min: Date.today %><br>
       <%= f.label :time %>

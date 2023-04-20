@@ -2,32 +2,27 @@
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mb-1">
   <article class="p-12 text-center" id="welcome message">
     <%= image_tag("do_good.jpg", alt: "Do Good Logo", class: "mx-auto w-1/5 h-auto") %>
-    <h2 class="py-12 text-2xl font-bold text-gray-900">
+    <h2 class="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold py-6 sm:w-4/6 w-5/6 mx-auto">
       <%= @user_facade[:name] %>'s Do Good Page
     </h2>
     <button class="p-2 mb-4 bg-red-500 hover:bg-indigo-500 text-white font-base rounded" href='/random_acts'>
       <%= link_to "Choose a Random Act of Kindess", '/random_acts' %>
     </button>
-    <h4 class="p-8 font-bold text-lg">
+    <hr class="h-px my-8 bg-indigo-300 border-0">
+    <h4 class="text-gray-500 text-lg text-center font-normal p-8"> 
       Good job, you've added <%=@events%> Do Good Events to your calendar so far!
     </h4>
     <iframe class="mx-auto" src="https://calendar.google.com/calendar/embed?src=<%=@email%>%40gmail.com&ctz=America%2FDenver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
   </article>
 </section>
 
-<!-- ORGINAL CODE: 
-<h1><%= @user_facade[:name] %>'s Do Good Page</h1>
-<%= link_to "Choose a Random Act of Kindess", '/random_acts'%>
-<p>Good job, you've added <%=@events%> Do Good Events to your calendar so far!</p>
-<iframe src="https://calendar.google.com/calendar/embed?src=<%=@email%>%40gmail.com&ctz=America%2FDenver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
---> 
+<hr class="h-px my-8 bg-gray-200 border-0">
 
-
-<!-- Invited Good Deed Cards -->
+<!-- You're Invited! Good Deed Cards -->
 <section class='flex items-center justify-center min-h-screen bg-gradient-to-br px-2'>
   <article>
       
-      <h2 class="py-12 text-2xl font-bold text-gray-900">
+      <h2 class="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold py-6 sm:w-4/6 w-5/6 mx-auto">
         <p>You're Invited!</p>
       </h2>
 
@@ -72,11 +67,13 @@
   </article>
 </section>
 
-<!-- You're Hosting Good Deed Cards -->
+<hr class="h-px my-8 bg-gray-200 border-0">
+
+<!-- You're Hosting! Good Deed Cards -->
 <section class='flex items-center justify-center min-h-screen bg-gradient-to-br px-2'>
   <article>
       
-      <h2 class="py-12 text-2xl font-bold text-gray-900">
+      <h2 class="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold py-6 sm:w-4/6 w-5/6 mx-auto">
         <p>You're Hosting!</p>
       </h2>
 
@@ -107,7 +104,7 @@
                   <% end %>
                 </div>
 
-                <a target='_blank' href="/user/good_deeds/<%= deed.id %>/edit" class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#6366f1] rounded-[14px] hover:bg-[#ef4444] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
+                <a target='_blank' href="/user/good_deeds/<%= deed.id %>/edit" class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#ef4444] rounded-[14px] hover:bg-[#6366f1] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
                     Update
                 </a>
 
@@ -120,12 +117,13 @@
   </article>
 </section>
 
+<hr class="h-px my-8 bg-gray-200 border-0">
 
 <!-- Completed Good Deed Cards -->
 <section class='flex items-center justify-center min-h-screen bg-gradient-to-br px-2'>
   <article>
       
-      <h2 class="py-12 text-2xl font-bold text-gray-900">
+      <h2 class="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold py-6 sm:w-4/6 w-5/6 mx-auto">
         <p>Past Good Deeds</p>
       </h2>
 
@@ -133,6 +131,9 @@
       <% @user_facade[:completed_deeds].each do |deed| %>
         <div class='max-w-md mx-auto  bg-white rounded-lg shadow-xl overflow-hidden' id= "completed-<%= deed.id %>">
           <div class='max-w-md mx-auto'>
+
+          <!-- Need to add AWS images: 
+          <img src=<%= "https://#{ENV['S3_BUCKET_NAME']}.s3.#{ENV['AWS_REGION']}.amazonaws.com/#{deed.media_link}" %> ></img> -->
             <div class='h-[400px]' style="background-image: url('<%= asset_path 'upcoming_good.jpg' %>');background-size:cover;background-position:center">
             </div>
               <div class='p-4 sm:p-6'>
@@ -179,41 +180,13 @@
   </article>
 </section>
 
-<!-- This is an example component -->
-<div class='flex items-center justify-center min-h-screen from-[#F9F5F3] via-[#F9F5F3] to-[#F9F5F3] bg-gradient-to-br px-2'>
-    <div class='w-full max-w-md  mx-auto bg-white rounded-3xl shadow-xl overflow-hidden'>
-        <div class='max-w-md mx-auto'>
-          <div class='h-[236px]' style='background-image:url(https://img.freepik.com/free-photo/pasta-spaghetti-with-shrimps-sauce_1220-5072.jpg?w=2000&t=st=1678041911~exp=1678042511~hmac=e4aa55e70f8c231d4d23832a611004f86eeb3b6ca067b3fa0c374ac78fe7aba6);background-size:cover;background-position:center'>
-           </div>
-          <div class='p-4 sm:p-6'>
-            <p class='font-bold text-gray-700 text-[22px] leading-7 mb-1'>Spagetti with shrimp sauce</p>
-            
-            <div class='flex flex-row'>
-              <p class='text-[#3C3C4399] text-[17px] mr-2 '>MVR 700</p>
-              <p class='text-[17px] font-bold text-[#0FB478]'>MVR 700</p>
-            </div>
-
-            
-            <%# <p class='text-[#7C7C80] font-[15px] mt-6'><%= deed.notes %>
-            
-
-              <a target='_blank' href='foodiesapp://food/1001' class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#FFC933] rounded-[14px] hover:bg-[#FFC933DD] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
-                  View on foodies
-              </a>
-            <a target='_blank' href="https://apps.apple.com/us/app/id1493631471" class='block mt-1.5 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform rounded-[14px] hover:bg-[#F2ECE7] hover:text-[#000000dd] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
-                  Download app
-              </a>
-          </div>
-        </div>
-    </div>
-</div>
-
-
-
-
 
 <!-- Original Code -->
-<!-- 
+<!-- <h1><%= @user_facade[:name] %>'s Do Good Page</h1>
+  <%= link_to "Choose a Random Act of Kindess", '/random_acts'%>
+  <p>Good job, you've added <%=@events%> Do Good Events to your calendar so far!</p>
+  <iframe src="https://calendar.google.com/calendar/embed?src=<%=@email%>%40gmail.com&ctz=America%2FDenver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
 <p>You're Invited!</p>
 <% @user_facade[:invited_deeds].each do |deed| %>
   <div id= "invited-<%= deed.id %>">
@@ -230,8 +203,6 @@
   </div>
 <% end %> 
 
-
-
 <p>You're Hosting!</p>
 <% @user_facade[:hosting_deeds].each do |deed| %>
   <div id= "hosting-<%= deed.id %>">
@@ -247,14 +218,12 @@
     <br>
   </div>
 <% end %> 
--->
 
-<!-- <p>Past Good Deeds</p>
+<p>Past Good Deeds</p>
 <% @user_facade[:completed_deeds].each do |deed| %>
   <div id= "completed-<%= deed.id %>">
 
-
-    
+    # Had to delete image upload code cuz Tailwind be picky
 
     <%= deed.name %>
     <%= deed.date %>

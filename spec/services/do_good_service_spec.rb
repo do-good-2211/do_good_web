@@ -36,7 +36,7 @@ RSpec.describe DoGoodService, :vcr do
   end
 
   describe '#updated_deed' do
-    xit "returns a json object of an updated good deed" do
+    it "returns a json object of an updated good deed" do
       good_deed = DoGoodService.update_deed(2, 35, {
                                               name: "High-five a stranger.",
                                               date: "02-02-2024",
@@ -45,7 +45,7 @@ RSpec.describe DoGoodService, :vcr do
                                               notes: "This was awesome",
                                               media_link: "http://picture.jpg"
                                             })
-
+        binding.pry
       expect(good_deed).to be_a(Hash)
 
       expect(good_deed[:data]).to have_key(:id)

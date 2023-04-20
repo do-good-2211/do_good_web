@@ -138,9 +138,7 @@
         <div class='w-100 bg-white rounded-lg shadow-xl overflow-hidden' id="completed-<%= deed.id %>">
           <div class='w-100'>
 
-          <!-- Need to add AWS images: -->
             <div class='h-[500px]' style="background-image: url('<%= "https://#{ENV['S3_BUCKET_NAME']}.s3.#{ENV['AWS_REGION']}.amazonaws.com/#{deed.media_link}" %>');background-size:cover;background-position:center">
-              <img src=<%= "https://#{ENV['S3_BUCKET_NAME']}.s3.#{ENV['AWS_REGION']}.amazonaws.com/#{deed.media_link}" %> ></img> 
             </div>
               <div class='p-4 sm:p-6'>
                 

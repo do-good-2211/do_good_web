@@ -30,9 +30,9 @@
 
     <section class="mt-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8 pb-10">
       <% @user_facade[:invited_deeds].each do |deed| %>
-        <div class='max-w-md mx-auto  bg-white rounded-lg shadow-xl overflow-hidden' id= "invited-<%= deed.id %>">
-          <div class='max-w-md mx-auto'>
-            <div class='h-[400px]' style="background-image: url('<%= asset_path 'upcoming_good.jpg' %>');background-size:cover;background-position:center">
+        <div class='w-100 bg-white rounded-lg shadow-xl overflow-hidden' id= "invited-<%= deed.id %>">
+          <div class='w-100'>
+            <div class='h-[300px]' style="background-image: url('<%= asset_path 'upcoming_good.jpg' %>');background-size:cover;background-position:center">
             </div>
               <div class='p-4 sm:p-6'>
                 
@@ -83,12 +83,12 @@
 
     <section class="mt-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8 pb-10">
       <% @user_facade[:hosting_deeds].each do |deed| %>
-        <div class='max-w-md mx-auto  bg-white rounded-lg shadow-xl overflow-hidden' id= "hosting-<%= deed.id %>">
-          <div class='max-w-md mx-auto'>
-            <div class='h-[400px]' style="background-image: url('<%= asset_path 'upcoming_good.jpg' %>');background-size:cover;background-position:center">
+        <div class='w-100 bg-white rounded-lg shadow-xl overflow-hidden' id= "hosting-<%= deed.id %>">
+          <div class='w-100'>
+            <div class='h-[300px]' style="background-image: url('<%= asset_path 'upcoming_good.jpg' %>');background-size:cover;background-position:center">
             </div>
               <div class='p-4 sm:p-6'>
-                
+
                 <p class='font-bold text-gray-700 text-[17px] text-center leading-7 mb-1'><%= deed.name %></p>
 
                  <div class='flex flex-row mt-10 ml-10'>
@@ -135,12 +135,12 @@
 
     <section class="mt-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8 pb-10">
       <% @user_facade[:completed_deeds].each do |deed| %>
-        <div class='max-w-md mx-auto  bg-white rounded-lg shadow-xl overflow-hidden' id= "completed-<%= deed.id %>">
-          <div class='max-w-md mx-auto'>
+        <div class='w-100 bg-white rounded-lg shadow-xl overflow-hidden' id="completed-<%= deed.id %>">
+          <div class='w-100'>
 
-          <!-- Need to add AWS images: 
-          <img src=<%= "https://#{ENV['S3_BUCKET_NAME']}.s3.#{ENV['AWS_REGION']}.amazonaws.com/#{deed.media_link}" %> ></img> -->
-            <div class='h-[400px]' style="background-image: url('<%= asset_path 'upcoming_good.jpg' %>');background-size:cover;background-position:center">
+          <!-- Need to add AWS images: -->
+            <div class='h-[500px]' style="background-image: url('<%= "https://#{ENV['S3_BUCKET_NAME']}.s3.#{ENV['AWS_REGION']}.amazonaws.com/#{deed.media_link}" %>');background-size:cover;background-position:center">
+              <img src=<%= "https://#{ENV['S3_BUCKET_NAME']}.s3.#{ENV['AWS_REGION']}.amazonaws.com/#{deed.media_link}" %> ></img> 
             </div>
               <div class='p-4 sm:p-6'>
                 

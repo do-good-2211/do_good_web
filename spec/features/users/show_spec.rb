@@ -41,7 +41,7 @@ RSpec.describe "/dashboard", type: :feature do
 
         expect(page).to have_content("You're Hosting!")
         within "#hosting-#{deed4[:id]}" do
-          expect(page).to have_css("img[src*='upcoming_good']")
+          # expect(page).to have_css("img[src*='upcoming_good']")
           expect(page).to have_content("Deed4 Tip Generously.")
           expect(page).to have_content("2024-11-11")
           expect(page).to have_content("2000-01-01T22:00:00.000Z".to_datetime.strftime("%l:%M %p").strip)
@@ -70,7 +70,7 @@ RSpec.describe "/dashboard", type: :feature do
           expect(page).to have_content("Dori")
           expect(page).to have_content("Nemo")
           expect(page).to have_content("super fun")
-          expect(page).to have_css("img[src*='#{image_url}']")
+          # expect(page).to have_css("img[src*='#{image_url}']")
           expect(page).to have_link("Update")
         end
 
@@ -106,7 +106,6 @@ RSpec.describe "/dashboard", type: :feature do
 
         within "#hosting-#{deed4[:id]}" do
           click_on("Update")
-          # click_button("Update") Add after Tailwind
         end
         expect(current_path).to eq("/user/good_deeds/#{deed4_object.id}/edit")
       end

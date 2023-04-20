@@ -70,7 +70,7 @@
 <hr class="h-px my-8 bg-gray-200 border-0">
 
 <!-- You're Hosting! Good Deed Cards -->
-<section class='flex items-center justify-center min-h-screen bg-gradient-to-br px-2'>
+<section class='flex items-center justify-center min-h-screen bg-gradient-to-br px-2'> ..
   <article>
       
       <h2 class="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold py-6 sm:w-4/6 w-5/6 mx-auto">
@@ -79,7 +79,7 @@
 
     <section class="mt-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8 pb-10">
       <% @user_facade[:hosting_deeds].each do |deed| %>
-        <div class='max-w-md mx-auto  bg-white rounded-lg shadow-xl overflow-hidden' id= "hosted-<%= deed.id %>">
+        <div class='max-w-md mx-auto  bg-white rounded-lg shadow-xl overflow-hidden' id= "hosting-<%= deed.id %>">
           <div class='max-w-md mx-auto'>
             <div class='h-[400px]' style="background-image: url('<%= asset_path 'upcoming_good.jpg' %>');background-size:cover;background-position:center">
             </div>

@@ -1738,7 +1738,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 20 Apr 2023 23:30:11 GMT
+      - Thu, 20 Apr 2023 20:51:06 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -1762,9 +1762,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1ab7ca0d-d4ab-4d3b-9f15-597419d751f7
+      - 85516a63-8181-4fb8-b46e-a6acd5e017fa
       X-Runtime:
-      - '0.009237'
+      - '0.004683'
       Transfer-Encoding:
       - chunked
       Via:
@@ -1774,10 +1774,10 @@ http_interactions:
       string: '{"data":{"id":"1","type":"good_deed","attributes":{"name":"High-five
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"Completed","notes":"","media_link":null,"host_id":2,"host_name":"Jean-Luc
         Picard","attendees":[]}}}'
-  recorded_at: Thu, 20 Apr 2023 23:30:11 GMT
+  recorded_at: Thu, 20 Apr 2023 20:51:06 GMT
 - request:
     method: get
-    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/1
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/2
     body:
       encoding: US-ASCII
       string: ''
@@ -1796,7 +1796,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 20 Apr 2023 23:30:12 GMT
+      - Thu, 20 Apr 2023 23:54:14 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -1816,26 +1816,26 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"cff96c926e44c9957de0cc285088a418"
+      - W/"8239023e8b2ad9f68b5dd9d36420db7e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 268d5bad-fcfd-4b25-a8e7-adf7189bcb86
+      - 4ec9f86b-bd50-4834-9ee5-4cf0bc0f91bf
       X-Runtime:
-      - '0.005406'
+      - '0.008732'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"good_deed","attributes":{"name":"High-five
-        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"Completed","notes":"","media_link":null,"host_id":2,"host_name":"Jean-Luc
-        Picard","attendees":[]}}}'
-  recorded_at: Thu, 20 Apr 2023 23:30:12 GMT
+      string: '{"data":{"id":"2","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2023-04-20","time":"2000-01-01T22:46:04.000Z","status":"In
+        Progress","notes":"","media_link":null,"host_id":2,"host_name":"Jean-Luc Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 23:54:14 GMT
 - request:
     method: patch
-    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/1?param=1
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/2?param=1
     body:
       encoding: UTF-8
       string: '{"name":"High-five a stranger.","date":"2024-02-02","time":"16:00","status":"In
@@ -1857,7 +1857,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 20 Apr 2023 23:32:38 GMT
+      - Thu, 20 Apr 2023 23:54:14 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -1877,21 +1877,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"d32db95cb449b02b79cff94c1d01aec0"
+      - W/"066a8990769fd52a2c0c55f9c8484de7"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4421e176-ed5b-4427-b922-b8a7f929c607
+      - db1ca5ce-34d0-4934-b4d3-3004d440f856
       X-Runtime:
-      - '0.011182'
+      - '0.015847'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"good_deed","attributes":{"name":"High-five
+      string: '{"data":{"id":"2","type":"good_deed","attributes":{"name":"High-five
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","notes":"","media_link":null,"host_id":2,"host_name":"Jean-Luc Picard","attendees":[]}}}'
-  recorded_at: Thu, 20 Apr 2023 23:32:38 GMT
+  recorded_at: Thu, 20 Apr 2023 23:54:15 GMT
 recorded_with: VCR 6.1.0

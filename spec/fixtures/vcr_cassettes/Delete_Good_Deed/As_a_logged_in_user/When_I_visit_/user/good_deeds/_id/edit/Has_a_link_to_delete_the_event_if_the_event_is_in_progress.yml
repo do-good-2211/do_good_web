@@ -1021,7 +1021,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 20 Apr 2023 23:30:10 GMT
+      - Thu, 20 Apr 2023 20:51:04 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -1045,9 +1045,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ca42046b-9092-4a40-b000-2f91b79db542
+      - f3377b6f-b32a-4411-a519-80547188c0cc
       X-Runtime:
-      - '0.005473'
+      - '0.004989'
       Transfer-Encoding:
       - chunked
       Via:
@@ -1057,10 +1057,10 @@ http_interactions:
       string: '{"data":{"id":"1","type":"good_deed","attributes":{"name":"High-five
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"Completed","notes":"","media_link":null,"host_id":2,"host_name":"Jean-Luc
         Picard","attendees":[]}}}'
-  recorded_at: Thu, 20 Apr 2023 23:30:10 GMT
+  recorded_at: Thu, 20 Apr 2023 20:51:04 GMT
 - request:
     method: get
-    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/1
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/2
     body:
       encoding: US-ASCII
       string: ''
@@ -1079,7 +1079,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 20 Apr 2023 23:30:10 GMT
+      - Thu, 20 Apr 2023 23:54:11 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -1099,21 +1099,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"cff96c926e44c9957de0cc285088a418"
+      - W/"8239023e8b2ad9f68b5dd9d36420db7e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6a911f79-8987-4ba2-9bba-76137fd1f663
+      - 627b6313-8731-438b-9042-587d15be2d7d
       X-Runtime:
-      - '0.005536'
+      - '0.107118'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"good_deed","attributes":{"name":"High-five
-        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"Completed","notes":"","media_link":null,"host_id":2,"host_name":"Jean-Luc
-        Picard","attendees":[]}}}'
-  recorded_at: Thu, 20 Apr 2023 23:30:11 GMT
+      string: '{"data":{"id":"2","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2023-04-20","time":"2000-01-01T22:46:04.000Z","status":"In
+        Progress","notes":"","media_link":null,"host_id":2,"host_name":"Jean-Luc Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 23:54:12 GMT
 recorded_with: VCR 6.1.0

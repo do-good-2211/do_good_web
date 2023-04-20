@@ -26,16 +26,14 @@ class User::GoodDeedsController < ApplicationController
   end
 
   def update
-
     if params[:media_link].present?
       image = params[:media_link] #grabs the image to use in the aws method
       filename = "#{SecureRandom.uuid}.#{image.original_filename.split(".").last}" #formats the image filepath
       params[:media_link] = filename #do not remove, this saves the media link to the back end
+      aws(image, filename) #method is defined below, this is connecting to amazon web service and putting the
+                          #image in the bucket
     end
  
-    aws(image, filename) #method is defined below, this is connecting to amazon web service and putting the
-                        #image in the bucket
-    
     GoodDeedFacade.new(params, nil, current_user.id).update_deed
     redirect_to dashboard_path
   end
@@ -45,5 +43,8 @@ class User::GoodDeedsController < ApplicationController
     s3.put_object(bucket: ENV['S3_BUCKET_NAME'], key: filename, body: image.read)
   end
 
-  def destroy; end
+  def destroy
+    GoodDeedFacade.new(params, nil, current_user.id).delete_deed
+    redirect_to dashboard_path
+  end
 end

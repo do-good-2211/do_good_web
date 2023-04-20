@@ -1,12 +1,14 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://warm-temple-59633.herokuapp.com/api/v1/good_deeds
+    method: post
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/2/good_deeds?param=1
     body:
-      encoding: US-ASCII
-      string: ''
+      encoding: UTF-8
+      string: '{"name":"High-five a stranger.","date":"02-02-2024","time":"2000-01-01T16:00:00.000Z","attendees":[1]}'
     headers:
+      Content-Type:
+      - application/json
       User-Agent:
       - Faraday v2.7.4
       Accept-Encoding:
@@ -15,13 +17,13 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 201
+      message: Created
     headers:
       Server:
       - Cowboy
       Date:
-      - Wed, 19 Apr 2023 17:38:00 GMT
+      - Tue, 18 Apr 2023 18:04:47 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -41,24 +43,26 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"90d0241e3615667c572a37a612495c25"
+      - W/"fecc804554a0fc12844d9f4675169670"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 52a5d6e0-ab73-4497-9b94-473179b4b390
+      - b4ffc8e2-4699-4a20-a918-b6cb12b1cb55
       X-Runtime:
-      - '0.003596'
+      - '0.016747'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"7","type":"good_deeds","attributes":{"name":"Help Others4.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}}]}'
-  recorded_at: Wed, 19 Apr 2023 17:38:00 GMT
+      string: '{"data":{"id":"51","type":"good_deeds_create","attributes":{"name":"High-five
+        a stranger.","media_link":null,"notes":null,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
+        Progress","host_id":2}}}'
+  recorded_at: Tue, 18 Apr 2023 18:04:48 GMT
 - request:
-    method: get
-    uri: https://warm-temple-59633.herokuapp.com/api/v1/good_deeds
+    method: delete
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/2/good_deeds/51
     body:
       encoding: US-ASCII
       string: ''
@@ -71,13 +75,15 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 204
+      message: No Content
     headers:
       Server:
       - Cowboy
       Date:
-      - Wed, 19 Apr 2023 17:38:00 GMT
+      - Tue, 18 Apr 2023 18:05:57 GMT
+      Content-Length:
+      - '0'
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -92,24 +98,16 @@ http_interactions:
       - none
       Referrer-Policy:
       - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"90d0241e3615667c572a37a612495c25"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - 1bb1e9d2-6d02-478f-9db4-ec66bf830578
+      - 892f1ff8-f838-41b7-bed3-8a4db9468870
       X-Runtime:
-      - '0.003710'
-      Transfer-Encoding:
-      - chunked
+      - '0.018524'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"7","type":"good_deeds","attributes":{"name":"Help Others4.","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","time":"2000-01-01T16:00:00.000Z","date":"2023-01-01"}}]}'
-  recorded_at: Wed, 19 Apr 2023 17:38:01 GMT
+      string: ''
+  recorded_at: Tue, 18 Apr 2023 18:05:58 GMT
 recorded_with: VCR 6.1.0

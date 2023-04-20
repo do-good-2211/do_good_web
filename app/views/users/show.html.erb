@@ -85,7 +85,7 @@
       <% @user_facade[:hosting_deeds].each do |deed| %>
         <div class='w-100 bg-white rounded-lg shadow-xl overflow-hidden' id= "hosting-<%= deed.id %>">
           <div class='w-100'>
-            <div class='h-[300px]' style="background-image: url('<%= asset_path 'upcoming_good.jpg' %>');background-size:cover;background-position:center">
+            <div class='h-[300px]' style="background-image: url('<%= asset_path 'upcoming_good2.jpg' %>');background-size:cover;background-position:center">
             </div>
               <div class='p-4 sm:p-6'>
 
@@ -138,7 +138,12 @@
         <div class='w-100 bg-white rounded-lg shadow-xl overflow-hidden' id="completed-<%= deed.id %>">
           <div class='w-100'>
 
-            <div class='h-[500px]' style="background-image: url('<%= "https://#{ENV['S3_BUCKET_NAME']}.s3.#{ENV['AWS_REGION']}.amazonaws.com/#{deed.media_link}" %>');background-size:cover;background-position:center">
+            <% if  deed.media_link == nil || deed.media_link == "" %>
+              <div class='h-[300px]' style="background-image: url('<%= asset_path 'completed_badge.jpg' %>');background-size:cover;background-position:center">
+            <% else %>
+              <div class='h-[300px]' style="background-image: url('<%= "https://#{ENV['S3_BUCKET_NAME']}.s3.#{ENV['AWS_REGION']}.amazonaws.com/#{deed.media_link}" %>');background-size:cover;background-position:center">
+            <% end %>
+            
             </div>
               <div class='p-4 sm:p-6'>
                 

@@ -35,7 +35,7 @@ RSpec.describe "User good deed edit page" do
           expect(page).to have_button('Update Event')
         end
 
-          expect(page).to have_button('Delete Event')
+        expect(page).to have_button('Delete Event')
       end
 
       it 'When I check the completed box, update the time, and click "Update Event", I am redirected to the dashboard' do

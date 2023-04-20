@@ -42,7 +42,7 @@ class GoodDeedFacade
       name: @name,
       date: @date,
       time: @time,
-      status: status,
+      status:,
       notes: @notes,
       media_link: @media_link
     }

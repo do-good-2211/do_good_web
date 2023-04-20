@@ -304,4 +304,87 @@ http_interactions:
         at a local animal shelter","media_link":null,"notes":null,"date":"2023-04-17","time":"2000-01-01T21:47:34.000Z","status":"In
         Progress","host_id":1}}}'
   recorded_at: Mon, 17 Apr 2023 21:47:40 GMT
+- request:
+    method: post
+    uri: https://www.googleapis.com/calendar/v3/calendars/user@gmail.com/events
+    body:
+      encoding: UTF-8
+      string: '{"description":"Volunteer at a local animal shelter at 2023-04-18 22:56:17
+        -0700!","end":{"date":"2023-04-18"},"start":{"date":"2023-04-18"},"summary":"Do
+        Good Event! Date: 2023-04-18"}'
+    headers:
+      User-Agent:
+      - unknown/0.0.0 google-api-ruby-client/0.11.0 Mac OS X/13.3.1 (gzip)
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Wed, 19 Apr 2023 05:56:17 GMT
+      X-Goog-Api-Client:
+      - gl-ruby/3.1.1 gdcl/1.11.0
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Www-Authenticate:
+      - Bearer realm="https://accounts.google.com/"
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Encoding:
+      - gzip
+      Date:
+      - Wed, 19 Apr 2023 05:56:17 GMT
+      Server:
+      - ESF
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "error": {
+            "code": 401,
+            "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+            "errors": [
+              {
+                "message": "Login Required.",
+                "domain": "global",
+                "reason": "required",
+                "location": "Authorization",
+                "locationType": "header"
+              }
+            ],
+            "status": "UNAUTHENTICATED",
+            "details": [
+              {
+                "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+                "reason": "CREDENTIALS_MISSING",
+                "domain": "googleapis.com",
+                "metadata": {
+                  "service": "calendar-json.googleapis.com",
+                  "method": "calendar.v3.Events.Insert"
+                }
+              }
+            ]
+          }
+        }
+  recorded_at: Wed, 19 Apr 2023 05:56:17 GMT
 recorded_with: VCR 6.1.0

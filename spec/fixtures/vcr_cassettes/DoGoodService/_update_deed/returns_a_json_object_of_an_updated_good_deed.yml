@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 18 Apr 2023 18:01:40 GMT
+      - Tue, 18 Apr 2023 19:31:25 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -43,29 +43,30 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"8fb952307b00087455b3d8e3c31cc49e"
+      - W/"5121effd206b50b1420fec3fb17e21e4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 99a53f3a-2fe3-4b7e-9bbf-f4f380d45d8c
+      - a2fad9f8-0441-4859-bb35-ba5714619cf2
       X-Runtime:
-      - '0.102839'
+      - '0.021939'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"49","type":"good_deeds_create","attributes":{"name":"High-five
+      string: '{"data":{"id":"52","type":"good_deeds_create","attributes":{"name":"High-five
         a stranger.","media_link":null,"notes":null,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","host_id":2}}}'
-  recorded_at: Tue, 18 Apr 2023 18:01:41 GMT
+  recorded_at: Tue, 18 Apr 2023 19:31:26 GMT
 - request:
     method: patch
-    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/2/good_deeds/29?param=1
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/2/good_deeds/52?param=1
     body:
       encoding: UTF-8
-      string: '{"name":"High-five a stranger.","date":"02-02-2024","time":"2000-01-01T16:00:00.000Z","status":1,"notes":null,"media_link":null}'
+      string: '{"name":"High-five a stranger.","date":"02-02-2024","time":"2000-01-01T16:00:00.000Z","attendees":[1],"notes":"This
+        was awesome","media_link":"http://picture.jpg"}'
     headers:
       Content-Type:
       - application/json
@@ -83,7 +84,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 18 Apr 2023 18:01:40 GMT
+      - Tue, 18 Apr 2023 19:31:26 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -103,21 +104,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"d55a56cc22514139e0d4875bbfaa6ec2"
+      - W/"402a8c5de70ca99f9111e21d43ccb26e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fad81359-5ce5-4f3a-91a4-9fe8df92a7ec
+      - 10013158-6af8-4d00-b32c-7ac4f10b6a45
       X-Runtime:
-      - '0.036844'
+      - '0.014988'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"29","type":"good_deed","attributes":{"name":"High-five
-        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"Completed","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
+      string: '{"data":{"id":"52","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
+        Progress","notes":"This was awesome","media_link":"http://picture.jpg","host_id":2,"host_name":"Jean-Luc
         Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}}}'
-  recorded_at: Tue, 18 Apr 2023 18:01:41 GMT
+  recorded_at: Tue, 18 Apr 2023 19:31:26 GMT
 recorded_with: VCR 6.1.0

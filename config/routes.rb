@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'good_deeds#index'
 
+  get "/about", to: "pages#about"
+
   get "/login", to: "users#login"
   get "/logout", to: "sessions#logout"
 

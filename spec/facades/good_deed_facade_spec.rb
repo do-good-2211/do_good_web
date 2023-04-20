@@ -59,12 +59,10 @@ RSpec.describe GoodDeedFacade, :vcr do
   end
 
   describe '#update_deed' do
-    xit 'returns an updated deed object with its respective attributes' do
-      binding.pry
-      @name = 'Pick up trash'
-      params = {"notes" => "Had fun"}
-      GoodDeedFacade.new(params, nil, 2).update_deed
-      binding.pry
+    it 'returns an updated deed object with its respective attributes' do
+      @facade.create_deed
+      good_deed_data = @facade.update_deed
+      good_deed = Deed.new(good_deed_data[:data])
 
       expect(good_deed).to be_a Deed
       expect(good_deed.id).to be_an Integer
@@ -74,6 +72,17 @@ RSpec.describe GoodDeedFacade, :vcr do
       expect(good_deed.status).to be_a String
       expect(good_deed.notes).to be_a(String).or eq(nil)
       expect(good_deed.media_link).to be_a(String).or eq(nil)
+    end
+  end
+
+  describe '#delete_deed' do
+    it 'deletes a deed object and returns a status 204' do
+      created_deed = @facade.create_deed
+      deed_id = created_deed[:data][:id]
+
+      response = GoodDeedFacade.new({ id: deed_id }, nil, 2).delete_deed
+
+      expect(response.status).to eq(204)
     end
   end
 end

@@ -8,7 +8,7 @@
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mb-1">
   <article class="p-12 text-center" id="logo">
     <%= image_tag("do_good.jpg", alt: "Do Good Logo", class: "mx-auto w-1/5 h-auto") %>
-    <h2 class="py-8 text-lg font-normal text-gray-900">
+    <h2 class="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold py-6 sm:w-4/6 w-5/6 mx-auto">
       <% if current_user %>
         Ready to do more good?
       <% else %>
@@ -26,12 +26,14 @@
       <% end %>
   </article>
 </section>
+<hr class="h-px my-8 bg-gray-200 border-0">
 
 <!-- Good Deed Cards -->
 <section class='flex items-center justify-center min-h-screen bg-gradient-to-br px-2'>
   <article>
     <section class="mt-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8 pb-10">
       <% @deeds.get_deeds.each do |deed| %> 
+      <!-- <% if deed.media_link != nil %> -->
         <div class='max-w-md  mx-auto bg-white rounded-lg shadow-xl overflow-hidden w-80'>
           <div class='max-w-md mx-auto'>
             <div class='h-[400px]' style='background-image:url(<%= deed.media_link %>);background-size:cover;background-position:center'>
@@ -42,6 +44,7 @@
             </div>
           </div>
         </div>
+        <!-- <% end %> -->
       <% end %> 
     </section>
   </article>

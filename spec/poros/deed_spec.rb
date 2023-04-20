@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Deed do
-  let(:info) {
+  let(:info) do
     { id: "55",
       type: "good_deed",
       attributes: {
@@ -15,7 +15,7 @@ RSpec.describe Deed do
         host_name: "Captain Sparrow",
         host_id: "22"
       } }
-  }
+  end
   let(:deed1) { Deed.new(info) }
 
   it "exists & has attributes" do

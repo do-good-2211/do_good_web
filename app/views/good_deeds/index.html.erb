@@ -26,7 +26,6 @@
       <% end %>
   </article>
 </section>
-
 <hr class="h-px my-8 bg-gray-200 border-0">
 
 <!-- Good Deed Cards -->
@@ -34,6 +33,7 @@
   <article>
     <section class="mt-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8 pb-10">
       <% @deeds.get_deeds.each do |deed| %> 
+      <!-- <% if deed.media_link != nil %> -->
         <div class='max-w-md  mx-auto bg-white rounded-lg shadow-xl overflow-hidden w-80'>
           <div class='max-w-md mx-auto'>
             <div class='h-[400px]' style='background-image:url(<%= deed.media_link %>);background-size:cover;background-position:center'>
@@ -44,6 +44,7 @@
             </div>
           </div>
         </div>
+        <!-- <% end %> -->
       <% end %> 
     </section>
   </article>

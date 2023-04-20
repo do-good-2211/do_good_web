@@ -19,6 +19,8 @@
 <hr class="h-px my-8 bg-gray-200 border-0">
 
 <!-- You're Invited! Good Deed Cards -->
+<% if  @user_facade[:invited_deeds].empty? %>
+<% else %>
 <section class='flex items-center justify-center min-h-screen bg-gradient-to-br px-2'>
   <article>
       
@@ -66,10 +68,12 @@
     </section>
   </article>
 </section>
-
 <hr class="h-px my-8 bg-gray-200 border-0">
+<% end %>
 
 <!-- You're Hosting! Good Deed Cards -->
+<% if  @user_facade[:hosting_deeds].empty? %>
+<% else %>
 <section class='flex items-center justify-center min-h-screen bg-gradient-to-br px-2'> ..
   <article>
       
@@ -116,9 +120,11 @@
     </section>
   </article>
 </section>
-
 <hr class="h-px my-8 bg-gray-200 border-0">
+<% end %>
 
+<% if  @user_facade[:completed_deeds].empty? %>
+<% else %>
 <!-- Completed Good Deed Cards -->
 <section class='flex items-center justify-center min-h-screen bg-gradient-to-br px-2'>
   <article>
@@ -179,7 +185,7 @@
     </section>
   </article>
 </section>
-
+<% end %>
 
 <!-- Original Code -->
 <!-- <h1><%= @user_facade[:name] %>'s Do Good Page</h1>

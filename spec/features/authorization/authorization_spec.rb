@@ -32,12 +32,14 @@ RSpec.describe "Authorization" do
       user = { "id" => "1", "attributes" => { "name" => "Bob", "email" => "user@gmail.com", "password_digest" => "test1", "role" => "User" } }
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit random_acts_path
+
       expect(current_path).to eq(random_acts_path)
       expect(page).to_not have_content("You are not authorized to access this page")
     end
 
     it "When navigating to /good_deeds/new, I see a message that I do not have access, and I'm redirected to the home page'" do
       visit new_user_good_deed_path
+
       expect(current_path).to eq(root_path)
       expect(page).to have_content("You are not authorized to access this page")
     end
@@ -45,8 +47,8 @@ RSpec.describe "Authorization" do
     it "When I am logged in as a user, I can visit the new good deed page" do
       user = User.new(id: 1, attributes: { name: "John Smith", email: "user@gmail.com", role: "User", good_deeds: { data: [] } })
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-
       visit new_user_good_deed_path
+      
       expect(current_path).to eq(new_user_good_deed_path)
       expect(page).to_not have_content("You are not authorized to access this page")
     end

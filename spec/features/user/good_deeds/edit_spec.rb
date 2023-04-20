@@ -14,7 +14,6 @@ RSpec.describe "User good deed edit page" do
 
       before do
         user = User.new(id: 1, attributes: { name: "John Smith", email: "user@gmail.com", role: "User", good_deeds: { data: [deed1, deed2] } })
-
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
         allow_any_instance_of(CalendarFacade).to receive(:list_events).and_return(12)
 

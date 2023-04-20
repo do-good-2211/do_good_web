@@ -35,6 +35,7 @@ class User::GoodDeedsController < ApplicationController
     end
  
     updated_deed = GoodDeedFacade.new(params, nil, current_user.id).update_deed
+    # require 'pry'; binding.pry
     updated_deed_check(updated_deed, params)
   end
 
@@ -60,13 +61,13 @@ class User::GoodDeedsController < ApplicationController
       end
     end
 
-    def updated_deed_check(updated_deed)
+    def updated_deed_check(updated_deed, params)
       if updated_deed.has_key?(:errors)
-        redirect_to "/user/good_deeds/edit/#{params[:id]}"
+        redirect_to "/user/good_deeds/#{current_user.id}/edit"
         flash[:error] = "Event could not be updated."
       else
         redirect_to dashboard_path
-        flash[:success] = "Even updated!"
+        flash[:success] = "Event updated!"
       end
     end
 end

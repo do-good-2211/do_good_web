@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 19 Apr 2023 21:48:48 GMT
+      - Wed, 19 Apr 2023 21:48:40 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -45,9 +45,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c72e057a-5ae9-4b39-a5a9-4b9e939d71a8
+      - 9861ceee-2b44-44d0-8cbf-f203924da7d8
       X-Runtime:
-      - '0.020474'
+      - '0.006110'
       Transfer-Encoding:
       - chunked
       Via:
@@ -58,7 +58,7 @@ http_interactions:
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
         Picard","attendees":[]}}}'
-  recorded_at: Wed, 19 Apr 2023 21:48:49 GMT
+  recorded_at: Wed, 19 Apr 2023 21:48:40 GMT
 - request:
     method: get
     uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/1
@@ -80,7 +80,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 19 Apr 2023 21:48:49 GMT
+      - Wed, 19 Apr 2023 21:48:39 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -104,9 +104,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a7bc1479-3986-48f1-8c5f-c5cbfea1d908
+      - 9526470c-1dac-4648-af66-8c4300f06582
       X-Runtime:
-      - '0.006051'
+      - '0.006179'
       Transfer-Encoding:
       - chunked
       Via:
@@ -117,7 +117,7 @@ http_interactions:
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
         Picard","attendees":[]}}}'
-  recorded_at: Wed, 19 Apr 2023 21:48:50 GMT
+  recorded_at: Wed, 19 Apr 2023 21:48:40 GMT
 - request:
     method: get
     uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/1
@@ -139,7 +139,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 19 Apr 2023 21:48:50 GMT
+      - Wed, 19 Apr 2023 21:48:41 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -163,9 +163,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f1c38687-849b-4313-af2e-2c2d92db5c73
+      - 71464ef7-fa2a-45ce-b62d-ff8e7ded8218
       X-Runtime:
-      - '0.006140'
+      - '0.005915'
       Transfer-Encoding:
       - chunked
       Via:
@@ -176,7 +176,7 @@ http_interactions:
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
         Picard","attendees":[]}}}'
-  recorded_at: Wed, 19 Apr 2023 21:48:50 GMT
+  recorded_at: Wed, 19 Apr 2023 21:48:41 GMT
 - request:
     method: get
     uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/1
@@ -198,7 +198,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 19 Apr 2023 21:48:50 GMT
+      - Wed, 19 Apr 2023 21:48:40 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -222,9 +222,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 15ef0ff2-4ce0-42c0-aa4d-36b507323e90
+      - '0863e6bc-b750-4e31-bfba-be1f373d0920'
       X-Runtime:
-      - '0.006018'
+      - '0.006573'
       Transfer-Encoding:
       - chunked
       Via:
@@ -235,7 +235,7 @@ http_interactions:
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
         Picard","attendees":[]}}}'
-  recorded_at: Wed, 19 Apr 2023 21:48:50 GMT
+  recorded_at: Wed, 19 Apr 2023 21:48:41 GMT
 - request:
     method: get
     uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/1
@@ -257,7 +257,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 19 Apr 2023 21:48:50 GMT
+      - Wed, 19 Apr 2023 21:48:41 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -281,9 +281,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2fad2572-139f-4aea-bca2-d8d02b8e868e
+      - 33f21572-baa0-4ab8-8bc8-a6256a45cd3b
       X-Runtime:
-      - '0.006292'
+      - '0.006155'
       Transfer-Encoding:
       - chunked
       Via:
@@ -294,7 +294,7 @@ http_interactions:
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
         Picard","attendees":[]}}}'
-  recorded_at: Wed, 19 Apr 2023 21:48:51 GMT
+  recorded_at: Wed, 19 Apr 2023 21:48:41 GMT
 - request:
     method: get
     uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/1
@@ -316,7 +316,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 19 Apr 2023 21:48:50 GMT
+      - Wed, 19 Apr 2023 21:48:42 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -340,9 +340,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6faeaba5-3540-4d62-8555-c75b29c1f7db
+      - a655b56a-b252-4759-b8f7-7f6ad4853a26
       X-Runtime:
-      - '0.006263'
+      - '0.005933'
       Transfer-Encoding:
       - chunked
       Via:
@@ -353,7 +353,7 @@ http_interactions:
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
         Picard","attendees":[]}}}'
-  recorded_at: Wed, 19 Apr 2023 21:48:51 GMT
+  recorded_at: Wed, 19 Apr 2023 21:48:42 GMT
 - request:
     method: get
     uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/1
@@ -375,7 +375,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 19 Apr 2023 21:48:51 GMT
+      - Wed, 19 Apr 2023 21:48:42 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -399,9 +399,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a4023f50-ebe8-4ae9-96cc-e6f2edff3407
+      - 1d4c9ce4-76d6-4959-9c7c-fd83d8d56940
       X-Runtime:
-      - '0.006208'
+      - '0.005879'
       Transfer-Encoding:
       - chunked
       Via:
@@ -412,14 +412,14 @@ http_interactions:
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
         Picard","attendees":[]}}}'
-  recorded_at: Wed, 19 Apr 2023 21:48:51 GMT
+  recorded_at: Wed, 19 Apr 2023 21:48:42 GMT
 - request:
     method: patch
     uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/1?param=1
     body:
       encoding: UTF-8
-      string: '{"name":"High-five a stranger.","date":"2023-04-19","time":"2023-04-19
-        14:48:51 -0700","status":"In Progress","notes":"","media_link":null}'
+      string: '{"name":"High-five a stranger.","date":"2024-02-02","time":"2023-04-19
+        14:48:42 -0700","status":"Completed","notes":"","media_link":null}'
     headers:
       Content-Type:
       - application/json
@@ -437,7 +437,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 19 Apr 2023 21:48:51 GMT
+      - Wed, 19 Apr 2023 21:48:42 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -459,9 +459,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 1fa81815-58dd-4633-8029-32cb2f6ee231
+      - 61b5c992-cc43-4238-8f30-6dd23e18bcc0
       X-Runtime:
-      - '0.006103'
+      - '0.007480'
       Transfer-Encoding:
       - chunked
       Via:
@@ -470,7 +470,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"errors":[{"status":"404","title":"Invalid Request","detail":["Couldn''t
         find GoodDeed with ''id''=1 [WHERE \"user_good_deeds\".\"user_id\" = $1]"]}]}'
-  recorded_at: Wed, 19 Apr 2023 21:48:52 GMT
+  recorded_at: Wed, 19 Apr 2023 21:48:43 GMT
 - request:
     method: get
     uri: https://warm-temple-59633.herokuapp.com/api/v1/users
@@ -492,7 +492,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 19 Apr 2023 21:48:52 GMT
+      - Wed, 19 Apr 2023 21:48:43 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -516,9 +516,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fcf44f72-92c4-4ba0-a5ad-0b4508af7b66
+      - 171092f7-51d3-4c8a-b208-0d8dfbe610fa
       X-Runtime:
-      - '0.178088'
+      - '0.189509'
       Transfer-Encoding:
       - chunked
       Via:
@@ -1025,7 +1025,7 @@ http_interactions:
         Jones-Hofmann","email":"karajhturing@gmail.com","password_digest":"$2a$12$4tQU4YcEWkKmOuqBv6uM1.JxnK8Ee01cPVNUrlhMym5LiKlRy/2hu","role":"user","created_at":"2023-04-16T22:18:50.796Z","updated_at":"2023-04-16T22:18:50.796Z","uid":"111021676679827005112","provider":"google_oauth2"},{"id":7,"name":"Jasmine
         Hamou","email":"jasmine.mahabadi@gmail.com","password_digest":"$2a$12$oniNdigH44MTr2R2.gozneW3I4U7dPjJ2FU24MI.BqPAHEUcT7sQ6","role":"user","created_at":"2023-04-17T18:50:04.571Z","updated_at":"2023-04-17T18:50:04.571Z","uid":"105857666600427905871","provider":"google_oauth2"},{"id":9,"name":"Huy
         Phan","email":"huyphan520@gmail.com","password_digest":"$2a$12$ODkoxUOqUkqixnWl12kL9OprFac6Z0uR1qXhVdw1GSJ8Y5e28NG2y","role":"user","created_at":"2023-04-17T23:32:24.386Z","updated_at":"2023-04-17T23:32:24.386Z","uid":"115160514392428970745","provider":"google_oauth2"},{"id":10,"name":"menyeart1@gmail.com","email":"menyeart1@gmail.com","password_digest":"$2a$12$6NN109QuvNJg40SFJX0egO13Rj3YTkn9Ao2bM4uB5UKYmY5mRIkOq","role":"user","created_at":"2023-04-18T01:53:51.178Z","updated_at":"2023-04-18T01:53:51.178Z","uid":"101776878166784970527","provider":"google_oauth2"}]}}]}}}]}'
-  recorded_at: Wed, 19 Apr 2023 21:48:53 GMT
+  recorded_at: Wed, 19 Apr 2023 21:48:44 GMT
 - request:
     method: get
     uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1
@@ -1047,7 +1047,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 19 Apr 2023 21:48:53 GMT
+      - Wed, 19 Apr 2023 21:48:43 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -1071,9 +1071,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e364a249-87d2-4c16-b262-5011ad72e838
+      - 83c424d0-f560-404f-97b7-45747d2a4b30
       X-Runtime:
-      - '0.061213'
+      - '0.060727'
       Transfer-Encoding:
       - chunked
       Via:
@@ -1181,6 +1181,9 @@ http_interactions:
         Progress","notes":null,"media_link":null,"host_id":1,"host_name":"John Smith","attendees":[]}},{"id":"60","type":"good_deed","attributes":{"name":"High-five
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
-        Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}}]}}}}'
-  recorded_at: Wed, 19 Apr 2023 04:05:03 GMT
+        Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}},{"id":"71","type":"good_deed","attributes":{"name":"Donate
+        to your local food bank","date":"2023-04-21","time":"2000-01-01T16:17:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":10,"host_name":"menyeart1@gmail.com","attendees":[{"id":1,"name":"John
+        Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}}]}}}}'
+  recorded_at: Wed, 19 Apr 2023 21:48:44 GMT
 recorded_with: VCR 6.1.0

@@ -1,0 +1,113 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/2/good_deeds?param=1
+    body:
+      encoding: UTF-8
+      string: '{"name":"High-five a stranger.","date":"02-02-2024","time":"2000-01-01T16:00:00.000Z","attendees":[1]}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 18 Apr 2023 18:04:47 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"fecc804554a0fc12844d9f4675169670"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b4ffc8e2-4699-4a20-a918-b6cb12b1cb55
+      X-Runtime:
+      - '0.016747'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"51","type":"good_deeds_create","attributes":{"name":"High-five
+        a stranger.","media_link":null,"notes":null,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
+        Progress","host_id":2}}}'
+  recorded_at: Tue, 18 Apr 2023 18:04:48 GMT
+- request:
+    method: delete
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/2/good_deeds/51
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 18 Apr 2023 18:05:57 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 892f1ff8-f838-41b7-bed3-8a4db9468870
+      X-Runtime:
+      - '0.018524'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 18 Apr 2023 18:05:58 GMT
+recorded_with: VCR 6.1.0

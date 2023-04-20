@@ -1,0 +1,123 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/2/good_deeds?param=1
+    body:
+      encoding: UTF-8
+      string: '{"name":"High-five a stranger.","date":"02-02-2024","time":"2000-01-01T16:00:00.000Z","attendees":[1]}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 18 Apr 2023 18:01:40 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fb952307b00087455b3d8e3c31cc49e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 99a53f3a-2fe3-4b7e-9bbf-f4f380d45d8c
+      X-Runtime:
+      - '0.102839'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"49","type":"good_deeds_create","attributes":{"name":"High-five
+        a stranger.","media_link":null,"notes":null,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
+        Progress","host_id":2}}}'
+  recorded_at: Tue, 18 Apr 2023 18:01:41 GMT
+- request:
+    method: patch
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/2/good_deeds/29?param=1
+    body:
+      encoding: UTF-8
+      string: '{"name":"High-five a stranger.","date":"02-02-2024","time":"2000-01-01T16:00:00.000Z","status":1,"notes":null,"media_link":null}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 18 Apr 2023 18:01:40 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"d55a56cc22514139e0d4875bbfaa6ec2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fad81359-5ce5-4f3a-91a4-9fe8df92a7ec
+      X-Runtime:
+      - '0.036844'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"29","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"Completed","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
+        Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}}}'
+  recorded_at: Tue, 18 Apr 2023 18:01:41 GMT
+recorded_with: VCR 6.1.0

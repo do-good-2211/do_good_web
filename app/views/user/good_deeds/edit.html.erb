@@ -3,29 +3,49 @@
 </header>
 
 <section id="edit_deed">
-  <%= form_with url: user_good_deed_path(@facade.deed_id), method: :patch, local: true do |f| %>
-    <h3><%= f.text_field :name, value: "#{@facade.fetch_deed.name}", read_only: true %></h3>
-    <%= f.label :date %>
-    <%= f.date_field :date, value: @facade.fetch_deed.date, min: Date.today %><br>
-    <%= f.label :time %>
-    <%= f.time_field :time, required: true %><br>
-    <%= f.label :attendees %>
-    <% @facade.fetch_deed.attendees.each do |attendee| %>
-      <%= f.label :attendee, value: attendee.name %>
-    <% end %><br>
-    <%= f.check_box :status %>
-    <%= f.label :status, "Completed" %><br>
-    <%= f.label :notes %>
-    <%= f.text_area :notes, value: @facade.fetch_deed.notes %><br>
-    <%= f.label :media_link %>
-    <%= f.file_field :media_link, value: @facade.fetch_deed.media_link %><br>
-    <%= f.submit "Update Event" %>
+  <% if @facade.fetch_deed.status == 'In Progress' %>
+    <%= form_with url: user_good_deed_path(@facade.deed_id), method: :patch, local: true do |f| %>
+      <h3><%= f.text_field :name, value: "#{@facade.fetch_deed.name}", read_only: true %></h3>
+      <%= f.label :date %>
+      <%= f.date_field :date, value: @facade.fetch_deed.date, min: Date.today %><br>
+      <%= f.label :time %>
+      <%= f.time_field :time, value: @facade.fetch_deed.time.to_datetime.strftime("%H:%M") %><br>
+      <%= f.label :attendees %>
+      <% @facade.fetch_deed.attendees.each do |attendee| %>
+        <%= f.text_field :attendee, value: attendee.name, readonly: true %>
+      <% end %><br>
+      <%= f.check_box :status %>
+      <%= f.label :status, "Completed" %><br>
+      <%= f.label :notes %>
+      <%= f.text_area :notes, value: @facade.fetch_deed.notes %><br>
+      <%= f.label :media_link %>
+      <%= f.file_field :media_link, value: @facade.fetch_deed.media_link %><br>
+      <%= f.submit "Update Event" %>
+    <% end %>
+  <% elsif @facade.fetch_deed.status == 'Completed' %>
+    <%= form_with url: user_good_deed_path(@facade.deed_id), method: :patch, local: true do |f| %>
+      <h3><%= f.text_field :name, value: @facade.fetch_deed.name, readonly: true %></h3>
+      <%= f.label :date %>
+      <%= f.date_field :date, value: @facade.fetch_deed.date, readonly: true %><br>
+      <%= f.label :time %>
+      <%= f.text_field :time, value: @facade.fetch_deed.time, readonly: true %><br>
+      <%= f.label :attendees %>
+      <% @facade.fetch_deed.attendees.each do |attendee| %>
+        <%= f.label :attendee, value: attendee.name %>
+      <% end %><br>
+      <%= f.text_field :status, value: 'Completed', readonly: true %>
+      <%= f.label :notes %>
+      <%= f.text_area :notes, value: @facade.fetch_deed.notes %><br>
+      <%= f.label :media_link %>
+      <%= f.file_field :media_link, value: @facade.fetch_deed.media_link %><br>
+      <%= f.submit "Update Event" %>
+    <% end %>
   <% end %>
 </section>
 <br>
 <br>
 <nav id="delete_deed">
   <% if @facade.fetch_deed.status == "In Progress" %>
-    <%= link_to "Delete Event", user_good_deed_path(@facade.deed_id), method: :delete %>
+    <%= link_to "Delete Event", user_good_deed_path(@facade.deed_id), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
   <% end %>
 </nav>

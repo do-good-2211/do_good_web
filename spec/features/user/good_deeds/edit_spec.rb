@@ -35,13 +35,12 @@ RSpec.describe "User good deed edit page" do
         end
       end
 
-      it 'When I check the completed box, update the time, and click "Update Event", I am redirected to the dashboard' do
+      it 'When I update the time, and click "Update Event", I am redirected to the dashboard' do
         visit edit_user_good_deed_path(3)
 
         @good_deed = GoodDeedFacade.new({ id: 3 }, nil, 1).fetch_deed
         
         fill_in :time, with: Time.now
-        check :status
         allow_any_instance_of(User::GoodDeedsController).to receive(:aws).and_return("123.jpg")
         click_button 'Update Event'
 

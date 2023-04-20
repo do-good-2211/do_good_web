@@ -9,7 +9,7 @@
     <%= f.label :date %>
     <%= f.date_field :date, value: deed.date, min: Date.today %><br>
     <%= f.label :time %>
-    <%= f.time_field :time, value: deed.time %><br>
+    <%= f.time_field :time, required: true %><br>
     <%= f.label :attendees %>
     <% deed.attendees.each do |attendee| %>
       <%= f.label :attendee, value: attendee.name %>

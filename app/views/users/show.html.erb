@@ -137,6 +137,12 @@
 
 <p>You're Invited!</p>
 <% @user_facade[:invited_deeds].each do |deed| %>
+
+<!-- **THIS IS THE WORKING IMAGE LINK TO DISPLAY AWS BUCKET IMAGES TO THE VIEW. MOVE IT WHEREVER BUT DONT CHANGE THE SYNTAX PLEASE** -->
+<img src=<%= "https://#{ENV['S3_BUCKET_NAME']}.s3.#{ENV['AWS_REGION']}.amazonaws.com/#{deed.media_link}" %> ></img>
+<!-- **THIS IS THE WORKING IMAGE LINK TO DISPLAY AWS BUCKET IMAGES TO THE VIEW. MOVE IT WHEREVER BUT DONT CHANGE THE SYNTAX PLEASE** -->
+
+
   <div id= "invited-<%= deed.id %>">
     <!-- <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good", class: "mx-auto w-1/5 h-auto") %> -->
    <%= image_tag("upcoming_good.jpg", alt: "Upcoming Good") %>
@@ -156,6 +162,7 @@
 <p>Past Good Deeds</p>
 <% @user_facade[:completed_deeds].each do |deed| %>
   <div id= "completed-<%= deed.id %>">
+
 
     <% if deed.media_link %>
       <%= image_tag deed.media_link %>

@@ -14,6 +14,8 @@ require "action_view/railtie"
 require "action_cable/engine"
 # require "rails/test_unit/railtie"
 
+require 'aws-sdk-core'
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -32,5 +34,15 @@ module DoGoodWeb
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Aws.config.update({
+    #   region: 'us-east-2',
+    #   credentials: Aws::Credentials.new(ENV['AWS_ACCESS_KEY'], ENV['AWS_SECRET_ACCESS_KEY'])
+    # })
+
+  #   Aws.config(
+  # access_key_id:      ENV['AWS_ACCESS_KEY_ID'],
+  # secret_access_key:  ENV['AWS_SECRET_ACCESS_KEY'],
+  # region: ENV['AWS_REGION'])
   end
 end

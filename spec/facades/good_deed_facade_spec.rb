@@ -60,8 +60,11 @@ RSpec.describe GoodDeedFacade, :vcr do
 
   describe '#update_deed' do
     xit 'returns an updated deed object with its respective attributes' do
-      @facade.create_deed
-      good_deed = @facade.update_deed
+      binding.pry
+      @name = 'Pick up trash'
+      params = {"notes" => "Had fun"}
+      GoodDeedFacade.new(params, nil, 2).update_deed
+      binding.pry
 
       expect(good_deed).to be_a Deed
       expect(good_deed.id).to be_an Integer

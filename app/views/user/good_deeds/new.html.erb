@@ -15,6 +15,7 @@
         <section id="new_good_deed">
           <%= form_with url: user_good_deeds_path, method: :post, local: true do |f| %>
           <%= f.hidden_field :name, value: @facade.good_deed %>
+
             <div class="divide-y divide-gray-200">
               <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                 <div class="flex items-center justify-center space-x-10">
@@ -66,5 +67,4 @@
       <% end %>
     <%= f.submit 'Create Good!' %>
   <% end %>
-</section>
--->
+</section> -->

@@ -29,12 +29,17 @@
       <% @deeds.get_deeds.each do |deed| %> 
         <div class='max-w-md  mx-auto bg-white rounded-lg shadow-xl overflow-hidden w-80'>
           <div class='max-w-md mx-auto'>
-            <div class='h-[400px]' style='background-image:url(<%= deed.media_link %>);background-size:cover;background-position:center'>
-              </div>
+
+                <% if  deed.media_link == nil || deed.media_link == "" %>
+                  <div class='h-[400px]' style='background-image:url(<%= asset_path 'completed_badge.jpg' %>);background-size:cover;background-position:center'></div>
+                <% else %>
+                  <div class='h-[400px]' style="background-image: url('<%= "https://#{ENV['S3_BUCKET_NAME']}.s3.#{ENV['AWS_REGION']}.amazonaws.com/#{deed.media_link}" %>');background-size:cover;background-position:center"></div>
+                <% end %>
+
                 <div class='p-4 sm:p-6'>
                   <p class='font-bold text-gray-700 text-[15px] leading-7 mb-1'><%= deed.name %></p>
                 </div>
-            </div>
+
           </div>
         </div>
       <% end %> 

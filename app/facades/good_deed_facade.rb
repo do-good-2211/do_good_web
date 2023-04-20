@@ -18,7 +18,7 @@ class GoodDeedFacade
   end
 
   def get_deeds
-    GoodDeedService.good_deeds[:data].map { |deed| Deed.new(deed) }
+    @_deeds ||= GoodDeedService.good_deeds[:data].map { |deed| Deed.new(deed) }
   end
 
   def create_deed
@@ -33,8 +33,8 @@ class GoodDeedFacade
   end
 
   def fetch_deed
-    data = GoodDeedService.fetch_deed(@user_id, @deed_id)
-    Deed.new(data[:data])
+    data ||= GoodDeedService.fetch_deed(@user_id, @deed_id)
+    @_deed ||= Deed.new(data[:data])
   end
 
   def update_deed
@@ -42,17 +42,21 @@ class GoodDeedFacade
       name: @name,
       date: @date,
       time: @time,
-      status:,
+      status: status,
       notes: @notes,
       media_link: @media_link
     }
     DoGoodService.update_deed(@user_id, @deed_id, deed_hash)
   end
 
+  def delete_deed
+    GoodDeedService.delete_deed(@user_id, @deed_id)
+  end
+
   private
 
   def status
-    @status = if @status == 1
+    @status = if @status == "1"
                 "Completed"
               else
                 "In Progress"

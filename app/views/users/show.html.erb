@@ -30,8 +30,9 @@
 
     <section class="mt-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8 pb-10">
       <% @user_facade[:invited_deeds].each do |deed| %>
-        <div class='w-100 bg-white rounded-lg shadow-xl overflow-hidden' id= "invited-<%= deed.id %>">
-          <div class='w-100'>
+        <div class='max-w-md bg-white rounded-lg shadow-xl overflow-hidden' id="invited-<%= deed.id %>">
+          <div class='max-w-md'>
+
             <div class='h-[300px]' style="background-image: url('<%= asset_path 'upcoming_good.jpg' %>');background-size:cover;background-position:center">
             </div>
               <div class='p-4 sm:p-6'>
@@ -74,7 +75,7 @@
 <!-- You're Hosting! Good Deed Cards -->
 <% if  @user_facade[:hosting_deeds].empty? %>
 <% else %>
-<section class='flex items-center justify-center min-h-screen bg-gradient-to-br px-2'> ..
+<section class='flex items-center justify-center min-h-screen bg-gradient-to-br px-2'>
   <article>
       
       <h2 class="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold py-6 sm:w-4/6 w-5/6 mx-auto">
@@ -83,8 +84,9 @@
 
     <section class="mt-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8 pb-10">
       <% @user_facade[:hosting_deeds].each do |deed| %>
-        <div class='w-100 bg-white rounded-lg shadow-xl overflow-hidden' id= "hosting-<%= deed.id %>">
-          <div class='w-100'>
+        <div class='max-w-md bg-white rounded-lg shadow-xl overflow-hidden' id="hosting-<%= deed.id %>">
+          <div class='max-w-md'>
+
             <div class='h-[300px]' style="background-image: url('<%= asset_path 'upcoming_good2.jpg' %>');background-size:cover;background-position:center">
             </div>
               <div class='p-4 sm:p-6'>
@@ -135,8 +137,8 @@
 
     <section class="mt-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8 pb-10">
       <% @user_facade[:completed_deeds].each do |deed| %>
-        <div class='w-100 bg-white rounded-lg shadow-xl overflow-hidden' id="completed-<%= deed.id %>">
-          <div class='w-100'>
+        <div class='max-w-md bg-white rounded-lg shadow-xl overflow-hidden' id="completed-<%= deed.id %>">
+          <div class='max-w-md'>
 
             <% if  deed.media_link == nil || deed.media_link == "" %>
               <div class='h-[300px]' style="background-image: url('<%= asset_path 'completed_badge.jpg' %>');background-size:cover;background-position:center">

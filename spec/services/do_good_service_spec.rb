@@ -53,7 +53,7 @@ RSpec.describe DoGoodService, :vcr do
                                               notes: "This was awesome",
                                               media_link: "http://picture.jpg"
                                             })
-        binding.pry
+
       expect(good_deed).to be_a(Hash)
 
       expect(good_deed[:data]).to have_key(:id)

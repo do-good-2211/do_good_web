@@ -43,7 +43,6 @@ RSpec.describe "The good deeds service", :vcr do
 
     describe '#delete deed' do
       it 'deletes a good deed and returns a status 204' do
-        # make the deed
         new_deed = DoGoodService.create_deed(2, {
                                                name: "High-five a stranger.",
                                                date: "02-02-2024",

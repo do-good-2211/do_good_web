@@ -30,5 +30,5 @@ class DoGoodService
   #   Faraday.new(url: "http://localhost:3000",
   #               params: { param: "1" },
   #               headers: { "Content-Type" => "application/json" })
-  #  end
+   end
 end

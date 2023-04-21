@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/2
     body:
       encoding: US-ASCII
       string: ''
@@ -18,6 +18,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 20 Apr 2023 22:48:58 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -35,54 +41,1074 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"6167c9a85aec1087c257912e6325845c"
+      - W/"8239023e8b2ad9f68b5dd9d36420db7e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c6d31108-ff93-415d-b6db-7d741a0ebb6c
+      - adf23420-40cf-462d-927e-47f345f4e2cd
       X-Runtime:
-      - '0.087990'
+      - '0.004910'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"users","attributes":{"name":"Jasmine Hamou","role":"user","good_deeds":[{"id":2,"name":"High-five
-        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-17T18:51:52.320Z","updated_at":"2023-04-17T18:51:52.320Z"},{"id":19,"name":"High-five
-        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-17T18:51:53.943Z","updated_at":"2023-04-17T18:51:53.943Z"},{"id":19,"name":"High-five
-        a stranger.","host_id":1,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-17T18:51:53.943Z","updated_at":"2023-04-17T18:51:53.943Z"}],"email":"john@example.com"}},{"id":"2","type":"users","attributes":{"name":"Jean-Luc
-        Picard","role":"user","good_deeds":[{"id":10,"name":"High-five a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-16T22:17:10.606Z","updated_at":"2023-04-16T22:17:10.606Z"},{"id":12,"name":"High-five
-        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-17T14:33:17.406Z","updated_at":"2023-04-17T14:33:17.406Z"},{"id":13,"name":"High-five
-        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-17T14:35:54.383Z","updated_at":"2023-04-17T14:35:54.383Z"},{"id":15,"name":"High-five
-        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-17T14:36:12.580Z","updated_at":"2023-04-17T14:36:12.580Z"},{"id":17,"name":"High-five
-        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-17T17:24:24.335Z","updated_at":"2023-04-17T17:24:24.335Z"},{"id":18,"name":"High-five
-        a stranger.","host_id":2,"date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-17T18:51:52.320Z","updated_at":"2023-04-17T18:51:52.320Z"}],"email":"captain@uss-enterprise.com"}},{"id":"3","type":"users","attributes":{"name":"William
-        Riker","role":"user","good_deeds":[{"id":7,"name":"Help Others4.","host_id":3,"date":"2023-01-01","time":"2000-01-01T16:00:00.000Z","notes":"Worth
-        it!","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","status":"Completed","created_at":"2023-04-16T22:13:45.317Z","updated_at":"2023-04-16T22:13:45.317Z"}],"email":"number2@uss-enterprise.com"}},{"id":"4","type":"users","attributes":{"name":"Data","role":"user","good_deeds":[{"id":7,"name":"Help
-        Others4.","host_id":3,"date":"2023-01-01","time":"2000-01-01T16:00:00.000Z","notes":"Worth
-        it!","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","status":"Completed","created_at":"2023-04-16T22:13:45.317Z","updated_at":"2023-04-16T22:13:45.317Z"},{"id":8,"name":"Help
-        Others5.","host_id":4,"date":"2023-01-01","time":"2000-01-01T16:00:00.000Z","notes":null,"media_link":null,"status":"In
-        Progress","created_at":"2023-04-16T22:13:45.332Z","updated_at":"2023-04-16T22:13:45.332Z"}],"email":"data@uss-enterprise.com"}},{"id":"5","type":"users","attributes":{"name":"Geordi
-        La Forge","role":"user","good_deeds":[{"id":7,"name":"Help Others4.","host_id":3,"date":"2023-01-01","time":"2000-01-01T16:00:00.000Z","notes":"Worth
-        it!","media_link":"https://images.unsplash.com/photo-1679227679356-7a3d5bd5d8be?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=Mnw0MzM0NTl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODA5NzUzMDE\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400","status":"Completed","created_at":"2023-04-16T22:13:45.317Z","updated_at":"2023-04-16T22:13:45.317Z"}],"email":"chief-engineer@uss-enterprise.com"}},{"id":"6","type":"users","attributes":{"name":"Kara
-        Jones-Hofmann","role":"user","good_deeds":[],"email":"karajhturing@gmail.com"}},{"id":"7","type":"users","attributes":{"name":"Jasmine
-        Hamou","role":"user","good_deeds":[],"email":"jasmine.mahabadi@gmail.com"}}]}'
-  recorded_at: Mon, 17 Apr 2023 19:50:23 GMT
+      string: '{"data":{"id":"2","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2023-04-20","time":"2000-01-01T22:46:04.000Z","status":"In
+        Progress","notes":"","media_link":null,"host_id":2,"host_name":"Jean-Luc Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 22:48:59 GMT
 - request:
-    method: post
-    uri: http://localhost:3000/api/v1/users/1/good_deeds?param=1
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 20 Apr 2023 22:48:58 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8239023e8b2ad9f68b5dd9d36420db7e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0d500386-ed05-4c2f-8bdc-97399c15924a
+      X-Runtime:
+      - '0.005031'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"name":"Volunteer at a local animal shelter","date":"2023-04-17","time":"2023-04-17
-        13:52:30 -0600","attendees":["1"]}'
+      string: '{"data":{"id":"2","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2023-04-20","time":"2000-01-01T22:46:04.000Z","status":"In
+        Progress","notes":"","media_link":null,"host_id":2,"host_name":"Jean-Luc Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 22:48:59 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 20 Apr 2023 22:48:59 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8239023e8b2ad9f68b5dd9d36420db7e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3c6eb2f6-fd19-4b1e-a578-fc9e8d6a99e3
+      X-Runtime:
+      - '0.004544'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2023-04-20","time":"2000-01-01T22:46:04.000Z","status":"In
+        Progress","notes":"","media_link":null,"host_id":2,"host_name":"Jean-Luc Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 22:48:59 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 20 Apr 2023 22:48:59 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8239023e8b2ad9f68b5dd9d36420db7e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7df35aa7-847a-4f0b-bd79-c26ec793e78d
+      X-Runtime:
+      - '0.005891'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2023-04-20","time":"2000-01-01T22:46:04.000Z","status":"In
+        Progress","notes":"","media_link":null,"host_id":2,"host_name":"Jean-Luc Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 22:49:00 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 20 Apr 2023 22:49:00 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8239023e8b2ad9f68b5dd9d36420db7e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6e1f8dfd-67e8-443b-a33f-02df02115068
+      X-Runtime:
+      - '0.005553'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2023-04-20","time":"2000-01-01T22:46:04.000Z","status":"In
+        Progress","notes":"","media_link":null,"host_id":2,"host_name":"Jean-Luc Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 22:49:00 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 20 Apr 2023 22:49:00 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8239023e8b2ad9f68b5dd9d36420db7e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8ac0ef7a-c7d3-40f1-b7d9-16f4ecc687c7
+      X-Runtime:
+      - '0.005193'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2023-04-20","time":"2000-01-01T22:46:04.000Z","status":"In
+        Progress","notes":"","media_link":null,"host_id":2,"host_name":"Jean-Luc Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 22:49:01 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 20 Apr 2023 22:49:01 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8239023e8b2ad9f68b5dd9d36420db7e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c1b69df0-20ea-4d22-8fd2-c527904c8ac3
+      X-Runtime:
+      - '0.006209'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2023-04-20","time":"2000-01-01T22:46:04.000Z","status":"In
+        Progress","notes":"","media_link":null,"host_id":2,"host_name":"Jean-Luc Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 22:49:01 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 20 Apr 2023 22:49:01 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8239023e8b2ad9f68b5dd9d36420db7e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8ff47f7c-2c53-4516-b33f-9fa78f06095f
+      X-Runtime:
+      - '0.005112'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2023-04-20","time":"2000-01-01T22:46:04.000Z","status":"In
+        Progress","notes":"","media_link":null,"host_id":2,"host_name":"Jean-Luc Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 22:49:01 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 20 Apr 2023 22:49:01 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8239023e8b2ad9f68b5dd9d36420db7e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c8186180-bb1c-4a80-bd17-35e078281666
+      X-Runtime:
+      - '0.005042'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2023-04-20","time":"2000-01-01T22:46:04.000Z","status":"In
+        Progress","notes":"","media_link":null,"host_id":2,"host_name":"Jean-Luc Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 22:49:02 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 20 Apr 2023 22:49:02 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"5112ec42886e7f3826bd11053f647cdc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 69d88cb8-18fe-463b-af64-0ca7f62611f3
+      X-Runtime:
+      - '0.005510'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T22:39:00.000Z","status":"Completed","notes":"This
+        was great!","media_link":null,"host_id":2,"host_name":"Jean-Luc Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 22:49:02 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 20 Apr 2023 22:49:02 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"5112ec42886e7f3826bd11053f647cdc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 427a84b9-86d9-4efa-bc0a-dab6abb8c837
+      X-Runtime:
+      - '0.006489'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T22:39:00.000Z","status":"Completed","notes":"This
+        was great!","media_link":null,"host_id":2,"host_name":"Jean-Luc Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 22:49:03 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 20 Apr 2023 22:49:03 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"5112ec42886e7f3826bd11053f647cdc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ce79f1cd-f050-464f-82c0-06f23f2d2942
+      X-Runtime:
+      - '0.004997'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T22:39:00.000Z","status":"Completed","notes":"This
+        was great!","media_link":null,"host_id":2,"host_name":"Jean-Luc Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 22:49:03 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 20 Apr 2023 22:49:03 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"5112ec42886e7f3826bd11053f647cdc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 82c27c68-97fd-44ab-aa8d-66252bed26df
+      X-Runtime:
+      - '0.006158'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T22:39:00.000Z","status":"Completed","notes":"This
+        was great!","media_link":null,"host_id":2,"host_name":"Jean-Luc Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 22:49:03 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 20 Apr 2023 22:49:03 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"5112ec42886e7f3826bd11053f647cdc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4e103111-9605-4d2d-a344-65c6dc6e93ca
+      X-Runtime:
+      - '0.005479'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T22:39:00.000Z","status":"Completed","notes":"This
+        was great!","media_link":null,"host_id":2,"host_name":"Jean-Luc Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 22:49:04 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 20 Apr 2023 22:49:03 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"5112ec42886e7f3826bd11053f647cdc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 75c80e71-2778-458e-89fa-ef57dd466335
+      X-Runtime:
+      - '0.004695'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T22:39:00.000Z","status":"Completed","notes":"This
+        was great!","media_link":null,"host_id":2,"host_name":"Jean-Luc Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 22:49:04 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 20 Apr 2023 22:49:04 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"5112ec42886e7f3826bd11053f647cdc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 289aeefc-f19a-4c97-8403-6cc86edf1f9e
+      X-Runtime:
+      - '0.005026'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T22:39:00.000Z","status":"Completed","notes":"This
+        was great!","media_link":null,"host_id":2,"host_name":"Jean-Luc Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 22:49:05 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 20 Apr 2023 22:49:05 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"5112ec42886e7f3826bd11053f647cdc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d134239f-95b4-47d2-b9e1-f925979ff226
+      X-Runtime:
+      - '0.005544'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T22:39:00.000Z","status":"Completed","notes":"This
+        was great!","media_link":null,"host_id":2,"host_name":"Jean-Luc Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 22:49:05 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 20 Apr 2023 22:49:05 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"5112ec42886e7f3826bd11053f647cdc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7c21fcc1-a4bd-49c3-957f-5ccfca3b5820
+      X-Runtime:
+      - '0.005114'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T22:39:00.000Z","status":"Completed","notes":"This
+        was great!","media_link":null,"host_id":2,"host_name":"Jean-Luc Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 22:49:05 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 20 Apr 2023 22:49:05 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"5112ec42886e7f3826bd11053f647cdc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 964603e3-9850-4e4b-b708-188f707c33a1
+      X-Runtime:
+      - '0.005132'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T22:39:00.000Z","status":"Completed","notes":"This
+        was great!","media_link":null,"host_id":2,"host_name":"Jean-Luc Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 22:49:06 GMT
+- request:
+    method: patch
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/3?param=1
+    body:
+      encoding: UTF-8
+      string: '{"name":"High-five a stranger.","date":"2024-02-02","time":"10:39 PM","status":"In
+        Progress","notes":"This was great!","media_link":null}'
     headers:
       Content-Type:
       - application/json
@@ -94,9 +1120,15 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 201
-      message: Created
+      code: 200
+      message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 20 Apr 2023 22:49:06 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -114,21 +1146,24 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"63934840e7a156968f5ada98d5284e10"
+      - W/"beca147f14eae66638c89e85a5833069"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - cd1c4d2e-a3ce-4f06-b0ef-2c0e0a36ad3c
+      - 39754059-98f9-4f73-888f-ac128402c21e
       X-Runtime:
-      - '0.019892'
+      - '0.010610'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"20","type":"good_deeds_create","attributes":{"name":"Volunteer
-        at a local animal shelter","media_link":null,"notes":null,"date":"2023-04-17","time":"2000-01-01T19:52:30.000Z","status":"In
-        Progress","host_id":1}}}'
-  recorded_at: Sun, 16 Apr 2023 02:33:35 GMT
+      string: '{"data":{"id":"3","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T22:39:00.000Z","status":"In
+        Progress","notes":"This was great!","media_link":null,"host_id":2,"host_name":"Jean-Luc
+        Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 22:49:06 GMT
 - request:
     method: get
     uri: https://warm-temple-59633.herokuapp.com/api/v1/users
@@ -150,7 +1185,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 17 Apr 2023 19:50:22 GMT
+      - Thu, 20 Apr 2023 22:49:07 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -170,271 +1205,13 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"6167c9a85aec1087c257912e6325845c"
+      - W/"b0f24f0b26343de1119360b3b72c27c8"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c6d31108-ff93-415d-b6db-7d741a0ebb6c
+      - 59e817d4-eed3-48a3-9ce3-86516f446654
       X-Runtime:
-      - '0.087990'
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"users","attributes":{"name":"John Smith","role":"user","good_deeds":[]}}]}'
-  recorded_at: Sun, 16 Apr 2023 21:50:37 GMT
-- request:
-    method: post
-    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/id/good_deeds?param=1
-    body:
-      encoding: UTF-8
-      string: '{"name":"Volunteer at a local animal shelter","date":"2023-04-17","time":"2023-04-17
-        15:00:52 -0600","attendees":["1"]}'
-    headers:
-      Content-Type:
-      - application/json
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Mon, 17 Apr 2023 21:00:53 GMT
-      Connection:
-      - keep-alive
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Cache-Control:
-      - no-cache
-      X-Request-Id:
-      - 2dafee92-b165-4412-bb8c-16a85a4daed3
-      X-Runtime:
-      - '0.012528'
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"errors":[{"status":"404","title":"Invalid Request","detail":["Couldn''t
-        find User with ''id''=0"]}]}'
-  recorded_at: Mon, 17 Apr 2023 21:00:53 GMT
-- request:
-    method: post
-    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds?param=1
-    body:
-      encoding: UTF-8
-      string: '{"name":"Volunteer at a local animal shelter","date":"2023-04-17","time":"2023-04-17
-        14:47:34 -0700","attendees":["1"]}'
-    headers:
-      Content-Type:
-      - application/json
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Mon, 17 Apr 2023 21:47:39 GMT
-      Connection:
-      - keep-alive
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"713fe0046fe9d7435d2913dcfcbfb155"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 4cd6ed90-1f6e-4835-be9d-c2df349cea8e
-      X-Runtime:
-      - '0.053135'
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"26","type":"good_deeds_create","attributes":{"name":"Volunteer
-        at a local animal shelter","media_link":null,"notes":null,"date":"2023-04-17","time":"2000-01-01T21:47:34.000Z","status":"In
-        Progress","host_id":1}}}'
-  recorded_at: Mon, 17 Apr 2023 21:47:40 GMT
-- request:
-    method: post
-    uri: https://www.googleapis.com/calendar/v3/calendars/user@gmail.com/events
-    body:
-      encoding: UTF-8
-      string: '{"description":"Volunteer at a local animal shelter at 2023-04-18 22:56:17
-        -0700!","end":{"date":"2023-04-18"},"start":{"date":"2023-04-18"},"summary":"Do
-        Good Event! Date: 2023-04-18"}'
-    headers:
-      User-Agent:
-      - unknown/0.0.0 google-api-ruby-client/0.11.0 Mac OS X/13.3.1 (gzip)
-      Accept:
-      - "*/*"
-      Accept-Encoding:
-      - gzip,deflate
-      Date:
-      - Wed, 19 Apr 2023 05:56:17 GMT
-      X-Goog-Api-Client:
-      - gl-ruby/3.1.1 gdcl/1.11.0
-      Content-Type:
-      - application/json
-  response:
-    status:
-      code: 401
-      message: Unauthorized
-    headers:
-      Www-Authenticate:
-      - Bearer realm="https://accounts.google.com/"
-      Vary:
-      - Origin
-      - Referer
-      - X-Origin
-      Content-Type:
-      - application/json; charset=UTF-8
-      Content-Encoding:
-      - gzip
-      Date:
-      - Wed, 19 Apr 2023 05:56:17 GMT
-      Server:
-      - ESF
-      Cache-Control:
-      - private
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: |
-        {
-          "error": {
-            "code": 401,
-            "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
-            "errors": [
-              {
-                "message": "Login Required.",
-                "domain": "global",
-                "reason": "required",
-                "location": "Authorization",
-                "locationType": "header"
-              }
-            ],
-            "status": "UNAUTHENTICATED",
-            "details": [
-              {
-                "@type": "type.googleapis.com/google.rpc.ErrorInfo",
-                "reason": "CREDENTIALS_MISSING",
-                "domain": "googleapis.com",
-                "metadata": {
-                  "service": "calendar-json.googleapis.com",
-                  "method": "calendar.v3.Events.Insert"
-                }
-              }
-            ]
-          }
-        }
-  recorded_at: Wed, 19 Apr 2023 05:56:17 GMT
-- request:
-    method: get
-    uri: https://warm-temple-59633.herokuapp.com/api/v1/users
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Thu, 20 Apr 2023 20:51:10 GMT
-      Connection:
-      - keep-alive
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"d94aad9646141f8677627f61d46f9169"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - c0842598-f53a-4d4f-a53b-02348a9adf02
-      X-Runtime:
-      - '0.259974'
+      - '0.275463'
       Transfer-Encoding:
       - chunked
       Via:
@@ -557,7 +1334,10 @@ http_interactions:
         Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}},{"id":"92","type":"good_deed","attributes":{"name":"High-five
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
-        Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}}]}}},{"id":"2","type":"users","attributes":{"name":"Jean-Luc
+        Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}},{"id":"102","type":"good_deed","attributes":{"name":"Donate
+        blood at a local blood center","date":"2023-04-29","time":"2000-01-01T15:43:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":10,"host_name":"menyeart1@gmail.com","attendees":[{"id":1,"name":"John
+        Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}}]}}},{"id":"2","type":"users","attributes":{"name":"Jean-Luc
         Picard","role":"user","email":"captain@uss-enterprise.com","good_deeds":{"data":[{"id":"10","type":"good_deed","attributes":{"name":"High-five
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
@@ -716,8 +1496,7 @@ http_interactions:
         around your favorite park","date":"2023-04-19","time":"2000-01-01T16:58:00.000Z","status":"Completed","notes":"","media_link":null,"host_id":7,"host_name":"Jasmine
         Hamou","attendees":[{"id":4,"name":"Data","email":"data@uss-enterprise.com","password_digest":"$2a$12$cZZGXKbSLLKCo.gkoBBLfOw6FAAlZ7YTaZ9PE5q84y8So3SOI5AVa","role":"user","created_at":"2023-04-16T22:13:45.028Z","updated_at":"2023-04-16T22:13:45.028Z","uid":"33033","provider":"Google
         Baby!"}]}},{"id":"62","type":"good_deed","attributes":{"name":"Donate blood
-        at a local blood center","date":"2023-04-21","time":"2000-01-01T19:02:00.000Z","status":"In
-        Progress","notes":null,"media_link":null,"host_id":7,"host_name":"Jasmine
+        at a local blood center","date":"2023-04-21","time":"2000-01-01T19:02:00.000Z","status":"Completed","notes":"","media_link":null,"host_id":7,"host_name":"Jasmine
         Hamou","attendees":[{"id":4,"name":"Data","email":"data@uss-enterprise.com","password_digest":"$2a$12$cZZGXKbSLLKCo.gkoBBLfOw6FAAlZ7YTaZ9PE5q84y8So3SOI5AVa","role":"user","created_at":"2023-04-16T22:13:45.028Z","updated_at":"2023-04-16T22:13:45.028Z","uid":"33033","provider":"Google
         Baby!"}]}},{"id":"65","type":"good_deed","attributes":{"name":"Made website
         for cousin","date":"2023-04-26","time":"2000-01-01T13:30:00.000Z","status":"Completed","notes":"fun,
@@ -785,8 +1564,7 @@ http_interactions:
         Progress","notes":"fdv","media_link":"ce4e6f12-0940-452f-933b-b49e106f3b16.jpg","host_id":9,"host_name":"Huy
         Phan","attendees":[{"id":5,"name":"Geordi La Forge","email":"chief-engineer@uss-enterprise.com","password_digest":"$2a$12$mqbVKHxMyUsfOozJrIVyxeG8kKEanjO0yZgp4QBNlZ.pJid8AbV2S","role":"user","created_at":"2023-04-16T22:13:45.287Z","updated_at":"2023-04-16T22:13:45.287Z","uid":"44044","provider":"Google
         Baby!"},{"id":6,"name":"Kara Jones-Hofmann","email":"karajhturing@gmail.com","password_digest":"$2a$12$4tQU4YcEWkKmOuqBv6uM1.JxnK8Ee01cPVNUrlhMym5LiKlRy/2hu","role":"user","created_at":"2023-04-16T22:18:50.796Z","updated_at":"2023-04-16T22:18:50.796Z","uid":"111021676679827005112","provider":"google_oauth2"}]}},{"id":"53","type":"good_deed","attributes":{"name":"Donate
-        to your local food bank","date":"2023-04-21","time":"2000-01-01T12:37:00.000Z","status":"In
-        Progress","notes":null,"media_link":null,"host_id":7,"host_name":"Jasmine
+        to your local food bank","date":"2023-04-21","time":"2000-01-01T12:37:00.000Z","status":"Completed","notes":"","media_link":null,"host_id":7,"host_name":"Jasmine
         Hamou","attendees":[{"id":6,"name":"Kara Jones-Hofmann","email":"karajhturing@gmail.com","password_digest":"$2a$12$4tQU4YcEWkKmOuqBv6uM1.JxnK8Ee01cPVNUrlhMym5LiKlRy/2hu","role":"user","created_at":"2023-04-16T22:18:50.796Z","updated_at":"2023-04-16T22:18:50.796Z","uid":"111021676679827005112","provider":"google_oauth2"},{"id":8,"name":"Mel
         Travelz","email":"meltravelz@gmail.com","password_digest":"$2a$12$ks6TP4cyoYBgJPUzcrf74efV7D1WLth1OfKkUjevAcRte4AsVZFhS","role":"user","created_at":"2023-04-17T20:28:14.084Z","updated_at":"2023-04-17T20:28:14.084Z","uid":"117104532482641534725","provider":"google_oauth2"},{"id":9,"name":"Huy
         Phan","email":"huyphan520@gmail.com","password_digest":"$2a$12$ODkoxUOqUkqixnWl12kL9OprFac6Z0uR1qXhVdw1GSJ8Y5e28NG2y","role":"user","created_at":"2023-04-17T23:32:24.386Z","updated_at":"2023-04-17T23:32:24.386Z","uid":"115160514392428970745","provider":"google_oauth2"},{"id":10,"name":"menyeart1@gmail.com","email":"menyeart1@gmail.com","password_digest":"$2a$12$6NN109QuvNJg40SFJX0egO13Rj3YTkn9Ao2bM4uB5UKYmY5mRIkOq","role":"user","created_at":"2023-04-18T01:53:51.178Z","updated_at":"2023-04-18T01:53:51.178Z","uid":"101776878166784970527","provider":"google_oauth2"}]}},{"id":"55","type":"good_deed","attributes":{"name":"Pick
@@ -920,8 +1698,7 @@ http_interactions:
         Progress","notes":null,"media_link":null,"host_id":9,"host_name":"Huy Phan","attendees":[{"id":7,"name":"Jasmine
         Hamou","email":"jasmine.mahabadi@gmail.com","password_digest":"$2a$12$oniNdigH44MTr2R2.gozneW3I4U7dPjJ2FU24MI.BqPAHEUcT7sQ6","role":"user","created_at":"2023-04-17T18:50:04.571Z","updated_at":"2023-04-17T18:50:04.571Z","uid":"105857666600427905871","provider":"google_oauth2"},{"id":8,"name":"Mel
         Travelz","email":"meltravelz@gmail.com","password_digest":"$2a$12$ks6TP4cyoYBgJPUzcrf74efV7D1WLth1OfKkUjevAcRte4AsVZFhS","role":"user","created_at":"2023-04-17T20:28:14.084Z","updated_at":"2023-04-17T20:28:14.084Z","uid":"117104532482641534725","provider":"google_oauth2"}]}},{"id":"53","type":"good_deed","attributes":{"name":"Donate
-        to your local food bank","date":"2023-04-21","time":"2000-01-01T12:37:00.000Z","status":"In
-        Progress","notes":null,"media_link":null,"host_id":7,"host_name":"Jasmine
+        to your local food bank","date":"2023-04-21","time":"2000-01-01T12:37:00.000Z","status":"Completed","notes":"","media_link":null,"host_id":7,"host_name":"Jasmine
         Hamou","attendees":[{"id":6,"name":"Kara Jones-Hofmann","email":"karajhturing@gmail.com","password_digest":"$2a$12$4tQU4YcEWkKmOuqBv6uM1.JxnK8Ee01cPVNUrlhMym5LiKlRy/2hu","role":"user","created_at":"2023-04-16T22:18:50.796Z","updated_at":"2023-04-16T22:18:50.796Z","uid":"111021676679827005112","provider":"google_oauth2"},{"id":8,"name":"Mel
         Travelz","email":"meltravelz@gmail.com","password_digest":"$2a$12$ks6TP4cyoYBgJPUzcrf74efV7D1WLth1OfKkUjevAcRte4AsVZFhS","role":"user","created_at":"2023-04-17T20:28:14.084Z","updated_at":"2023-04-17T20:28:14.084Z","uid":"117104532482641534725","provider":"google_oauth2"},{"id":9,"name":"Huy
         Phan","email":"huyphan520@gmail.com","password_digest":"$2a$12$ODkoxUOqUkqixnWl12kL9OprFac6Z0uR1qXhVdw1GSJ8Y5e28NG2y","role":"user","created_at":"2023-04-17T23:32:24.386Z","updated_at":"2023-04-17T23:32:24.386Z","uid":"115160514392428970745","provider":"google_oauth2"},{"id":10,"name":"menyeart1@gmail.com","email":"menyeart1@gmail.com","password_digest":"$2a$12$6NN109QuvNJg40SFJX0egO13Rj3YTkn9Ao2bM4uB5UKYmY5mRIkOq","role":"user","created_at":"2023-04-18T01:53:51.178Z","updated_at":"2023-04-18T01:53:51.178Z","uid":"101776878166784970527","provider":"google_oauth2"}]}},{"id":"54","type":"good_deed","attributes":{"name":"Pick
@@ -939,8 +1716,7 @@ http_interactions:
         a charity and donate to it","date":"2023-04-30","time":"2000-01-01T18:01:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":7,"host_name":"Jasmine
         Hamou","attendees":[]}},{"id":"62","type":"good_deed","attributes":{"name":"Donate
-        blood at a local blood center","date":"2023-04-21","time":"2000-01-01T19:02:00.000Z","status":"In
-        Progress","notes":null,"media_link":null,"host_id":7,"host_name":"Jasmine
+        blood at a local blood center","date":"2023-04-21","time":"2000-01-01T19:02:00.000Z","status":"Completed","notes":"","media_link":null,"host_id":7,"host_name":"Jasmine
         Hamou","attendees":[{"id":4,"name":"Data","email":"data@uss-enterprise.com","password_digest":"$2a$12$cZZGXKbSLLKCo.gkoBBLfOw6FAAlZ7YTaZ9PE5q84y8So3SOI5AVa","role":"user","created_at":"2023-04-16T22:13:45.028Z","updated_at":"2023-04-16T22:13:45.028Z","uid":"33033","provider":"Google
         Baby!"}]}},{"id":"64","type":"good_deed","attributes":{"name":"Volunteer and
         help out at a senior center","date":"2023-04-28","time":"2000-01-01T15:19:00.000Z","status":"In
@@ -1034,7 +1810,16 @@ http_interactions:
         Jones-Hofmann","email":"karajhturing@gmail.com","password_digest":"$2a$12$4tQU4YcEWkKmOuqBv6uM1.JxnK8Ee01cPVNUrlhMym5LiKlRy/2hu","role":"user","created_at":"2023-04-16T22:18:50.796Z","updated_at":"2023-04-16T22:18:50.796Z","uid":"111021676679827005112","provider":"google_oauth2"},{"id":7,"name":"Jasmine
         Hamou","email":"jasmine.mahabadi@gmail.com","password_digest":"$2a$12$oniNdigH44MTr2R2.gozneW3I4U7dPjJ2FU24MI.BqPAHEUcT7sQ6","role":"user","created_at":"2023-04-17T18:50:04.571Z","updated_at":"2023-04-17T18:50:04.571Z","uid":"105857666600427905871","provider":"google_oauth2"},{"id":9,"name":"Huy
         Phan","email":"huyphan520@gmail.com","password_digest":"$2a$12$ODkoxUOqUkqixnWl12kL9OprFac6Z0uR1qXhVdw1GSJ8Y5e28NG2y","role":"user","created_at":"2023-04-17T23:32:24.386Z","updated_at":"2023-04-17T23:32:24.386Z","uid":"115160514392428970745","provider":"google_oauth2"},{"id":10,"name":"menyeart1@gmail.com","email":"menyeart1@gmail.com","password_digest":"$2a$12$6NN109QuvNJg40SFJX0egO13Rj3YTkn9Ao2bM4uB5UKYmY5mRIkOq","role":"user","created_at":"2023-04-18T01:53:51.178Z","updated_at":"2023-04-18T01:53:51.178Z","uid":"101776878166784970527","provider":"google_oauth2"},{"id":13,"name":"Khoa
-        Nguyen","email":"thirdeye3238@gmail.com","password_digest":null,"role":"user","created_at":"2023-04-20T01:38:48.022Z","updated_at":"2023-04-20T01:38:48.022Z","uid":"100651305328987823172","provider":"google_oauth2"}]}}]}}},{"id":"8","type":"users","attributes":{"name":"Mel
+        Nguyen","email":"thirdeye3238@gmail.com","password_digest":null,"role":"user","created_at":"2023-04-20T01:38:48.022Z","updated_at":"2023-04-20T01:38:48.022Z","uid":"100651305328987823172","provider":"google_oauth2"}]}},{"id":"99","type":"good_deed","attributes":{"name":"Find
+        a charity and donate to it","date":"2023-04-29","time":"2000-01-01T16:57:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":7,"host_name":"Jasmine
+        Hamou","attendees":[]}},{"id":"100","type":"good_deed","attributes":{"name":"Find
+        a charity and donate to it","date":"2023-04-29","time":"2000-01-01T14:25:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":7,"host_name":"Jasmine
+        Hamou","attendees":[]}},{"id":"101","type":"good_deed","attributes":{"name":"Pick
+        up litter around your favorite park","date":"2023-04-22","time":"2000-01-01T14:38:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":7,"host_name":"Jasmine
+        Hamou","attendees":[]}}]}}},{"id":"8","type":"users","attributes":{"name":"Mel
         Travelz","role":"user","email":"meltravelz@gmail.com","good_deeds":{"data":[{"id":"21","type":"good_deed","attributes":{"name":"Donate
         to your local food bank","date":"2023-04-20","time":"2000-01-01T19:44:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":8,"host_name":"Mel Travelz","attendees":[{"id":2,"name":"Jean-Luc
@@ -1052,8 +1837,7 @@ http_interactions:
         Progress","notes":null,"media_link":null,"host_id":9,"host_name":"Huy Phan","attendees":[{"id":7,"name":"Jasmine
         Hamou","email":"jasmine.mahabadi@gmail.com","password_digest":"$2a$12$oniNdigH44MTr2R2.gozneW3I4U7dPjJ2FU24MI.BqPAHEUcT7sQ6","role":"user","created_at":"2023-04-17T18:50:04.571Z","updated_at":"2023-04-17T18:50:04.571Z","uid":"105857666600427905871","provider":"google_oauth2"},{"id":8,"name":"Mel
         Travelz","email":"meltravelz@gmail.com","password_digest":"$2a$12$ks6TP4cyoYBgJPUzcrf74efV7D1WLth1OfKkUjevAcRte4AsVZFhS","role":"user","created_at":"2023-04-17T20:28:14.084Z","updated_at":"2023-04-17T20:28:14.084Z","uid":"117104532482641534725","provider":"google_oauth2"}]}},{"id":"53","type":"good_deed","attributes":{"name":"Donate
-        to your local food bank","date":"2023-04-21","time":"2000-01-01T12:37:00.000Z","status":"In
-        Progress","notes":null,"media_link":null,"host_id":7,"host_name":"Jasmine
+        to your local food bank","date":"2023-04-21","time":"2000-01-01T12:37:00.000Z","status":"Completed","notes":"","media_link":null,"host_id":7,"host_name":"Jasmine
         Hamou","attendees":[{"id":6,"name":"Kara Jones-Hofmann","email":"karajhturing@gmail.com","password_digest":"$2a$12$4tQU4YcEWkKmOuqBv6uM1.JxnK8Ee01cPVNUrlhMym5LiKlRy/2hu","role":"user","created_at":"2023-04-16T22:18:50.796Z","updated_at":"2023-04-16T22:18:50.796Z","uid":"111021676679827005112","provider":"google_oauth2"},{"id":8,"name":"Mel
         Travelz","email":"meltravelz@gmail.com","password_digest":"$2a$12$ks6TP4cyoYBgJPUzcrf74efV7D1WLth1OfKkUjevAcRte4AsVZFhS","role":"user","created_at":"2023-04-17T20:28:14.084Z","updated_at":"2023-04-17T20:28:14.084Z","uid":"117104532482641534725","provider":"google_oauth2"},{"id":9,"name":"Huy
         Phan","email":"huyphan520@gmail.com","password_digest":"$2a$12$ODkoxUOqUkqixnWl12kL9OprFac6Z0uR1qXhVdw1GSJ8Y5e28NG2y","role":"user","created_at":"2023-04-17T23:32:24.386Z","updated_at":"2023-04-17T23:32:24.386Z","uid":"115160514392428970745","provider":"google_oauth2"},{"id":10,"name":"menyeart1@gmail.com","email":"menyeart1@gmail.com","password_digest":"$2a$12$6NN109QuvNJg40SFJX0egO13Rj3YTkn9Ao2bM4uB5UKYmY5mRIkOq","role":"user","created_at":"2023-04-18T01:53:51.178Z","updated_at":"2023-04-18T01:53:51.178Z","uid":"101776878166784970527","provider":"google_oauth2"}]}},{"id":"63","type":"good_deed","attributes":{"name":"Volunteer
@@ -1137,8 +1921,7 @@ http_interactions:
         Progress","notes":null,"media_link":null,"host_id":9,"host_name":"Huy Phan","attendees":[{"id":7,"name":"Jasmine
         Hamou","email":"jasmine.mahabadi@gmail.com","password_digest":"$2a$12$oniNdigH44MTr2R2.gozneW3I4U7dPjJ2FU24MI.BqPAHEUcT7sQ6","role":"user","created_at":"2023-04-17T18:50:04.571Z","updated_at":"2023-04-17T18:50:04.571Z","uid":"105857666600427905871","provider":"google_oauth2"},{"id":8,"name":"Mel
         Travelz","email":"meltravelz@gmail.com","password_digest":"$2a$12$ks6TP4cyoYBgJPUzcrf74efV7D1WLth1OfKkUjevAcRte4AsVZFhS","role":"user","created_at":"2023-04-17T20:28:14.084Z","updated_at":"2023-04-17T20:28:14.084Z","uid":"117104532482641534725","provider":"google_oauth2"}]}},{"id":"53","type":"good_deed","attributes":{"name":"Donate
-        to your local food bank","date":"2023-04-21","time":"2000-01-01T12:37:00.000Z","status":"In
-        Progress","notes":null,"media_link":null,"host_id":7,"host_name":"Jasmine
+        to your local food bank","date":"2023-04-21","time":"2000-01-01T12:37:00.000Z","status":"Completed","notes":"","media_link":null,"host_id":7,"host_name":"Jasmine
         Hamou","attendees":[{"id":6,"name":"Kara Jones-Hofmann","email":"karajhturing@gmail.com","password_digest":"$2a$12$4tQU4YcEWkKmOuqBv6uM1.JxnK8Ee01cPVNUrlhMym5LiKlRy/2hu","role":"user","created_at":"2023-04-16T22:18:50.796Z","updated_at":"2023-04-16T22:18:50.796Z","uid":"111021676679827005112","provider":"google_oauth2"},{"id":8,"name":"Mel
         Travelz","email":"meltravelz@gmail.com","password_digest":"$2a$12$ks6TP4cyoYBgJPUzcrf74efV7D1WLth1OfKkUjevAcRte4AsVZFhS","role":"user","created_at":"2023-04-17T20:28:14.084Z","updated_at":"2023-04-17T20:28:14.084Z","uid":"117104532482641534725","provider":"google_oauth2"},{"id":9,"name":"Huy
         Phan","email":"huyphan520@gmail.com","password_digest":"$2a$12$ODkoxUOqUkqixnWl12kL9OprFac6Z0uR1qXhVdw1GSJ8Y5e28NG2y","role":"user","created_at":"2023-04-17T23:32:24.386Z","updated_at":"2023-04-17T23:32:24.386Z","uid":"115160514392428970745","provider":"google_oauth2"},{"id":10,"name":"menyeart1@gmail.com","email":"menyeart1@gmail.com","password_digest":"$2a$12$6NN109QuvNJg40SFJX0egO13Rj3YTkn9Ao2bM4uB5UKYmY5mRIkOq","role":"user","created_at":"2023-04-18T01:53:51.178Z","updated_at":"2023-04-18T01:53:51.178Z","uid":"101776878166784970527","provider":"google_oauth2"}]}},{"id":"63","type":"good_deed","attributes":{"name":"Volunteer
@@ -1244,8 +2027,7 @@ http_interactions:
         Progress","notes":null,"media_link":null,"host_id":10,"host_name":"menyeart1@gmail.com","attendees":[{"id":3,"name":"William
         Riker","email":"number2@uss-enterprise.com","password_digest":"$2a$12$j8ptlySJR2/YaH5BPwdMterGWvGO7LcRj6sOzk04QuaTkokY9g2Oi","role":"user","created_at":"2023-04-16T22:13:44.778Z","updated_at":"2023-04-16T22:13:44.778Z","uid":"22022","provider":"Google
         Baby!"}]}},{"id":"53","type":"good_deed","attributes":{"name":"Donate to your
-        local food bank","date":"2023-04-21","time":"2000-01-01T12:37:00.000Z","status":"In
-        Progress","notes":null,"media_link":null,"host_id":7,"host_name":"Jasmine
+        local food bank","date":"2023-04-21","time":"2000-01-01T12:37:00.000Z","status":"Completed","notes":"","media_link":null,"host_id":7,"host_name":"Jasmine
         Hamou","attendees":[{"id":6,"name":"Kara Jones-Hofmann","email":"karajhturing@gmail.com","password_digest":"$2a$12$4tQU4YcEWkKmOuqBv6uM1.JxnK8Ee01cPVNUrlhMym5LiKlRy/2hu","role":"user","created_at":"2023-04-16T22:18:50.796Z","updated_at":"2023-04-16T22:18:50.796Z","uid":"111021676679827005112","provider":"google_oauth2"},{"id":8,"name":"Mel
         Travelz","email":"meltravelz@gmail.com","password_digest":"$2a$12$ks6TP4cyoYBgJPUzcrf74efV7D1WLth1OfKkUjevAcRte4AsVZFhS","role":"user","created_at":"2023-04-17T20:28:14.084Z","updated_at":"2023-04-17T20:28:14.084Z","uid":"117104532482641534725","provider":"google_oauth2"},{"id":9,"name":"Huy
         Phan","email":"huyphan520@gmail.com","password_digest":"$2a$12$ODkoxUOqUkqixnWl12kL9OprFac6Z0uR1qXhVdw1GSJ8Y5e28NG2y","role":"user","created_at":"2023-04-17T23:32:24.386Z","updated_at":"2023-04-17T23:32:24.386Z","uid":"115160514392428970745","provider":"google_oauth2"},{"id":10,"name":"menyeart1@gmail.com","email":"menyeart1@gmail.com","password_digest":"$2a$12$6NN109QuvNJg40SFJX0egO13Rj3YTkn9Ao2bM4uB5UKYmY5mRIkOq","role":"user","created_at":"2023-04-18T01:53:51.178Z","updated_at":"2023-04-18T01:53:51.178Z","uid":"101776878166784970527","provider":"google_oauth2"}]}},{"id":"55","type":"good_deed","attributes":{"name":"Pick
@@ -1354,7 +2136,10 @@ http_interactions:
         Jones-Hofmann","email":"karajhturing@gmail.com","password_digest":"$2a$12$4tQU4YcEWkKmOuqBv6uM1.JxnK8Ee01cPVNUrlhMym5LiKlRy/2hu","role":"user","created_at":"2023-04-16T22:18:50.796Z","updated_at":"2023-04-16T22:18:50.796Z","uid":"111021676679827005112","provider":"google_oauth2"},{"id":7,"name":"Jasmine
         Hamou","email":"jasmine.mahabadi@gmail.com","password_digest":"$2a$12$oniNdigH44MTr2R2.gozneW3I4U7dPjJ2FU24MI.BqPAHEUcT7sQ6","role":"user","created_at":"2023-04-17T18:50:04.571Z","updated_at":"2023-04-17T18:50:04.571Z","uid":"105857666600427905871","provider":"google_oauth2"},{"id":9,"name":"Huy
         Phan","email":"huyphan520@gmail.com","password_digest":"$2a$12$ODkoxUOqUkqixnWl12kL9OprFac6Z0uR1qXhVdw1GSJ8Y5e28NG2y","role":"user","created_at":"2023-04-17T23:32:24.386Z","updated_at":"2023-04-17T23:32:24.386Z","uid":"115160514392428970745","provider":"google_oauth2"},{"id":10,"name":"menyeart1@gmail.com","email":"menyeart1@gmail.com","password_digest":"$2a$12$6NN109QuvNJg40SFJX0egO13Rj3YTkn9Ao2bM4uB5UKYmY5mRIkOq","role":"user","created_at":"2023-04-18T01:53:51.178Z","updated_at":"2023-04-18T01:53:51.178Z","uid":"101776878166784970527","provider":"google_oauth2"},{"id":13,"name":"Khoa
-        Nguyen","email":"thirdeye3238@gmail.com","password_digest":null,"role":"user","created_at":"2023-04-20T01:38:48.022Z","updated_at":"2023-04-20T01:38:48.022Z","uid":"100651305328987823172","provider":"google_oauth2"}]}}]}}},{"id":"11","type":"users","attributes":{"name":"Jennifer
+        Nguyen","email":"thirdeye3238@gmail.com","password_digest":null,"role":"user","created_at":"2023-04-20T01:38:48.022Z","updated_at":"2023-04-20T01:38:48.022Z","uid":"100651305328987823172","provider":"google_oauth2"}]}},{"id":"102","type":"good_deed","attributes":{"name":"Donate
+        blood at a local blood center","date":"2023-04-29","time":"2000-01-01T15:43:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":10,"host_name":"menyeart1@gmail.com","attendees":[{"id":1,"name":"John
+        Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}}]}}},{"id":"11","type":"users","attributes":{"name":"Jennifer
         Dmytrenko","role":"user","email":"jdmytrenko615@gmail.com","good_deeds":{"data":[{"id":"54","type":"good_deed","attributes":{"name":"Pick
         up litter around your favorite park","date":"2023-04-21","time":"2000-01-01T16:28:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":7,"host_name":"Jasmine
@@ -1450,7 +2235,7 @@ http_interactions:
         Hamou","email":"jasmine.mahabadi@gmail.com","password_digest":"$2a$12$oniNdigH44MTr2R2.gozneW3I4U7dPjJ2FU24MI.BqPAHEUcT7sQ6","role":"user","created_at":"2023-04-17T18:50:04.571Z","updated_at":"2023-04-17T18:50:04.571Z","uid":"105857666600427905871","provider":"google_oauth2"},{"id":9,"name":"Huy
         Phan","email":"huyphan520@gmail.com","password_digest":"$2a$12$ODkoxUOqUkqixnWl12kL9OprFac6Z0uR1qXhVdw1GSJ8Y5e28NG2y","role":"user","created_at":"2023-04-17T23:32:24.386Z","updated_at":"2023-04-17T23:32:24.386Z","uid":"115160514392428970745","provider":"google_oauth2"},{"id":10,"name":"menyeart1@gmail.com","email":"menyeart1@gmail.com","password_digest":"$2a$12$6NN109QuvNJg40SFJX0egO13Rj3YTkn9Ao2bM4uB5UKYmY5mRIkOq","role":"user","created_at":"2023-04-18T01:53:51.178Z","updated_at":"2023-04-18T01:53:51.178Z","uid":"101776878166784970527","provider":"google_oauth2"},{"id":13,"name":"Khoa
         Nguyen","email":"thirdeye3238@gmail.com","password_digest":null,"role":"user","created_at":"2023-04-20T01:38:48.022Z","updated_at":"2023-04-20T01:38:48.022Z","uid":"100651305328987823172","provider":"google_oauth2"}]}}]}}}]}'
-  recorded_at: Thu, 20 Apr 2023 20:51:11 GMT
+  recorded_at: Thu, 20 Apr 2023 22:49:07 GMT
 - request:
     method: get
     uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1
@@ -1472,7 +2257,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 20 Apr 2023 20:51:11 GMT
+      - Thu, 20 Apr 2023 22:49:07 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -1492,13 +2277,13 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"f52ead26b0e9113baf13e38d3b868478"
+      - W/"8facea6dc7c0eb02d98f731873810072"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2da67cdc-663c-42b3-94c2-25f160b2a123
+      - 485b4ec0-82cf-4ff1-b6dd-90e6f98744c7
       X-Runtime:
-      - '0.048706'
+      - '0.065899'
       Transfer-Encoding:
       - chunked
       Via:
@@ -1621,6 +2406,126 @@ http_interactions:
         Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}},{"id":"92","type":"good_deed","attributes":{"name":"High-five
         a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
         Progress","notes":null,"media_link":null,"host_id":2,"host_name":"Jean-Luc
-        Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}}]}}}}'
-  recorded_at: Thu, 20 Apr 2023 20:51:11 GMT
+        Picard","attendees":[{"id":1,"name":"John Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}},{"id":"102","type":"good_deed","attributes":{"name":"Donate
+        blood at a local blood center","date":"2023-04-29","time":"2000-01-01T15:43:00.000Z","status":"In
+        Progress","notes":null,"media_link":null,"host_id":10,"host_name":"menyeart1@gmail.com","attendees":[{"id":1,"name":"John
+        Smith","email":"john@example.com","password_digest":"$2a$12$Kz7pa0rMoSKNaTqc3PtfmOBl6kUQiHwDoR.bsozkzVm9pVU.foPMa","role":"user","created_at":"2023-04-16T21:34:06.687Z","updated_at":"2023-04-16T21:34:06.687Z","uid":"100000000000000000000","provider":"google_oauth2"}]}}]}}}}'
+  recorded_at: Thu, 20 Apr 2023 22:49:08 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 20 Apr 2023 23:54:16 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"066a8990769fd52a2c0c55f9c8484de7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - eceab25e-f17b-4a63-b577-1508d5bab300
+      X-Runtime:
+      - '0.008003'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T16:00:00.000Z","status":"In
+        Progress","notes":"","media_link":null,"host_id":2,"host_name":"Jean-Luc Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 23:54:16 GMT
+- request:
+    method: get
+    uri: https://warm-temple-59633.herokuapp.com/api/v1/users/1/good_deeds/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 20 Apr 2023 23:54:16 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"beca147f14eae66638c89e85a5833069"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 017e8878-57ca-4737-9820-f29bd589fb1a
+      X-Runtime:
+      - '0.011679'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"good_deed","attributes":{"name":"High-five
+        a stranger.","date":"2024-02-02","time":"2000-01-01T22:39:00.000Z","status":"In
+        Progress","notes":"This was great!","media_link":null,"host_id":2,"host_name":"Jean-Luc
+        Picard","attendees":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 23:54:17 GMT
 recorded_with: VCR 6.1.0

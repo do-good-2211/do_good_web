@@ -23,7 +23,6 @@ RSpec.describe GoodDeedFacade, :vcr do
       good = @facade.get_deeds
 
       expect(good).to be_an(Array)
-
       good.each do |deed|
         expect(deed.id).to be_an(Integer)
         expect(deed.name).to be_a(String)

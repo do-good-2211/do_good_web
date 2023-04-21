@@ -1,13 +1,11 @@
 <!-- ReadMe -->
 <a id="readme-top"></a>
 
-*README in progrss*
-
 <!-- Opening -->
 <br />
 <div align="center">
   <a href="https://github.com/do-good-2211/do_good_api">
-    <img src=".github/do_good.jpg" alt="Logo" width="150" height="150">
+    <img src="app/assets/images/do_good.jpg" alt="Logo" width="150" height="150">
   </a>
 
 <h3 align="center">Welcome to Do Good</h3>
@@ -203,7 +201,7 @@ Happy path, sad path, and edge testing were considered and tested. When a reques
 
 <details>
   <summary><img src="https://www.loginradius.com/blog/static/a9dad0fc4bf1af95243aa5e2d017bc22/a8669/google_cover.jpg" style="width:43px; height:33px;" > <strong>Google OAuth</strong></summary><br>
-  <p>Signing in to the Do Good app is made simple by allowing users to sign in with google. </p>
+  <p>Signing in to the Do Good app is made simple by allowing users to sign in with Google. </p>
   
   More information on the gem used for this(`omniauth-google-oauth2`) can be found [here](https://github.com/zquestz/omniauth-google-oauth2)
 </details>
@@ -235,20 +233,19 @@ Happy path, sad path, and edge testing were considered and tested. When a reques
 <!-- Future Iterations -->
 
 <h2 id="refactor">Future Iterations</h2>
-<!-- <li></li>
-<li></li> -->
+
 <details>
   <summary>Possible Features</summary>
     <dl>
-      <dt>Idea 1</dt>
-        <dd>- Stuff bit 1</dd>
-        <dd>- Stuff bit 2</dd>
-      <dt>Idea 2</dt>
-        <dd>- Stuff bit 1</dd>
-        <dd>- Stuff bit 2</dd>
+      <dt>Only list friends, not all users</dt>
+      <dt>Find ways to speed up processing</dt>
+        <dd>Consider adding background workers</dd>
+      <dt>Accept/Decline Invitation</dt>
+        <dd>- Allow invitee to accept or decline invitation</dd>
+      <dt>Good Deeds Facade Refactor</dt>
+        <dd>- Break down into helper methods</dd>
       <dt>Upload Video/Multiple Media</dt>
         <dd>- Users can can upload both images and videos</dd>
-        <dd>- Stuff bit 2</dd>
       <dt>Stories of Good</dt>
         <dd>- Users can share stories of good that happened to them</dd>
       <dt>Find good/opportunities</dt>
@@ -258,15 +255,13 @@ Happy path, sad path, and edge testing were considered and tested. When a reques
       <dt>User Metrics</dt>
         <dd>- Users can see their own metrics</dd>
         <dd>- Users can see a library of their deed history</dd>
+      <dt>Homepage picture order</dt>
+        <dd>- Sort the images of good deeds with most recent visible first</dd>
     </dl>
   
 </details>
 
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- CONTACT -->
 ## Contributors
@@ -278,4 +273,4 @@ Happy path, sad path, and edge testing were considered and tested. When a reques
 | [GitHub](https://github.com/HuyPhan2025) | [GitHub](https://github.com/hamouj) | [GitHub](https://github.com/KaraJoHo) | [GitHub](https://github.com/menyeart) | [GitHub](https://github.com/MelTravelz) | [GitHub](https://github.com/mikedao) |
 | [LinkedIn](https://www.linkedin.com/in/huy-phan-2471b3261/) |  [LinkedIn](https://www.linkedin.com/in/jasmine-hamou/) | [LinkedIn](https://www.linkedin.com/in/81012911-91208/) | [LinkedIn](https://www.linkedin.com/in/matt-enyeart/) | [LinkedIn](https://www.linkedin.com/in/melony-erin-franchini/) | [LinkedIn](https://www.linkedin.com/in/michaeldao/) |
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>

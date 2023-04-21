@@ -17,9 +17,8 @@ class DoGoodService
   end
 
   def self.update_deed(user_id, deed_id, deed_hash)
-    response = conn.patch("/api/v1/users/#{user_id}/good_deeds/#{deed_id}") do |req|
-      req.body = deed_hash.to_json
-    end
+    response = conn.patch("api/v1/users/#{user_id}/good_deeds/#{deed_id}", deed_hash.to_json)
+
     JSON.parse(response.body, symbolize_names: true)
   end
 
@@ -27,8 +26,8 @@ class DoGoodService
     Faraday.new(url: "https://warm-temple-59633.herokuapp.com/",
                 params: { param: "1" },
                 headers: { "Content-Type" => "application/json" })
-    #   Faraday.new(url: "http://localhost:3000",
-    #               params: { param: "1" },
-    #               headers: { "Content-Type" => "application/json" })
+      # Faraday.new(url: "http://localhost:3000",
+      #             params: { param: "1" },
+      #             headers: { "Content-Type" => "application/json" })
   end
 end

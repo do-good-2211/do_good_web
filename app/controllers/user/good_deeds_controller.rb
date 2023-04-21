@@ -43,13 +43,13 @@ class User::GoodDeedsController < ApplicationController
     redirect_to dashboard_path
   end
 
-  private
-
+  
   def aws(image, filename)
     s3 = Aws::S3::Client.new(region: ENV['AWS_REGION'])
     s3.put_object(bucket: ENV['S3_BUCKET_NAME'], key: filename, body: image.read)
   end
-
+  
+  private
   def new_deed_check(new_deed, params)
     if new_deed.key?(:errors)
       redirect_to "/user/good_deeds/new?good_deed=#{params[:name]}"

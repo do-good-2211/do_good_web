@@ -35,7 +35,6 @@ class User::GoodDeedsController < ApplicationController
     end
 
     updated_deed = GoodDeedFacade.new(params, nil, current_user.id).update_deed
-    # require 'pry'; binding.pry
     updated_deed_check(updated_deed)
   end
 

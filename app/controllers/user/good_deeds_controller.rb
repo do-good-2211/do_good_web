@@ -27,21 +27,16 @@ class User::GoodDeedsController < ApplicationController
 
   def update
     if params[:media_link].present?
-      image = params[:media_link] #grabs the image to use in the aws method
-      filename = "#{SecureRandom.uuid}.#{image.original_filename.split(".").last}" #formats the image filepath
-      params[:media_link] = filename #do not remove, this saves the media link to the back end
-      aws(image, filename) #method is defined below, this is connecting to amazon web service and putting the
-                          #image in the bucket
+      image = params[:media_link] # grabs the image to use in the aws method
+      filename = "#{SecureRandom.uuid}.#{image.original_filename.split('.').last}" # formats the image filepath
+      params[:media_link] = filename # do not remove, this saves the media link to the back end
+      aws(image, filename) # method is defined below, this is connecting to amazon web service and putting the
+      # image in the bucket
     end
- 
+
     updated_deed = GoodDeedFacade.new(params, nil, current_user.id).update_deed
     # require 'pry'; binding.pry
-    updated_deed_check(updated_deed, params)
-  end
-
-  def aws(image, filename)
-    s3 = Aws::S3::Client.new(region: ENV['AWS_REGION'])
-    s3.put_object(bucket: ENV['S3_BUCKET_NAME'], key: filename, body: image.read)
+    updated_deed_check(updated_deed)
   end
 
   def destroy
@@ -51,23 +46,28 @@ class User::GoodDeedsController < ApplicationController
 
   private
 
-    def new_deed_check(new_deed, params)
-      if new_deed.has_key?(:errors)
-        redirect_to "/user/good_deeds/new?good_deed=#{params[:name]}"
-        flash[:error] = "Event could not be created."
-      else
-        redirect_to dashboard_path
-        flash[:success] = "Event created!"
-      end
-    end
+  def aws(image, filename)
+    s3 = Aws::S3::Client.new(region: ENV['AWS_REGION'])
+    s3.put_object(bucket: ENV['S3_BUCKET_NAME'], key: filename, body: image.read)
+  end
 
-    def updated_deed_check(updated_deed, params)
-      if updated_deed.has_key?(:errors)
-        redirect_to "/user/good_deeds/#{current_user.id}/edit"
-        flash[:error] = "Event could not be updated."
-      else
-        redirect_to dashboard_path
-        flash[:success] = "Event updated!"
-      end
+  def new_deed_check(new_deed, params)
+    if new_deed.key?(:errors)
+      redirect_to "/user/good_deeds/new?good_deed=#{params[:name]}"
+      flash[:error] = "Event could not be created."
+    else
+      redirect_to dashboard_path
+      flash[:success] = "Event created!"
     end
+  end
+
+  def updated_deed_check(updated_deed)
+    if updated_deed.key?(:errors)
+      redirect_to "/user/good_deeds/#{current_user.id}/edit"
+      flash[:error] = "Event could not be updated."
+    else
+      redirect_to dashboard_path
+      flash[:success] = "Event updated!"
+    end
+  end
 end

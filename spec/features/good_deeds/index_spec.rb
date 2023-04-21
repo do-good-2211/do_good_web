@@ -45,7 +45,7 @@ RSpec.describe "Home page", type: :feature do
       expect(page).to have_link("Home")
       expect(page).to have_link("Log Out")
       expect(page).to have_link("My Page")
-      expect(page).to have_link("Choose a Random Act of Kindess")
+      expect(page).to have_link("Choose a Random Act of Kindness")
       expect(page).to have_content("Ready to do more good?")
 
       expect(page).to_not have_content("Ok, I'm Convinced. I wanna join the fun!")
@@ -58,7 +58,7 @@ RSpec.describe "Home page", type: :feature do
       ra3 = RandomAct.new("Buy your mother flowers")
       allow_any_instance_of(RandomActFacade).to receive(:create_acts).and_return([ra1, ra2, ra3])
 
-      click_link("Choose a Random Act of Kindess")
+      click_link("Choose a Random Act of Kindness")
 
       expect(current_path).to eq("/random_acts")
     end

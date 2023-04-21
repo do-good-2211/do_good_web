@@ -45,14 +45,14 @@ RSpec.describe "User good deed new page" do
         within '#new_good_deed' do
           fill_in :date, with: Date.today
           fill_in :time, with: Time.now
-        end  
-          find(:css, "#attendees_#{@users.first.id}").set true
-          find(:css, "#attendees_#{@users.last.id}").set true
-          click_button 'Create Good!'
+        end
+        find(:css, "#attendees_#{@users.first.id}").set true
+        find(:css, "#attendees_#{@users.last.id}").set true
+        click_button 'Create Good!'
 
-          expect(current_path).to eq(dashboard_path)
-          expect(page).to have_content("Event created!")
-          expect(page).to have_content("Volunteer at a local animal shelter")
+        expect(current_path).to eq(dashboard_path)
+        expect(page).to have_content("Event created!")
+        expect(page).to have_content("Volunteer at a local animal shelter")
       end
 
       it 'When I leave the date or time blank and click "Create Good!" I am redirected to the new page with a message' do

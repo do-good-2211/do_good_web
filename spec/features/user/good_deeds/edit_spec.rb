@@ -41,7 +41,7 @@ RSpec.describe "User good deed edit page" do
         visit edit_user_good_deed_path(3)
 
         @good_deed = GoodDeedFacade.new({ id: 3 }, nil, 1).fetch_deed
-        
+
         fill_in :time, with: Time.now
         allow_any_instance_of(User::GoodDeedsController).to receive(:aws).and_return("123.jpg")
         click_button 'Update Event'

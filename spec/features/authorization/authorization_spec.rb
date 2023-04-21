@@ -48,7 +48,7 @@ RSpec.describe "Authorization" do
       user = User.new(id: 1, attributes: { name: "John Smith", email: "user@gmail.com", role: "User", good_deeds: { data: [] } })
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit new_user_good_deed_path
-      
+
       expect(current_path).to eq(new_user_good_deed_path)
       expect(page).to_not have_content("You are not authorized to access this page")
     end

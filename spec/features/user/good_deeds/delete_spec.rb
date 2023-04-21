@@ -22,7 +22,7 @@ RSpec.describe "Delete Good Deed" do
         check 'Completed'
         click_button 'Update Event'
         visit edit_user_good_deed_path(1)
-        
+
         expect(page).to_not have_link('Delete Event')
       end
 

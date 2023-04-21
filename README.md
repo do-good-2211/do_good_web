@@ -255,8 +255,6 @@ Happy path, sad path, and edge testing were considered and tested. When a reques
       <dt>User Metrics</dt>
         <dd>- Users can see their own metrics</dd>
         <dd>- Users can see a library of their deed history</dd>
-      <dt>Homepage picture order</dt>
-        <dd>- Sort the images of good deeds with most recent visible first</dd>
     </dl>
   
 </details>

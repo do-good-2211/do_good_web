@@ -136,9 +136,9 @@
           <div class='max-w-md'>
 
             <% if  deed.media_link == nil || deed.media_link == "" %>
-              <div class='h-[300px]' style="background-image: url('<%= asset_path 'completed_badge.jpg' %>');background-size:cover;background-position:center"></div>
+              <div class='h-[400px]' style="background-image: url('<%= asset_path 'completed_badge.jpg' %>');background-size:cover;background-position:center"></div>
             <% else %>
-              <div class='h-[300px]' style="background-image: url('<%= "https://#{ENV['S3_BUCKET_NAME']}.s3.#{ENV['AWS_REGION']}.amazonaws.com/#{deed.media_link}" %>');background-size:cover;background-position:center"></div>
+              <div class='h-[400px]' style="background-image: url('<%= "https://#{ENV['S3_BUCKET_NAME']}.s3.#{ENV['AWS_REGION']}.amazonaws.com/#{deed.media_link}" %>');background-size:cover;background-position:center"></div>
             <% end %>
               
             <div class='p-4 sm:p-6'>

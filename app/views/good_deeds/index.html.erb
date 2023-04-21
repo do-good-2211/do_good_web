@@ -11,7 +11,7 @@
     </h2>
       <% if current_user %>
         <button class="p-2 mb-4 bg-red-500 hover:bg-indigo-500 text-white font-base rounded" href='/random_acts'>
-          <%= link_to "Choose a Random Act of Kindess", '/random_acts'%>
+          <%= link_to "Choose a Random Act of Kindness", '/random_acts'%>
         </button>
       <% else %>
         <button class="p-2 mb-4 bg-red-500 hover:bg-indigo-500 text-white font-base rounded" href='/auth/google_oauth2'>
@@ -26,7 +26,7 @@
 <section class='flex items-center justify-center min-h-screen bg-gradient-to-br px-2'>
   <article>
     <section class="mt-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8 pb-10">
-      <% @deeds.get_deeds.each do |deed| %> 
+      <% @deeds.get_deeds.reverse.each do |deed| %> 
         <div class='max-w-md  mx-auto bg-white rounded-lg shadow-xl overflow-hidden w-80'>
           <div class='max-w-md mx-auto'>
 

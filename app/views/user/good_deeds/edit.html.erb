@@ -15,7 +15,7 @@
                 <%= image_tag("do_good.jpg", alt: "Do Good Logo", class: "mx-auto w-1/5 h-auto") %>
                 <div class="block pl-2 font-semibold text-xl self-start text-gray-700">
                   <h2 class="leading-relaxed mt-5"><%= @facade_fetched_deed.name %></h2>
-                  <p class="text-sm text-gray-500 font-normal leading-relaxed">Complete form, invite others, & do good!</p>
+                  <p class="text-sm text-gray-500 font-normal leading-relaxed">Complete the form, invite others, & do good!</p>
                 </div>
               </div>
 
@@ -86,14 +86,15 @@
 
           <% elsif @facade_fetched_deed.status == 'Completed' %>
             <%= form_with url: user_good_deed_path(@facade.deed_id), method: :patch, local: true do |f| %>
-            <%= f.hidden_field :name, value: @facade_fetched_deed.name, readonly: true %>
+            <%= f.hidden_field :name, value: @facade_fetched_deed.name %>
+            <%= f.hidden_field :status, value: "1" %>
                   
               <!-- Logo & Deed Name -->
               <div class="flex items-center space-x-5">
                 <%= image_tag("do_good.jpg", alt: "Do Good Logo", class: "mx-auto w-1/5 h-auto") %>
                 <div class="block pl-2 font-semibold text-xl self-start text-gray-700">
                   <h2 class="leading-relaxed mt-5"><%= @facade_fetched_deed.name %></h2>
-                  <p class="text-sm text-gray-500 font-normal leading-relaxed">Complete form, invite others, & do good!</p>
+                  <p class="text-sm text-gray-500 font-normal leading-relaxed">Complete the form, invite others, & do good!</p>
                 </div>
               </div>
     

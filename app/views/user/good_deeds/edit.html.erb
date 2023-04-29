@@ -48,18 +48,6 @@
                   </div>
                 </div>
 
-                  <!-- Attendees : if we want as a row below date/time
-                  <% if @facade_fetched_deed.attendees.size >= 1 %>
-                    <div class="flex flex-col place-items-center">
-                      <label class="leading-loose font-semibold text-gray-800">Attendees</label>
-                      <div class="flex flex-col justify-self-start">
-                        <% @facade_fetched_deed.attendees.each do |attendee| %>
-                          <p><%= attendee.name%></p>
-                        <% end %>   
-                      </div>    
-                    </div>
-                  <% end %> -->
-
                   <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                   <!-- Notes -->
                     <div class="flex flex-col place-items-center">
@@ -105,6 +93,10 @@
             <%= form_with url: user_good_deed_path(@facade.deed_id), method: :patch, local: true do |f| %>
             <%= f.hidden_field :name, value: @facade_fetched_deed.name %>
             <%= f.hidden_field :status, value: "1" %>
+            <%= f.hidden_field :attendee, value: @facade_fetched_deed.attendees, readonly: true %>
+            <%= f.hidden_field :date, value: @facade_fetched_deed.date %>
+            <%= f.hidden_field :time, value: @facade_fetched_deed.time.to_datetime.strftime("%H:%M") %>
+
                   
               <!-- Logo & Deed Name -->
               <div class="flex items-center space-x-5">
@@ -118,7 +110,30 @@
               <div class="divide-y divide-gray-200">
                 <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
 
-                  <!-- Date & Time -->
+                  <!-- Date & Time & Attendees (Updated) -->
+                  <div class="flex items-center justify-center space-x-10">
+                    <div class="flex flex-col">
+                      <label class="leading-loose font-semibold text-gray-800">Date</label>
+                      <p><%= @facade_fetched_deed.date %></p>
+                    </div>
+                    <div class="flex flex-col">
+                      <label class="leading-loose font-semibold text-gray-800">Time</label>
+                      <p><%= @facade_fetched_deed.time.to_datetime.strftime("%H:%M") %></p>
+                    </div>
+                    <% if @facade_fetched_deed.attendees.size >= 1 %>
+                      <div class="flex flex-col place-items-center">
+                        <label class="leading-loose font-semibold text-gray-800">Attendees</label>
+                        <div class="flex flex-col justify-self-start">
+                          <% @facade_fetched_deed.attendees.each do |attendee| %>
+                            <p><%= attendee.name%></p>
+                          <% end %>   
+                        </div>    
+                      </div>
+                    <% end %>
+                  </div>
+                </div>
+
+                  <!-- Date & Time: Original
                   <div class="flex items-center justify-center space-x-10">
                     <div class="flex flex-col">
                       <label class="leading-loose font-semibold text-gray-800"><%= f.label :date %></label>
@@ -128,9 +143,9 @@
                       <label class="leading-loose font-semibold text-gray-800"><%= f.label :time %></label>
                       <%= f.text_field :time, value: @facade_fetched_deed.time, readonly: true %>
                     </div>
-                  </div>
+                  </div> -->
 
-                  <!-- Attendees -->
+                  <!-- Attendees: Original
                   <% if @facade_fetched_deed.attendees.size > 1 %>
                     <div class="flex flex-col place-items-center">
                       <label class="leading-loose font-semibold text-gray-800"><%= f.label :attendees %></label>
@@ -140,18 +155,19 @@
                         <% end %>   
                       </div>    
                     </div>
-                  <% end %>
+                  <% end %> -->
                   
+                  <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                   <!-- Notes -->
                     <div class="flex flex-col place-items-center">
                       <label class="leading-loose font-semibold text-indigo-500"><%= f.label :notes %></label>
-                          <%= f.text_area :notes, value: @facade_fetched_deed.notes %>
+                        <%= f.text_area :notes, size: "46x4", value: @facade_fetched_deed.notes %>
                     </div>
 
                   <!-- Image Upload -->
                   <div class="flex flex-col place-items-center">
                       <label class="leading-loose font-semibold text-indigo-500"><%= f.label :media_link %></label>
-                      <div class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600">
+                      <div class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-600 focus:outline-none text-gray-600">
                       <%= f.file_field :media_link, value: @facade_fetched_deed.media_link %>
                       </div>
                   </div>

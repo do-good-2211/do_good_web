@@ -4,7 +4,7 @@
 <!-- Opening -->
 <br />
 <div align="center">
-  <a href="https://github.com/do-good-2211/do_good_api">
+  <a href="https://github.com/do-good-2211/do_good_web">
     <img src="app/assets/images/do_good.jpg" alt="Logo" width="150" height="150">
   </a>
 

@@ -6,6 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%= favicon_link_tag asset_path('sun_favicon.png') %>
 
     <%= javascript_importmap_tags %>
   </head>
@@ -17,46 +18,48 @@
     <%= link_to "Log Out", logout_path %>
   <% end %> --> 
 
-      <header class="w-full text-gray-700 border-t border-gray-100 shadow-sm body-font bg-gradient-to-r from-orange-300 to-rose-400">
-        <div class="container flex flex-col flex-wrap items-center p-5 mx-auto md:flex-row">
-            <nav class="flex flex-wrap items-center text-base lg:w-2/5 md:ml-auto">
-                <a href="/" class="mr-5 font-medium hover:text-indigo-500">Home</a>
-                <a href="/about" class="mr-5 font-medium hover:text-indigo-500">About</a>
-            </nav>
-              <a
-                class="flex items-center order-first mb-4 font-medium text-gray-900 lg:order-none lg:w-1/5 title-font lg:items-center lg:justify-center md:mb-0">
-            </a>
-            <!-- Below are only displayed when a user is logged in / Need to align right -->
-            <% if current_user %>
-            <div class="inline-flex items-center h-full ml-5 lg:w-2/5 lg:justify-end lg:ml-0">
-                <a href="/dashboard" class="mr-5 font-medium hover:text-indigo-500">My Page</a>
-                <a href="/logout" class="mr-5 font-medium hover:text-indigo-500">Log Out</a>
-            </div>
-            <% else %>
-            <div class="inline-flex items-center h-full ml-5 lg:w-2/5 lg:justify-end lg:ml-0">
-                <a class="mr-5 font-medium hover:text-indigo-500"></a>
-                <a class="mr-5 font-medium hover:text-indigo-500"></a>
-            </div>
-            <% end %>
+    <header class="w-full text-gray-700 border-t border-gray-100 shadow-sm body-font bg-gradient-to-r from-orange-300 to-rose-400">
+      <div class="container flex flex-col flex-wrap items-center p-5 mx-auto md:flex-row">
+        <nav class="flex flex-wrap items-center text-base lg:w-2/5 md:ml-auto">
+            <a href="/" class="mr-5 font-medium hover:text-indigo-500">Home</a>
+            <a href="/about" class="mr-5 font-medium hover:text-indigo-500">About</a>
+        </nav>
+          <a
+            class="flex items-center order-first mb-4 font-medium text-gray-900 lg:order-none lg:w-1/5 title-font lg:items-center lg:justify-center md:mb-0">
+        </a>
+        <!-- Below are only displayed when a user is logged in / Need to align right -->
+        <% if current_user %>
+        <div class="inline-flex items-center h-full ml-5 lg:w-2/5 lg:justify-end lg:ml-0">
+            <a href="/dashboard" class="mr-5 font-medium hover:text-indigo-500">My Page</a>
+            <a href="/logout" class="mr-5 font-medium hover:text-indigo-500">Log Out</a>
         </div>
+        <% else %>
+        <div class="inline-flex items-center h-full ml-5 lg:w-2/5 lg:justify-end lg:ml-0">
+            <a class="mr-5 font-medium hover:text-indigo-500"></a>
+            <a class="mr-5 font-medium hover:text-indigo-500"></a>
+        </div>
+        <% end %>
+      </div>
     </header>
 
-    <% flash.each do |type, message| %>
-      <p><%= message %></p>
-    <% end %>
-      <br>
-      <%= yield %>
+    <div class ="ml-3 text-indigo-500" >
+      <% flash.each do |type, message| %>
+        <p><%= message %></p>
+      <% end %>
+    </div>
 
-      <footer>
-          <div class="bg-gradient-to-r from-indigo-500 to-fuchsia-600 mt-auto">
-            <div class="container px-5 py-4 mx-auto text-sm font-bold text-orange-200 capitalize xl:text-center">
-                Need more feel-goods?
-                <a class="text-orange-200 font-bold hover:text-white"
-                  href="https://www.7cups.com/">
-                  Chat with someone now!
-                </a>       
-            </div>
-        </div>
-      </footer>
+    <%= yield %>
+
+    <footer>
+        <div class="bg-gradient-to-r from-indigo-500 to-fuchsia-600 mt-auto">
+          <div class="container px-5 py-4 mx-auto text-sm font-bold text-orange-200 capitalize xl:text-center">
+              Need more feel-goods?
+              <a class="text-orange-200 font-bold hover:text-white"
+                href="https://www.7cups.com/">
+                Chat with someone now!
+              </a>       
+          </div>
+      </div>
+    </footer>
   </body>
 </html>

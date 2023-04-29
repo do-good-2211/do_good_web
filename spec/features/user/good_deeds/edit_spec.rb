@@ -25,10 +25,9 @@ RSpec.describe "User good deed edit page" do
       it 'I see the name of the good deed and a form with the deed information prepopulated' do
         within 'section#edit_deed' do
           expect(page).to have_field(:name, with: @good_deed.name, type: :hidden)
-          expect(page).to have_field(:date)
-          expect(page).to have_field(:time)
-          expect(page).to have_content('Attendees')
-          expect(page).to have_unchecked_field(:status)
+          expect(page).to have_field(:date, type: :hidden)
+          expect(page).to have_field(:time, type: :hidden)
+          expect(page).to have_unchecked_field(:status, type: :hidden)
           expect(page).to have_field(:notes)
           expect(page).to have_field(:media_link)
           expect(page).to have_button('Update Event')
@@ -42,7 +41,7 @@ RSpec.describe "User good deed edit page" do
 
         @good_deed = GoodDeedFacade.new({ id: 3 }, nil, 1).fetch_deed
 
-        fill_in :time, with: Time.now
+        fill_in :notes, with: "what a great time we had"
         allow_any_instance_of(User::GoodDeedsController).to receive(:aws).and_return("123.jpg")
         click_button 'Update Event'
 
@@ -60,8 +59,7 @@ RSpec.describe "User good deed edit page" do
 
       it 'When I edit some fields and click "Update Event", I am redirected to the dashboard' do
         allow_any_instance_of(User::GoodDeedsController).to receive(:aws).and_return("123.jpg")
-        fill_in :date, with: Date.today
-        fill_in :time, with: Time.now
+        fill_in :notes, with: "what a great time we had"
         click_button 'Update Event'
 
         expect(current_path).to eq(dashboard_path)

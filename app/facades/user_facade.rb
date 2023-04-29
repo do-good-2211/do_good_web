@@ -19,6 +19,7 @@ class UserFacade
   def fetch_user_dashboard
     user = fetch_user
     all_deeds_array = user.good_deeds
+    
     # make_deeds (helper method)
     array_of_deed_objects = all_deeds_array[:data].map do |deed_hash|
       Deed.new(deed_hash)
@@ -39,7 +40,7 @@ class UserFacade
       end
     end
 
-    # hash that is returned to the view: (helper method?)
+    # hash that is returned to the view: (helper method)
     {
       name: user.name,
       id: user.id,

@@ -43,9 +43,10 @@ class GoodDeedFacade
       date: @date,
       time: @time,
       status: status,
-      notes: @notes,
-      media_link: @media_link
+      notes: @notes
     }
+    deed_hash[:media_link] = @media_link if @media_link != nil
+
     DoGoodService.update_deed(@user_id, @deed_id, deed_hash)
   end
 

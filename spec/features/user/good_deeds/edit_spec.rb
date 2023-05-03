@@ -25,8 +25,8 @@ RSpec.describe "User good deed edit page" do
       it 'I see the name of the good deed and a form with the deed information prepopulated' do
         within 'section#edit_deed' do
           expect(page).to have_field(:name, with: @good_deed.name, type: :hidden)
-          expect(page).to have_field(:date, type: :hidden)
-          expect(page).to have_field(:time, type: :hidden)
+          expect(page).to have_field(:date)
+          expect(page).to have_field(:time)
           expect(page).to have_unchecked_field(:status, type: :hidden)
           expect(page).to have_field(:notes)
           expect(page).to have_field(:media_link)

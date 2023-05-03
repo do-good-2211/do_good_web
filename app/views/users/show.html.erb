@@ -108,7 +108,7 @@
                 <% end %>
               </div>
 
-              <a target='_blank' href="/user/good_deeds/<%= deed.id %>/edit" class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#ef4444] rounded-[14px] hover:bg-[#6366f1] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
+              <a target="_self" href="/user/good_deeds/<%= deed.id %>/edit" class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#ef4444] rounded-[14px] hover:bg-[#6366f1] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
                   Update
               </a>
             </div>
@@ -172,7 +172,7 @@
               <% end %>
 
               <% if deed.host_id == @user_facade[:id].to_i %>
-                <a target='_blank' href="/user/good_deeds/<%= deed.id %>/edit" class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#6366f1] rounded-[14px] hover:bg-[#ef4444] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
+                <a target="_self" href="/user/good_deeds/<%= deed.id %>/edit" class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#6366f1] rounded-[14px] hover:bg-[#ef4444] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
                     Update
                 </a>
               <% end %>

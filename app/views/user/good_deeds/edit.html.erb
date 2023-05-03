@@ -29,7 +29,7 @@
                   <div class="flex items-center justify-center space-x-10">
                     <div class="flex flex-col">
                       <label class="leading-loose font-semibold text-gray-800"><%= f.label :date %></label>
-                      <p><%= f.date_field :date, value: @facade.fetch_deed.date, min: Date.today %></p>
+                      <p><%= f.date_field :date, value: @facade.fetch_deed.date %></p>
                     </div>
                     <div class="flex flex-col">
                       <label class="leading-loose font-semibold text-gray-800"><%= f.label :time %></label>

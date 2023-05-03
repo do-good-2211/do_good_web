@@ -10,8 +10,8 @@
             <%= form_with url: user_good_deed_path(@facade.deed_id), method: :patch, local: true do |f| %>
             <%= f.hidden_field :name, value: @facade_fetched_deed.name, readonly: true %>
             <%= f.hidden_field :attendee, value: @facade_fetched_deed.attendees, readonly: true %>
-            <%= f.hidden_field :date, value: @facade_fetched_deed.date %>
-            <%= f.hidden_field :time, value: @facade_fetched_deed.time.to_datetime.strftime("%H:%M") %>
+            <!-- <%= f.hidden_field :date, value: @facade_fetched_deed.date %> -->
+            <!-- <%= f.hidden_field :time, value: @facade_fetched_deed.time.to_datetime.strftime("%H:%M") %> -->
 
               <!-- Logo & Deed Name -->
               <div class="flex items-center space-x-5">
@@ -28,12 +28,12 @@
                   <!-- Date & Time & Attendees (Updated) -->
                   <div class="flex items-center justify-center space-x-10">
                     <div class="flex flex-col">
-                      <label class="leading-loose font-semibold text-gray-800">Date</label>
-                      <p><%= @facade_fetched_deed.date %></p>
+                      <label class="leading-loose font-semibold text-gray-800"><%= f.label :date %></label>
+                      <p><%= f.date_field :date, value: @facade.fetch_deed.date, min: Date.today %></p>
                     </div>
                     <div class="flex flex-col">
-                      <label class="leading-loose font-semibold text-gray-800">Time</label>
-                      <p><%= @facade_fetched_deed.time.to_datetime.strftime("%H:%M") %></p>
+                      <label class="leading-loose font-semibold text-gray-800"><%= f.label :time %></label>
+                      <p><%= f.time_field :time, value: @facade.fetch_deed.time.to_datetime.strftime("%H:%M") %></p>
                     </div>
                     <% if @facade_fetched_deed.attendees.size >= 1 %>
                       <div class="flex flex-col place-items-center">
@@ -89,6 +89,7 @@
               </div>
             <% end %>
 
+          <!-- HERE STARTS THE EDIT FORM FOR A COMPLETED GOOD DEED -->
           <% elsif @facade_fetched_deed.status == 'Completed' %>
             <%= form_with url: user_good_deed_path(@facade.deed_id), method: :patch, local: true do |f| %>
             <%= f.hidden_field :name, value: @facade_fetched_deed.name %>

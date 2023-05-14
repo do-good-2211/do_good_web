@@ -48,13 +48,22 @@
 ## About The Project
 
    ☀️ [Production Website](https://cryptic-fortress-66693.herokuapp.com/)
-   <br>
+     <br>
+     <ul>
+      <p><b>log-in credentials</b></p>
+      <li>email: dogood.sampleuser@gmail.com</li>
+      <li>password: dogood2211</li>
+    </ul>
    ☀️ [Backend Service](https://warm-temple-59633.herokuapp.com/)
    <br>
    ☀️ [Backend Repository](https://github.com/do-good-2211/do_good_api)
 
    <!-- * [Video Presentation]() -->
-
+   <div>
+    <video src="https://github.com/hamouj/image_repo/assets/114951691/6db83a52-743f-4dfd-ae70-46a4eddbda0a" type="video/mp4" controls width=”340" height=”260">
+    </video>
+   </div>
+   
   **Do Good** was created by Back End students at Turing School of Software and Design as their [consultancy project](https://backend.turing.edu/module3/projects/consultancy/).
 
   The mission of **Do Good** is to provide users with convenient access to positivity and an opportunity to be part of the good in the world.
